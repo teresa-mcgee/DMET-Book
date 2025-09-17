@@ -1,0 +1,122 @@
+---
+title: "{p}"
+format: html
+editor: visual
+---
+# Protein Overview (chatGPT generated from Uniprot)
+GPT : please provide a very brief entry of the {p} protein from the uniprot web page entry from mouse. Include any aliases for the protein. 
+
+# Data Overview
+The protein data can be handled either with RINT normalization or using box-cox transformations. Here, I demonstrate the data's properties and the BC transformation chosen. Often the BC transformation resulted in more clear genome scans, but not all BC transformed data has undergone complete analysis.
+
+### Transformation recommendation
+
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/boxcox/BC_Histograms_page_001.jpg){fig-align="center" width="80%"}
+
+### Protein Distributions
+
+------------------------------------------------------------------------
+#### Raw Data
+
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/dataHistograms/dataHistograms_page_001.jpg){fig-align="center" width="80%"}
+
+#### Box Cox
+
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/boxcox/BC_Histograms/BC_Histograms_page_001.jpg){fig-align="center" width="80%"}
+
+#### RINT
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/RINT_Histograms/RINT_Histograms_page_001.jpg){fig-align="center" width="80%"}
+
+# RINT analysis
+
+## pQTL scans
+
+### Combined RNA
+
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/Combined_rna_scan/Combined_rna_scan_page_001.jpg){fig-align="center" width="80%"}
+
+
+### 0.95 threshold
+
+::: {layout-ncol=1}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_001.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_002.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_003.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_004.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_005.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_006.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_007.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_008.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_009.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_010.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_011.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_012.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_013.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_014.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_015.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_016.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_017.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_018.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_019.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_020.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_021.jpg){group="{p}-scans"}
+:::
+
+### 0.90 threshold
+
+::: {layout-ncol=1}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_001.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_002.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_003.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_004.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_005.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_006.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_007.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_008.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_009.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_010.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_011.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_012.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_013.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_014.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_015.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_016.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_017.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_018.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_019.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_020.jpg){group="{p}-scans"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9/scans_0.9_page_021.jpg){group="{p}-scans"}
+:::
+
+
+
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9//work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.9){fig-align="center" width="80%"}
+
+
+
+
+## Peak Locus
+
+### Confidence Interval of significant peak (if it exists)
+Bayesian bootstrap derived confidence interval.
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/ci_scans/ci_scans_page_002.jpg)
+
+### TIMBR
+::: {layout-ncol=2}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/timbr_results/timbr_results_page_001.jpg)
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/timbr_results/timbr_results_page_002.jpg)
+:::
+
+### Mediation
+
+#### Protein - Protein mediation using peak locus
+
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/proteinMediators/proteinMediators_page_001.jpg)
+
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/proteinMediators/proteinMediators_page_002.jpg)
+
+#### Genome wide mediation with RNA
+X axis represents the genomic region of the gene for the transcript tested. Thresholds were generated using a permuted mediator with 1000 permutatations to generate a "null" distribution of bayes factors for mediation. Generally, a BF of 0 is the transition between "Evidence against mediation" (negative numbers) and "Evidence for mediation" (positive). That being said, we generally would only consider BF above the threshold from permutations for strong evidence for mediation. 
+
+![](/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/genome_wide_rna_med/genome_wide_rna_med_page_001.jpg)
+

@@ -1,0 +1,40 @@
+---
+title: "PDF to JPG Converter"
+format: html
+---
+
+# Introduction
+
+This Quarto document demonstrates how to convert all PDFs in a folder into JPG images, 
+placing each PDF’s pages into its own subfolder.
+
+We’ll use **ImageMagick** (`magick`) from the command line.
+
+---
+
+# Bash Script
+
+```{bash}
+#!/bin/bash
+# Convert all PDFs in a folder to JPGs, one JPG per page
+# Requires ImageMagick installed (provides `magick` command)
+
+input_folder="pdfs"
+output_folder="jpgs"
+
+mkdir -p "$output_folder"
+
+for pdf in "$input_folder"/*.pdf; do
+    filename=$(basename "$pdf" .pdf)
+    subfolder="$output_folder/$filename"
+    mkdir -p "$subfolder"
+
+    echo "📄 Converting $filename.pdf ..."
+    
+    # Convert all pages to JPGs
+    magick -density 300 "$pdf" "$subfolder/${filename}_page_%03d.jpg"
+    
+    echo "   ✅ Saved images in $subfolder"
+done
+
+echo "🎉 Conversion complete!"

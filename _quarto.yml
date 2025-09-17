@@ -1,0 +1,33 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "DMET results"
+  author: "Teresa McGee"
+  date: today
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - part: "Protein Analyses"
+      chapters:
+        - Bsep.qmd
+        - Ent1.qmd
+    - example.qmd
+
+format:
+  html:
+    theme: cosmo          # Bootswatch theme (cosmo, flatly, lumen, etc.)
+    toc: true             # enable table of contents in sidebar
+    toc-location: left
+    number-sections: true # auto-number sections
+    code-fold: true       # allow folding code blocks
+    code-summary: "Show code"
+    css: styles.css       # optional: add custom styles here
+
+# Optional: website extras
+website:
+  favicon: images/favicon.png   # optional favicon
+  sidebar:
+    style: "floating"           # floating or docked sidebar
+    search: true                # adds search box

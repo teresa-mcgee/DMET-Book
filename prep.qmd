@@ -1,0 +1,59 @@
+---
+title: "Batch PDF to JPG Conversion"
+format: html
+---
+
+# Overview
+
+This document reads a list of biomarker names from a text file and, for each biomarker,
+converts all PDFs in the corresponding `boxcox` folder into JPGs.  
+Each set of JPGs is stored in a separate `jpgs` folder next to the input.
+
+---
+
+# Conversion Script
+
+```{bash}
+#!/bin/bash
+# Requires: ImageMagick installed (provides `magick` and `identify`)
+
+# Path to the biomarker list
+biomarker_list="biomarkernames.txt"
+
+# Loop through each biomarker name
+while IFS= read -r biomarker; do
+    input_folder="/work/users/m/c/mcgeet/DMETpaper/figures/${biomarker}/boxcox"
+    output_folder="/work/users/m/c/mcgeet/DMETpaper/figures/${biomarker}/jpgs"
+
+    echo "Processing biomarker: $biomarker"
+    mkdir -p "$output_folder"
+
+    # Convert all PDFs in this input folder
+    for pdf in "$input_folder"/*.pdf; do
+        if [ -f "$pdf" ]; then
+            filename=$(basename "$pdf" .pdf)
+
+            # --- Check if PDF is blank ---
+            # Count pages and unique colors
+            page_count=$(identify -format "%n" "$pdf" 2>/dev/null | head -n 1)
+            color_count=$(convert -density 30 "$pdf[0]" -colors 8 -format "%k" info: 2>/dev/null)
+
+            if [ "$page_count" -eq 0 ] || [ "$color_count" -le 1 ]; then
+                echo "  ⚠️  $filename.pdf appears to be blank. Removing..."
+                rm -f "$pdf"
+                continue
+            fi
+            # -----------------------------
+
+            subfolder="$output_folder/$filename"
+            mkdir -p "$subfolder"
+
+            echo "  📄 Converting $filename.pdf ..."
+            magick -density 300 "$pdf" "$subfolder/${filename}_page_%03d.jpg"
+            echo "  ✅ Saved images in $subfolder"
+        fi
+    done
+done < "$biomarker_list"
+
+echo "🎉 All conversions complete!"
+```
