@@ -1,0 +1,180 @@
+---
+title: "{p}"
+format: html
+editor: visual
+---
+
+# Protein Overview 
+
+{GPT1}
+
+# Data Overview 
+
+The protein data can be handled either with RINT normalization or using box-cox transformations. Here, I demonstrate the data's properties and the BC transformation chosen. Often the BC transformation resulted in more clear genome scans, but not all BC transformed data has undergone complete analysis.
+
+### Transformation recommendation
+
+Lets take a look at how boxcox would handle the data, and the distributions:
+
+![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/boxcox/BC_Histograms_page_001.jpg){fig-align="center" width="80%"}
+
+### Protein Distributions
+
+------------------------------------------------------------------------
+
+#### Raw Data
+
+![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/dataHistograms/dataHistograms_page_001.jpg){fig-align="center" width="80%"}
+
+#### Box Cox
+
+![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/boxcox/BC_Histograms/BC_Histograms_page_001.jpg){fig-align="center" width="80%"}
+
+#### RINT
+
+![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/RINT_Histograms/RINT_Histograms_page_001.jpg){fig-align="center" width="80%"}
+
+# RINT analysis
+
+## pQTL scans
+
+### Combined RNA
+
+![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/Combined_rna_scan/Combined_rna_scan_page_001.jpg){fig-align="center" width="80%"}
+
+### 0.95 threshold
+## {p} Scans (Carousel)
+
+<div id="{p}-carousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_001.jpg" class="d-block w-100" alt="{p} scan 1">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_002.jpg" class="d-block w-100" alt="{p} scan 2">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_003.jpg" class="d-block w-100" alt="{p} scan 3">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_004.jpg" class="d-block w-100" alt="{p} scan 4">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_005.jpg" class="d-block w-100" alt="{p} scan 5">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_006.jpg" class="d-block w-100" alt="{p} scan 6">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_007.jpg" class="d-block w-100" alt="{p} scan 7">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_008.jpg" class="d-block w-100" alt="{p} scan 8">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_009.jpg" class="d-block w-100" alt="{p} scan 9">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_010.jpg" class="d-block w-100" alt="{p} scan 10">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_011.jpg" class="d-block w-100" alt="{p} scan 11">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_012.jpg" class="d-block w-100" alt="{p} scan 12">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_013.jpg" class="d-block w-100" alt="{p} scan 13">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_014.jpg" class="d-block w-100" alt="{p} scan 14">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_015.jpg" class="d-block w-100" alt="{p} scan 15">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_016.jpg" class="d-block w-100" alt="{p} scan 16">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_017.jpg" class="d-block w-100" alt="{p} scan 17">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_018.jpg" class="d-block w-100" alt="{p} scan 18">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_019.jpg" class="d-block w-100" alt="{p} scan 19">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_020.jpg" class="d-block w-100" alt="{p} scan 20">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/{p}/jpgs/rint/scans_0.95/scans_0.95_page_021.jpg" class="d-block w-100" alt="{p} scan 21">
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#{p}-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#{p}-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+### 0.90 threshold
+
+::: {layout-ncol="1"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_001.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_002.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_003.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_004.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_005.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_006.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_007.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_008.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_009.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_010.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_011.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_012.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_013.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_014.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_015.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_016.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_017.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_018.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_019.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_020.jpg){group="{p}-scans"} ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9/scans_0.9_page_021.jpg){group="{p}-scans"}
+:::
+
+![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9//work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/scans_0.9){fig-align="center" width="80%"}
+
+## Peak Locus
+
+### Confidence Interval of significant peak (if it exists)
+
+Bayesian bootstrap derived confidence interval. ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/ci_scans/ci_scans_page_002.jpg)
+
+### TIMBR
+
+::: {layout-ncol="2"}
+![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/timbr_results/timbr_results_page_001.jpg) ![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/timbr_results/timbr_results_page_002.jpg)
+:::
+
+### Mediation
+
+#### Protein - Protein mediation using peak locus
+
+![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/proteinMediators/proteinMediators_page_001.jpg)
+
+![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/proteinMediators/proteinMediators_page_002.jpg)
+
+#### Genome wide mediation with RNA
+
+X axis represents the genomic region of the gene for the transcript tested. Thresholds were generated using a permuted mediator with 1000 permutatations to generate a "null" distribution of bayes factors for mediation. Generally, a BF of 0 is the transition between "Evidence against mediation" (negative numbers) and "Evidence for mediation" (positive). That being said, we generally would only consider BF above the threshold from permutations for strong evidence for mediation.
+
+![](/work/users/m/c/mcgeet/DMETpaper/figures/%7Bp%7D/jpgs/rint/genome_wide_rna_med/genome_wide_rna_med_page_001.jpg)

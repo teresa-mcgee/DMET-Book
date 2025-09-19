@@ -1,0 +1,306 @@
+---
+title: "Mrp2"
+format: html
+editor: visual
+---
+
+# Protein Overview 
+
+The mouse protein Mrp2, also known as **Abcc2**, is a member of the ATP-binding cassette (ABC) transporter family. It is involved in the transport of various substrates across cellular membranes. In addition to its primary name, Mrp2 has aliases such as **multidrug resistance-associated protein 2** and **Canalicular multispecific organic anion transporter 2**. The gene encoding this protein is located on chromosome 6 in mice.
+
+# Data Overview 
+
+The protein data can be handled either with RINT normalization or using box-cox transformations. Here, I demonstrate the data's properties and the BC transformation chosen. Often the BC transformation resulted in more clear genome scans, but not all BC transformed data has undergone complete analysis.
+
+### Transformation recommendation
+
+Lets take a look at how boxcox would handle the data, and the distributions:
+
+![](/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/boxcox_page_001.jpg){fig-align="center" width="80%"}
+
+### Protein Distributions
+
+------------------------------------------------------------------------
+
+#### Raw Data
+
+![](/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/rawHistograms/rawHistograms_page_001.jpg){fig-align="center" width="80%"}
+
+#### Box Cox
+
+![](/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/BC_Histograms/BC_Histograms_page_001.jpg){fig-align="center" width="80%"}
+
+#### RINT
+
+![](/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/RINT_Histograms/RINT_Histograms_page_001.jpg){fig-align="center" width="80%"}
+### Heritability
+We can estimate how heritable the trait is globally here. We are showing that the trait is (or isn't) strongly correlated within strains.
+![](/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/h2.jpg){fig-align="center" width="80%"}
+
+
+#### Box Cox Analysis
+
+I am adding in the analysis for box cox transformed data. As of now, this only includes the full dataset (no subsetting for zero-inflated phenotypes).
+
+## pQTL scans
+
+### Combined RNA
+
+![](/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/genome_scan_combined_RNAProt.jpg){fig-align="center" width="80%"}
+
+### 0.95 threshold
+## Mrp2 Scans (Carousel)
+
+<div id="Mrp2-carousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_001.jpg" class="d-block w-100" alt="Mrp2 scan 1">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_002.jpg" class="d-block w-100" alt="Mrp2 scan 2">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_003.jpg" class="d-block w-100" alt="Mrp2 scan 3">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_004.jpg" class="d-block w-100" alt="Mrp2 scan 4">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_005.jpg" class="d-block w-100" alt="Mrp2 scan 5">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_006.jpg" class="d-block w-100" alt="Mrp2 scan 6">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_007.jpg" class="d-block w-100" alt="Mrp2 scan 7">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_008.jpg" class="d-block w-100" alt="Mrp2 scan 8">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_009.jpg" class="d-block w-100" alt="Mrp2 scan 9">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_010.jpg" class="d-block w-100" alt="Mrp2 scan 10">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_011.jpg" class="d-block w-100" alt="Mrp2 scan 11">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_012.jpg" class="d-block w-100" alt="Mrp2 scan 12">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_013.jpg" class="d-block w-100" alt="Mrp2 scan 13">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_014.jpg" class="d-block w-100" alt="Mrp2 scan 14">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_015.jpg" class="d-block w-100" alt="Mrp2 scan 15">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_016.jpg" class="d-block w-100" alt="Mrp2 scan 16">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_017.jpg" class="d-block w-100" alt="Mrp2 scan 17">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_018.jpg" class="d-block w-100" alt="Mrp2 scan 18">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_019.jpg" class="d-block w-100" alt="Mrp2 scan 19">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_020.jpg" class="d-block w-100" alt="Mrp2 scan 20">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/scans_0.95/scans_0.9_page_021.jpg" class="d-block w-100" alt="Mrp2 scan 21">
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#Mrp2-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#Mrp2-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+### 0.90 threshold
+
+## Mrp2 Scans (Carousel)
+
+<div id="Mrp2-carousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_001.jpg" class="d-block w-100" alt="Mrp2 scan 1">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_002.jpg" class="d-block w-100" alt="Mrp2 scan 2">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_003.jpg" class="d-block w-100" alt="Mrp2 scan 3">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_004.jpg" class="d-block w-100" alt="Mrp2 scan 4">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_005.jpg" class="d-block w-100" alt="Mrp2 scan 5">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_006.jpg" class="d-block w-100" alt="Mrp2 scan 6">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_007.jpg" class="d-block w-100" alt="Mrp2 scan 7">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_008.jpg" class="d-block w-100" alt="Mrp2 scan 8">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_009.jpg" class="d-block w-100" alt="Mrp2 scan 9">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_010.jpg" class="d-block w-100" alt="Mrp2 scan 10">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_011.jpg" class="d-block w-100" alt="Mrp2 scan 11">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_012.jpg" class="d-block w-100" alt="Mrp2 scan 12">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_013.jpg" class="d-block w-100" alt="Mrp2 scan 13">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_014.jpg" class="d-block w-100" alt="Mrp2 scan 14">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_015.jpg" class="d-block w-100" alt="Mrp2 scan 15">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_016.jpg" class="d-block w-100" alt="Mrp2 scan 16">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_017.jpg" class="d-block w-100" alt="Mrp2 scan 17">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_018.jpg" class="d-block w-100" alt="Mrp2 scan 18">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_019.jpg" class="d-block w-100" alt="Mrp2 scan 19">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_020.jpg" class="d-block w-100" alt="Mrp2 scan 20">
+    </div>
+
+    <div class="carousel-item">
+      <img src="/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/scans_0.9/scans_0.9_page_021.jpg" class="d-block w-100" alt="Mrp2 scan 21">
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#Mrp2-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#Mrp2-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+## Peak Locus
+
+### Confidence Interval of significant peak (if it exists)
+Bayesian bootstrap derived confidence interval.
+![](/work/users/m/c/mcgeet/DMETpaper/figures/Mrp2/jpgs/boxcox/ci_scans/ci_scans_page_002.jpg)
+
+### TIMBR
+------------------------------------------------------------------------
+TIMBR (Tree-Based Inference of Multiallelism via Bayesian Regression) is a framework for inferring the allelic series at a QTL in multiparental populations. Instead of assuming each founder haplotype is functionally unique, TIMBR tests whether some haplotypes can be grouped together into fewer functional alleles that better explain trait variation. The method uses a prior, which in Bayesian statistics means the assumptions or expectations built into the model before the data are analyzed. In TIMBR, the prior is based on the Chinese Restaurant Process (CRP), which is a flexible way to let the data decide how many functional alleles there are. Under the CRP, haplotypes are more likely to be assigned to an allele group that already has members, but new groups can always form. TIMBR also incorporates phylogenetic information so that closely related haplotypes are more likely to cluster together, which reflects biological intuition. By doing this, TIMBR can distinguish whether a QTL is best explained by a simple two-allele model, or whether multiple functional alleles are truly required.
+We tested for the number of functional alleles accross the full confidence interval. Here, we show how the distribution changes from the first locus(5 prime end) to the last locus (3 prime end). 
+
+```{r include=FALSE}
+# # Load the lookup table (CSV example)
+# lookup_table <- data.table::fread("/work/users/m/c/mcgeet/DMETpaper/out/SignificantResults.txt")
+# 
+# # Current biomarker Mrp2
+# p <- "Mrp2"
+# 
+# # Find matching chromosome
+# c <- lookup_table$CH[lookup_table$Protein == p]
+# 
+# # Build path
+# fig_path <- file.path("/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures",
+#                       p, "jpgs", "boxcox", paste0("CHR", c), "TIMBR", "figure.jpg")
+# 
+# fig_file <- list.files(file.path("/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures",
+#                                  Mrp2, "jpgs", "boxcox", paste0("CHR", c), "TIMBR"),
+#                        pattern = "\\.jpg$", full.names = TRUE)[1]
+```
+
+
+### Mediation
+------------------------------------------------------------------------
+bmediatR (Bayesian mediation analysis for QTL) is designed to test whether molecular traits act as mediators of genetic effects. A mediator is a variable that explains the path between a genetic variant and another trait. For example, if a transcript level sits between a genetic variant and a protein trait, the transcript is considered the mediator; if a protein explains the link between a variant and a downstream phenotype, the protein is the mediator. The model formally compares alternative causal structures: one where the genetic effect is direct, and others where the effect is indirect through a transcript or protein. Another key concept is co-localization (co-local), which refers to cases where two traits share a QTL in the same genomic region. Co-localization alone does not prove mediation, since different causal variants may lie close together, but bmediatR provides a framework to test whether the shared QTL is consistent with a mediation model. This helps clarify whether, for example, a transcript QTL drives a protein QTL, or whether they simply overlap without a causal link.
+
+#### Protein - Protein mediation using peak locus
+In this example, we are showing the potential protein mediators of the Mrp2 protein through the top locus. If there is evidence of mediation, 
+
+![](/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/proteinMediators/proteinMediators_page_001.jpg)
+
+#### Genome wide mediation with RNA
+
+X axis represents the genomic region of the gene for the transcript tested. Thresholds were generated using a permuted mediator with 1000 permutatations to generate a "null" distribution of bayes factors for mediation. Generally, a BF of 0 is the transition between "Evidence against mediation" (negative numbers) and "Evidence for mediation" (positive). That being said, we generally would only consider BF above the threshold from permutations for strong evidence for mediation. 
+
+![](/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/Mrp2/jpgs/boxcox/genome_wide_mediators/genome_wide_mediators_page_001.jpg)
+
+

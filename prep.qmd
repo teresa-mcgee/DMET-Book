@@ -1,59 +1,96 @@
 ---
-title: "Batch PDF to JPG Conversion"
+title: "Batch PDF to JPG Conversion (Pure Python)"
 format: html
 ---
 
 # Overview
 
-This document reads a list of biomarker names from a text file and, for each biomarker,
-converts all PDFs in the corresponding `boxcox` folder into JPGs.  
-Each set of JPGs is stored in a separate `jpgs` folder next to the input.
+This script uses **PyMuPDF** and **Pillow** to convert PDFs to JPGs.  
+It checks if a PDF is blank (no text and empty white pages). If blank, the PDF is removed.  
 
 ---
 
+```{bash}
+which python
+python --version
+```
+
+```{r}
+library(reticulate)
+use_python("/usr/bin/python3", required = TRUE)
+# e.g. use_python("/nas/longleaf/apps/python/3.11/bin/python3", required = TRUE)
+```
+
+
 # Conversion Script
 
-```{bash}
-#!/bin/bash
-# Requires: ImageMagick installed (provides `magick` and `identify`)
+```{python}
+import fitz  # PyMuPDF
+from PIL import Image, ImageChops
+from pathlib import Path
 
-# Path to the biomarker list
-biomarker_list="biomarkernames.txt"
+# Path to biomarker list
+biomarker_list = "biomarkernames.txt"
 
-# Loop through each biomarker name
-while IFS= read -r biomarker; do
-    input_folder="/work/users/m/c/mcgeet/DMETpaper/figures/${biomarker}/boxcox"
-    output_folder="/work/users/m/c/mcgeet/DMETpaper/figures/${biomarker}/jpgs"
+# Read biomarker names
+with open(biomarker_list, "r", encoding="utf-8") as f:
+    biomarkers = [line.strip().strip('"') for line in f if line.strip()]
 
-    echo "Processing biomarker: $biomarker"
-    mkdir -p "$output_folder"
+def is_blank_pdf(pdf_path: Path) -> bool:
+    """Check if PDF is blank (no text, no significant graphics)."""
+    try:
+        doc = fitz.open(pdf_path)
+        if len(doc) == 0:
+            return True
+        
+        for page in doc:
+            # Check text
+            if page.get_text().strip():
+                return False
+            
+            # Render image at low resolution
+            pix = page.get_pixmap(dpi=30)
+            img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+            
+            # Compare to a white background
+            bg = Image.new("RGB", img.size, (255, 255, 255))
+            diff = ImageChops.difference(img, bg)
+            if diff.getbbox() is not None:  # Something non-white found
+                return False
+        return True
+    except Exception:
+        return True
 
-    # Convert all PDFs in this input folder
-    for pdf in "$input_folder"/*.pdf; do
-        if [ -f "$pdf" ]; then
-            filename=$(basename "$pdf" .pdf)
+def pdf_to_jpgs(pdf_path: Path, output_folder: Path):
+    """Convert each page of PDF into JPGs."""
+    doc = fitz.open(pdf_path)
+    pdf_name = pdf_path.stem
+    subfolder = output_folder / pdf_name
+    subfolder.mkdir(parents=True, exist_ok=True)
 
-            # --- Check if PDF is blank ---
-            # Count pages and unique colors
-            page_count=$(identify -format "%n" "$pdf" 2>/dev/null | head -n 1)
-            color_count=$(convert -density 30 "$pdf[0]" -colors 8 -format "%k" info: 2>/dev/null)
+    for i, page in enumerate(doc, start=1):
+        pix = page.get_pixmap(dpi=300)
+        img_path = subfolder / f"{pdf_name}_page_{i:03d}.jpg"
+        pix.save(str(img_path))
+    return subfolder
 
-            if [ "$page_count" -eq 0 ] || [ "$color_count" -le 1 ]; then
-                echo "  ⚠️  $filename.pdf appears to be blank. Removing..."
-                rm -f "$pdf"
-                continue
-            fi
-            # -----------------------------
+# Process all biomarkers
+for biomarker in biomarkers:
+    input_folder = Path(f"/work/users/m/c/mcgeet/DMETpaper/figs/{biomarker}/full")
+    output_folder = Path(f"/work/users/m/c/mcgeet/DMETpaper/figures/{biomarker}/jpgs/boxcox")
 
-            subfolder="$output_folder/$filename"
-            mkdir -p "$subfolder"
+    print(f"Processing biomarker: {biomarker}")
+    output_folder.mkdir(parents=True, exist_ok=True)
 
-            echo "  📄 Converting $filename.pdf ..."
-            magick -density 300 "$pdf" "$subfolder/${filename}_page_%03d.jpg"
-            echo "  ✅ Saved images in $subfolder"
-        fi
-    done
-done < "$biomarker_list"
+    for pdf_file in input_folder.glob("*.pdf"):
+        if is_blank_pdf(pdf_file):
+            print(f"  ⚠️ Removing blank PDF: {pdf_file.name}")
+            pdf_file.unlink()
+            continue
 
-echo "🎉 All conversions complete!"
+        print(f"  📄 Converting {pdf_file.name} ...")
+        saved_to = pdf_to_jpgs(pdf_file, output_folder)
+        print(f"  ✅ Saved images in {saved_to}")
+
+print("🎉 All conversions complete!")
 ```

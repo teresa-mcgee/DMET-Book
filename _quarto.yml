@@ -1,6 +1,6 @@
 project:
   type: book
-  output-dir: _book
+  output-dir: docs    # GitHub Pages looks for a "docs" folder by default
 
 book:
   title: "DMET results"
@@ -25,6 +25,8 @@ format:
     code-summary: "Show code"
     css: styles.css       # optional: add custom styles here
 
+execute:
+  error: true
 # Optional: website extras
 website:
   favicon: images/favicon.png   # optional favicon
