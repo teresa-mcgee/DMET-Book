@@ -7,11 +7,39 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: quarto-dev/quarto-actions/setup@v2
-      - run: quarto render
-      - uses: actions/upload-pages-artifact@v1
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Install R (optional, remove if not using R)
+        uses: r-lib/actions/setup-r@v2
+
+      - name: Render book
+        run: quarto render
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: _book
-      - uses: actions/deploy-pages@v1
+          path: _book  # or docs if that's your output-dir
+
+  deploy:
+    needs: build-deploy
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
