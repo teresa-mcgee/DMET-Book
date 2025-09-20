@@ -28,7 +28,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: _book  # or docs if that's your output-dir
+          path: docs  # or docs if that's your output-dir
 
   deploy:
     needs: build-deploy
