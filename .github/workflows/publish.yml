@@ -3,17 +3,21 @@ name: Quarto Publish
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
+
+# Avoid overlapping deploys
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    # required perms for Pages pipeline
     permissions:
       contents: read
       pages: write
       id-token: write
-      actions: read   # required by deploy-pages@v4
-
+      actions: read
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -24,18 +28,17 @@ jobs:
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      # If you render R content, uncomment:
+      # If your project runs R code, uncomment:
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
 
-      - name: Render
+      - name: Render site
         run: quarto render
 
-      # Upload the site artifact for Pages (NOT upload-artifact)
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: docs   # change to your Quarto output dir (e.g. docs)
+          path: docs   # change to 'docs' if your _quarto.yml uses project.output-dir: docs
 
   deploy:
     runs-on: ubuntu-latest
