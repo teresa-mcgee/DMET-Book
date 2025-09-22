@@ -76,7 +76,7 @@ def pdf_to_jpgs(pdf_path: Path, output_folder: Path):
 
 # Process all biomarkers
 for biomarker in biomarkers:
-    input_folder = Path(f"/work/users/m/c/mcgeet/DMETpaper/figs/{biomarker}/full")
+    input_folder = Path(f"/work/users/m/c/mcgeet/DMETpaper/DMET-results/figures/mediation_proteinprotein/{biomarker}.pdf")
     output_folder = Path(f"/work/users/m/c/mcgeet/DMETpaper/figures/{biomarker}/jpgs/boxcox")
 
     print(f"Processing biomarker: {biomarker}")

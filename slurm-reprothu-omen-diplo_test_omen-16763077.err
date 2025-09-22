@@ -1,0 +1,18 @@
+Loading required package: devtools
+Loading required package: usethis
+Loading required package: miqtl
+Loading required package: Diploffect.INLA
+
+Attaching package: ‘Diploffect.INLA’
+
+The following objects are masked from ‘package:miqtl’:
+
+    DiploprobReader, rint
+
+Loading required package: Matrix
+This is INLA_25.09.19 built 2025-09-19 08:13:06 UTC.
+ - See www.r-inla.org/contact-us for how to get help.
+ - List available models/likelihoods/etc with inla.list.models()
+ - Use inla.doc(<NAME>) to access documentation
+Error: unexpected '\\' in "inla.diploffect.summary <- run.diploffect.inla.summary.stats(inla.diploffect)\"
+Execution halted

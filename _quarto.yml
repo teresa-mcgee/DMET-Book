@@ -11,8 +11,33 @@ book:
     - intro.qmd
     - part: "Protein Analyses"
       chapters:
+        - ATPase.qmd
+        - Abcb4.qmd
+        - Bcrp.qmd
         - Bsep.qmd
+        - Ces1.qmd
+        - Ces2.qmd
+        - Cyp1a2.qmd
+        - Cyp2c29.qmd
+        - Cyp2c39.qmd
+        - Cyp2c9.qmd
+        - Cyp2c50.qmd
+        - Cyp2d9.qmd
+        - Cyp2d10.qmd
+        - Cyp2d26.qmd
+        - Cyp2e1.qmd
+        - Cyp2f2.qmd
+        - Cyp3a11.qmd
         - Ent1.qmd
+        - Mrp2.qmd
+        - Mrp3.qmd
+        - Ntcp.qmd
+        - Oatp1a4.qmd
+        - Oatp2a1.qmd
+        - Oct1.2.qmd
+        - Ugt1a1.qmd
+        - Ugt1a6.qmd
+        - Ugt2a2.qmd
     - example.qmd
 
 format:
