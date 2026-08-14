@@ -9,6 +9,7 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
+    - status.qmd
     - part: "Protein Analyses"
       chapters:
         - ATPase.qmd
@@ -20,11 +21,11 @@ book:
         - Cyp1a2.qmd
         - Cyp2c29.qmd
         - Cyp2c39.qmd
-        - Cyp2c9.qmd
         - Cyp2c50.qmd
-        - Cyp2d9.qmd
+        - Cyp2c9.qmd
         - Cyp2d10.qmd
         - Cyp2d26.qmd
+        - Cyp2d9.qmd
         - Cyp2e1.qmd
         - Cyp2f2.qmd
         - Cyp3a11.qmd
@@ -38,7 +39,7 @@ book:
         - Ugt1a1.qmd
         - Ugt1a6.qmd
         - Ugt2a2.qmd
-    - example.qmd
+    - references.qmd
 
 format:
   html:
@@ -48,13 +49,6 @@ format:
     number-sections: true # auto-number sections
     code-fold: true       # allow folding code blocks
     code-summary: "Show code"
-    css: styles.css       # optional: add custom styles here
 
 execute:
   error: true
-# Optional: website extras
-website:
-  favicon: images/favicon.png   # optional favicon
-  sidebar:
-    style: "floating"           # floating or docked sidebar
-    search: true                # adds search box

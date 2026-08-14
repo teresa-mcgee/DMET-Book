@@ -1,9 +1,14 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
+This book collects the results of a pharmacogenomics screen of 27 drug-metabolizing enzyme and transporter (DMET) proteins, measured across Collaborative Cross (CC) mouse strains. For each protein it walks through:
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+- **Protein distributions** -- raw, RINT-normalized, and Box-Cox-transformed measurements, and which transformation was recommended.
+- **Heritability** -- how strongly the trait clusters within CC strains.
+- **pQTL genome scans** -- `miqtl`-based linkage scans, with permutation-derived significance thresholds.
+- **RNA mediation** -- whether transcript abundance (via `bmediatR`) explains the protein QTL.
+- **Merge / diplotype fine-mapping** -- founder-haplotype-resolved fine-mapping at significant loci.
+- **TIMBR** -- whether the founder haplotypes at a QTL collapse into fewer functional alleles.
 
-```{r}
-1 + 1
-```
+Not every protein has been carried through every stage yet. Rather than hide that, each chapter says explicitly which analyses exist for that protein and which don't ("_Not yet analyzed here_"), and the [Analysis Status](status.qmd) chapter gives the full picture across all 27 proteins at once, plus a short list of known data-quality issues in the current figures. That chapter is regenerated automatically (via `build_chapters.py`) from what's actually present on disk, so it should never drift out of date the way a hand-maintained checklist would.
+
+See [Methods](intro.qmd) for how the underlying proteomics and genetic data were generated.

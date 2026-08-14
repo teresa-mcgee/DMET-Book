@@ -1,0 +1,58 @@
+# Analysis Status {.unnumbered}
+
+This table is generated automatically by `build_chapters.py` from what's actually present on disk under `figures/{protein}/` (plus `merge/` and `out/Merge/` in the main project repository) -- it is not hand-maintained, so it shouldn't drift out of date the way a manually-updated checklist would. Re-run `python3 build_chapters.py` after regenerating figures or re-running an analysis stage; it rewrites the table below in place.
+
+✅ = done &nbsp;&nbsp; ⚠️ = partial or has a known issue &nbsp;&nbsp; ❌ = not yet done
+
+<!-- STATUS_TABLE_START -->
+
+| Protein | Distributions | Heritability* | pQTL scan | RNA mediation | Merge/diplotype | TIMBR |
+|---|---|---|---|---|---|---|
+| ATPase | ✅ | ⚠️ | ⚠️ | ❌ | ❌ | ✅ |
+| Abcb4 | ✅ | ⚠️ | ⚠️ | ⚠️ | ❌ | ✅ |
+| Bcrp | ✅ | ⚠️ | ⚠️ | ⚠️ | ❌ | ✅ |
+| Bsep | ✅ | ⚠️ | ✅ | ✅ | ✅ | ✅ |
+| Ces1 | ✅ | ⚠️ | ⚠️ | ✅ | ❌ | ✅ |
+| Ces2 | ✅ | ⚠️ | ✅ | ❌ | ❌ | ❌ |
+| Cyp1a2 | ✅ | ⚠️ | ✅ | ✅ | ❌ | ✅ |
+| Cyp2c29 | ✅ | ⚠️ | ✅ | ✅ | ❌ | ✅ |
+| Cyp2c39 | ✅ | ⚠️ | ⚠️ | ❌ | ✅ | ✅ |
+| Cyp2c9 | ✅ | ⚠️ | ⚠️ | ❌ | ❌ | ✅ |
+| Cyp2c50 | ✅ | ⚠️ | ⚠️ | ❌ | ⚠️ | ✅ |
+| Cyp2d9 | ✅ | ⚠️ | ⚠️ | ❌ | ❌ | ✅ |
+| Cyp2d10 | ✅ | ⚠️ | ⚠️ | ❌ | ❌ | ✅ |
+| Cyp2d26 | ✅ | ⚠️ | ✅ | ✅ | ❌ | ✅ |
+| Cyp2e1 | ✅ | ⚠️ | ⚠️ | ❌ | ❌ | ✅ |
+| Cyp2f2 | ✅ | ⚠️ | ⚠️ | ❌ | ❌ | ✅ |
+| Cyp3a11 | ✅ | ⚠️ | ✅ | ✅ | ❌ | ✅ |
+| Ent1 | ✅ | ⚠️ | ✅ | ✅ | ❌ | ✅ |
+| Mrp2 | ✅ | ⚠️ | ⚠️ | ⚠️ | ❌ | ✅ |
+| Mrp3 | ✅ | ⚠️ | ⚠️ | ⚠️ | ❌ | ✅ |
+| Ntcp | ✅ | ⚠️ | ✅ | ✅ | ❌ | ✅ |
+| Oatp1a4 | ✅ | ⚠️ | ✅ | ❌ | ❌ | ✅ |
+| Oatp2a1 | ✅ | ⚠️ | ⚠️ | ❌ | ❌ | ✅ |
+| Oct1.2 | ✅ | ⚠️ | ⚠️ | ❌ | ❌ | ✅ |
+| Ugt1a1 | ✅ | ⚠️ | ⚠️ | ❌ | ❌ | ✅ |
+| Ugt1a6 | ✅ | ⚠️ | ⚠️ | ⚠️ | ❌ | ✅ |
+| Ugt2a2 | ✅ | ⚠️ | ⚠️ | ❌ | ❌ | ✅ |
+
+<!-- STATUS_TABLE_END -->
+
+\* **Heritability** is ⚠️ for every protein: the extraction pipeline that was supposed to pull each protein's page out of `individual_h2.pdf` never worked correctly, and every protein's chapter currently shows the *same* placeholder heritability plot. `individual_h2.pdf` does contain real per-protein heritability estimates (27 pages, one per protein), but the pages carry no protein label or title -- only a locus ID and h2 value -- so there's no reliable way to recover the correct page-to-protein mapping without re-deriving it from the original scan objects. Treat every heritability figure in this book as a placeholder until that's fixed.
+
+## Known issues fixed as part of this cleanup
+
+- **RNA-mediation image filename mismatch.** The figure-generation script names its output `genome_wide_rna_med_page_001.jpg`; the old chapter template hardcoded `genome_wide_mediators_page_001.jpg` (only matching Ent1's older naming). This broke the image for every other protein that otherwise had this figure. The generator now checks both names.
+- **TIMBR was never actually shown.** Real TIMBR output exists for 26 of 27 proteins (only Ces2 has none), but the `### TIMBR` section was `include=FALSE` and fully commented out in every chapter. It's now wired in wherever a TIMBR figure exists, using the dedicated allelic-series dot plots for Cyp2c39/Cyp2c50 where available.
+- **Duplicate/stale figure trees.** `figs/`, the top-level `figures/`, and an accidental nested `figures/figures/` copy inside this book have been merged into (or removed in favor of) `figures/` here, which is what the current figure-generation pipeline (`run_final_fig.sh`) actually writes to.
+
+## Headline gap: merge / diplotype fine-mapping
+
+Merge/diplotype analysis -- founder-haplotype-resolved fine-mapping at significant loci -- has only been run for **Bsep** and **Cyp2c39** (plus a partial run for **Cyp2c50** that did the diplotype filtering step but surfaced no significant SNPs). The remaining ~24 proteins have not had this analysis run at all. See the `merge/` and `out/Merge/` columns in the table above, and `R/Merge/` for the scripts (`Bsep_Merge.R`, `cyp2c39merge.R`, `cyp_Merge.R`, `sub_cyp_Merge.R` and variants) that would need to be re-run/generalized for the remaining proteins.
+
+## Other partial coverage
+
+- **pQTL scans**: several proteins are missing one or more of the box-cox / RINT / full-dataset scan variants (e.g. Oct1.2, Ugt1a1, Ugt1a6 have essentially no scan output yet).
+- **RNA mediation**: about half the panel has no mediation analysis run at all; a few more have the underlying RDS result but no rendered genome-wide figure yet.
+
+Both are visible per-protein in the table above and in each protein's own chapter (look for "_Not yet analyzed here_" notes).

@@ -1,9 +1,27 @@
-# Introduction
+# Methods {.unnumbered}
 
-This is a book created from markdown and executable code.
+## Proteomics
 
-See @knuth84 for additional discussion of literate programming.
+Raw protein-abundance data were generated using protein isolation, proteolytic digestion, and quantitative targeted absolute proteomics (QTAP) analysis, as previously described in Qasem et al. (2020). Peptides were selected to avoid confounding from genetic variation, by excluding peptides with non-synonymous mutations predicted from the Inbred Strain Variant Database (Oreper et al., 2017).
 
-```{r}
-1 + 1
-```
+For three proteins -- **Cyp2c50**, **Cyp3a11**, and **Oatp1a4** -- avoiding a variant peptide was not possible, and the peptide sequence used contains a missense variant across some Collaborative Cross founder/strain haplotypes. Separately, **Cyp2c39** likely carries a genetic variant in the C57BL/6J (B6) strain that caused QTAP to fail to detect the protein in B6-descended strains; this shows up as a zero-inflated phenotype for Cyp2c39 (see that chapter's distribution plots).
+
+## Genome scans
+
+pQTL genome scans were run with [`miqtl`](https://cran.r-project.org/package=miqtl). Genome-wide significance thresholds were derived from permutation testing (typically 1000 permutations) using a generalized extreme value (GEV) fit to the permuted maximum statistics, at the 0.90/0.95 percentile as noted per chapter.
+
+## RNA mediation
+
+Mediation analysis uses `bmediatR` (Bayesian mediation analysis for QTL) to test whether transcript abundance mediates a protein QTL, and whether one protein mediates another's QTL at a shared peak locus.
+
+## TIMBR
+
+TIMBR (Tree-based Inference of Multiple-allele Regression) infers whether the founder haplotypes underlying a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings with a phylogenetic backbone, rather than assuming every founder haplotype is functionally distinct.
+
+## Merge / diplotype fine-mapping
+
+At significant loci, diplotype-resolved ("merge") analysis re-tests association at the level of imputed founder-haplotype dosage to narrow the candidate region and flag significant SNPs. As of this writing this has only been carried out for a subset of proteins -- see [Analysis Status](status.qmd).
+
+::: {.callout-note}
+Full bibliographic details for Qasem et al. (2020) and Oreper et al. (2017) are not yet recorded anywhere in this project. Please add the complete citations to `references.bib` -- these are currently referenced by author/year only.
+:::
