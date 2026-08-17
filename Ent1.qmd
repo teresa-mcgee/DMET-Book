@@ -274,6 +274,11 @@ Haplotype effects and circos plot swept across the bootstrap confidence interval
 <script>document.getElementById("Ent1-timbr-chr17-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Ent1-timbr-chr17-jump").value=e.to;});</script>
 
 
+#### CI-window model-selection dot plot
+
+![](figures/Ent1/jpgs/boxcox/CHR17/TIMBR/timbr_ci_dot.jpg){fig-align="center" width="90%"}
+
+
 ## Merge / Diplotype Fine-Mapping
 
 _Not yet analyzed here: merge/diplotype fine-mapping has not been run for Ent1. See [Analysis Status](status.qmd)._

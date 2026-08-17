@@ -93,6 +93,23 @@ SIGNIFICANT_CHR = {p: chrom for p, (chrom, _locus) in SIGNIFICANT_PEAKS.items()}
 SIGNIFICANT_LOCUS = {p: locus for p, (_chrom, locus) in SIGNIFICANT_PEAKS.items()}
 ALL_PEAKS = load_all_peaks()
 
+# Loci that clear a LOOSER 90%-permutation threshold but are NOT part of the
+# 95%-threshold "authoritative" set above (out/SignificantResults.txt) --
+# TIMBR run for these by R/TIMBR/run_timbr_new_gaps.R (see that script's
+# `targets` list, which this mirrors) as a lighter-weight exploratory pass:
+# only a CI-window model-selection dot-plot is produced, never the full
+# haplotype-effects/circos sweep given to the authoritative peaks. Rendered
+# as a distinct "borderline" subsection so it's never confused with a
+# genome-wide-significant result.
+BORDERLINE_TIMBR = {
+    ("Bsep", "17"): ("UNC28070667", "borderline: -log10(p)=4.670 vs 90th-percentile threshold=4.663"),
+    ("Ces2", "5"): ("UNC9452574", "strong new finding: -log10(p)=53.852 vs 90th-percentile threshold=4.663"),
+    ("Cyp1a2", "10"): ("UNC17599064", "-log10(p)=4.776 vs 90th-percentile threshold=4.663"),
+    ("Cyp2d26", "3"): ("UNC5373318", "-log10(p)=4.919 vs 90th-percentile threshold=4.665"),
+    ("Cyp3a11", "3"): ("UNC5114998", "borderline: -log10(p)=4.665 vs 90th-percentile threshold=4.663, essentially at the line"),
+    ("Oatp2a1", "16"): ("JAX00414665", "-log10(p)=4.706 vs 90th-percentile threshold=4.663"),
+}
+
 
 def scan_active_index(protein, n_pages):
     """0-based index into the scan carousel's pages to open on, given this
@@ -172,12 +189,16 @@ TIMBR_INDEX_RE = re.compile(r"^index_(\d+)_(.+)\.jpg$")
 def find_timbr_raw(protein, pdir):
     """All `CHR{chrom}/TIMBR` raw-image dirs for this protein, across every
     transform subdirectory, as a {chrom: {...}} dict. Each value has
-    'peak_effects'/'peak_circos' (Path or None) and 'sweep' (list of
+    'peak_effects'/'peak_circos' (Path or None), 'sweep' (list of
     (index, locus, effects_path, circos_path) tuples, sorted by index
     ascending -- verified for Bsep/Ent1 that ascending index order equals
     ascending genomic (Mb) order, by cross-checking against the
     out/{protein}/{transform}/chr_{chrom}_ci_interval.txt loci list; empty
-    list if this chrom has no sweep, just a single peak (Ces2)).
+    list if this chrom has no sweep, just a single peak (Ces2)), and
+    'ci_dot' (Path or None) -- the CI-window model-selection dot-plot added by
+    R/TIMBR/run_timbr_significant_gaps.R / run_timbr_new_gaps.R, either
+    alongside a full effects/circos treatment (authoritative peaks) or, for
+    BORDERLINE_TIMBR loci, entirely on its own (no effects/circos at all).
 
     If more than one transform has a TIMBR dir for the same chromosome
     (hasn't happened as of 2026-08), the one with more sweep loci wins, on
@@ -189,23 +210,28 @@ def find_timbr_raw(protein, pdir):
     for timbr_dir in jpgs.glob("*/CHR*/TIMBR"):
         chrom = timbr_dir.parent.name[len("CHR"):]
         effects_dir, circos_dir = timbr_dir / "effects", timbr_dir / "circos"
-        if not (effects_dir.is_dir() and circos_dir.is_dir()):
+        ci_dot = timbr_dir / "timbr_ci_dot.jpg"
+        ci_dot = ci_dot if ci_dot.exists() else None
+        has_effects_circos = effects_dir.is_dir() and circos_dir.is_dir()
+        if not has_effects_circos and ci_dot is None:
             continue
         sweep = []
-        for f in effects_dir.glob("index_*_*.jpg"):
-            m = TIMBR_INDEX_RE.match(f.name)
-            if not m:
-                continue
-            circos_f = circos_dir / f.name
-            if circos_f.exists():
-                sweep.append((int(m.group(1)), m.group(2), f, circos_f))
-        sweep.sort(key=lambda t: t[0])
-        peak_effects = effects_dir / "peak.jpg"
-        peak_circos = circos_dir / "peak.jpg"
+        if has_effects_circos:
+            for f in effects_dir.glob("index_*_*.jpg"):
+                m = TIMBR_INDEX_RE.match(f.name)
+                if not m:
+                    continue
+                circos_f = circos_dir / f.name
+                if circos_f.exists():
+                    sweep.append((int(m.group(1)), m.group(2), f, circos_f))
+            sweep.sort(key=lambda t: t[0])
+        peak_effects = effects_dir / "peak.jpg" if has_effects_circos else None
+        peak_circos = circos_dir / "peak.jpg" if has_effects_circos else None
         entry = dict(
-            peak_effects=peak_effects if peak_effects.exists() else None,
-            peak_circos=peak_circos if peak_circos.exists() else None,
+            peak_effects=peak_effects if peak_effects and peak_effects.exists() else None,
+            peak_circos=peak_circos if peak_circos and peak_circos.exists() else None,
             sweep=sweep,
+            ci_dot=ci_dot,
         )
         if chrom not in by_chrom or len(sweep) > len(by_chrom[chrom]["sweep"]):
             by_chrom[chrom] = entry
@@ -458,7 +484,7 @@ def analyze_protein(protein):
         rna = "partial"
     else:
         rna = "missing"
-    has_raw_peak = any(e["peak_effects"] or e["peak_circos"] for e in timbr_raw.values())
+    has_raw_peak = any(e["peak_effects"] or e["peak_circos"] or e["ci_dot"] for e in timbr_raw.values())
     timbr_status = "done" if (timbr or has_raw_peak) else "missing"
 
     return dict(
@@ -541,16 +567,18 @@ def build_chapter(protein, a):
     # -- but NOT over a `timbr_ci_page_*` composite (Cyp2c39/Cyp2c50), which is
     # already a faithful, working rendering of the same underlying sweep and
     # is left untouched.
-    use_raw = bool(timbr_raw) and not (a['timbr'] and a['timbr'].name.startswith('timbr_ci_page'))
+    borderline_chroms = [c for c in timbr_raw if (protein, c) in BORDERLINE_TIMBR]
+    primary_chroms_raw = {c: e for c, e in timbr_raw.items() if c not in borderline_chroms}
+    use_raw = bool(primary_chroms_raw) and not (a['timbr'] and a['timbr'].name.startswith('timbr_ci_page'))
     if use_raw:
         # Order multi-peak proteins (currently only Ces2: chr18 + chr3) by
         # significance (most significant first); single-peak proteins have
         # only one chrom here so this is a no-op for them.
-        ranked = [c for c, _l, _p in ALL_PEAKS.get(protein, []) if c in timbr_raw]
-        chroms = ranked + [c for c in sorted(timbr_raw) if c not in ranked]
+        ranked = [c for c, _l, _p in ALL_PEAKS.get(protein, []) if c in primary_chroms_raw]
+        chroms = ranked + [c for c in sorted(primary_chroms_raw) if c not in ranked]
         multi = len(chroms) > 1
         for chrom in chroms:
-            entry = timbr_raw[chrom]
+            entry = primary_chroms_raw[chrom]
             if multi:
                 L += [f'### Chr {chrom} peak locus', '']
             if entry['peak_effects'] and entry['peak_circos']:
@@ -573,6 +601,10 @@ def build_chapter(protein, a):
                 L += [f'_Single-locus TIMBR result only -- the bootstrap-CI sweep failed/was empty for '
                       f'this locus, so only the peak marker itself was tested. See '
                       f'[Analysis Status](status.qmd)._', '']
+            if entry['ci_dot']:
+                L += ['', "#### CI-window model-selection dot plot", '',
+                      img(entry['ci_dot'], width="90%")]
+            L += ['']
     elif a['timbr']:
         pages = sibling_pages(a['timbr'])
         quick_jumps = None
@@ -590,9 +622,31 @@ def build_chapter(protein, a):
                     ("3' side", len(pages) - 1),
                 ]
         L += [carousel(f"{protein}-timbr", pages, quick_jumps=quick_jumps) if len(pages) > 1 else img(a['timbr'])]
+        # The composite `timbr_ci_page_*` carousel above predates the CI-window
+        # model-selection dot-plot, so it's never baked into that composite --
+        # append it separately when present (currently Cyp2c39/Cyp2c50 CHR19).
+        for chrom, entry in primary_chroms_raw.items():
+            if entry['ci_dot']:
+                L += ['', "#### CI-window model-selection dot plot", '',
+                      img(entry['ci_dot'], width="90%")]
     else:
         L += [missing("TIMBR output", protein)]
     L += ['']
+
+    if borderline_chroms:
+        L += ['### Borderline loci (90th-percentile threshold)', '',
+              'These loci clear a looser 90%-permutation threshold but are **not** part of '
+              'the genome-wide-significant set above (`out/SignificantResults.txt`, 95th '
+              'percentile) -- treat as exploratory. Only a CI-window model-selection dot '
+              'plot was produced for these (no haplotype-effects/circos sweep).', '']
+        for chrom in sorted(borderline_chroms, key=lambda c: int(c) if c.isdigit() else 99):
+            entry = timbr_raw[chrom]
+            locus, note = BORDERLINE_TIMBR[(protein, chrom)]
+            L += [f'#### Chr {chrom} ({locus})', '', f'_{note}_', '']
+            if entry['ci_dot']:
+                L += [img(entry['ci_dot'], width="90%"), '']
+            else:
+                L += [missing(f"TIMBR CI dot-plot for Chr {chrom}", protein), '']
 
     L += ['## Merge / Diplotype Fine-Mapping', '']
     if a['merge'] == 'done':

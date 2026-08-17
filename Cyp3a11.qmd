@@ -136,6 +136,16 @@ TIMBR infers whether founder haplotypes at a QTL collapse into fewer functional 
 </div>
 <script>document.getElementById("Cyp3a11-timbr-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Cyp3a11-timbr-jump").value=e.to;});</script>
 
+### Borderline loci (90th-percentile threshold)
+
+These loci clear a looser 90%-permutation threshold but are **not** part of the genome-wide-significant set above (`out/SignificantResults.txt`, 95th percentile) -- treat as exploratory. Only a CI-window model-selection dot plot was produced for these (no haplotype-effects/circos sweep).
+
+#### Chr 3 (UNC5114998)
+
+_borderline: -log10(p)=4.665 vs 90th-percentile threshold=4.663, essentially at the line_
+
+![](figures/Cyp3a11/jpgs/boxcox/CHR3/TIMBR/timbr_ci_dot.jpg){fig-align="center" width="90%"}
+
 ## Merge / Diplotype Fine-Mapping
 
 _Not yet analyzed here: merge/diplotype fine-mapping has not been run for Cyp3a11. See [Analysis Status](status.qmd)._

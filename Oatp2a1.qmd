@@ -136,6 +136,16 @@ TIMBR infers whether founder haplotypes at a QTL collapse into fewer functional 
 </div>
 <script>document.getElementById("Oatp2a1-timbr-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Oatp2a1-timbr-jump").value=e.to;});</script>
 
+### Borderline loci (90th-percentile threshold)
+
+These loci clear a looser 90%-permutation threshold but are **not** part of the genome-wide-significant set above (`out/SignificantResults.txt`, 95th percentile) -- treat as exploratory. Only a CI-window model-selection dot plot was produced for these (no haplotype-effects/circos sweep).
+
+#### Chr 16 (JAX00414665)
+
+_-log10(p)=4.706 vs 90th-percentile threshold=4.663_
+
+![](figures/Oatp2a1/jpgs/boxcox/CHR16/TIMBR/timbr_ci_dot.jpg){fig-align="center" width="90%"}
+
 ## Merge / Diplotype Fine-Mapping
 
 _Not yet analyzed here: merge/diplotype fine-mapping has not been run for Oatp2a1. See [Analysis Status](status.qmd)._

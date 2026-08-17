@@ -253,12 +253,12 @@
   {
     "objectID": "Bsep.html",
     "href": "Bsep.html",
-    "title": "1  Bsep",
+    "title": "4  Bsep",
     "section": "",
-    "text": "2 Protein Overview\nThe mouse protein Bsep, also known as Bile Salt Export Pump, is encoded by the gene Abcb11. It has several aliases, including Abcb11 and Bsep. This protein is primarily involved in the transport of bile acids from the liver to the bile ducts, playing a crucial role in bile formation and overall liver function.",
+    "text": "5 Protein Overview\nThe mouse protein Bsep, also known as Bile Salt Export Pump, is encoded by the gene Abcb11. It has several aliases, including Abcb11 and Bsep. This protein is primarily involved in the transport of bile acids from the liver to the bile ducts, playing a crucial role in bile formation and overall liver function.",
     "crumbs": [
       "Protein Analyses",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Bsep</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bsep</span>"
     ]
   },
   {
@@ -297,12 +297,12 @@
   {
     "objectID": "Bsep.html#peak-locus",
     "href": "Bsep.html#peak-locus",
-    "title": "1  Bsep",
-    "section": "3.4 Peak Locus",
-    "text": "3.4 Peak Locus\n\n3.4.1 Confidence Interval of significant peak (if it exists)\nBayesian bootstrap derived confidence interval.",
+    "title": "4  Bsep",
+    "section": "6.4 Peak Locus",
+    "text": "6.4 Peak Locus\n\n6.4.1 Confidence interval of the significant peak (if one exists)",
     "crumbs": [
       "Protein Analyses",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Bsep</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bsep</span>"
     ]
   },
   {
@@ -407,12 +407,12 @@
   {
     "objectID": "Ces2.html",
     "href": "Ces2.html",
-    "title": "7  Ces2",
+    "title": "6  Ces2",
     "section": "",
-    "text": "8 Protein Overview\nThe mouse protein Ces2, also known as Carboxylesterase 2, is encoded by the gene Ces2. Its aliases include Ces2a and Ces2b. Ces2 is involved in the hydrolysis of ester bonds and plays a critical role in the metabolism of various endogenous and exogenous compounds.",
+    "text": "7 Protein Overview\nThe mouse protein Ces2, also known as Carboxylesterase 2, is encoded by the gene Ces2. Its aliases include Ces2a and Ces2b. Ces2 is involved in the hydrolysis of ester bonds and plays a critical role in the metabolism of various endogenous and exogenous compounds.",
     "crumbs": [
       "Protein Analyses",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ces2</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Ces2</span>"
     ]
   },
   {
@@ -451,12 +451,12 @@
   {
     "objectID": "Ces2.html#peak-locus",
     "href": "Ces2.html#peak-locus",
-    "title": "7  Ces2",
-    "section": "9.4 Peak Locus",
-    "text": "9.4 Peak Locus\n\n9.4.1 Confidence Interval of significant peak (if it exists)\nBayesian bootstrap derived confidence interval.",
+    "title": "6  Ces2",
+    "section": "8.4 Peak Locus",
+    "text": "8.4 Peak Locus\n\n8.4.1 Confidence interval of the significant peak (if one exists)",
     "crumbs": [
       "Protein Analyses",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ces2</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Ces2</span>"
     ]
   },
   {
@@ -484,12 +484,12 @@
   {
     "objectID": "Cyp1a2.html",
     "href": "Cyp1a2.html",
-    "title": "8  Cyp1a2",
+    "title": "7  Cyp1a2",
     "section": "",
-    "text": "9 Protein Overview\nThe mouse protein Cyp1a2, encoded by the gene Cyp1a2, is a member of the cytochrome P450 family involved in the metabolism of various substances, including drugs and endogenous compounds. It is known by several aliases, including Cyp1a2. This protein plays a critical role in the detoxification of environmental chemicals and the metabolism of xenobiotics.",
+    "text": "8 Protein Overview\nThe mouse protein Cyp1a2, encoded by the gene Cyp1a2, is a member of the cytochrome P450 family involved in the metabolism of various substances, including drugs and endogenous compounds. It is known by several aliases, including Cyp1a2. This protein plays a critical role in the detoxification of environmental chemicals and the metabolism of xenobiotics.",
     "crumbs": [
       "Protein Analyses",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Cyp1a2</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Cyp1a2</span>"
     ]
   },
   {
@@ -528,12 +528,12 @@
   {
     "objectID": "Cyp1a2.html#peak-locus",
     "href": "Cyp1a2.html#peak-locus",
-    "title": "8  Cyp1a2",
-    "section": "10.4 Peak Locus",
-    "text": "10.4 Peak Locus\n\n10.4.1 Confidence Interval of significant peak (if it exists)\nBayesian bootstrap derived confidence interval.",
+    "title": "7  Cyp1a2",
+    "section": "9.4 Peak Locus",
+    "text": "9.4 Peak Locus\n\n9.4.1 Confidence interval of the significant peak (if one exists)",
     "crumbs": [
       "Protein Analyses",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Cyp1a2</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Cyp1a2</span>"
     ]
   },
   {
@@ -638,12 +638,12 @@
   {
     "objectID": "Cyp2c39.html",
     "href": "Cyp2c39.html",
-    "title": "10  Cyp2c39",
+    "title": "9  Cyp2c39",
     "section": "",
-    "text": "11 Protein Overview\nThe mouse protein Cyp2c39, also known by its gene name Cyp2c39, is a member of the cytochrome P450 superfamily. It is involved in the metabolism of various endogenous and exogenous compounds. The protein has aliases such as Cytochrome P450 2C39.",
+    "text": "10 Protein Overview\nThe mouse protein Cyp2c39, also known by its gene name Cyp2c39, is a member of the cytochrome P450 superfamily. It is involved in the metabolism of various endogenous and exogenous compounds. The protein has aliases such as Cytochrome P450 2C39.",
     "crumbs": [
       "Protein Analyses",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Cyp2c39</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cyp2c39</span>"
     ]
   },
   {
@@ -682,12 +682,12 @@
   {
     "objectID": "Cyp2c39.html#peak-locus",
     "href": "Cyp2c39.html#peak-locus",
-    "title": "10  Cyp2c39",
-    "section": "12.4 Peak Locus",
-    "text": "12.4 Peak Locus\n\n12.4.1 Confidence Interval of significant peak (if it exists)\nBayesian bootstrap derived confidence interval.",
+    "title": "9  Cyp2c39",
+    "section": "11.4 Peak Locus",
+    "text": "11.4 Peak Locus\n\n11.4.1 Confidence interval of the significant peak (if one exists)",
     "crumbs": [
       "Protein Analyses",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Cyp2c39</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cyp2c39</span>"
     ]
   },
   {
@@ -792,12 +792,12 @@
   {
     "objectID": "Cyp2c50.html",
     "href": "Cyp2c50.html",
-    "title": "12  Cyp2c50",
+    "title": "10  Cyp2c50",
     "section": "",
-    "text": "13 Protein Overview\nCyp2c50, also known as Cytochrome P450 2C50, is a mouse protein encoded by the gene Cyp2c50. This protein belongs to the cytochrome P450 family and plays a role in the metabolism of various compounds. The gene has several aliases, including CYP2C50, reflecting its involvement in metabolic processes in the liver and other tissues.",
+    "text": "11 Protein Overview\nCyp2c50, also known as Cytochrome P450 2C50, is a mouse protein encoded by the gene Cyp2c50. This protein belongs to the cytochrome P450 family and plays a role in the metabolism of various compounds. The gene has several aliases, including CYP2C50, reflecting its involvement in metabolic processes in the liver and other tissues.",
     "crumbs": [
       "Protein Analyses",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Cyp2c50</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Cyp2c50</span>"
     ]
   },
   {
@@ -836,12 +836,12 @@
   {
     "objectID": "Cyp2c50.html#peak-locus",
     "href": "Cyp2c50.html#peak-locus",
-    "title": "12  Cyp2c50",
-    "section": "14.4 Peak Locus",
-    "text": "14.4 Peak Locus\n\n14.4.1 Confidence Interval of significant peak (if it exists)\nBayesian bootstrap derived confidence interval.",
+    "title": "10  Cyp2c50",
+    "section": "12.4 Peak Locus",
+    "text": "12.4 Peak Locus\n\n12.4.1 Confidence interval of the significant peak (if one exists)",
     "crumbs": [
       "Protein Analyses",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Cyp2c50</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Cyp2c50</span>"
     ]
   },
   {
@@ -1023,12 +1023,12 @@
   {
     "objectID": "Cyp2d26.html",
     "href": "Cyp2d26.html",
-    "title": "15  Cyp2d26",
+    "title": "13  Cyp2d26",
     "section": "",
-    "text": "16 Protein Overview\nThe protein Cyp2d26 is a member of the cytochrome P450 superfamily, involved in the metabolism of various substances. Its gene name is Cyp2d26, and it may also be referred to by its alias Cytochrome P450 2D26. This protein is typically found in mice and plays a role in the oxidation of organic substances. For detailed properties and functions, you can refer to its entry in the UniProt database.",
+    "text": "14 Protein Overview\nThe protein Cyp2d26 is a member of the cytochrome P450 superfamily, involved in the metabolism of various substances. Its gene name is Cyp2d26, and it may also be referred to by its alias Cytochrome P450 2D26. This protein is typically found in mice and plays a role in the oxidation of organic substances. For detailed properties and functions, you can refer to its entry in the UniProt database.",
     "crumbs": [
       "Protein Analyses",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Cyp2d26</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Cyp2d26</span>"
     ]
   },
   {
@@ -1067,12 +1067,12 @@
   {
     "objectID": "Cyp2d26.html#peak-locus",
     "href": "Cyp2d26.html#peak-locus",
-    "title": "15  Cyp2d26",
-    "section": "17.4 Peak Locus",
-    "text": "17.4 Peak Locus\n\n17.4.1 Confidence Interval of significant peak (if it exists)\nBayesian bootstrap derived confidence interval.",
+    "title": "13  Cyp2d26",
+    "section": "15.4 Peak Locus",
+    "text": "15.4 Peak Locus\n\n15.4.1 Confidence interval of the significant peak (if one exists)",
     "crumbs": [
       "Protein Analyses",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Cyp2d26</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Cyp2d26</span>"
     ]
   },
   {
@@ -1254,12 +1254,12 @@
   {
     "objectID": "Cyp3a11.html",
     "href": "Cyp3a11.html",
-    "title": "18  Cyp3a11",
+    "title": "17  Cyp3a11",
     "section": "",
-    "text": "19 Protein Overview\nThe mouse protein Cyp3a11, also known as Cytochrome P450 3A11, is encoded by the gene Cyp3a11. It is involved in the metabolism of various drugs and xenobiotics. The protein has several aliases, including Cyp3a and Cytochrome P450 3A subfamily A.",
+    "text": "18 Protein Overview\nThe mouse protein Cyp3a11, also known as Cytochrome P450 3A11, is encoded by the gene Cyp3a11. It is involved in the metabolism of various drugs and xenobiotics. The protein has several aliases, including Cyp3a and Cytochrome P450 3A subfamily A.",
     "crumbs": [
       "Protein Analyses",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Cyp3a11</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Cyp3a11</span>"
     ]
   },
   {
@@ -1298,12 +1298,12 @@
   {
     "objectID": "Cyp3a11.html#peak-locus",
     "href": "Cyp3a11.html#peak-locus",
-    "title": "18  Cyp3a11",
-    "section": "20.4 Peak Locus",
-    "text": "20.4 Peak Locus\n\n20.4.1 Confidence Interval of significant peak (if it exists)\nBayesian bootstrap derived confidence interval.",
+    "title": "17  Cyp3a11",
+    "section": "19.4 Peak Locus",
+    "text": "19.4 Peak Locus\n\n19.4.1 Confidence interval of the significant peak (if one exists)",
     "crumbs": [
       "Protein Analyses",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Cyp3a11</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Cyp3a11</span>"
     ]
   },
   {
@@ -1331,12 +1331,12 @@
   {
     "objectID": "Ent1.html",
     "href": "Ent1.html",
-    "title": "2  Ent1",
+    "title": "18  Ent1",
     "section": "",
-    "text": "3 Protein Overview\nThe mouse protein Ent1 (ENT1) is encoded by the gene Ent1, which stands for “equilibrative nucleoside transporter 1.” It is also known by several aliases, including Ent1 and Slc29a1. ENT1 is involved in the transport of nucleosides across cell membranes, playing a crucial role in nucleoside homeostasis and cellular signaling.",
+    "text": "19 Protein Overview\nThe mouse protein Ent1 (ENT1) is encoded by the gene Ent1, which stands for “equilibrative nucleoside transporter 1.” It is also known by several aliases, including Ent1 and Slc29a1. ENT1 is involved in the transport of nucleosides across cell membranes, playing a crucial role in nucleoside homeostasis and cellular signaling.",
     "crumbs": [
       "Protein Analyses",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Ent1</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Ent1</span>"
     ]
   },
   {
@@ -1375,12 +1375,12 @@
   {
     "objectID": "Ent1.html#peak-locus",
     "href": "Ent1.html#peak-locus",
-    "title": "2  Ent1",
-    "section": "4.3 Peak Locus",
-    "text": "4.3 Peak Locus\n\n4.3.1 Confidence Interval of significant peak (if it exists)\nBayesian bootstrap derived confidence interval.",
+    "title": "18  Ent1",
+    "section": "20.4 Peak Locus",
+    "text": "20.4 Peak Locus\n\n20.4.1 Confidence interval of the significant peak (if one exists)",
     "crumbs": [
       "Protein Analyses",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Ent1</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Ent1</span>"
     ]
   },
   {
@@ -1716,12 +1716,12 @@
   {
     "objectID": "Oatp2a1.html",
     "href": "Oatp2a1.html",
-    "title": "24  Oatp2a1",
+    "title": "23  Oatp2a1",
     "section": "",
-    "text": "25 Protein Overview\nThe mouse protein Oatp2a1, also known as Slco2a1, is an organic anion transporting polypeptide involved in the transport of various organic molecules across cell membranes. It has several aliases, including Oatp-2A1 and Oatp2a. The gene encoding this protein is important for physiological processes such as drug metabolism and the transport of bile acids.",
+    "text": "24 Protein Overview\nThe mouse protein Oatp2a1, also known as Slco2a1, is an organic anion transporting polypeptide involved in the transport of various organic molecules across cell membranes. It has several aliases, including Oatp-2A1 and Oatp2a. The gene encoding this protein is important for physiological processes such as drug metabolism and the transport of bile acids.",
     "crumbs": [
       "Protein Analyses",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Oatp2a1</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Oatp2a1</span>"
     ]
   },
   {
@@ -1760,12 +1760,12 @@
   {
     "objectID": "Oatp2a1.html#peak-locus",
     "href": "Oatp2a1.html#peak-locus",
-    "title": "24  Oatp2a1",
-    "section": "26.4 Peak Locus",
-    "text": "26.4 Peak Locus\n\n26.4.1 Confidence Interval of significant peak (if it exists)\nBayesian bootstrap derived confidence interval.",
+    "title": "23  Oatp2a1",
+    "section": "25.4 Peak Locus",
+    "text": "25.4 Peak Locus\n\n25.4.1 Confidence interval of the significant peak (if one exists)\nNot yet analyzed here: no confidence-interval scan found for Oatp2a1. See Analysis Status.",
     "crumbs": [
       "Protein Analyses",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Oatp2a1</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Oatp2a1</span>"
     ]
   },
   {
@@ -2177,6 +2177,670 @@
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Ent1</span>"
+    ]
+  },
+  {
+    "objectID": "Bsep.html#protein-distributions",
+    "href": "Bsep.html#protein-distributions",
+    "title": "4  Bsep",
+    "section": "6.1 Protein Distributions",
+    "text": "6.1 Protein Distributions\n\n6.1.1 Box-Cox transformation diagnostic\n\n\n\n\n\n\n\n6.1.2 Raw data\n\n\n\n\n\n\n\n6.1.3 Box-Cox transformed\n\n\n\n\n\n\n\n6.1.4 RINT transformed",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bsep</span>"
+    ]
+  },
+  {
+    "objectID": "Bsep.html#heritability",
+    "href": "Bsep.html#heritability",
+    "title": "4  Bsep",
+    "section": "6.2 Heritability",
+    "text": "6.2 Heritability\nEstimated narrow-sense heritability, i.e. whether the trait is strongly correlated within Collaborative Cross strains.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bsep</span>"
+    ]
+  },
+  {
+    "objectID": "Bsep.html#pqtl-genome-scans",
+    "href": "Bsep.html#pqtl-genome-scans",
+    "title": "4  Bsep",
+    "section": "6.3 pQTL Genome Scans",
+    "text": "6.3 pQTL Genome Scans\n\n6.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n6.3.2 Genome-wide scan (scans_0.95, box-cox)\nOpens on Chr 16, where the significant peak is.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bsep</span>"
+    ]
+  },
+  {
+    "objectID": "Bsep.html#rna-mediation",
+    "href": "Bsep.html#rna-mediation",
+    "title": "4  Bsep",
+    "section": "6.5 RNA Mediation",
+    "text": "6.5 RNA Mediation\nGenome-wide test of whether transcript abundance mediates the protein QTL (bmediatR).\n\n\n\n\n\n\n6.5.1 Protein-protein mediation at the peak locus",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bsep</span>"
+    ]
+  },
+  {
+    "objectID": "Bsep.html#timbr-allelic-series",
+    "href": "Bsep.html#timbr-allelic-series",
+    "title": "4  Bsep",
+    "section": "6.6 TIMBR (Allelic Series)",
+    "text": "6.6 TIMBR (Allelic Series)\nTIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.\n\n\n\nHaplotype effects and circos plot swept across the bootstrap confidence interval (5’ to 3’ along the chromosome):\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\n\n5’ side\n\n\nLead SNP\n\n\n3’ side\n\nJump to figure:  Figure 1 (UNC26639796) Figure 2 (UNC26643139) Figure 3 (UNC26647019) Figure 4 (UNC26649804) Figure 5 (JAX00068367) Figure 6 (UNC160204180) Figure 7 (JAX00418250) Figure 8 (UNC26663082) Figure 9 (UNC26665635) Figure 10 (UNC26668100) Figure 11 (UNC160278519) Figure 12 (UNC26676210) Figure 13 (UNC26676584) Figure 14 (UNC26676889) Figure 15 (UNC26678617) Figure 16 (UNC26681030) Figure 17 (UNC26683460) Figure 18 (UNC26686315) Figure 19 (UNC26688966) Figure 20 (UNC26691871) Figure 21 (UNC26692168) Figure 22 (UNC26694004) Figure 23 (JAX00068722) Figure 24 (JAX00418935) Figure 25 (JAX00418998) Figure 26 (UNC26715479) Figure 27 (UNC26719596) \n\n\n\n6.6.0.1 CI-window model-selection dot plot\n\n\n\n\n\n\n\n6.6.1 Borderline loci (90th-percentile threshold)\nThese loci clear a looser 90%-permutation threshold but are not part of the genome-wide-significant set above (out/SignificantResults.txt, 95th percentile) – treat as exploratory. Only a CI-window model-selection dot plot was produced for these (no haplotype-effects/circos sweep).\n\n6.6.1.1 Chr 17 (UNC28070667)\nborderline: -log10(p)=4.670 vs 90th-percentile threshold=4.663",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bsep</span>"
+    ]
+  },
+  {
+    "objectID": "Bsep.html#merge-diplotype-fine-mapping",
+    "href": "Bsep.html#merge-diplotype-fine-mapping",
+    "title": "4  Bsep",
+    "section": "6.7 Merge / Diplotype Fine-Mapping",
+    "text": "6.7 Merge / Diplotype Fine-Mapping\nMerge analysis has been run for Bsep; see merge/Bsep/ in the main project repository for diplotype and SNP-filtering results.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bsep</span>"
+    ]
+  },
+  {
+    "objectID": "Ces2.html#protein-distributions",
+    "href": "Ces2.html#protein-distributions",
+    "title": "6  Ces2",
+    "section": "8.1 Protein Distributions",
+    "text": "8.1 Protein Distributions\n\n8.1.1 Box-Cox transformation diagnostic\n\n\n\n\n\n\n\n8.1.2 Raw data\n\n\n\n\n\n\n\n8.1.3 Box-Cox transformed\n\n\n\n\n\n\n\n8.1.4 RINT transformed",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Ces2</span>"
+    ]
+  },
+  {
+    "objectID": "Ces2.html#heritability",
+    "href": "Ces2.html#heritability",
+    "title": "6  Ces2",
+    "section": "8.2 Heritability",
+    "text": "8.2 Heritability\nEstimated narrow-sense heritability, i.e. whether the trait is strongly correlated within Collaborative Cross strains.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Ces2</span>"
+    ]
+  },
+  {
+    "objectID": "Ces2.html#pqtl-genome-scans",
+    "href": "Ces2.html#pqtl-genome-scans",
+    "title": "6  Ces2",
+    "section": "8.3 pQTL Genome Scans",
+    "text": "8.3 pQTL Genome Scans\n\n8.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n8.3.2 Genome-wide scan (scans_0.95, box-cox)\nOpens on Chr 18, where the significant peak is.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Ces2</span>"
+    ]
+  },
+  {
+    "objectID": "Ces2.html#rna-mediation",
+    "href": "Ces2.html#rna-mediation",
+    "title": "6  Ces2",
+    "section": "8.5 RNA Mediation",
+    "text": "8.5 RNA Mediation\nGenome-wide test of whether transcript abundance mediates the protein QTL (bmediatR).\nNot yet analyzed here: no RNA-mediation figure found for Ces2. See Analysis Status.\n\n8.5.1 Protein-protein mediation at the peak locus",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Ces2</span>"
+    ]
+  },
+  {
+    "objectID": "Ces2.html#timbr-allelic-series",
+    "href": "Ces2.html#timbr-allelic-series",
+    "title": "6  Ces2",
+    "section": "8.6 TIMBR (Allelic Series)",
+    "text": "8.6 TIMBR (Allelic Series)\nTIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.\n\n8.6.1 Chr 18 peak locus\n\n\n\nSingle-locus TIMBR result only – the bootstrap-CI sweep failed/was empty for this locus, so only the peak marker itself was tested. See Analysis Status.\n\n\n8.6.2 Chr 3 peak locus\n\n\n\nSingle-locus TIMBR result only – the bootstrap-CI sweep failed/was empty for this locus, so only the peak marker itself was tested. See Analysis Status.\n\n\n8.6.3 Borderline loci (90th-percentile threshold)\nThese loci clear a looser 90%-permutation threshold but are not part of the genome-wide-significant set above (out/SignificantResults.txt, 95th percentile) – treat as exploratory. Only a CI-window model-selection dot plot was produced for these (no haplotype-effects/circos sweep).\n\n8.6.3.1 Chr 5 (UNC9452574)\nstrong new finding: -log10(p)=53.852 vs 90th-percentile threshold=4.663",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Ces2</span>"
+    ]
+  },
+  {
+    "objectID": "Ces2.html#merge-diplotype-fine-mapping",
+    "href": "Ces2.html#merge-diplotype-fine-mapping",
+    "title": "6  Ces2",
+    "section": "8.7 Merge / Diplotype Fine-Mapping",
+    "text": "8.7 Merge / Diplotype Fine-Mapping\nNot yet analyzed here: merge/diplotype fine-mapping has not been run for Ces2. See Analysis Status.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Ces2</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp1a2.html#protein-distributions",
+    "href": "Cyp1a2.html#protein-distributions",
+    "title": "7  Cyp1a2",
+    "section": "9.1 Protein Distributions",
+    "text": "9.1 Protein Distributions\n\n9.1.1 Box-Cox transformation diagnostic\n\n\n\n\n\n\n\n9.1.2 Raw data\n\n\n\n\n\n\n\n9.1.3 Box-Cox transformed\n\n\n\n\n\n\n\n9.1.4 RINT transformed",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Cyp1a2</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp1a2.html#heritability",
+    "href": "Cyp1a2.html#heritability",
+    "title": "7  Cyp1a2",
+    "section": "9.2 Heritability",
+    "text": "9.2 Heritability\nEstimated narrow-sense heritability, i.e. whether the trait is strongly correlated within Collaborative Cross strains.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Cyp1a2</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp1a2.html#pqtl-genome-scans",
+    "href": "Cyp1a2.html#pqtl-genome-scans",
+    "title": "7  Cyp1a2",
+    "section": "9.3 pQTL Genome Scans",
+    "text": "9.3 pQTL Genome Scans\n\n9.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n9.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Cyp1a2</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp1a2.html#rna-mediation",
+    "href": "Cyp1a2.html#rna-mediation",
+    "title": "7  Cyp1a2",
+    "section": "9.5 RNA Mediation",
+    "text": "9.5 RNA Mediation\nGenome-wide test of whether transcript abundance mediates the protein QTL (bmediatR).\n\n\n\n\n\n\n9.5.1 Protein-protein mediation at the peak locus",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Cyp1a2</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp1a2.html#timbr-allelic-series",
+    "href": "Cyp1a2.html#timbr-allelic-series",
+    "title": "7  Cyp1a2",
+    "section": "9.6 TIMBR (Allelic Series)",
+    "text": "9.6 TIMBR (Allelic Series)\nTIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 \n\n\n\n9.6.1 Borderline loci (90th-percentile threshold)\nThese loci clear a looser 90%-permutation threshold but are not part of the genome-wide-significant set above (out/SignificantResults.txt, 95th percentile) – treat as exploratory. Only a CI-window model-selection dot plot was produced for these (no haplotype-effects/circos sweep).\n\n9.6.1.1 Chr 10 (UNC17599064)\n-log10(p)=4.776 vs 90th-percentile threshold=4.663",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Cyp1a2</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp1a2.html#merge-diplotype-fine-mapping",
+    "href": "Cyp1a2.html#merge-diplotype-fine-mapping",
+    "title": "7  Cyp1a2",
+    "section": "9.7 Merge / Diplotype Fine-Mapping",
+    "text": "9.7 Merge / Diplotype Fine-Mapping\nNot yet analyzed here: merge/diplotype fine-mapping has not been run for Cyp1a2. See Analysis Status.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Cyp1a2</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp2c39.html#protein-distributions",
+    "href": "Cyp2c39.html#protein-distributions",
+    "title": "9  Cyp2c39",
+    "section": "11.1 Protein Distributions",
+    "text": "11.1 Protein Distributions\n\n11.1.1 Box-Cox transformation diagnostic\n\n\n\n\n\n\n\n11.1.2 Raw data\n\n\n\n\n\n\n\n11.1.3 Box-Cox transformed\n\n\n\n\n\n\n\n11.1.4 RINT transformed",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cyp2c39</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp2c39.html#heritability",
+    "href": "Cyp2c39.html#heritability",
+    "title": "9  Cyp2c39",
+    "section": "11.2 Heritability",
+    "text": "11.2 Heritability\nEstimated narrow-sense heritability, i.e. whether the trait is strongly correlated within Collaborative Cross strains.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cyp2c39</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp2c39.html#pqtl-genome-scans",
+    "href": "Cyp2c39.html#pqtl-genome-scans",
+    "title": "9  Cyp2c39",
+    "section": "11.3 pQTL Genome Scans",
+    "text": "11.3 pQTL Genome Scans\n\n11.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n11.3.2 Genome-wide scan (scans_0.95, box-cox)\nOpens on Chr 19, where the significant peak is.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cyp2c39</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp2c39.html#rna-mediation",
+    "href": "Cyp2c39.html#rna-mediation",
+    "title": "9  Cyp2c39",
+    "section": "11.5 RNA Mediation",
+    "text": "11.5 RNA Mediation\nGenome-wide test of whether transcript abundance mediates the protein QTL (bmediatR).\nNot yet analyzed here: no RNA-mediation figure found for Cyp2c39. See Analysis Status.\n\n11.5.1 Protein-protein mediation at the peak locus",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cyp2c39</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp2c39.html#timbr-allelic-series",
+    "href": "Cyp2c39.html#timbr-allelic-series",
+    "title": "9  Cyp2c39",
+    "section": "11.6 TIMBR (Allelic Series)",
+    "text": "11.6 TIMBR (Allelic Series)\nTIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\n\n5’ side\n\n\nLead SNP\n\n\n3’ side\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21 Figure 22 Figure 23 Figure 24 Figure 25 Figure 26 Figure 27 Figure 28 Figure 29 Figure 30 Figure 31 Figure 32 Figure 33 Figure 34 Figure 35 Figure 36 Figure 37 Figure 38 Figure 39 Figure 40 \n\n\n\n11.6.0.1 CI-window model-selection dot plot",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cyp2c39</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp2c39.html#merge-diplotype-fine-mapping",
+    "href": "Cyp2c39.html#merge-diplotype-fine-mapping",
+    "title": "9  Cyp2c39",
+    "section": "11.7 Merge / Diplotype Fine-Mapping",
+    "text": "11.7 Merge / Diplotype Fine-Mapping\nMerge analysis has been run for Cyp2c39; see merge/Cyp2c39/ in the main project repository for diplotype and SNP-filtering results.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cyp2c39</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp2c50.html#protein-distributions",
+    "href": "Cyp2c50.html#protein-distributions",
+    "title": "10  Cyp2c50",
+    "section": "12.1 Protein Distributions",
+    "text": "12.1 Protein Distributions\n\n12.1.1 Box-Cox transformation diagnostic\n\n\n\n\n\n\n\n12.1.2 Raw data\n\n\n\n\n\n\n\n12.1.3 Box-Cox transformed\n\n\n\n\n\n\n\n12.1.4 RINT transformed",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Cyp2c50</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp2c50.html#heritability",
+    "href": "Cyp2c50.html#heritability",
+    "title": "10  Cyp2c50",
+    "section": "12.2 Heritability",
+    "text": "12.2 Heritability\nEstimated narrow-sense heritability, i.e. whether the trait is strongly correlated within Collaborative Cross strains.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Cyp2c50</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp2c50.html#pqtl-genome-scans",
+    "href": "Cyp2c50.html#pqtl-genome-scans",
+    "title": "10  Cyp2c50",
+    "section": "12.3 pQTL Genome Scans",
+    "text": "12.3 pQTL Genome Scans\n\n12.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n12.3.2 Genome-wide scan (scans_0.95, box-cox)\nOpens on Chr 19, where the significant peak is.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Cyp2c50</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp2c50.html#rna-mediation",
+    "href": "Cyp2c50.html#rna-mediation",
+    "title": "10  Cyp2c50",
+    "section": "12.5 RNA Mediation",
+    "text": "12.5 RNA Mediation\nGenome-wide test of whether transcript abundance mediates the protein QTL (bmediatR).\nNot yet analyzed here: no RNA-mediation figure found for Cyp2c50. See Analysis Status.\n\n12.5.1 Protein-protein mediation at the peak locus",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Cyp2c50</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp2c50.html#timbr-allelic-series",
+    "href": "Cyp2c50.html#timbr-allelic-series",
+    "title": "10  Cyp2c50",
+    "section": "12.6 TIMBR (Allelic Series)",
+    "text": "12.6 TIMBR (Allelic Series)\nTIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\n\n5’ side\n\n\nLead SNP\n\n\n3’ side\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21 Figure 22 Figure 23 Figure 24 Figure 25 Figure 26 Figure 27 Figure 28 Figure 29 Figure 30 Figure 31 Figure 32 Figure 33 Figure 34 Figure 35 Figure 36 Figure 37 Figure 38 Figure 39 Figure 40 Figure 41 Figure 42 Figure 43 Figure 44 Figure 45 Figure 46 Figure 47 Figure 48 Figure 49 Figure 50 Figure 51 Figure 52 Figure 53 Figure 54 Figure 55 Figure 56 Figure 57 \n\n\n\n12.6.0.1 CI-window model-selection dot plot",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Cyp2c50</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp2c50.html#merge-diplotype-fine-mapping",
+    "href": "Cyp2c50.html#merge-diplotype-fine-mapping",
+    "title": "10  Cyp2c50",
+    "section": "12.7 Merge / Diplotype Fine-Mapping",
+    "text": "12.7 Merge / Diplotype Fine-Mapping\nA partial merge run exists for Cyp2c50 (diplotype filtering only, no significant SNPs surfaced yet); see out/Merge/Cyp2c50/.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Cyp2c50</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp2d26.html#protein-distributions",
+    "href": "Cyp2d26.html#protein-distributions",
+    "title": "13  Cyp2d26",
+    "section": "15.1 Protein Distributions",
+    "text": "15.1 Protein Distributions\n\n15.1.1 Box-Cox transformation diagnostic\n\n\n\n\n\n\n\n15.1.2 Raw data\n\n\n\n\n\n\n\n15.1.3 Box-Cox transformed\n\n\n\n\n\n\n\n15.1.4 RINT transformed",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Cyp2d26</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp2d26.html#heritability",
+    "href": "Cyp2d26.html#heritability",
+    "title": "13  Cyp2d26",
+    "section": "15.2 Heritability",
+    "text": "15.2 Heritability\nEstimated narrow-sense heritability, i.e. whether the trait is strongly correlated within Collaborative Cross strains.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Cyp2d26</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp2d26.html#pqtl-genome-scans",
+    "href": "Cyp2d26.html#pqtl-genome-scans",
+    "title": "13  Cyp2d26",
+    "section": "15.3 pQTL Genome Scans",
+    "text": "15.3 pQTL Genome Scans\n\n15.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n15.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Cyp2d26</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp2d26.html#rna-mediation",
+    "href": "Cyp2d26.html#rna-mediation",
+    "title": "13  Cyp2d26",
+    "section": "15.5 RNA Mediation",
+    "text": "15.5 RNA Mediation\nGenome-wide test of whether transcript abundance mediates the protein QTL (bmediatR).\n\n\n\n\n\n\n15.5.1 Protein-protein mediation at the peak locus",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Cyp2d26</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp2d26.html#timbr-allelic-series",
+    "href": "Cyp2d26.html#timbr-allelic-series",
+    "title": "13  Cyp2d26",
+    "section": "15.6 TIMBR (Allelic Series)",
+    "text": "15.6 TIMBR (Allelic Series)\nTIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 \n\n\n\n15.6.1 Borderline loci (90th-percentile threshold)\nThese loci clear a looser 90%-permutation threshold but are not part of the genome-wide-significant set above (out/SignificantResults.txt, 95th percentile) – treat as exploratory. Only a CI-window model-selection dot plot was produced for these (no haplotype-effects/circos sweep).\n\n15.6.1.1 Chr 3 (UNC5373318)\n-log10(p)=4.919 vs 90th-percentile threshold=4.665",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Cyp2d26</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp2d26.html#merge-diplotype-fine-mapping",
+    "href": "Cyp2d26.html#merge-diplotype-fine-mapping",
+    "title": "13  Cyp2d26",
+    "section": "15.7 Merge / Diplotype Fine-Mapping",
+    "text": "15.7 Merge / Diplotype Fine-Mapping\nNot yet analyzed here: merge/diplotype fine-mapping has not been run for Cyp2d26. See Analysis Status.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Cyp2d26</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp3a11.html#protein-distributions",
+    "href": "Cyp3a11.html#protein-distributions",
+    "title": "17  Cyp3a11",
+    "section": "19.1 Protein Distributions",
+    "text": "19.1 Protein Distributions\n\n19.1.1 Box-Cox transformation diagnostic\n\n\n\n\n\n\n\n19.1.2 Raw data\n\n\n\n\n\n\n\n19.1.3 Box-Cox transformed\n\n\n\n\n\n\n\n19.1.4 RINT transformed",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Cyp3a11</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp3a11.html#heritability",
+    "href": "Cyp3a11.html#heritability",
+    "title": "17  Cyp3a11",
+    "section": "19.2 Heritability",
+    "text": "19.2 Heritability\nEstimated narrow-sense heritability, i.e. whether the trait is strongly correlated within Collaborative Cross strains.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Cyp3a11</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp3a11.html#pqtl-genome-scans",
+    "href": "Cyp3a11.html#pqtl-genome-scans",
+    "title": "17  Cyp3a11",
+    "section": "19.3 pQTL Genome Scans",
+    "text": "19.3 pQTL Genome Scans\n\n19.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n19.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Cyp3a11</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp3a11.html#rna-mediation",
+    "href": "Cyp3a11.html#rna-mediation",
+    "title": "17  Cyp3a11",
+    "section": "19.5 RNA Mediation",
+    "text": "19.5 RNA Mediation\nGenome-wide test of whether transcript abundance mediates the protein QTL (bmediatR).\n\n\n\n\n\n\n19.5.1 Protein-protein mediation at the peak locus",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Cyp3a11</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp3a11.html#timbr-allelic-series",
+    "href": "Cyp3a11.html#timbr-allelic-series",
+    "title": "17  Cyp3a11",
+    "section": "19.6 TIMBR (Allelic Series)",
+    "text": "19.6 TIMBR (Allelic Series)\nTIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 \n\n\n\n19.6.1 Borderline loci (90th-percentile threshold)\nThese loci clear a looser 90%-permutation threshold but are not part of the genome-wide-significant set above (out/SignificantResults.txt, 95th percentile) – treat as exploratory. Only a CI-window model-selection dot plot was produced for these (no haplotype-effects/circos sweep).\n\n19.6.1.1 Chr 3 (UNC5114998)\nborderline: -log10(p)=4.665 vs 90th-percentile threshold=4.663, essentially at the line",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Cyp3a11</span>"
+    ]
+  },
+  {
+    "objectID": "Cyp3a11.html#merge-diplotype-fine-mapping",
+    "href": "Cyp3a11.html#merge-diplotype-fine-mapping",
+    "title": "17  Cyp3a11",
+    "section": "19.7 Merge / Diplotype Fine-Mapping",
+    "text": "19.7 Merge / Diplotype Fine-Mapping\nNot yet analyzed here: merge/diplotype fine-mapping has not been run for Cyp3a11. See Analysis Status.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Cyp3a11</span>"
+    ]
+  },
+  {
+    "objectID": "Ent1.html#protein-distributions",
+    "href": "Ent1.html#protein-distributions",
+    "title": "18  Ent1",
+    "section": "20.1 Protein Distributions",
+    "text": "20.1 Protein Distributions\n\n20.1.1 Box-Cox transformation diagnostic\n\n\n\n\n\n\n\n20.1.2 Raw data\n\n\n\n\n\n\n\n20.1.3 Box-Cox transformed\n\n\n\n\n\n\n\n20.1.4 RINT transformed",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Ent1</span>"
+    ]
+  },
+  {
+    "objectID": "Ent1.html#heritability",
+    "href": "Ent1.html#heritability",
+    "title": "18  Ent1",
+    "section": "20.2 Heritability",
+    "text": "20.2 Heritability\nEstimated narrow-sense heritability, i.e. whether the trait is strongly correlated within Collaborative Cross strains.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Ent1</span>"
+    ]
+  },
+  {
+    "objectID": "Ent1.html#pqtl-genome-scans",
+    "href": "Ent1.html#pqtl-genome-scans",
+    "title": "18  Ent1",
+    "section": "20.3 pQTL Genome Scans",
+    "text": "20.3 pQTL Genome Scans\n\n20.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n20.3.2 Genome-wide scan (scans_0.95, box-cox)\nOpens on Chr 17, where the significant peak is.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Ent1</span>"
+    ]
+  },
+  {
+    "objectID": "Ent1.html#rna-mediation",
+    "href": "Ent1.html#rna-mediation",
+    "title": "18  Ent1",
+    "section": "20.5 RNA Mediation",
+    "text": "20.5 RNA Mediation\nGenome-wide test of whether transcript abundance mediates the protein QTL (bmediatR).\n\n\n\n\n\n\n20.5.1 Protein-protein mediation at the peak locus",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Ent1</span>"
+    ]
+  },
+  {
+    "objectID": "Ent1.html#timbr-allelic-series",
+    "href": "Ent1.html#timbr-allelic-series",
+    "title": "18  Ent1",
+    "section": "20.6 TIMBR (Allelic Series)",
+    "text": "20.6 TIMBR (Allelic Series)\nTIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.\n\n\n\nHaplotype effects and circos plot swept across the bootstrap confidence interval (5’ to 3’ along the chromosome):\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\n\n5’ side\n\n\nLead SNP\n\n\n3’ side\n\nJump to figure:  Figure 1 (JAX00435271) Figure 2 (UNC27745381) Figure 3 (JAX00435428) Figure 4 (UNC27753230) Figure 5 (UNC27756287) Figure 6 (UNC27758212) Figure 7 (UNC27760878) Figure 8 (UNC27764199) Figure 9 (UNC170640988) Figure 10 (JAX00435945) Figure 11 (JAX00435967) Figure 12 (UNC27771124) Figure 13 (UNC27772495) Figure 14 (UNC27777490) Figure 15 (JAX00436267) Figure 16 (UNC27783820) Figure 17 (UNC27790128) Figure 18 (UNC27793991) Figure 19 (UNC27797171) Figure 20 (UNC27801762) Figure 21 (UNC27809137) Figure 22 (UNC27813596) Figure 23 (JAX00075306) Figure 24 (UNC27819524) Figure 25 (UNC27828122) Figure 26 (JAX00437712) Figure 27 (UNC27844705) Figure 28 (UNC27847687) Figure 29 (UNC170448425) Figure 30 (UNC27853366) Figure 31 (UNC27856284) Figure 32 (UNC27861011) Figure 33 (UNC27870438) Figure 34 (JAX00075867) Figure 35 (UNC27884323) Figure 36 (UNC27887073) Figure 37 (UNC27889597) Figure 38 (UNC27892830) Figure 39 (UNC27896336) Figure 40 (UNC27899428) Figure 41 (UNC27906493) Figure 42 (UNC27914100) Figure 43 (UNC27918634) Figure 44 (UNC27921617) Figure 45 (JAX00076078) Figure 46 (JAX00439903) Figure 47 (UNC27930578) Figure 48 (UNC27933633) Figure 49 (UNC27938725) Figure 50 (UNC27944457) Figure 51 (UNC27946999) Figure 52 (UNC27948126) Figure 53 (UNC27948988) Figure 54 (UNC27949997) Figure 55 (UNC27951126) Figure 56 (JAX00211150) Figure 57 (JAX00440410) Figure 58 (UNC27961766) Figure 59 (UNC27967874) Figure 60 (JAX00440769) Figure 61 (UNC27977342) Figure 62 (UNC27977438) Figure 63 (UNC27978808) Figure 64 (UNC27980725) Figure 65 (UNC27983676) Figure 66 (UNC27985514) \n\n\n\n20.6.0.1 CI-window model-selection dot plot",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Ent1</span>"
+    ]
+  },
+  {
+    "objectID": "Ent1.html#merge-diplotype-fine-mapping",
+    "href": "Ent1.html#merge-diplotype-fine-mapping",
+    "title": "18  Ent1",
+    "section": "20.7 Merge / Diplotype Fine-Mapping",
+    "text": "20.7 Merge / Diplotype Fine-Mapping\nNot yet analyzed here: merge/diplotype fine-mapping has not been run for Ent1. See Analysis Status.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Ent1</span>"
+    ]
+  },
+  {
+    "objectID": "Oatp2a1.html#protein-distributions",
+    "href": "Oatp2a1.html#protein-distributions",
+    "title": "23  Oatp2a1",
+    "section": "25.1 Protein Distributions",
+    "text": "25.1 Protein Distributions\n\n25.1.1 Box-Cox transformation diagnostic\n\n\n\n\n\n\n\n25.1.2 Raw data\n\n\n\n\n\n\n\n25.1.3 Box-Cox transformed\n\n\n\n\n\n\n\n25.1.4 RINT transformed",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Oatp2a1</span>"
+    ]
+  },
+  {
+    "objectID": "Oatp2a1.html#heritability",
+    "href": "Oatp2a1.html#heritability",
+    "title": "23  Oatp2a1",
+    "section": "25.2 Heritability",
+    "text": "25.2 Heritability\nEstimated narrow-sense heritability, i.e. whether the trait is strongly correlated within Collaborative Cross strains.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Oatp2a1</span>"
+    ]
+  },
+  {
+    "objectID": "Oatp2a1.html#pqtl-genome-scans",
+    "href": "Oatp2a1.html#pqtl-genome-scans",
+    "title": "23  Oatp2a1",
+    "section": "25.3 pQTL Genome Scans",
+    "text": "25.3 pQTL Genome Scans\n\n25.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n25.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Oatp2a1</span>"
+    ]
+  },
+  {
+    "objectID": "Oatp2a1.html#rna-mediation",
+    "href": "Oatp2a1.html#rna-mediation",
+    "title": "23  Oatp2a1",
+    "section": "25.5 RNA Mediation",
+    "text": "25.5 RNA Mediation\nGenome-wide test of whether transcript abundance mediates the protein QTL (bmediatR).\nNot yet analyzed here: no RNA-mediation figure found for Oatp2a1. See Analysis Status.\n\n25.5.1 Protein-protein mediation at the peak locus\nNot yet analyzed here: no protein-protein mediation figure found for Oatp2a1. See Analysis Status.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Oatp2a1</span>"
+    ]
+  },
+  {
+    "objectID": "Oatp2a1.html#timbr-allelic-series",
+    "href": "Oatp2a1.html#timbr-allelic-series",
+    "title": "23  Oatp2a1",
+    "section": "25.6 TIMBR (Allelic Series)",
+    "text": "25.6 TIMBR (Allelic Series)\nTIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 \n\n\n\n25.6.1 Borderline loci (90th-percentile threshold)\nThese loci clear a looser 90%-permutation threshold but are not part of the genome-wide-significant set above (out/SignificantResults.txt, 95th percentile) – treat as exploratory. Only a CI-window model-selection dot plot was produced for these (no haplotype-effects/circos sweep).\n\n25.6.1.1 Chr 16 (JAX00414665)\n-log10(p)=4.706 vs 90th-percentile threshold=4.663",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Oatp2a1</span>"
+    ]
+  },
+  {
+    "objectID": "Oatp2a1.html#merge-diplotype-fine-mapping",
+    "href": "Oatp2a1.html#merge-diplotype-fine-mapping",
+    "title": "23  Oatp2a1",
+    "section": "25.7 Merge / Diplotype Fine-Mapping",
+    "text": "25.7 Merge / Diplotype Fine-Mapping\nNot yet analyzed here: merge/diplotype fine-mapping has not been run for Oatp2a1. See Analysis Status.",
+    "crumbs": [
+      "Protein Analyses",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Oatp2a1</span>"
+    ]
+  },
+  {
+    "objectID": "status.html",
+    "href": "status.html",
+    "title": "Analysis Status",
+    "section": "",
+    "text": "Known issues fixed as part of this cleanup\nThis table is generated automatically by build_chapters.py from what’s actually present on disk under figures/{protein}/ (plus merge/ and out/Merge/ in the main project repository) – it is not hand-maintained, so it shouldn’t drift out of date the way a manually-updated checklist would. Re-run python3 build_chapters.py after regenerating figures or re-running an analysis stage; it rewrites the table below in place.\n✅ = done    ⚠️ = partial or has a known issue    ❌ = not yet done\n* Heritability figures are real per-protein plots, not placeholders – see “Known issues fixed” below for the one bug that did exist here.",
+    "crumbs": [
+      "Analysis Status"
+    ]
+  },
+  {
+    "objectID": "status.html#known-issues-fixed-as-part-of-this-cleanup",
+    "href": "status.html#known-issues-fixed-as-part-of-this-cleanup",
+    "title": "Analysis Status",
+    "section": "",
+    "text": "ATPase/Abcb4 heritability figures were swapped. figures/ATPase/h2.jpg and figures/Abcb4/h2.jpg had each other’s plot (confirmed visually: title text on the image itself named the other protein). Every other protein’s heritability figure was already correct. The two files have been swapped to match their filenames.\nGenome-scan carousels rendered as broken/literal code. The carousel HTML generated by build_chapters.py had blank lines between &lt;div class=\"carousel-item\"&gt; blocks. A blank line ends a raw-HTML block in Pandoc/CommonMark, so the indented lines after it (4+ spaces) were parsed as an indented code block instead of continuing as HTML – the carousel showed up as literal tag text instead of an image slider. Fixed by making the whole carousel one contiguous HTML block with no internal blank lines.\nRNA-mediation image filename mismatch. The figure-generation script names its output genome_wide_rna_med_page_001.jpg; the old chapter template hardcoded genome_wide_mediators_page_001.jpg (only matching Ent1’s older naming). This broke the image for every other protein that otherwise had this figure. The generator now checks both names.\nTIMBR was never actually shown. Real TIMBR output exists for 26 of 27 proteins (only Ces2 has none), but the ### TIMBR section was include=FALSE and fully commented out in every chapter. It’s now wired in wherever a TIMBR figure exists, using the dedicated allelic-series dot plots for Cyp2c39/Cyp2c50 where available.\nDuplicate/stale figure trees. figs/, the top-level figures/, and an accidental nested figures/figures/ copy inside this book have been merged into (or removed in favor of) figures/ here, which is what the current figure-generation pipeline (run_final_fig.sh) actually writes to.",
+    "crumbs": [
+      "Analysis Status"
+    ]
+  },
+  {
+    "objectID": "status.html#headline-gap-merge-diplotype-fine-mapping",
+    "href": "status.html#headline-gap-merge-diplotype-fine-mapping",
+    "title": "Analysis Status",
+    "section": "Headline gap: merge / diplotype fine-mapping",
+    "text": "Headline gap: merge / diplotype fine-mapping\nMerge/diplotype analysis – founder-haplotype-resolved fine-mapping at significant loci – has only been run for Bsep and Cyp2c39 (plus a partial run for Cyp2c50 that did the diplotype filtering step but surfaced no significant SNPs). The remaining ~24 proteins have not had this analysis run at all. See the merge/ and out/Merge/ columns in the table above, and R/Merge/ for the scripts (Bsep_Merge.R, cyp2c39merge.R, cyp_Merge.R, sub_cyp_Merge.R and variants) that would need to be re-run/generalized for the remaining proteins.",
+    "crumbs": [
+      "Analysis Status"
+    ]
+  },
+  {
+    "objectID": "status.html#other-partial-coverage",
+    "href": "status.html#other-partial-coverage",
+    "title": "Analysis Status",
+    "section": "Other partial coverage",
+    "text": "Other partial coverage\n\npQTL scans: several proteins are missing one or more of the box-cox / RINT / full-dataset scan variants (e.g. Oct1.2, Ugt1a1, Ugt1a6 have essentially no scan output yet).\nRNA mediation: about half the panel has no mediation analysis run at all; a few more have the underlying RDS result but no rendered genome-wide figure yet.\n\nBoth are visible per-protein in the table above and in each protein’s own chapter (look for “Not yet analyzed here” notes).",
+    "crumbs": [
+      "Analysis Status"
+    ]
+  },
+  {
+    "objectID": "overview.html",
+    "href": "overview.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Significance Summary\nThis page summarizes pQTL/eQTL significance, mediation, and TIMBR allelic-series results across all 27 proteins in one place. Each section notes its data source and current coverage – some columns are populated for every protein, others only for the subset that has been carried through that analysis stage so far (see Analysis Status for the per-stage completion table).\npQTL significance (✅/❌) is the permutation/GEV-corrected genome-wide call from out/SignificantResults.txt – the authoritative source, not the looser uncorrected per-protein files. P-value and Q-value come from output/pQTL_pandq.txt and cover all 27 proteins; Adj. P-value is only available for the proteins with a genuine hit. RNA columns are marked “—” (not “❌”) where the RNA-side analysis has not been run through to a comparable significance call yet – not evidence of a null result. TIMBR columns show “pending” for proteins whose posterior model object has not been (re-)computed yet.",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "overview.html#significance-summary",
+    "href": "overview.html#significance-summary",
+    "title": "Overview",
+    "section": "",
+    "text": "Protein\npQTL Sig.\nP-value\nAdj. P-value\nQ-value\nRNA Sig.\nRNA P-value\nRNA Q-value\nTIMBR Top Allelic Series\nTIMBR # Alleles\n\n\n\n\nATPase\n❌\n0.000174\n—\n0.139\n—\n—\n—\npending\npending\n\n\nAbcb4\n❌\n0.000365\n—\n0.235\n—\n—\n—\npending\npending\n\n\nBcrp\n❌\n0.000343\n—\n0.229\n—\n—\n—\npending\npending\n\n\nBsep\n✅\n3.84e-07\n0.00905\n0.00161\n—\n—\n—\n0,1,0,1,1,0,0,1\n3\n\n\nCes1\n❌\n3.16e-06\n—\n0.00713\n—\n—\n—\npending\npending\n\n\nCes2\n✅\n2.8e-08\n—\n0.000234\n—\n—\n—\n0,0,0,0,0,1,0,0\n2\n\n\nCyp1a2\n❌\n1.6e-05\n—\n0.0206\n—\n—\n—\npending\npending\n\n\nCyp2c29\n❌\n3.84e-06\n—\n0.00713\n—\n—\n—\npending\npending\n\n\nCyp2c39\n✅\n3.84e-06\n0\n0.00713\n—\n—\n—\n0,1,0,0,0,2,2,0\n3\n\n\nCyp2c9\n❌\n4.66e-05\n—\n0.0487\n—\n—\n—\npending\npending\n\n\nCyp2c50\n✅\n3.84e-06\n8.37e-07\n0.00713\n—\n—\n—\n0,1,0,0,0,1,2,0\n3\n\n\nCyp2d9\n❌\n6.7e-05\n—\n0.0622\n—\n—\n—\npending\npending\n\n\nCyp2d10\n❌\n9.49e-08\n—\n0.000529\n—\n—\n—\npending\npending\n\n\nCyp2d26\n❌\n7.11e-06\n—\n0.0119\n—\n—\n—\npending\npending\n\n\nCyp2e1\n❌\n0.000258\n—\n0.187\n—\n—\n—\npending\npending\n\n\nCyp2f2\n❌\n5.43e-05\n—\n0.0534\n—\n—\n—\npending\npending\n\n\nCyp3a11\n❌\n2.74e-06\n—\n0.00713\n—\n—\n—\npending\npending\n\n\nEnt1\n✅\n9.52e-06\n0.017\n0.0145\n✅\n2.8e-06\n0.221\n0,0,0,0,0,0,0,1\n2\n\n\nMrp2\n❌\n7.45e-05\n—\n0.0656\n—\n—\n—\npending\npending\n\n\nMrp3\n❌\n8.36e-05\n—\n0.0699\n—\n—\n—\npending\npending\n\n\nNtcp\n❌\n1.28e-05\n—\n0.0178\n—\n—\n—\npending\npending\n\n\nOatp1a4\n❌\n1.18e-09\n—\n1.98e-05\n—\n—\n—\npending\npending\n\n\nOatp2a1\n❌\n4.2e-05\n—\n0.0468\n—\n—\n—\npending\npending\n\n\nOct1.2\n❌\n0.000201\n—\n0.153\n—\n—\n—\npending\npending\n\n\nUgt1a1\n❌\n0.000295\n—\n0.205\n—\n—\n—\npending\npending\n\n\nUgt1a6\n❌\n2.73e-05\n—\n0.0326\n—\n—\n—\npending\npending\n\n\nUgt2a2\n❌\n0.000671\n—\n0.416\n—\n—\n—\npending\npending",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "overview.html#significant-mediators",
+    "href": "overview.html#significant-mediators",
+    "title": "Overview",
+    "section": "Significant Mediators",
+    "text": "Significant Mediators\nGenes/proteins whose mediation Bayes Factor exceeds the genome-wide permutation threshold for that protein (permutation source), or exceeds BF &gt; 1 as a default cutoff where no permutation threshold has been computed yet (default_BF1 source – treat these as provisional). Self-pairs (a protein mediating its own QTL) are excluded as uninformative. Coverage is currently limited to proteins with a saved bmediatR result object – see dev-notes/DEV_NOTES.md.\n\n\n\nProtein\nType\nMediator\nLog10 BF\nThreshold\nThreshold Source\n\n\n\n\nCes2\nProtein\nCes1\n3.68\n1.70\npermutation\n\n\nCyp2c29\nProtein\nCyp2e1\n1.85\n1.83\npermutation\n\n\nCyp2c39\nProtein\nCes1\n3.68\n0.00\ndefault_BF1\n\n\nCyp2c39\nProtein\nUgt1a1\n0.91\n0.00\ndefault_BF1\n\n\nCyp2c50\nProtein\nCyp2d26\n0.81\n0.00\ndefault_BF1\n\n\nCyp2c50\nProtein\nCyp2c39\n0.11\n0.00\ndefault_BF1\n\n\nCyp2c50\nProtein\nCyp2c39\n0.00\n0.00\ndefault_BF1\n\n\nCyp2d10\nProtein\nCyp2e1\n2.91\n0.00\ndefault_BF1\n\n\nCyp2d10\nProtein\nBcrp\n2.02\n0.00\ndefault_BF1\n\n\nCyp2d10\nProtein\nOatp1a4\n1.51\n0.00\ndefault_BF1\n\n\nCyp2d10\nProtein\nCyp2c50\n1.42\n0.00\ndefault_BF1\n\n\nCyp2d10\nProtein\nCyp2d26\n1.25\n0.00\ndefault_BF1\n\n\nCyp2d10\nProtein\nCyp2c29\n0.93\n0.00\ndefault_BF1\n\n\nCyp2d10\nProtein\nAbcb4\n0.47\n0.00\ndefault_BF1\n\n\nCyp2d10\nProtein\nCyp2c29\n0.20\n0.00\ndefault_BF1\n\n\nCyp2d10\nProtein\nCyp2e1\n0.11\n0.00\ndefault_BF1\n\n\nCyp2d10\nProtein\nOatp1a4\n0.04\n0.00\ndefault_BF1\n\n\nCyp2d10\nProtein\nCes1\n0.03\n0.00\ndefault_BF1\n\n\nCyp2d10\nProtein\nCyp1a2\n0.00\n0.00\ndefault_BF1\n\n\nOatp1a4\nProtein\nCyp2e1\n1.09\n0.00\ndefault_BF1\n\n\nOatp1a4\nProtein\nUgt1a1\n0.42\n0.00\ndefault_BF1\n\n\nOatp1a4\nProtein\nCyp2c29\n0.26\n0.00\ndefault_BF1\n\n\nOatp1a4\nProtein\nCyp2d10\n0.20\n0.00\ndefault_BF1\n\n\nOatp1a4\nProtein\nBcrp\n0.09\n0.00\ndefault_BF1\n\n\nOatp1a4\nProtein\nMrp2\n0.02\n0.00\ndefault_BF1",
+    "crumbs": [
+      "Overview"
     ]
   }
 ]

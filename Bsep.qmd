@@ -196,6 +196,21 @@ Haplotype effects and circos plot swept across the bootstrap confidence interval
 <script>document.getElementById("Bsep-timbr-chr16-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Bsep-timbr-chr16-jump").value=e.to;});</script>
 
 
+#### CI-window model-selection dot plot
+
+![](figures/Bsep/jpgs/boxcox/CHR16/TIMBR/timbr_ci_dot.jpg){fig-align="center" width="90%"}
+
+
+### Borderline loci (90th-percentile threshold)
+
+These loci clear a looser 90%-permutation threshold but are **not** part of the genome-wide-significant set above (`out/SignificantResults.txt`, 95th percentile) -- treat as exploratory. Only a CI-window model-selection dot plot was produced for these (no haplotype-effects/circos sweep).
+
+#### Chr 17 (UNC28070667)
+
+_borderline: -log10(p)=4.670 vs 90th-percentile threshold=4.663_
+
+![](figures/Bsep/jpgs/boxcox/CHR17/TIMBR/timbr_ci_dot.jpg){fig-align="center" width="90%"}
+
 ## Merge / Diplotype Fine-Mapping
 
 Merge analysis has been run for Bsep; see `merge/Bsep/` in the main project repository for diplotype and SNP-filtering results.

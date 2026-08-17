@@ -251,6 +251,10 @@ TIMBR infers whether founder haplotypes at a QTL collapse into fewer functional 
 </div>
 <script>document.getElementById("Cyp2c50-timbr-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Cyp2c50-timbr-jump").value=e.to;});</script>
 
+#### CI-window model-selection dot plot
+
+![](figures/Cyp2c50/jpgs/boxcox/CHR19/TIMBR/timbr_ci_dot.jpg){fig-align="center" width="90%"}
+
 ## Merge / Diplotype Fine-Mapping
 
 A partial merge run exists for Cyp2c50 (diplotype filtering only, no significant SNPs surfaced yet); see `out/Merge/Cyp2c50/`.
