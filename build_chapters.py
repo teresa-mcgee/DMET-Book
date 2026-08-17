@@ -150,26 +150,20 @@ def carousel(ident, pages):
     items = []
     for i, p in enumerate(pages):
         active = " active" if i == 0 else ""
-        items.append(
-            f'    <div class="carousel-item{active}">\n'
-            f'      <img src="{rel(p)}" class="d-block w-100" alt="{cid} page {i + 1}">\n'
-            f"    </div>"
-        )
-    items_html = "\n\n".join(items)
+        items.append(f'<div class="carousel-item{active}"><img src="{rel(p)}" class="d-block w-100" alt="{cid} page {i + 1}"></div>')
+    # Pandoc's markdown reader treats any line indented >=4 spaces as an indented
+    # code block, even inside an otherwise-open raw-HTML block -- so this whole
+    # block must stay at zero indentation, and each inline element (img, span)
+    # must share a line with its enclosing block tag rather than sit on its own
+    # line, or pandoc wraps it in a stray <p>. Previously indented, which rendered
+    # as literal escaped tag text instead of an actual carousel.
+    items_html = "\n".join(items)
     return f'''<div id="{cid}-carousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-
+<div class="carousel-inner">
 {items_html}
-
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#{cid}-carousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#{cid}-carousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#{cid}-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+<button class="carousel-control-next" type="button" data-bs-target="#{cid}-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 </div>'''
 
 
@@ -198,7 +192,7 @@ def analyze_protein(protein):
 
     n_dist = sum(1 for x in [raw, bc_hist, rint_hist, boxcox_diag] if x)
     distributions = "done" if n_dist == 4 else ("partial" if n_dist > 0 else "missing")
-    heritability = "placeholder" if h2.exists() else "missing"
+    heritability = "done" if h2.exists() else "missing"
     if scan_buckets >= 2 and ci:
         pqtl = "done"
     elif scan_buckets >= 1:
@@ -247,12 +241,7 @@ def build_chapter(protein, a):
           'Estimated narrow-sense heritability, i.e. whether the trait is strongly correlated '
           'within Collaborative Cross strains.', '']
     if a['h2']:
-        L += [img(a['h2']), '',
-              '::: {.callout-warning}',
-              'The per-protein heritability figure pipeline is currently broken: every protein '
-              'currently shows the same placeholder page extracted from `individual_h2.pdf`. '
-              'See [Analysis Status](status.qmd) for detail.',
-              ':::']
+        L += [img(a['h2'])]
     else:
         L += [missing("heritability figure", protein)]
     L += ['']

@@ -36,10 +36,6 @@ Estimated narrow-sense heritability, i.e. whether the trait is strongly correlat
 
 ![](figures/Ces1/h2.jpg){fig-align="center" width="80%"}
 
-::: {.callout-warning}
-The per-protein heritability figure pipeline is currently broken: every protein currently shows the same placeholder page extracted from `individual_h2.pdf`. See [Analysis Status](status.qmd) for detail.
-:::
-
 ## pQTL Genome Scans
 
 ### Combined with RNA (eQTL + pQTL)
@@ -49,101 +45,31 @@ The per-protein heritability figure pipeline is currently broken: every protein 
 ### Genome-wide scan (scans_0.95, box-cox)
 
 <div id="Ces1-carousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-
-    <div class="carousel-item active">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_001.jpg" class="d-block w-100" alt="Ces1 page 1">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_002.jpg" class="d-block w-100" alt="Ces1 page 2">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_003.jpg" class="d-block w-100" alt="Ces1 page 3">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_004.jpg" class="d-block w-100" alt="Ces1 page 4">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_005.jpg" class="d-block w-100" alt="Ces1 page 5">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_006.jpg" class="d-block w-100" alt="Ces1 page 6">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_007.jpg" class="d-block w-100" alt="Ces1 page 7">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_008.jpg" class="d-block w-100" alt="Ces1 page 8">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_009.jpg" class="d-block w-100" alt="Ces1 page 9">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_010.jpg" class="d-block w-100" alt="Ces1 page 10">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_011.jpg" class="d-block w-100" alt="Ces1 page 11">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_012.jpg" class="d-block w-100" alt="Ces1 page 12">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_013.jpg" class="d-block w-100" alt="Ces1 page 13">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_014.jpg" class="d-block w-100" alt="Ces1 page 14">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_015.jpg" class="d-block w-100" alt="Ces1 page 15">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_016.jpg" class="d-block w-100" alt="Ces1 page 16">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_017.jpg" class="d-block w-100" alt="Ces1 page 17">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_018.jpg" class="d-block w-100" alt="Ces1 page 18">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_019.jpg" class="d-block w-100" alt="Ces1 page 19">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_020.jpg" class="d-block w-100" alt="Ces1 page 20">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_021.jpg" class="d-block w-100" alt="Ces1 page 21">
-    </div>
-
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#Ces1-carousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#Ces1-carousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+<div class="carousel-inner">
+<div class="carousel-item active"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_001.jpg" class="d-block w-100" alt="Ces1 page 1"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_002.jpg" class="d-block w-100" alt="Ces1 page 2"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_003.jpg" class="d-block w-100" alt="Ces1 page 3"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_004.jpg" class="d-block w-100" alt="Ces1 page 4"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_005.jpg" class="d-block w-100" alt="Ces1 page 5"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_006.jpg" class="d-block w-100" alt="Ces1 page 6"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_007.jpg" class="d-block w-100" alt="Ces1 page 7"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_008.jpg" class="d-block w-100" alt="Ces1 page 8"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_009.jpg" class="d-block w-100" alt="Ces1 page 9"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_010.jpg" class="d-block w-100" alt="Ces1 page 10"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_011.jpg" class="d-block w-100" alt="Ces1 page 11"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_012.jpg" class="d-block w-100" alt="Ces1 page 12"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_013.jpg" class="d-block w-100" alt="Ces1 page 13"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_014.jpg" class="d-block w-100" alt="Ces1 page 14"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_015.jpg" class="d-block w-100" alt="Ces1 page 15"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_016.jpg" class="d-block w-100" alt="Ces1 page 16"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_017.jpg" class="d-block w-100" alt="Ces1 page 17"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_018.jpg" class="d-block w-100" alt="Ces1 page 18"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_019.jpg" class="d-block w-100" alt="Ces1 page 19"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_020.jpg" class="d-block w-100" alt="Ces1 page 20"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/boxcox/scans_0.95/scans_0.95_page_021.jpg" class="d-block w-100" alt="Ces1 page 21"></div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#Ces1-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+<button class="carousel-control-next" type="button" data-bs-target="#Ces1-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 </div>
 
 ## Peak Locus
@@ -167,25 +93,12 @@ Genome-wide test of whether transcript abundance mediates the protein QTL (bmedi
 TIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.
 
 <div id="Ces1-timbr-carousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-
-    <div class="carousel-item active">
-      <img src="figures/Ces1/jpgs/rint/timbr_results/timbr_results_page_001.jpg" class="d-block w-100" alt="Ces1-timbr page 1">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Ces1/jpgs/rint/timbr_results/timbr_results_page_002.jpg" class="d-block w-100" alt="Ces1-timbr page 2">
-    </div>
-
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#Ces1-timbr-carousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#Ces1-timbr-carousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+<div class="carousel-inner">
+<div class="carousel-item active"><img src="figures/Ces1/jpgs/rint/timbr_results/timbr_results_page_001.jpg" class="d-block w-100" alt="Ces1-timbr page 1"></div>
+<div class="carousel-item"><img src="figures/Ces1/jpgs/rint/timbr_results/timbr_results_page_002.jpg" class="d-block w-100" alt="Ces1-timbr page 2"></div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#Ces1-timbr-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+<button class="carousel-control-next" type="button" data-bs-target="#Ces1-timbr-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 </div>
 
 ## Merge / Diplotype Fine-Mapping

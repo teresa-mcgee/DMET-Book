@@ -36,10 +36,6 @@ Estimated narrow-sense heritability, i.e. whether the trait is strongly correlat
 
 ![](figures/Cyp2c50/h2.jpg){fig-align="center" width="80%"}
 
-::: {.callout-warning}
-The per-protein heritability figure pipeline is currently broken: every protein currently shows the same placeholder page extracted from `individual_h2.pdf`. See [Analysis Status](status.qmd) for detail.
-:::
-
 ## pQTL Genome Scans
 
 ### Combined with RNA (eQTL + pQTL)
@@ -49,101 +45,31 @@ The per-protein heritability figure pipeline is currently broken: every protein 
 ### Genome-wide scan (scans_0.95, box-cox)
 
 <div id="Cyp2c50-carousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-
-    <div class="carousel-item active">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_001.jpg" class="d-block w-100" alt="Cyp2c50 page 1">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_002.jpg" class="d-block w-100" alt="Cyp2c50 page 2">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_003.jpg" class="d-block w-100" alt="Cyp2c50 page 3">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_004.jpg" class="d-block w-100" alt="Cyp2c50 page 4">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_005.jpg" class="d-block w-100" alt="Cyp2c50 page 5">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_006.jpg" class="d-block w-100" alt="Cyp2c50 page 6">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_007.jpg" class="d-block w-100" alt="Cyp2c50 page 7">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_008.jpg" class="d-block w-100" alt="Cyp2c50 page 8">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_009.jpg" class="d-block w-100" alt="Cyp2c50 page 9">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_010.jpg" class="d-block w-100" alt="Cyp2c50 page 10">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_011.jpg" class="d-block w-100" alt="Cyp2c50 page 11">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_012.jpg" class="d-block w-100" alt="Cyp2c50 page 12">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_013.jpg" class="d-block w-100" alt="Cyp2c50 page 13">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_014.jpg" class="d-block w-100" alt="Cyp2c50 page 14">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_015.jpg" class="d-block w-100" alt="Cyp2c50 page 15">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_016.jpg" class="d-block w-100" alt="Cyp2c50 page 16">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_017.jpg" class="d-block w-100" alt="Cyp2c50 page 17">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_018.jpg" class="d-block w-100" alt="Cyp2c50 page 18">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_019.jpg" class="d-block w-100" alt="Cyp2c50 page 19">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_020.jpg" class="d-block w-100" alt="Cyp2c50 page 20">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_021.jpg" class="d-block w-100" alt="Cyp2c50 page 21">
-    </div>
-
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#Cyp2c50-carousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#Cyp2c50-carousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+<div class="carousel-inner">
+<div class="carousel-item active"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_001.jpg" class="d-block w-100" alt="Cyp2c50 page 1"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_002.jpg" class="d-block w-100" alt="Cyp2c50 page 2"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_003.jpg" class="d-block w-100" alt="Cyp2c50 page 3"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_004.jpg" class="d-block w-100" alt="Cyp2c50 page 4"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_005.jpg" class="d-block w-100" alt="Cyp2c50 page 5"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_006.jpg" class="d-block w-100" alt="Cyp2c50 page 6"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_007.jpg" class="d-block w-100" alt="Cyp2c50 page 7"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_008.jpg" class="d-block w-100" alt="Cyp2c50 page 8"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_009.jpg" class="d-block w-100" alt="Cyp2c50 page 9"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_010.jpg" class="d-block w-100" alt="Cyp2c50 page 10"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_011.jpg" class="d-block w-100" alt="Cyp2c50 page 11"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_012.jpg" class="d-block w-100" alt="Cyp2c50 page 12"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_013.jpg" class="d-block w-100" alt="Cyp2c50 page 13"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_014.jpg" class="d-block w-100" alt="Cyp2c50 page 14"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_015.jpg" class="d-block w-100" alt="Cyp2c50 page 15"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_016.jpg" class="d-block w-100" alt="Cyp2c50 page 16"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_017.jpg" class="d-block w-100" alt="Cyp2c50 page 17"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_018.jpg" class="d-block w-100" alt="Cyp2c50 page 18"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_019.jpg" class="d-block w-100" alt="Cyp2c50 page 19"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_020.jpg" class="d-block w-100" alt="Cyp2c50 page 20"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_021.jpg" class="d-block w-100" alt="Cyp2c50 page 21"></div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#Cyp2c50-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+<button class="carousel-control-next" type="button" data-bs-target="#Cyp2c50-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 </div>
 
 ## Peak Locus
@@ -167,245 +93,67 @@ _Not yet analyzed here: no RNA-mediation figure found for Cyp2c50. See [Analysis
 TIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.
 
 <div id="Cyp2c50-timbr-carousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-
-    <div class="carousel-item active">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_001.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 1">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_002.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 2">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_003.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 3">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_004.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 4">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_005.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 5">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_006.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 6">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_007.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 7">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_008.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 8">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_009.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 9">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_010.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 10">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_011.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 11">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_012.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 12">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_013.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 13">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_014.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 14">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_015.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 15">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_016.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 16">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_017.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 17">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_018.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 18">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_019.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 19">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_020.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 20">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_021.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 21">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_022.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 22">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_023.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 23">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_024.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 24">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_025.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 25">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_026.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 26">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_027.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 27">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_028.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 28">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_029.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 29">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_030.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 30">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_031.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 31">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_032.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 32">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_033.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 33">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_034.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 34">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_035.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 35">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_036.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 36">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_037.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 37">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_038.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 38">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_039.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 39">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_040.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 40">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_041.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 41">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_042.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 42">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_043.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 43">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_044.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 44">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_045.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 45">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_046.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 46">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_047.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 47">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_048.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 48">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_049.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 49">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_050.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 50">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_051.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 51">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_052.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 52">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_053.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 53">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_054.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 54">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_055.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 55">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_056.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 56">
-    </div>
-
-    <div class="carousel-item">
-      <img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_057.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 57">
-    </div>
-
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#Cyp2c50-timbr-carousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#Cyp2c50-timbr-carousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+<div class="carousel-inner">
+<div class="carousel-item active"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_001.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 1"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_002.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 2"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_003.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 3"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_004.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 4"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_005.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 5"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_006.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 6"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_007.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 7"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_008.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 8"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_009.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 9"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_010.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 10"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_011.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 11"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_012.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 12"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_013.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 13"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_014.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 14"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_015.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 15"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_016.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 16"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_017.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 17"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_018.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 18"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_019.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 19"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_020.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 20"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_021.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 21"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_022.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 22"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_023.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 23"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_024.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 24"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_025.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 25"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_026.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 26"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_027.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 27"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_028.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 28"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_029.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 29"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_030.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 30"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_031.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 31"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_032.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 32"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_033.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 33"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_034.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 34"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_035.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 35"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_036.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 36"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_037.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 37"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_038.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 38"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_039.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 39"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_040.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 40"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_041.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 41"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_042.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 42"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_043.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 43"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_044.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 44"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_045.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 45"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_046.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 46"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_047.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 47"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_048.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 48"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_049.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 49"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_050.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 50"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_051.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 51"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_052.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 52"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_053.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 53"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_054.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 54"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_055.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 55"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_056.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 56"></div>
+<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_057.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 57"></div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#Cyp2c50-timbr-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+<button class="carousel-control-next" type="button" data-bs-target="#Cyp2c50-timbr-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 </div>
 
 ## Merge / Diplotype Fine-Mapping

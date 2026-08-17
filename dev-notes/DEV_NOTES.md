@@ -8,14 +8,13 @@ clobbered on the next run, hence this file.
 
 ## Open bugs
 
-### Per-protein heritability figure is broken (all 27 proteins)
-Every chapter's heritability image is the *same* placeholder page pulled from
-`individual_h2.pdf`. `individual_h2.pdf` does have real per-protein estimates
-(27 pages, one per protein), but pages carry no protein label/title — only a
-locus ID and h2 value — so there's no reliable way to recover the page→protein
-mapping from the PDF alone. Would need to re-derive per-protein h2 from the
-original scan/model objects instead of parsing the PDF.
-Generator-side flag: `build_chapters.py` lines ~201, ~251-253.
+### Unreferenced duplicate `figures/{protein}h2.jpg` flat files
+Alongside the real per-protein `figures/{protein}/h2.jpg`, there's a flat
+`figures/{protein}h2.jpg` for all 27 proteins — these are all byte-identical
+to each other (single placeholder page) and not referenced by any `.qmd`
+chapter. Likely a leftover from the pre-dedup figure tree. Safe to delete;
+not yet done because it's a batch delete across the tree — flagging instead
+of doing it silently. `git ls-files figures/*h2.jpg` to list them.
 
 ### RNA-mediation image filename mismatch (worked around, not fixed)
 Figure generator outputs `genome_wide_rna_med_page_001.jpg`; older chapter
@@ -58,6 +57,26 @@ generator level if `R/dev/final_figure_generation.R` is touched again.
 
 ## Fixed (kept here for history — see status.qmd "Known issues fixed" too)
 
+- **Heritability figures were assumed broken but weren't — only ATPase and
+  Abcb4 were swapped.** The 2026-08 cleanup wrongly concluded the whole
+  `individual_h2.pdf` page→protein extraction never worked, based on the flat
+  legacy duplicates (see "Open bugs" above) being byte-identical. The real
+  `figures/{protein}/h2.jpg` files were correct for 25/27 proteins the whole
+  time — only ATPase's and Abcb4's had been swapped (confirmed visually: each
+  image's own title text named the other protein). Swapped the two files back
+  2026-08-16; `build_chapters.py`'s `heritability` status now reports `"done"`
+  instead of a hardcoded `"placeholder"`, and the per-chapter callout-warning
+  about a broken pipeline was removed.
+- **Genome-scan/TIMBR carousels rendered as literal escaped-tag text instead
+  of an image slider.** Root cause: Pandoc's markdown reader treats any line
+  indented ≥4 spaces as an indented code block, even inside an
+  otherwise-open raw-HTML block — the old `carousel()` in `build_chapters.py`
+  indented `<div class="carousel-item">`/`<img>` lines by 4-6 spaces. Also,
+  inline elements (`<img>`, `<span>`) placed alone on their own line get
+  wrapped in a stray `<p>` by pandoc. Fixed by flattening the whole carousel
+  to zero indentation and keeping each inline element on the same line as its
+  enclosing block tag. Verified with `pandoc -f markdown -t html` on
+  Bsep/Cyp2c39/Cyp2c50 (multi-page carousels) — no `<pre><code>` escaping.
 - Duplicate/stale figure trees (`figs/`, top-level `figures/`, a nested
   `figures/figures/` copy) merged into the single `figures/{protein}/` tree
   that `run_final_fig.sh` writes to.
