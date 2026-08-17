@@ -44,9 +44,11 @@ Estimated narrow-sense heritability, i.e. whether the trait is strongly correlat
 
 ### Genome-wide scan (scans_0.95, box-cox)
 
+_Opens on Chr 18, where the significant peak is._
+
 <div id="Ces2-carousel" class="carousel slide" data-bs-ride="carousel">
 <div class="carousel-inner">
-<div class="carousel-item active"><img src="figures/Ces2/jpgs/boxcox/scans_0.95/scans_0.95_page_001.jpg" class="d-block w-100" alt="Ces2 page 1"></div>
+<div class="carousel-item"><img src="figures/Ces2/jpgs/boxcox/scans_0.95/scans_0.95_page_001.jpg" class="d-block w-100" alt="Ces2 page 1"></div>
 <div class="carousel-item"><img src="figures/Ces2/jpgs/boxcox/scans_0.95/scans_0.95_page_002.jpg" class="d-block w-100" alt="Ces2 page 2"></div>
 <div class="carousel-item"><img src="figures/Ces2/jpgs/boxcox/scans_0.95/scans_0.95_page_003.jpg" class="d-block w-100" alt="Ces2 page 3"></div>
 <div class="carousel-item"><img src="figures/Ces2/jpgs/boxcox/scans_0.95/scans_0.95_page_004.jpg" class="d-block w-100" alt="Ces2 page 4"></div>
@@ -64,13 +66,40 @@ Estimated narrow-sense heritability, i.e. whether the trait is strongly correlat
 <div class="carousel-item"><img src="figures/Ces2/jpgs/boxcox/scans_0.95/scans_0.95_page_016.jpg" class="d-block w-100" alt="Ces2 page 16"></div>
 <div class="carousel-item"><img src="figures/Ces2/jpgs/boxcox/scans_0.95/scans_0.95_page_017.jpg" class="d-block w-100" alt="Ces2 page 17"></div>
 <div class="carousel-item"><img src="figures/Ces2/jpgs/boxcox/scans_0.95/scans_0.95_page_018.jpg" class="d-block w-100" alt="Ces2 page 18"></div>
-<div class="carousel-item"><img src="figures/Ces2/jpgs/boxcox/scans_0.95/scans_0.95_page_019.jpg" class="d-block w-100" alt="Ces2 page 19"></div>
+<div class="carousel-item active"><img src="figures/Ces2/jpgs/boxcox/scans_0.95/scans_0.95_page_019.jpg" class="d-block w-100" alt="Ces2 page 19"></div>
 <div class="carousel-item"><img src="figures/Ces2/jpgs/boxcox/scans_0.95/scans_0.95_page_020.jpg" class="d-block w-100" alt="Ces2 page 20"></div>
 <div class="carousel-item"><img src="figures/Ces2/jpgs/boxcox/scans_0.95/scans_0.95_page_021.jpg" class="d-block w-100" alt="Ces2 page 21"></div>
 </div>
 <button class="carousel-control-prev" type="button" data-bs-target="#Ces2-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
 <button class="carousel-control-next" type="button" data-bs-target="#Ces2-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 </div>
+<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
+<label for="Ces2-jump" class="mb-0">Jump to figure:</label>
+<select id="Ces2-jump" class="form-select form-select-sm d-inline-block w-auto" onchange='bootstrap.Carousel.getOrCreateInstance(document.getElementById("Ces2-carousel")).to(parseInt(this.value));'>
+<option value="0">Figure 1</option>
+<option value="1">Figure 2</option>
+<option value="2">Figure 3</option>
+<option value="3">Figure 4</option>
+<option value="4">Figure 5</option>
+<option value="5">Figure 6</option>
+<option value="6">Figure 7</option>
+<option value="7">Figure 8</option>
+<option value="8">Figure 9</option>
+<option value="9">Figure 10</option>
+<option value="10">Figure 11</option>
+<option value="11">Figure 12</option>
+<option value="12">Figure 13</option>
+<option value="13">Figure 14</option>
+<option value="14">Figure 15</option>
+<option value="15">Figure 16</option>
+<option value="16">Figure 17</option>
+<option value="17">Figure 18</option>
+<option value="18" selected>Figure 19</option>
+<option value="19">Figure 20</option>
+<option value="20">Figure 21</option>
+</select>
+</div>
+<script>document.getElementById("Ces2-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Ces2-jump").value=e.to;});</script>
 
 ## Peak Locus
 
@@ -86,13 +115,24 @@ _Not yet analyzed here: no RNA-mediation figure found for Ces2. See [Analysis St
 
 ### Protein-protein mediation at the peak locus
 
-![](figures/Ces2/jpgs/proteinMediators/proteinMediators_page_001.jpg){fig-align="center" width="80%"}
+![](figures/Ces2/jpgs/proteinMediators/proteinMediators_page_001.jpg){fig-align="center" width="100%"}
 
 ## TIMBR (Allelic Series)
 
 TIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.
 
-_Not yet analyzed here: no TIMBR output found for Ces2. See [Analysis Status](status.qmd)._
+### Chr 18 peak locus
+
+<div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ces2/jpgs/boxcox/CHR18/TIMBR/effects/peak.jpg" style="max-width:48%;height:auto;"><img src="figures/Ces2/jpgs/boxcox/CHR18/TIMBR/circos/peak.jpg" style="max-width:48%;height:auto;"></div>
+
+_Single-locus TIMBR result only -- the bootstrap-CI sweep failed/was empty for this locus, so only the peak marker itself was tested. See [Analysis Status](status.qmd)._
+
+### Chr 3 peak locus
+
+<div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ces2/jpgs/boxcox/CHR3/TIMBR/effects/peak.jpg" style="max-width:48%;height:auto;"><img src="figures/Ces2/jpgs/boxcox/CHR3/TIMBR/circos/peak.jpg" style="max-width:48%;height:auto;"></div>
+
+_Single-locus TIMBR result only -- the bootstrap-CI sweep failed/was empty for this locus, so only the peak marker itself was tested. See [Analysis Status](status.qmd)._
+
 
 ## Merge / Diplotype Fine-Mapping
 

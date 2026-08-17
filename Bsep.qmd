@@ -44,9 +44,11 @@ Estimated narrow-sense heritability, i.e. whether the trait is strongly correlat
 
 ### Genome-wide scan (scans_0.95, box-cox)
 
+_Opens on Chr 16, where the significant peak is._
+
 <div id="Bsep-carousel" class="carousel slide" data-bs-ride="carousel">
 <div class="carousel-inner">
-<div class="carousel-item active"><img src="figures/Bsep/jpgs/boxcox/scans_0.95/scans_0.95_page_001.jpg" class="d-block w-100" alt="Bsep page 1"></div>
+<div class="carousel-item"><img src="figures/Bsep/jpgs/boxcox/scans_0.95/scans_0.95_page_001.jpg" class="d-block w-100" alt="Bsep page 1"></div>
 <div class="carousel-item"><img src="figures/Bsep/jpgs/boxcox/scans_0.95/scans_0.95_page_002.jpg" class="d-block w-100" alt="Bsep page 2"></div>
 <div class="carousel-item"><img src="figures/Bsep/jpgs/boxcox/scans_0.95/scans_0.95_page_003.jpg" class="d-block w-100" alt="Bsep page 3"></div>
 <div class="carousel-item"><img src="figures/Bsep/jpgs/boxcox/scans_0.95/scans_0.95_page_004.jpg" class="d-block w-100" alt="Bsep page 4"></div>
@@ -62,7 +64,7 @@ Estimated narrow-sense heritability, i.e. whether the trait is strongly correlat
 <div class="carousel-item"><img src="figures/Bsep/jpgs/boxcox/scans_0.95/scans_0.95_page_014.jpg" class="d-block w-100" alt="Bsep page 14"></div>
 <div class="carousel-item"><img src="figures/Bsep/jpgs/boxcox/scans_0.95/scans_0.95_page_015.jpg" class="d-block w-100" alt="Bsep page 15"></div>
 <div class="carousel-item"><img src="figures/Bsep/jpgs/boxcox/scans_0.95/scans_0.95_page_016.jpg" class="d-block w-100" alt="Bsep page 16"></div>
-<div class="carousel-item"><img src="figures/Bsep/jpgs/boxcox/scans_0.95/scans_0.95_page_017.jpg" class="d-block w-100" alt="Bsep page 17"></div>
+<div class="carousel-item active"><img src="figures/Bsep/jpgs/boxcox/scans_0.95/scans_0.95_page_017.jpg" class="d-block w-100" alt="Bsep page 17"></div>
 <div class="carousel-item"><img src="figures/Bsep/jpgs/boxcox/scans_0.95/scans_0.95_page_018.jpg" class="d-block w-100" alt="Bsep page 18"></div>
 <div class="carousel-item"><img src="figures/Bsep/jpgs/boxcox/scans_0.95/scans_0.95_page_019.jpg" class="d-block w-100" alt="Bsep page 19"></div>
 <div class="carousel-item"><img src="figures/Bsep/jpgs/boxcox/scans_0.95/scans_0.95_page_020.jpg" class="d-block w-100" alt="Bsep page 20"></div>
@@ -71,6 +73,33 @@ Estimated narrow-sense heritability, i.e. whether the trait is strongly correlat
 <button class="carousel-control-prev" type="button" data-bs-target="#Bsep-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
 <button class="carousel-control-next" type="button" data-bs-target="#Bsep-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 </div>
+<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
+<label for="Bsep-jump" class="mb-0">Jump to figure:</label>
+<select id="Bsep-jump" class="form-select form-select-sm d-inline-block w-auto" onchange='bootstrap.Carousel.getOrCreateInstance(document.getElementById("Bsep-carousel")).to(parseInt(this.value));'>
+<option value="0">Figure 1</option>
+<option value="1">Figure 2</option>
+<option value="2">Figure 3</option>
+<option value="3">Figure 4</option>
+<option value="4">Figure 5</option>
+<option value="5">Figure 6</option>
+<option value="6">Figure 7</option>
+<option value="7">Figure 8</option>
+<option value="8">Figure 9</option>
+<option value="9">Figure 10</option>
+<option value="10">Figure 11</option>
+<option value="11">Figure 12</option>
+<option value="12">Figure 13</option>
+<option value="13">Figure 14</option>
+<option value="14">Figure 15</option>
+<option value="15">Figure 16</option>
+<option value="16" selected>Figure 17</option>
+<option value="17">Figure 18</option>
+<option value="18">Figure 19</option>
+<option value="19">Figure 20</option>
+<option value="20">Figure 21</option>
+</select>
+</div>
+<script>document.getElementById("Bsep-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Bsep-jump").value=e.to;});</script>
 
 ## Peak Locus
 
@@ -86,20 +115,86 @@ Genome-wide test of whether transcript abundance mediates the protein QTL (bmedi
 
 ### Protein-protein mediation at the peak locus
 
-![](figures/Bsep/jpgs/rint/proteinMediators/proteinMediators_page_001.jpg){fig-align="center" width="80%"}
+![](figures/Bsep/jpgs/rint/proteinMediators/proteinMediators_page_001.jpg){fig-align="center" width="100%"}
 
 ## TIMBR (Allelic Series)
 
 TIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.
 
-<div id="Bsep-timbr-carousel" class="carousel slide" data-bs-ride="carousel">
+<div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/peak.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/peak.jpg" style="max-width:48%;height:auto;"></div>
+
+Haplotype effects and circos plot swept across the bootstrap confidence interval (5' to 3' along the chromosome):
+
+<div id="Bsep-timbr-chr16-carousel" class="carousel slide" data-bs-ride="carousel">
 <div class="carousel-inner">
-<div class="carousel-item active"><img src="figures/Bsep/jpgs/rint/timbr_results/timbr_results_page_001.jpg" class="d-block w-100" alt="Bsep-timbr page 1"></div>
-<div class="carousel-item"><img src="figures/Bsep/jpgs/rint/timbr_results/timbr_results_page_002.jpg" class="d-block w-100" alt="Bsep-timbr page 2"></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_1_UNC26639796.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_1_UNC26639796.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_2_UNC26643139.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_2_UNC26643139.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_3_UNC26647019.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_3_UNC26647019.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_4_UNC26649804.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_4_UNC26649804.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_5_JAX00068367.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_5_JAX00068367.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_6_UNC160204180.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_6_UNC160204180.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_7_JAX00418250.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_7_JAX00418250.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_8_UNC26663082.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_8_UNC26663082.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item active"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_9_UNC26665635.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_9_UNC26665635.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_10_UNC26668100.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_10_UNC26668100.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_11_UNC160278519.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_11_UNC160278519.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_12_UNC26676210.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_12_UNC26676210.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_13_UNC26676584.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_13_UNC26676584.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_14_UNC26676889.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_14_UNC26676889.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_15_UNC26678617.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_15_UNC26678617.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_16_UNC26681030.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_16_UNC26681030.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_17_UNC26683460.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_17_UNC26683460.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_18_UNC26686315.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_18_UNC26686315.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_19_UNC26688966.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_19_UNC26688966.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_20_UNC26691871.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_20_UNC26691871.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_21_UNC26692168.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_21_UNC26692168.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_22_UNC26694004.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_22_UNC26694004.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_23_JAX00068722.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_23_JAX00068722.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_24_JAX00418935.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_24_JAX00418935.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_25_JAX00418998.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_25_JAX00418998.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_26_UNC26715479.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_26_UNC26715479.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/effects/index_27_UNC26719596.jpg" style="max-width:48%;height:auto;"><img src="figures/Bsep/jpgs/boxcox/CHR16/TIMBR/circos/index_27_UNC26719596.jpg" style="max-width:48%;height:auto;"></div></div>
 </div>
-<button class="carousel-control-prev" type="button" data-bs-target="#Bsep-timbr-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
-<button class="carousel-control-next" type="button" data-bs-target="#Bsep-timbr-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+<button class="carousel-control-prev" type="button" data-bs-target="#Bsep-timbr-chr16-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+<button class="carousel-control-next" type="button" data-bs-target="#Bsep-timbr-chr16-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 </div>
+<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
+<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-target="#Bsep-timbr-chr16-carousel" data-bs-slide-to="0">5' side</button>
+<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-target="#Bsep-timbr-chr16-carousel" data-bs-slide-to="8">Lead SNP</button>
+<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-target="#Bsep-timbr-chr16-carousel" data-bs-slide-to="26">3' side</button>
+<label for="Bsep-timbr-chr16-jump" class="mb-0">Jump to figure:</label>
+<select id="Bsep-timbr-chr16-jump" class="form-select form-select-sm d-inline-block w-auto" onchange='bootstrap.Carousel.getOrCreateInstance(document.getElementById("Bsep-timbr-chr16-carousel")).to(parseInt(this.value));'>
+<option value="0">Figure 1 (UNC26639796)</option>
+<option value="1">Figure 2 (UNC26643139)</option>
+<option value="2">Figure 3 (UNC26647019)</option>
+<option value="3">Figure 4 (UNC26649804)</option>
+<option value="4">Figure 5 (JAX00068367)</option>
+<option value="5">Figure 6 (UNC160204180)</option>
+<option value="6">Figure 7 (JAX00418250)</option>
+<option value="7">Figure 8 (UNC26663082)</option>
+<option value="8" selected>Figure 9 (UNC26665635)</option>
+<option value="9">Figure 10 (UNC26668100)</option>
+<option value="10">Figure 11 (UNC160278519)</option>
+<option value="11">Figure 12 (UNC26676210)</option>
+<option value="12">Figure 13 (UNC26676584)</option>
+<option value="13">Figure 14 (UNC26676889)</option>
+<option value="14">Figure 15 (UNC26678617)</option>
+<option value="15">Figure 16 (UNC26681030)</option>
+<option value="16">Figure 17 (UNC26683460)</option>
+<option value="17">Figure 18 (UNC26686315)</option>
+<option value="18">Figure 19 (UNC26688966)</option>
+<option value="19">Figure 20 (UNC26691871)</option>
+<option value="20">Figure 21 (UNC26692168)</option>
+<option value="21">Figure 22 (UNC26694004)</option>
+<option value="22">Figure 23 (JAX00068722)</option>
+<option value="23">Figure 24 (JAX00418935)</option>
+<option value="24">Figure 25 (JAX00418998)</option>
+<option value="25">Figure 26 (UNC26715479)</option>
+<option value="26">Figure 27 (UNC26719596)</option>
+</select>
+</div>
+<script>document.getElementById("Bsep-timbr-chr16-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Bsep-timbr-chr16-jump").value=e.to;});</script>
+
 
 ## Merge / Diplotype Fine-Mapping
 

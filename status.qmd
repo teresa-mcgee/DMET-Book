@@ -13,7 +13,7 @@ This table is generated automatically by `build_chapters.py` from what's actuall
 | Bcrp | ✅ | ✅ | ⚠️ | ⚠️ | ❌ | ✅ |
 | Bsep | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Ces1 | ✅ | ✅ | ⚠️ | ✅ | ❌ | ✅ |
-| Ces2 | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Ces2 | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ |
 | Cyp1a2 | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ |
 | Cyp2c29 | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ |
 | Cyp2c39 | ✅ | ✅ | ⚠️ | ❌ | ✅ | ✅ |

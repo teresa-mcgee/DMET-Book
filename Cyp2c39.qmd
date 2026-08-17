@@ -44,9 +44,11 @@ Estimated narrow-sense heritability, i.e. whether the trait is strongly correlat
 
 ### Genome-wide scan (scans_0.95, box-cox)
 
+_Opens on Chr 19, where the significant peak is._
+
 <div id="Cyp2c39-carousel" class="carousel slide" data-bs-ride="carousel">
 <div class="carousel-inner">
-<div class="carousel-item active"><img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_001.jpg" class="d-block w-100" alt="Cyp2c39 page 1"></div>
+<div class="carousel-item"><img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_001.jpg" class="d-block w-100" alt="Cyp2c39 page 1"></div>
 <div class="carousel-item"><img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_002.jpg" class="d-block w-100" alt="Cyp2c39 page 2"></div>
 <div class="carousel-item"><img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_003.jpg" class="d-block w-100" alt="Cyp2c39 page 3"></div>
 <div class="carousel-item"><img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_004.jpg" class="d-block w-100" alt="Cyp2c39 page 4"></div>
@@ -65,12 +67,39 @@ Estimated narrow-sense heritability, i.e. whether the trait is strongly correlat
 <div class="carousel-item"><img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_017.jpg" class="d-block w-100" alt="Cyp2c39 page 17"></div>
 <div class="carousel-item"><img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_018.jpg" class="d-block w-100" alt="Cyp2c39 page 18"></div>
 <div class="carousel-item"><img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_019.jpg" class="d-block w-100" alt="Cyp2c39 page 19"></div>
-<div class="carousel-item"><img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_020.jpg" class="d-block w-100" alt="Cyp2c39 page 20"></div>
+<div class="carousel-item active"><img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_020.jpg" class="d-block w-100" alt="Cyp2c39 page 20"></div>
 <div class="carousel-item"><img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_021.jpg" class="d-block w-100" alt="Cyp2c39 page 21"></div>
 </div>
 <button class="carousel-control-prev" type="button" data-bs-target="#Cyp2c39-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
 <button class="carousel-control-next" type="button" data-bs-target="#Cyp2c39-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 </div>
+<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
+<label for="Cyp2c39-jump" class="mb-0">Jump to figure:</label>
+<select id="Cyp2c39-jump" class="form-select form-select-sm d-inline-block w-auto" onchange='bootstrap.Carousel.getOrCreateInstance(document.getElementById("Cyp2c39-carousel")).to(parseInt(this.value));'>
+<option value="0">Figure 1</option>
+<option value="1">Figure 2</option>
+<option value="2">Figure 3</option>
+<option value="3">Figure 4</option>
+<option value="4">Figure 5</option>
+<option value="5">Figure 6</option>
+<option value="6">Figure 7</option>
+<option value="7">Figure 8</option>
+<option value="8">Figure 9</option>
+<option value="9">Figure 10</option>
+<option value="10">Figure 11</option>
+<option value="11">Figure 12</option>
+<option value="12">Figure 13</option>
+<option value="13">Figure 14</option>
+<option value="14">Figure 15</option>
+<option value="15">Figure 16</option>
+<option value="16">Figure 17</option>
+<option value="17">Figure 18</option>
+<option value="18">Figure 19</option>
+<option value="19" selected>Figure 20</option>
+<option value="20">Figure 21</option>
+</select>
+</div>
+<script>document.getElementById("Cyp2c39-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Cyp2c39-jump").value=e.to;});</script>
 
 ## Peak Locus
 
@@ -86,7 +115,7 @@ _Not yet analyzed here: no RNA-mediation figure found for Cyp2c39. See [Analysis
 
 ### Protein-protein mediation at the peak locus
 
-![](figures/Cyp2c39/jpgs/proteinMediators/proteinMediators_page_001.jpg){fig-align="center" width="80%"}
+![](figures/Cyp2c39/jpgs/proteinMediators/proteinMediators_page_001.jpg){fig-align="center" width="100%"}
 
 ## TIMBR (Allelic Series)
 
@@ -138,6 +167,55 @@ TIMBR infers whether founder haplotypes at a QTL collapse into fewer functional 
 <button class="carousel-control-prev" type="button" data-bs-target="#Cyp2c39-timbr-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
 <button class="carousel-control-next" type="button" data-bs-target="#Cyp2c39-timbr-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 </div>
+<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
+<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-target="#Cyp2c39-timbr-carousel" data-bs-slide-to="0">5' side</button>
+<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-target="#Cyp2c39-timbr-carousel" data-bs-slide-to="36">Lead SNP</button>
+<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-target="#Cyp2c39-timbr-carousel" data-bs-slide-to="39">3' side</button>
+<label for="Cyp2c39-timbr-jump" class="mb-0">Jump to figure:</label>
+<select id="Cyp2c39-timbr-jump" class="form-select form-select-sm d-inline-block w-auto" onchange='bootstrap.Carousel.getOrCreateInstance(document.getElementById("Cyp2c39-timbr-carousel")).to(parseInt(this.value));'>
+<option value="0" selected>Figure 1</option>
+<option value="1">Figure 2</option>
+<option value="2">Figure 3</option>
+<option value="3">Figure 4</option>
+<option value="4">Figure 5</option>
+<option value="5">Figure 6</option>
+<option value="6">Figure 7</option>
+<option value="7">Figure 8</option>
+<option value="8">Figure 9</option>
+<option value="9">Figure 10</option>
+<option value="10">Figure 11</option>
+<option value="11">Figure 12</option>
+<option value="12">Figure 13</option>
+<option value="13">Figure 14</option>
+<option value="14">Figure 15</option>
+<option value="15">Figure 16</option>
+<option value="16">Figure 17</option>
+<option value="17">Figure 18</option>
+<option value="18">Figure 19</option>
+<option value="19">Figure 20</option>
+<option value="20">Figure 21</option>
+<option value="21">Figure 22</option>
+<option value="22">Figure 23</option>
+<option value="23">Figure 24</option>
+<option value="24">Figure 25</option>
+<option value="25">Figure 26</option>
+<option value="26">Figure 27</option>
+<option value="27">Figure 28</option>
+<option value="28">Figure 29</option>
+<option value="29">Figure 30</option>
+<option value="30">Figure 31</option>
+<option value="31">Figure 32</option>
+<option value="32">Figure 33</option>
+<option value="33">Figure 34</option>
+<option value="34">Figure 35</option>
+<option value="35">Figure 36</option>
+<option value="36">Figure 37</option>
+<option value="37">Figure 38</option>
+<option value="38">Figure 39</option>
+<option value="39">Figure 40</option>
+</select>
+</div>
+<script>document.getElementById("Cyp2c39-timbr-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Cyp2c39-timbr-jump").value=e.to;});</script>
 
 ## Merge / Diplotype Fine-Mapping
 

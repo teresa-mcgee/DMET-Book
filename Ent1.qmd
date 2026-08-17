@@ -44,9 +44,11 @@ Estimated narrow-sense heritability, i.e. whether the trait is strongly correlat
 
 ### Genome-wide scan (scans_0.95, box-cox)
 
+_Opens on Chr 17, where the significant peak is._
+
 <div id="Ent1-carousel" class="carousel slide" data-bs-ride="carousel">
 <div class="carousel-inner">
-<div class="carousel-item active"><img src="figures/Ent1/jpgs/boxcox/scans_0.95/scans_0.95_page_001.jpg" class="d-block w-100" alt="Ent1 page 1"></div>
+<div class="carousel-item"><img src="figures/Ent1/jpgs/boxcox/scans_0.95/scans_0.95_page_001.jpg" class="d-block w-100" alt="Ent1 page 1"></div>
 <div class="carousel-item"><img src="figures/Ent1/jpgs/boxcox/scans_0.95/scans_0.95_page_002.jpg" class="d-block w-100" alt="Ent1 page 2"></div>
 <div class="carousel-item"><img src="figures/Ent1/jpgs/boxcox/scans_0.95/scans_0.95_page_003.jpg" class="d-block w-100" alt="Ent1 page 3"></div>
 <div class="carousel-item"><img src="figures/Ent1/jpgs/boxcox/scans_0.95/scans_0.95_page_004.jpg" class="d-block w-100" alt="Ent1 page 4"></div>
@@ -63,7 +65,7 @@ Estimated narrow-sense heritability, i.e. whether the trait is strongly correlat
 <div class="carousel-item"><img src="figures/Ent1/jpgs/boxcox/scans_0.95/scans_0.95_page_015.jpg" class="d-block w-100" alt="Ent1 page 15"></div>
 <div class="carousel-item"><img src="figures/Ent1/jpgs/boxcox/scans_0.95/scans_0.95_page_016.jpg" class="d-block w-100" alt="Ent1 page 16"></div>
 <div class="carousel-item"><img src="figures/Ent1/jpgs/boxcox/scans_0.95/scans_0.95_page_017.jpg" class="d-block w-100" alt="Ent1 page 17"></div>
-<div class="carousel-item"><img src="figures/Ent1/jpgs/boxcox/scans_0.95/scans_0.95_page_018.jpg" class="d-block w-100" alt="Ent1 page 18"></div>
+<div class="carousel-item active"><img src="figures/Ent1/jpgs/boxcox/scans_0.95/scans_0.95_page_018.jpg" class="d-block w-100" alt="Ent1 page 18"></div>
 <div class="carousel-item"><img src="figures/Ent1/jpgs/boxcox/scans_0.95/scans_0.95_page_019.jpg" class="d-block w-100" alt="Ent1 page 19"></div>
 <div class="carousel-item"><img src="figures/Ent1/jpgs/boxcox/scans_0.95/scans_0.95_page_020.jpg" class="d-block w-100" alt="Ent1 page 20"></div>
 <div class="carousel-item"><img src="figures/Ent1/jpgs/boxcox/scans_0.95/scans_0.95_page_021.jpg" class="d-block w-100" alt="Ent1 page 21"></div>
@@ -71,6 +73,33 @@ Estimated narrow-sense heritability, i.e. whether the trait is strongly correlat
 <button class="carousel-control-prev" type="button" data-bs-target="#Ent1-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
 <button class="carousel-control-next" type="button" data-bs-target="#Ent1-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 </div>
+<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
+<label for="Ent1-jump" class="mb-0">Jump to figure:</label>
+<select id="Ent1-jump" class="form-select form-select-sm d-inline-block w-auto" onchange='bootstrap.Carousel.getOrCreateInstance(document.getElementById("Ent1-carousel")).to(parseInt(this.value));'>
+<option value="0">Figure 1</option>
+<option value="1">Figure 2</option>
+<option value="2">Figure 3</option>
+<option value="3">Figure 4</option>
+<option value="4">Figure 5</option>
+<option value="5">Figure 6</option>
+<option value="6">Figure 7</option>
+<option value="7">Figure 8</option>
+<option value="8">Figure 9</option>
+<option value="9">Figure 10</option>
+<option value="10">Figure 11</option>
+<option value="11">Figure 12</option>
+<option value="12">Figure 13</option>
+<option value="13">Figure 14</option>
+<option value="14">Figure 15</option>
+<option value="15">Figure 16</option>
+<option value="16">Figure 17</option>
+<option value="17" selected>Figure 18</option>
+<option value="18">Figure 19</option>
+<option value="19">Figure 20</option>
+<option value="20">Figure 21</option>
+</select>
+</div>
+<script>document.getElementById("Ent1-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Ent1-jump").value=e.to;});</script>
 
 ## Peak Locus
 
@@ -86,20 +115,164 @@ Genome-wide test of whether transcript abundance mediates the protein QTL (bmedi
 
 ### Protein-protein mediation at the peak locus
 
-![](figures/Ent1/jpgs/proteinMediators/proteinMediators_page_001.jpg){fig-align="center" width="80%"}
+![](figures/Ent1/jpgs/proteinMediators/proteinMediators_page_001.jpg){fig-align="center" width="100%"}
 
 ## TIMBR (Allelic Series)
 
 TIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.
 
-<div id="Ent1-timbr-carousel" class="carousel slide" data-bs-ride="carousel">
+<div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/peak.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/peak.jpg" style="max-width:48%;height:auto;"></div>
+
+Haplotype effects and circos plot swept across the bootstrap confidence interval (5' to 3' along the chromosome):
+
+<div id="Ent1-timbr-chr17-carousel" class="carousel slide" data-bs-ride="carousel">
 <div class="carousel-inner">
-<div class="carousel-item active"><img src="figures/Ent1/jpgs/rint/timbr_results/timbr_results_page_001.jpg" class="d-block w-100" alt="Ent1-timbr page 1"></div>
-<div class="carousel-item"><img src="figures/Ent1/jpgs/rint/timbr_results/timbr_results_page_002.jpg" class="d-block w-100" alt="Ent1-timbr page 2"></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_1_JAX00435271.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_1_JAX00435271.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_2_UNC27745381.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_2_UNC27745381.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_3_JAX00435428.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_3_JAX00435428.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_4_UNC27753230.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_4_UNC27753230.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_5_UNC27756287.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_5_UNC27756287.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_6_UNC27758212.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_6_UNC27758212.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_7_UNC27760878.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_7_UNC27760878.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_8_UNC27764199.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_8_UNC27764199.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_9_UNC170640988.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_9_UNC170640988.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_10_JAX00435945.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_10_JAX00435945.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_11_JAX00435967.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_11_JAX00435967.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_12_UNC27771124.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_12_UNC27771124.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_13_UNC27772495.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_13_UNC27772495.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_14_UNC27777490.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_14_UNC27777490.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_15_JAX00436267.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_15_JAX00436267.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_16_UNC27783820.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_16_UNC27783820.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_17_UNC27790128.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_17_UNC27790128.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_18_UNC27793991.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_18_UNC27793991.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_19_UNC27797171.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_19_UNC27797171.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_20_UNC27801762.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_20_UNC27801762.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_21_UNC27809137.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_21_UNC27809137.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_22_UNC27813596.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_22_UNC27813596.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_23_JAX00075306.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_23_JAX00075306.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_24_UNC27819524.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_24_UNC27819524.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_25_UNC27828122.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_25_UNC27828122.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_26_JAX00437712.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_26_JAX00437712.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_27_UNC27844705.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_27_UNC27844705.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_28_UNC27847687.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_28_UNC27847687.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_29_UNC170448425.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_29_UNC170448425.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_30_UNC27853366.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_30_UNC27853366.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_31_UNC27856284.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_31_UNC27856284.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_32_UNC27861011.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_32_UNC27861011.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_33_UNC27870438.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_33_UNC27870438.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_34_JAX00075867.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_34_JAX00075867.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_35_UNC27884323.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_35_UNC27884323.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_36_UNC27887073.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_36_UNC27887073.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_37_UNC27889597.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_37_UNC27889597.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_38_UNC27892830.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_38_UNC27892830.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_39_UNC27896336.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_39_UNC27896336.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_40_UNC27899428.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_40_UNC27899428.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_41_UNC27906493.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_41_UNC27906493.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_42_UNC27914100.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_42_UNC27914100.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_43_UNC27918634.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_43_UNC27918634.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_44_UNC27921617.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_44_UNC27921617.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_45_JAX00076078.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_45_JAX00076078.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_46_JAX00439903.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_46_JAX00439903.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_47_UNC27930578.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_47_UNC27930578.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_48_UNC27933633.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_48_UNC27933633.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_49_UNC27938725.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_49_UNC27938725.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item active"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_50_UNC27944457.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_50_UNC27944457.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_51_UNC27946999.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_51_UNC27946999.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_52_UNC27948126.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_52_UNC27948126.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_53_UNC27948988.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_53_UNC27948988.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_54_UNC27949997.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_54_UNC27949997.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_55_UNC27951126.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_55_UNC27951126.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_56_JAX00211150.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_56_JAX00211150.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_57_JAX00440410.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_57_JAX00440410.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_58_UNC27961766.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_58_UNC27961766.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_59_UNC27967874.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_59_UNC27967874.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_60_JAX00440769.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_60_JAX00440769.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_61_UNC27977342.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_61_UNC27977342.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_62_UNC27977438.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_62_UNC27977438.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_63_UNC27978808.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_63_UNC27978808.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_64_UNC27980725.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_64_UNC27980725.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_65_UNC27983676.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_65_UNC27983676.jpg" style="max-width:48%;height:auto;"></div></div>
+<div class="carousel-item"><div class="d-flex flex-wrap justify-content-center gap-2"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/effects/index_66_UNC27985514.jpg" style="max-width:48%;height:auto;"><img src="figures/Ent1/jpgs/boxcox/CHR17/TIMBR/circos/index_66_UNC27985514.jpg" style="max-width:48%;height:auto;"></div></div>
 </div>
-<button class="carousel-control-prev" type="button" data-bs-target="#Ent1-timbr-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
-<button class="carousel-control-next" type="button" data-bs-target="#Ent1-timbr-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+<button class="carousel-control-prev" type="button" data-bs-target="#Ent1-timbr-chr17-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+<button class="carousel-control-next" type="button" data-bs-target="#Ent1-timbr-chr17-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 </div>
+<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
+<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-target="#Ent1-timbr-chr17-carousel" data-bs-slide-to="0">5' side</button>
+<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-target="#Ent1-timbr-chr17-carousel" data-bs-slide-to="49">Lead SNP</button>
+<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-target="#Ent1-timbr-chr17-carousel" data-bs-slide-to="65">3' side</button>
+<label for="Ent1-timbr-chr17-jump" class="mb-0">Jump to figure:</label>
+<select id="Ent1-timbr-chr17-jump" class="form-select form-select-sm d-inline-block w-auto" onchange='bootstrap.Carousel.getOrCreateInstance(document.getElementById("Ent1-timbr-chr17-carousel")).to(parseInt(this.value));'>
+<option value="0">Figure 1 (JAX00435271)</option>
+<option value="1">Figure 2 (UNC27745381)</option>
+<option value="2">Figure 3 (JAX00435428)</option>
+<option value="3">Figure 4 (UNC27753230)</option>
+<option value="4">Figure 5 (UNC27756287)</option>
+<option value="5">Figure 6 (UNC27758212)</option>
+<option value="6">Figure 7 (UNC27760878)</option>
+<option value="7">Figure 8 (UNC27764199)</option>
+<option value="8">Figure 9 (UNC170640988)</option>
+<option value="9">Figure 10 (JAX00435945)</option>
+<option value="10">Figure 11 (JAX00435967)</option>
+<option value="11">Figure 12 (UNC27771124)</option>
+<option value="12">Figure 13 (UNC27772495)</option>
+<option value="13">Figure 14 (UNC27777490)</option>
+<option value="14">Figure 15 (JAX00436267)</option>
+<option value="15">Figure 16 (UNC27783820)</option>
+<option value="16">Figure 17 (UNC27790128)</option>
+<option value="17">Figure 18 (UNC27793991)</option>
+<option value="18">Figure 19 (UNC27797171)</option>
+<option value="19">Figure 20 (UNC27801762)</option>
+<option value="20">Figure 21 (UNC27809137)</option>
+<option value="21">Figure 22 (UNC27813596)</option>
+<option value="22">Figure 23 (JAX00075306)</option>
+<option value="23">Figure 24 (UNC27819524)</option>
+<option value="24">Figure 25 (UNC27828122)</option>
+<option value="25">Figure 26 (JAX00437712)</option>
+<option value="26">Figure 27 (UNC27844705)</option>
+<option value="27">Figure 28 (UNC27847687)</option>
+<option value="28">Figure 29 (UNC170448425)</option>
+<option value="29">Figure 30 (UNC27853366)</option>
+<option value="30">Figure 31 (UNC27856284)</option>
+<option value="31">Figure 32 (UNC27861011)</option>
+<option value="32">Figure 33 (UNC27870438)</option>
+<option value="33">Figure 34 (JAX00075867)</option>
+<option value="34">Figure 35 (UNC27884323)</option>
+<option value="35">Figure 36 (UNC27887073)</option>
+<option value="36">Figure 37 (UNC27889597)</option>
+<option value="37">Figure 38 (UNC27892830)</option>
+<option value="38">Figure 39 (UNC27896336)</option>
+<option value="39">Figure 40 (UNC27899428)</option>
+<option value="40">Figure 41 (UNC27906493)</option>
+<option value="41">Figure 42 (UNC27914100)</option>
+<option value="42">Figure 43 (UNC27918634)</option>
+<option value="43">Figure 44 (UNC27921617)</option>
+<option value="44">Figure 45 (JAX00076078)</option>
+<option value="45">Figure 46 (JAX00439903)</option>
+<option value="46">Figure 47 (UNC27930578)</option>
+<option value="47">Figure 48 (UNC27933633)</option>
+<option value="48">Figure 49 (UNC27938725)</option>
+<option value="49" selected>Figure 50 (UNC27944457)</option>
+<option value="50">Figure 51 (UNC27946999)</option>
+<option value="51">Figure 52 (UNC27948126)</option>
+<option value="52">Figure 53 (UNC27948988)</option>
+<option value="53">Figure 54 (UNC27949997)</option>
+<option value="54">Figure 55 (UNC27951126)</option>
+<option value="55">Figure 56 (JAX00211150)</option>
+<option value="56">Figure 57 (JAX00440410)</option>
+<option value="57">Figure 58 (UNC27961766)</option>
+<option value="58">Figure 59 (UNC27967874)</option>
+<option value="59">Figure 60 (JAX00440769)</option>
+<option value="60">Figure 61 (UNC27977342)</option>
+<option value="61">Figure 62 (UNC27977438)</option>
+<option value="62">Figure 63 (UNC27978808)</option>
+<option value="63">Figure 64 (UNC27980725)</option>
+<option value="64">Figure 65 (UNC27983676)</option>
+<option value="65">Figure 66 (UNC27985514)</option>
+</select>
+</div>
+<script>document.getElementById("Ent1-timbr-chr17-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Ent1-timbr-chr17-jump").value=e.to;});</script>
+
 
 ## Merge / Diplotype Fine-Mapping
 

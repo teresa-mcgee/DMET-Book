@@ -71,6 +71,33 @@ Estimated narrow-sense heritability, i.e. whether the trait is strongly correlat
 <button class="carousel-control-prev" type="button" data-bs-target="#Cyp3a11-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
 <button class="carousel-control-next" type="button" data-bs-target="#Cyp3a11-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 </div>
+<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
+<label for="Cyp3a11-jump" class="mb-0">Jump to figure:</label>
+<select id="Cyp3a11-jump" class="form-select form-select-sm d-inline-block w-auto" onchange='bootstrap.Carousel.getOrCreateInstance(document.getElementById("Cyp3a11-carousel")).to(parseInt(this.value));'>
+<option value="0" selected>Figure 1</option>
+<option value="1">Figure 2</option>
+<option value="2">Figure 3</option>
+<option value="3">Figure 4</option>
+<option value="4">Figure 5</option>
+<option value="5">Figure 6</option>
+<option value="6">Figure 7</option>
+<option value="7">Figure 8</option>
+<option value="8">Figure 9</option>
+<option value="9">Figure 10</option>
+<option value="10">Figure 11</option>
+<option value="11">Figure 12</option>
+<option value="12">Figure 13</option>
+<option value="13">Figure 14</option>
+<option value="14">Figure 15</option>
+<option value="15">Figure 16</option>
+<option value="16">Figure 17</option>
+<option value="17">Figure 18</option>
+<option value="18">Figure 19</option>
+<option value="19">Figure 20</option>
+<option value="20">Figure 21</option>
+</select>
+</div>
+<script>document.getElementById("Cyp3a11-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Cyp3a11-jump").value=e.to;});</script>
 
 ## Peak Locus
 
@@ -86,7 +113,7 @@ Genome-wide test of whether transcript abundance mediates the protein QTL (bmedi
 
 ### Protein-protein mediation at the peak locus
 
-![](figures/Cyp3a11/jpgs/proteinMediators/proteinMediators_page_001.jpg){fig-align="center" width="80%"}
+![](figures/Cyp3a11/jpgs/proteinMediators/proteinMediators_page_001.jpg){fig-align="center" width="100%"}
 
 ## TIMBR (Allelic Series)
 
@@ -100,6 +127,14 @@ TIMBR infers whether founder haplotypes at a QTL collapse into fewer functional 
 <button class="carousel-control-prev" type="button" data-bs-target="#Cyp3a11-timbr-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
 <button class="carousel-control-next" type="button" data-bs-target="#Cyp3a11-timbr-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 </div>
+<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
+<label for="Cyp3a11-timbr-jump" class="mb-0">Jump to figure:</label>
+<select id="Cyp3a11-timbr-jump" class="form-select form-select-sm d-inline-block w-auto" onchange='bootstrap.Carousel.getOrCreateInstance(document.getElementById("Cyp3a11-timbr-carousel")).to(parseInt(this.value));'>
+<option value="0" selected>Figure 1</option>
+<option value="1">Figure 2</option>
+</select>
+</div>
+<script>document.getElementById("Cyp3a11-timbr-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Cyp3a11-timbr-jump").value=e.to;});</script>
 
 ## Merge / Diplotype Fine-Mapping
 
