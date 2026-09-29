@@ -1,6 +1,8 @@
 # Preface {.unnumbered}
 
-This book collects the results of a pharmacogenomics screen of 27 drug-metabolizing enzyme and transporter (DMET) proteins, measured across Collaborative Cross (CC) mouse strains. For each protein it walks through:
+This book collects results from a pharmacogenomics screen of 27 drug-metabolizing enzyme and transporter (DMET) proteins measured across Collaborative Cross (CC) mouse strains. The current integrated v2 report excludes CES2 because of a protein QC issue; its legacy chapter is retained in the source tree but omitted from the rendered book.
+
+The [V2 results overview](overview.qmd) is the reporting-focused cross-panel summary, with the updated summary table, QTL maps, heritability results, protein clustering, and transcriptome figures. The [Analysis progress](status.qmd) page records current coverage and outstanding analyses. The remaining protein chapters provide detailed, protein-specific results where available. These include:
 
 - **Protein distributions** -- raw, RINT-normalized, and Box-Cox-transformed measurements, and which transformation was recommended.
 - **Heritability** -- how strongly the trait clusters within CC strains.
