@@ -9,12 +9,12 @@ This page tracks the reporting status of the **rerun_2026-09-24_v2** results bun
 | Protein broad-sense H² | Available for all 26 QC-retained proteins | Box–Cox protein estimates with 95% bootstrap intervals are shown in the figure 2 panel; p-values include Bonferroni correction in the summary. |
 | Protein strain profiles and clustering | Available | Box–Cox profiles, PCA, gap-statistic plot, and k=3 heatmap are linked from the overview. |
 | Transcript broad-sense H² | Available for matched probes | Forest plot and summary table cover 19 unique probes mapped to 20 of 26 QC-retained protein rows. Per-probe estimates include 95% bootstrap intervals and adjusted p-values. |
-| eQTL genome map | Partial | 15,982/20,666 transcripts are plotted; 59/104 corrected v2 tasks are recorded as complete. |
+| eQTL genome map | Peak results complete; location plot near-complete | The merged RNA-v2 table has 20,666/20,666 peak results and 104/104 task outputs; the location map plots 19,959 transcripts with complete positional annotation. |
 | Transcriptome structure | Available as overview plots | RINT hierarchical heatmap and binned transcript-correlation display are included. |
-| Genetic covariance / genetic correlations | Not available in this v2 bundle | No validated covariance estimates or corresponding plot were found. The existing protein Pearson correlation display is descriptive and is not genetic covariance. |
-| Mediation | Partial, targeted | Saved targeted results cover selected protein/locus combinations; uniform genome-wide coverage across the panel is not established. |
+| Genetic covariance / genetic correlations | Available as point estimates | Protein and coding-transcript CC-line covariance matrices and H²-diagonal correlation plots are included; uncertainty intervals have not been estimated. |
+| Mediation | Partial, targeted | 7/26 reportable proteins have plots in the RNA-v2 targeted mediation folder; the submitted array explicitly listed eight proteins, including excluded CES2. |
 | Merge/diplotype fine mapping | Partial | Available locus-specific results should be reported as selected-locus follow-up, not a complete panel-wide analysis. |
 
 ## Reporting interpretation
 
-The completed plots support reporting protein-level heritability, strain variation, protein QTL signals, partial eQTL mapping, and transcriptome structure. The current pQTL table is incomplete for OCT1.2 and the eQTL map is partial. Genetic covariance remains a separate missing result. The high-level overview labels the current correlation plot descriptively and records incomplete analysis coverage alongside the relevant figures.
+The completed plots support reporting protein-level heritability, strain variation, protein QTL signals, complete transcript peak results, near-complete positional eQTL mapping, and targeted mediation. The current pQTL table is incomplete for OCT1.2. Genetic covariance estimates are available but currently lack uncertainty intervals.

@@ -318,6 +318,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#coding-transcript-heritability" id="toc-coding-transcript-heritability" class="nav-link" data-scroll-target="#coding-transcript-heritability">Coding-transcript heritability</a></li>
   <li><a href="#protein-phenotype-correlation" id="toc-protein-phenotype-correlation" class="nav-link" data-scroll-target="#protein-phenotype-correlation">Protein phenotype correlation</a></li>
+  <li><a href="#genetic-covariance-and-genetic-correlation" id="toc-genetic-covariance-and-genetic-correlation" class="nav-link" data-scroll-target="#genetic-covariance-and-genetic-correlation">Genetic covariance and genetic correlation</a></li>
   </ul></li>
   <li><a href="#genome-wide-qtl-overview" id="toc-genome-wide-qtl-overview" class="nav-link" data-scroll-target="#genome-wide-qtl-overview">Genome-wide QTL overview</a>
   <ul class="collapse">
@@ -329,7 +330,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#protein-pca" id="toc-protein-pca" class="nav-link" data-scroll-target="#protein-pca">Protein PCA</a></li>
   <li><a href="#transcriptome" id="toc-transcriptome" class="nav-link" data-scroll-target="#transcriptome">Transcriptome</a></li>
   </ul></li>
-  <li><a href="#analyses-to-complete-or-clarify" id="toc-analyses-to-complete-or-clarify" class="nav-link" data-scroll-target="#analyses-to-complete-or-clarify">Analyses to complete or clarify</a></li>
+  <li><a href="#rna-mediation-coverage" id="toc-rna-mediation-coverage" class="nav-link" data-scroll-target="#rna-mediation-coverage">RNA mediation coverage</a></li>
+  <li><a href="#remaining-reporting-gaps" id="toc-remaining-reporting-gaps" class="nav-link" data-scroll-target="#remaining-reporting-gaps">Remaining reporting gaps</a></li>
   </ul>
 </nav>
 </nav>
@@ -722,7 +724,23 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Descriptive across-strain Pearson correlations between protein abundance measurements.</figcaption>
 </figure>
 </div>
-<p>This is a descriptive Pearson correlation matrix. It is <strong>not</strong> a genetic covariance or genetic correlation estimate. No validated multivariate genetic covariance result or corresponding uncertainty plot was present in the v2 outputs reviewed for this report; that analysis remains outstanding.</p>
+<p>This descriptive Pearson matrix summarizes observed across-strain protein abundance and is distinct from the random-effect covariance estimates below.</p>
+</section>
+<section id="genetic-covariance-and-genetic-correlation" class="level3">
+<h3 class="anchored" data-anchor-id="genetic-covariance-and-genetic-correlation">Genetic covariance and genetic correlation</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/protein_genetic_correlation_H2_diagonal.png" class="img-fluid figure-img"></p>
+<figcaption>Protein genetic correlations, with broad-sense H² on the diagonal.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/transcript_genetic_correlation_H2_diagonal.png" class="img-fluid figure-img"></p>
+<figcaption>Coding-transcript genetic correlations, with broad-sense H² on the diagonal.</figcaption>
+</figure>
+</div>
+<p>Download the <a href="figures/rerun_2026-09-24_v2/protein_genetic_correlation_H2_diagonal_genetic_covariance.csv">protein genetic covariance matrix</a>, <a href="figures/rerun_2026-09-24_v2/protein_genetic_correlation_H2_diagonal_genetic_correlation_H2_diagonal.csv">protein genetic correlation matrix with H² diagonal</a>, <a href="figures/rerun_2026-09-24_v2/transcript_genetic_correlation_H2_diagonal_genetic_covariance.csv">coding-transcript covariance matrix</a>, or <a href="figures/rerun_2026-09-24_v2/transcript_genetic_correlation_H2_diagonal_genetic_correlation_H2_diagonal.csv">coding-transcript correlation matrix with H² diagonal</a>. The displayed diagonal contains the existing broad-sense H² estimates; off-diagonal cells are estimated CC-line genetic correlations. Covariances use Box–Cox protein values and RINT transcript values. Protein residual cross-trait covariance is assumed zero because replicate assays are not paired across traits; transcript off-diagonal covariance is corrected for within-line residual covariance. Correlations were projected to a valid correlation matrix after sampling correction. Estimates are point estimates without confidence intervals.</p>
 </section>
 </section>
 <section id="genome-wide-qtl-overview" class="level2">
@@ -753,11 +771,11 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="eqtl">eQTL</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/rerun_2026-09-24_v2/figure3_eqtl_location_heatmap.png" class="img-fluid figure-img"></p>
+<p><img src="figures/rerun_2026-09-27_rna_v2/figure3_eqtl_location_heatmap.png" class="img-fluid figure-img"></p>
 <figcaption>eQTL genomic locations, with eQTL peak position on the x-axis and coding-gene position on the y-axis.</figcaption>
 </figure>
 </div>
-<p>The map currently plots 15,982 of 20,666 RNA matrix transcripts. Corrected v2 eQTL tasks are partial (59 of 104 completed in the saved run note), so this location map is a progress view rather than a complete eQTL atlas. The point color shows uncapped −log₁₀(p).</p>
+<p>The merged corrected RNA-v2 eQTL table contains peak results for all 20,666 of 20,666 transcripts, with all 104 of 104 task outputs present. The location map plots the 19,959 transcripts with usable chromosome and genomic-position annotation on both axes; 707 eQTL results do not have complete positional annotation for this display. The point color shows uncapped −log₁₀(p). The refreshed plot and its underlying coordinates are in the <a href="figures/rerun_2026-09-27_rna_v2/">RNA-v2 figure bundle</a>.</p>
 </section>
 </section>
 <section id="protein-variation-and-transcriptome-context" class="level2">
@@ -789,14 +807,57 @@ ul.task-list li input[type="checkbox"] {
 <p>The correlation overview bins transcripts by expression variance for display; it does not show a complete 20,666 × 20,666 transcript correlation matrix.</p>
 </section>
 </section>
-<section id="analyses-to-complete-or-clarify" class="level2">
-<h2 class="anchored" data-anchor-id="analyses-to-complete-or-clarify">Analyses to complete or clarify</h2>
+<section id="rna-mediation-coverage" class="level2">
+<h2 class="anchored" data-anchor-id="rna-mediation-coverage">RNA mediation coverage</h2>
+<p>The 2026-09-27 targeted mediation array was submitted for eight proteins. Seven are reportable after excluding CES2: Bsep, Cyp2c39, Cyp2c50, Cyp2d26, Cyp3a11, Ent1, Oatp2a1. Available chromosome overlays and posterior-bar plots are copied below; this is targeted locus follow-up, not panel-wide mediation.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Protein</th>
+<th>Available mediation figures</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bsep</td>
+<td><a href="figures/rerun_2026-09-24_v2/mediation_rna_v2/Bsep/mediation_overlay_chr16_withgenes.png">overlay 16 withgenes</a>, <a href="figures/rerun_2026-09-24_v2/mediation_rna_v2/Bsep/targeted_mediation_chr16_posterior_bars.pdf">posterior bars chr16</a></td>
+</tr>
+<tr class="even">
+<td>Cyp2c39</td>
+<td><a href="figures/rerun_2026-09-24_v2/mediation_rna_v2/Cyp2c39/mediation_overlay_chr19_withgenes.png">overlay 19 withgenes</a>, <a href="figures/rerun_2026-09-24_v2/mediation_rna_v2/Cyp2c39/targeted_mediation_chr19_posterior_bars.pdf">posterior bars chr19</a></td>
+</tr>
+<tr class="odd">
+<td>Cyp2c50</td>
+<td><a href="figures/rerun_2026-09-24_v2/mediation_rna_v2/Cyp2c50/mediation_overlay_chr19_withgenes.png">overlay 19 withgenes</a>, <a href="figures/rerun_2026-09-24_v2/mediation_rna_v2/Cyp2c50/mediation_overlay_chr3_withgenes.png">overlay 3 withgenes</a>, <a href="figures/rerun_2026-09-24_v2/mediation_rna_v2/Cyp2c50/targeted_mediation_chr19_posterior_bars.pdf">posterior bars chr19</a>, <a href="figures/rerun_2026-09-24_v2/mediation_rna_v2/Cyp2c50/targeted_mediation_chr3_posterior_bars.pdf">posterior bars chr3</a></td>
+</tr>
+<tr class="even">
+<td>Cyp2d26</td>
+<td><a href="figures/rerun_2026-09-24_v2/mediation_rna_v2/Cyp2d26/mediation_overlay_chr3_withgenes.png">overlay 3 withgenes</a>, <a href="figures/rerun_2026-09-24_v2/mediation_rna_v2/Cyp2d26/targeted_mediation_chr3_posterior_bars.pdf">posterior bars chr3</a></td>
+</tr>
+<tr class="odd">
+<td>Cyp3a11</td>
+<td><a href="figures/rerun_2026-09-24_v2/mediation_rna_v2/Cyp3a11/mediation_overlay_chr3_withgenes.png">overlay 3 withgenes</a>, <a href="figures/rerun_2026-09-24_v2/mediation_rna_v2/Cyp3a11/targeted_mediation_chr3_posterior_bars.pdf">posterior bars chr3</a></td>
+</tr>
+<tr class="even">
+<td>Ent1</td>
+<td><a href="figures/rerun_2026-09-24_v2/mediation_rna_v2/Ent1/mediation_overlay_chr17_withgenes.png">overlay 17 withgenes</a>, <a href="figures/rerun_2026-09-24_v2/mediation_rna_v2/Ent1/targeted_mediation_chr17_posterior_bars.pdf">posterior bars chr17</a></td>
+</tr>
+<tr class="odd">
+<td>Oatp2a1</td>
+<td><a href="figures/rerun_2026-09-24_v2/mediation_rna_v2/Oatp2a1/mediation_overlay_chr16_withgenes.png">overlay 16 withgenes</a>, <a href="figures/rerun_2026-09-24_v2/mediation_rna_v2/Oatp2a1/targeted_mediation_chr16_posterior_bars.pdf">posterior bars chr16</a></td>
+</tr>
+</tbody>
+</table>
+<p>The report previously showed no mediation figures because its builder only copied cross-panel plots and pQTL scans from the 2026-09-24 folder; it did not collect the separate 2026-09-27 RNA mediation folder. The other 19 QC-retained proteins have no plots in this RNA-v2 folder because they were not included in the explicit SLURM mediation protein list. CES2 outputs are omitted from the report because of its protein QC issue.</p>
+</section>
+<section id="remaining-reporting-gaps" class="level2">
+<h2 class="anchored" data-anchor-id="remaining-reporting-gaps">Remaining reporting gaps</h2>
 <ul>
-<li><strong>Genetic covariance/genetic correlation:</strong> no multivariate covariance estimates or uncertainty plot were found in the v2 output. The correlation heatmap above is phenotype-level and cannot substitute for this analysis.</li>
-<li><strong>eQTL coverage:</strong> 59/104 corrected tasks are recorded as complete, with 15,982/20,666 transcript peaks represented in the current map.</li>
+<li><strong>Genetic covariance uncertainty:</strong> current covariance and correlation matrices are point estimates; confidence intervals or bootstrap uncertainty are not yet estimated.</li>
+<li><strong>eQTL positional annotation:</strong> 20,666/20,666 transcripts have peak results, while 19,959 are plotted because 707 lack complete position annotation.</li>
 <li><strong>Coding transcript matching:</strong> six of the 26 QC-retained protein rows lack a gene-specific original-array transcript match, so their transcript H² is not estimated.</li>
 <li><strong>OCT1.2 pQTL:</strong> its protein H² is available, but the v2 integrated summary and per-protein scan figure are absent.</li>
-<li><strong>Mediation and fine mapping:</strong> the v2 tree contains targeted results for a subset of protein/locus combinations. They are not a complete, uniform panel-wide mediation or merge/diplotype report and should be described as targeted analyses.</li>
+<li><strong>Mediation and fine mapping:</strong> mediation covers seven reportable proteins from the targeted array. Merge/diplotype results remain locus-specific follow-up, not a uniform panel-wide report.</li>
 </ul>
 
 
