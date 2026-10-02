@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Significant pQTL credible-interval follow-up – DMET results</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./ATPase.html" rel="next">
+<link href="./status.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-70a47bd5681a7291082a5b9f83d58762.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./credible_intervals.html">Significant pQTL credible-interval follow-up</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">DMET results</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Methods</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">V2 results overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./status.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Analysis progress</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./credible_intervals.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Significant pQTL credible-interval follow-up</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Protein Analyses</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ATPase.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">ATPase</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Abcb4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Abcb4</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Bcrp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Bcrp</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Bsep.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bsep</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ces1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Ces1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Cyp1a2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Cyp1a2</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Cyp2c29.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cyp2c29</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Cyp2c39.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Cyp2c39</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Cyp2c50.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Cyp2c50</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Cyp2c9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Cyp2c9</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Cyp2d10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Cyp2d10</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Cyp2d26.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Cyp2d26</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Cyp2d9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Cyp2d9</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Cyp2e1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Cyp2e1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Cyp2f2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Cyp2f2</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Cyp3a11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Cyp3a11</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ent1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Ent1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Mrp2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Mrp2</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Mrp3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Mrp3</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ntcp.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Ntcp</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Oatp1a4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Oatp1a4</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Oatp2a1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Oatp2a1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Oct1.2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Oct1.2</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ugt1a1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Ugt1a1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ugt1a6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Ugt1a6</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Ugt2a2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Ugt2a2</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#oatp2a1-chr16-unc26384752" id="toc-oatp2a1-chr16-unc26384752" class="nav-link active" data-scroll-target="#oatp2a1-chr16-unc26384752">OATP2A1 chr16: UNC26384752</a></li>
+  <li><a href="#cyp2c50-chr19-unc30282360" id="toc-cyp2c50-chr19-unc30282360" class="nav-link" data-scroll-target="#cyp2c50-chr19-unc30282360">CYP2C50 chr19: UNC30282360</a></li>
+  <li><a href="#ent1-chr17-unc27944457" id="toc-ent1-chr17-unc27944457" class="nav-link" data-scroll-target="#ent1-chr17-unc27944457">ENT1 chr17: UNC27944457</a></li>
+  <li><a href="#cyp2d26-chr3-unc5373318" id="toc-cyp2d26-chr3-unc5373318" class="nav-link" data-scroll-target="#cyp2d26-chr3-unc5373318">CYP2D26 chr3: UNC5373318</a></li>
+  <li><a href="#bsep-chr16-unc26665635" id="toc-bsep-chr16-unc26665635" class="nav-link" data-scroll-target="#bsep-chr16-unc26665635">BSEP chr16: UNC26665635</a></li>
+  <li><a href="#cyp3a11-chr3-unc5114998" id="toc-cyp3a11-chr3-unc5114998" class="nav-link" data-scroll-target="#cyp3a11-chr3-unc5114998">CYP3A11 chr3: UNC5114998</a></li>
+  <li><a href="#cyp2c39-chr19-unc30297139" id="toc-cyp2c39-chr19-unc30297139" class="nav-link" data-scroll-target="#cyp2c39-chr19-unc30297139">CYP2C39 chr19: UNC30297139</a></li>
+  <li><a href="#cyp2c50-chr3-unc5366241" id="toc-cyp2c50-chr3-unc5366241" class="nav-link" data-scroll-target="#cyp2c50-chr3-unc5366241">CYP2C50 chr3: UNC5366241</a></li>
+  <li><a href="#coverage-notes" id="toc-coverage-notes" class="nav-link" data-scroll-target="#coverage-notes">Coverage notes</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Significant pQTL credible-interval follow-up</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This page follows the significant loci in <code>rerun_2026-09-24_v2/SignificantResults.txt</code>. It uses the saved 90% bootstrap credible intervals and matching v2 figures. CES2 is omitted because of the protein QC issue. Each locus is linked to its genome scan, CI/gene plot, mediation, TIMBR CI sweep, and Merge result where saved.</p>
+<p>All coordinates are Mb. The listed interval is the 90% bootstrap CI. Mediation, TIMBR, and Merge links refer to the same protein and lead locus.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 15%">
+<col style="width: 11%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Protein</th>
+<th style="text-align: right;">Chr</th>
+<th>Lead locus</th>
+<th style="text-align: right;">Mb</th>
+<th style="text-align: right;">90% CI (Mb)</th>
+<th style="text-align: right;">Scan p</th>
+<th style="text-align: right;">Adjusted p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>OATP2A1</td>
+<td style="text-align: right;">16</td>
+<td>UNC26384752</td>
+<td style="text-align: right;">15.22</td>
+<td style="text-align: right;">13.99–22.32</td>
+<td style="text-align: right;">1.37e-06</td>
+<td style="text-align: right;">7.33e-03</td>
+</tr>
+<tr class="even">
+<td>CYP2C50</td>
+<td style="text-align: right;">19</td>
+<td>UNC30282360</td>
+<td style="text-align: right;">37.99</td>
+<td style="text-align: right;">37.42–49.01</td>
+<td style="text-align: right;">4.88e-11</td>
+<td style="text-align: right;">2.22e-16</td>
+</tr>
+<tr class="odd">
+<td>ENT1</td>
+<td style="text-align: right;">17</td>
+<td>UNC27944457</td>
+<td style="text-align: right;">47.35</td>
+<td style="text-align: right;">28.12–55.33</td>
+<td style="text-align: right;">1.72e-06</td>
+<td style="text-align: right;">1.00e-02</td>
+</tr>
+<tr class="even">
+<td>CYP2D26</td>
+<td style="text-align: right;">3</td>
+<td>UNC5373318</td>
+<td style="text-align: right;">61.22</td>
+<td style="text-align: right;">59.97–96.77</td>
+<td style="text-align: right;">5.62e-06</td>
+<td style="text-align: right;">3.37e-02</td>
+</tr>
+<tr class="odd">
+<td>BSEP</td>
+<td style="text-align: right;">16</td>
+<td>UNC26665635</td>
+<td style="text-align: right;">38.15</td>
+<td style="text-align: right;">35.14–48.23</td>
+<td style="text-align: right;">4.18e-07</td>
+<td style="text-align: right;">1.90e-03</td>
+</tr>
+<tr class="even">
+<td>CYP3A11</td>
+<td style="text-align: right;">3</td>
+<td>UNC5114998</td>
+<td style="text-align: right;">41.34</td>
+<td style="text-align: right;">38.04–109.82</td>
+<td style="text-align: right;">5.74e-06</td>
+<td style="text-align: right;">2.86e-02</td>
+</tr>
+<tr class="odd">
+<td>CYP2C39</td>
+<td style="text-align: right;">19</td>
+<td>UNC30297139</td>
+<td style="text-align: right;">38.97</td>
+<td style="text-align: right;">38.20–40.36</td>
+<td style="text-align: right;">2.08e-15</td>
+<td style="text-align: right;">2.22e-16</td>
+</tr>
+<tr class="even">
+<td>CYP2C50</td>
+<td style="text-align: right;">3</td>
+<td>UNC5366241</td>
+<td style="text-align: right;">60.51</td>
+<td style="text-align: right;">50.30–90.49</td>
+<td style="text-align: right;">9.24e-07</td>
+<td style="text-align: right;">3.64e-03</td>
+</tr>
+</tbody>
+</table>
+<section id="oatp2a1-chr16-unc26384752" class="level2">
+<h2 class="anchored" data-anchor-id="oatp2a1-chr16-unc26384752">OATP2A1 chr16: UNC26384752</h2>
+<p>Lead position: 15.22 Mb; 90% CI: 13.99–22.32 Mb; scan p = 1.37e-06; adjusted p = 7.33e-03.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/credible_interval_gene_track.png" class="img-fluid figure-img"></p>
+<figcaption>90% bootstrap credible interval and nearby genes for OATP2A1, chr16.</figcaption>
+</figure>
+</div>
+<ul>
+<li>Genome scan: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/genome_scan_v2.pdf">v2 scan and adjusted scan PDF</a></li>
+<li>Mediation overlays: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/mediation_posterior_nogenes.png">posterior, no gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/mediation_overlay_withgenes.png">posterior, with gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/mediation_bf_nogenes.png">Bayes factor, no gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/mediation_bf_withgenes.png">Bayes factor, with gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/mediation_posterior_bars.pdf">posterior bars</a></li>
+<li>TIMBR: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/timbr_ci_sweep.jpg">posterior-probability plot</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/timbr_ci_bf.jpg">Bayes-factor plot</a></li>
+<li>Top TIMBR haplotype plots: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/haplotype_top1_0,0,1,1,0,0,0,1_chr16.jpg">haplotype_top1_0,0,1,1,0,0,0,1_chr16.jpg</a>, <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/haplotype_top2_0,0,0,1,0,0,0,1_chr16.jpg">haplotype_top2_0,0,0,1,0,0,0,1_chr16.jpg</a></li>
+<li>Merge: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/merge_at_locus.png">locus-specific merge plot</a></li>
+<li>CI scan data: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/credible_interval_scan_data.txt">download</a></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/mediation_posterior_nogenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation posterior probabilities without gene track: OATP2A1 chr16.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/mediation_overlay_withgenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation posterior probabilities with gene track: OATP2A1 chr16.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/mediation_bf_nogenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation Bayes factors without gene track: OATP2A1 chr16.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/mediation_bf_withgenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation Bayes factors with gene track: OATP2A1 chr16.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/timbr_ci_sweep.jpg" class="img-fluid figure-img"></p>
+<figcaption>TIMBR posterior probabilities: OATP2A1 chr16.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/timbr_ci_bf.jpg" class="img-fluid figure-img"></p>
+<figcaption>TIMBR Bayes factors: OATP2A1 chr16.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Oatp2a1_chr16_UNC26384752/merge_at_locus.png" class="img-fluid figure-img"></p>
+<figcaption>Merge profile for this locus and interval: OATP2A1 chr16.</figcaption>
+</figure>
+</div>
+</section>
+<section id="cyp2c50-chr19-unc30282360" class="level2">
+<h2 class="anchored" data-anchor-id="cyp2c50-chr19-unc30282360">CYP2C50 chr19: UNC30282360</h2>
+<p>Lead position: 37.99 Mb; 90% CI: 37.42–49.01 Mb; scan p = 4.88e-11; adjusted p = 2.22e-16.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/credible_interval_gene_track.png" class="img-fluid figure-img"></p>
+<figcaption>90% bootstrap credible interval and nearby genes for CYP2C50, chr19.</figcaption>
+</figure>
+</div>
+<ul>
+<li>Genome scan: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/genome_scan_v2.pdf">v2 scan and adjusted scan PDF</a></li>
+<li>Mediation overlays: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/mediation_posterior_nogenes.png">posterior, no gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/mediation_overlay_withgenes.png">posterior, with gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/mediation_bf_nogenes.png">Bayes factor, no gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/mediation_bf_withgenes.png">Bayes factor, with gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/mediation_posterior_bars.pdf">posterior bars</a></li>
+<li>TIMBR: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/timbr_ci_sweep.jpg">posterior-probability plot</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/timbr_ci_bf.jpg">Bayes-factor plot</a></li>
+<li>Top TIMBR haplotype plots: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/haplotype_top1_0,0,0,0,0,0,1,0_chr19.jpg">haplotype_top1_0,0,0,0,0,0,1,0_chr19.jpg</a>, <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/haplotype_top2_0,1,0,0,1,1,2,0_chr19.jpg">haplotype_top2_0,1,0,0,1,1,2,0_chr19.jpg</a>, <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/haplotype_top3_0,1,0,0,0,1,2,0_chr19.jpg">haplotype_top3_0,1,0,0,0,1,2,0_chr19.jpg</a></li>
+<li>Merge: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/merge_at_locus.png">locus-specific merge plot</a></li>
+<li>CI scan data: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/credible_interval_scan_data.txt">download</a></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/mediation_posterior_nogenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation posterior probabilities without gene track: CYP2C50 chr19.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/mediation_overlay_withgenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation posterior probabilities with gene track: CYP2C50 chr19.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/mediation_bf_nogenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation Bayes factors without gene track: CYP2C50 chr19.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/mediation_bf_withgenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation Bayes factors with gene track: CYP2C50 chr19.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/timbr_ci_sweep.jpg" class="img-fluid figure-img"></p>
+<figcaption>TIMBR posterior probabilities: CYP2C50 chr19.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/timbr_ci_bf.jpg" class="img-fluid figure-img"></p>
+<figcaption>TIMBR Bayes factors: CYP2C50 chr19.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr19_UNC30282360/merge_at_locus.png" class="img-fluid figure-img"></p>
+<figcaption>Merge profile for this locus and interval: CYP2C50 chr19.</figcaption>
+</figure>
+</div>
+</section>
+<section id="ent1-chr17-unc27944457" class="level2">
+<h2 class="anchored" data-anchor-id="ent1-chr17-unc27944457">ENT1 chr17: UNC27944457</h2>
+<p>Lead position: 47.35 Mb; 90% CI: 28.12–55.33 Mb; scan p = 1.72e-06; adjusted p = 1.00e-02.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/credible_interval_gene_track.png" class="img-fluid figure-img"></p>
+<figcaption>90% bootstrap credible interval and nearby genes for ENT1, chr17.</figcaption>
+</figure>
+</div>
+<ul>
+<li>Genome scan: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/genome_scan_v2.pdf">v2 scan and adjusted scan PDF</a></li>
+<li>Mediation overlays: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/mediation_posterior_nogenes.png">posterior, no gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/mediation_overlay_withgenes.png">posterior, with gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/mediation_bf_nogenes.png">Bayes factor, no gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/mediation_bf_withgenes.png">Bayes factor, with gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/mediation_posterior_bars.pdf">posterior bars</a></li>
+<li>TIMBR: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/timbr_ci_sweep.jpg">posterior-probability plot</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/timbr_ci_bf.jpg">Bayes-factor plot</a></li>
+<li>Top TIMBR haplotype plots: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/haplotype_top1_0,0,0,0,0,0,0,1_chr17.jpg">haplotype_top1_0,0,0,0,0,0,0,1_chr17.jpg</a>, <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/haplotype_top2_0,0,0,0,1,0,0,1_chr17.jpg">haplotype_top2_0,0,0,0,1,0,0,1_chr17.jpg</a>, <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/haplotype_top3_0,0,0,0,0,0,1,2_chr17.jpg">haplotype_top3_0,0,0,0,0,0,1,2_chr17.jpg</a></li>
+<li>Merge: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/merge_at_locus.png">locus-specific merge plot</a></li>
+<li>CI scan data: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/credible_interval_scan_data.txt">download</a></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/mediation_posterior_nogenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation posterior probabilities without gene track: ENT1 chr17.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/mediation_overlay_withgenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation posterior probabilities with gene track: ENT1 chr17.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/mediation_bf_nogenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation Bayes factors without gene track: ENT1 chr17.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/mediation_bf_withgenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation Bayes factors with gene track: ENT1 chr17.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/timbr_ci_sweep.jpg" class="img-fluid figure-img"></p>
+<figcaption>TIMBR posterior probabilities: ENT1 chr17.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/timbr_ci_bf.jpg" class="img-fluid figure-img"></p>
+<figcaption>TIMBR Bayes factors: ENT1 chr17.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Ent1_chr17_UNC27944457/merge_at_locus.png" class="img-fluid figure-img"></p>
+<figcaption>Merge profile for this locus and interval: ENT1 chr17.</figcaption>
+</figure>
+</div>
+</section>
+<section id="cyp2d26-chr3-unc5373318" class="level2">
+<h2 class="anchored" data-anchor-id="cyp2d26-chr3-unc5373318">CYP2D26 chr3: UNC5373318</h2>
+<p>Lead position: 61.22 Mb; 90% CI: 59.97–96.77 Mb; scan p = 5.62e-06; adjusted p = 3.37e-02.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/credible_interval_gene_track.png" class="img-fluid figure-img"></p>
+<figcaption>90% bootstrap credible interval and nearby genes for CYP2D26, chr3.</figcaption>
+</figure>
+</div>
+<ul>
+<li>Genome scan: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/genome_scan_v2.pdf">v2 scan and adjusted scan PDF</a></li>
+<li>Mediation overlays: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/mediation_posterior_nogenes.png">posterior, no gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/mediation_overlay_withgenes.png">posterior, with gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/mediation_bf_nogenes.png">Bayes factor, no gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/mediation_bf_withgenes.png">Bayes factor, with gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/mediation_posterior_bars.pdf">posterior bars</a></li>
+<li>TIMBR: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/timbr_ci_sweep.jpg">posterior-probability plot</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/timbr_ci_bf.jpg">Bayes-factor plot</a></li>
+<li>Top TIMBR haplotype plots: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/haplotype_top1_0,0,0,0,0,0,0,0_chr3.jpg">haplotype_top1_0,0,0,0,0,0,0,0_chr3.jpg</a>, <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/haplotype_top2_0,1,1,1,1,0,1,1_chr3.jpg">haplotype_top2_0,1,1,1,1,0,1,1_chr3.jpg</a></li>
+<li>Merge: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/merge_at_locus.png">locus-specific merge plot</a></li>
+<li>CI scan data: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/credible_interval_scan_data.txt">download</a></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/mediation_posterior_nogenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation posterior probabilities without gene track: CYP2D26 chr3.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/mediation_overlay_withgenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation posterior probabilities with gene track: CYP2D26 chr3.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/mediation_bf_nogenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation Bayes factors without gene track: CYP2D26 chr3.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/mediation_bf_withgenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation Bayes factors with gene track: CYP2D26 chr3.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/timbr_ci_sweep.jpg" class="img-fluid figure-img"></p>
+<figcaption>TIMBR posterior probabilities: CYP2D26 chr3.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/timbr_ci_bf.jpg" class="img-fluid figure-img"></p>
+<figcaption>TIMBR Bayes factors: CYP2D26 chr3.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2d26_chr3_UNC5373318/merge_at_locus.png" class="img-fluid figure-img"></p>
+<figcaption>Merge profile for this locus and interval: CYP2D26 chr3.</figcaption>
+</figure>
+</div>
+</section>
+<section id="bsep-chr16-unc26665635" class="level2">
+<h2 class="anchored" data-anchor-id="bsep-chr16-unc26665635">BSEP chr16: UNC26665635</h2>
+<p>Lead position: 38.15 Mb; 90% CI: 35.14–48.23 Mb; scan p = 4.18e-07; adjusted p = 1.90e-03.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/credible_interval_gene_track.png" class="img-fluid figure-img"></p>
+<figcaption>90% bootstrap credible interval and nearby genes for BSEP, chr16.</figcaption>
+</figure>
+</div>
+<ul>
+<li>Genome scan: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/genome_scan_v2.pdf">v2 scan and adjusted scan PDF</a></li>
+<li>Mediation overlays: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/mediation_posterior_nogenes.png">posterior, no gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/mediation_overlay_withgenes.png">posterior, with gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/mediation_bf_nogenes.png">Bayes factor, no gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/mediation_bf_withgenes.png">Bayes factor, with gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/mediation_posterior_bars.pdf">posterior bars</a></li>
+<li>TIMBR: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/timbr_ci_sweep.jpg">posterior-probability plot</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/timbr_ci_bf.jpg">Bayes-factor plot</a></li>
+<li>Top TIMBR haplotype plots: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/haplotype_top1_0,1,0,1,1,0,0,1_chr16.jpg">haplotype_top1_0,1,0,1,1,0,0,1_chr16.jpg</a>, <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/haplotype_top2_0,1,0,1,1,0,0,0_chr16.jpg">haplotype_top2_0,1,0,1,1,0,0,0_chr16.jpg</a>, <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/haplotype_top3_0,0,0,0,0,0,0,0_chr16.jpg">haplotype_top3_0,0,0,0,0,0,0,0_chr16.jpg</a></li>
+<li>Merge: Unavailable in this run</li>
+<li>CI scan data: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/credible_interval_scan_data.txt">download</a></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/mediation_posterior_nogenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation posterior probabilities without gene track: BSEP chr16.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/mediation_overlay_withgenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation posterior probabilities with gene track: BSEP chr16.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/mediation_bf_nogenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation Bayes factors without gene track: BSEP chr16.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/mediation_bf_withgenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation Bayes factors with gene track: BSEP chr16.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/timbr_ci_sweep.jpg" class="img-fluid figure-img"></p>
+<figcaption>TIMBR posterior probabilities: BSEP chr16.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Bsep_chr16_UNC26665635/timbr_ci_bf.jpg" class="img-fluid figure-img"></p>
+<figcaption>TIMBR Bayes factors: BSEP chr16.</figcaption>
+</figure>
+</div>
+</section>
+<section id="cyp3a11-chr3-unc5114998" class="level2">
+<h2 class="anchored" data-anchor-id="cyp3a11-chr3-unc5114998">CYP3A11 chr3: UNC5114998</h2>
+<p>Lead position: 41.34 Mb; 90% CI: 38.04–109.82 Mb; scan p = 5.74e-06; adjusted p = 2.86e-02.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/credible_interval_gene_track.png" class="img-fluid figure-img"></p>
+<figcaption>90% bootstrap credible interval and nearby genes for CYP3A11, chr3.</figcaption>
+</figure>
+</div>
+<ul>
+<li>Genome scan: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/genome_scan_v2.pdf">v2 scan and adjusted scan PDF</a></li>
+<li>Mediation overlays: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/mediation_posterior_nogenes.png">posterior, no gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/mediation_overlay_withgenes.png">posterior, with gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/mediation_bf_nogenes.png">Bayes factor, no gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/mediation_bf_withgenes.png">Bayes factor, with gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/mediation_posterior_bars.pdf">posterior bars</a></li>
+<li>TIMBR: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/timbr_ci_sweep.jpg">posterior-probability plot</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/timbr_ci_bf.jpg">Bayes-factor plot</a></li>
+<li>Top TIMBR haplotype plots: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/haplotype_top1_0,0,0,0,0,0,0,0_chr3.jpg">haplotype_top1_0,0,0,0,0,0,0,0_chr3.jpg</a>, <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/haplotype_top2_0,0,0,1,1,0,0,0_chr3.jpg">haplotype_top2_0,0,0,1,1,0,0,0_chr3.jpg</a>, <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/haplotype_top3_0,1,1,0,0,0,0,1_chr3.jpg">haplotype_top3_0,1,1,0,0,0,0,1_chr3.jpg</a></li>
+<li>Merge: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/merge_at_locus.png">locus-specific merge plot</a></li>
+<li>CI scan data: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/credible_interval_scan_data.txt">download</a></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/mediation_posterior_nogenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation posterior probabilities without gene track: CYP3A11 chr3.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/mediation_overlay_withgenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation posterior probabilities with gene track: CYP3A11 chr3.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/mediation_bf_nogenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation Bayes factors without gene track: CYP3A11 chr3.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/mediation_bf_withgenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation Bayes factors with gene track: CYP3A11 chr3.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/timbr_ci_sweep.jpg" class="img-fluid figure-img"></p>
+<figcaption>TIMBR posterior probabilities: CYP3A11 chr3.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/timbr_ci_bf.jpg" class="img-fluid figure-img"></p>
+<figcaption>TIMBR Bayes factors: CYP3A11 chr3.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp3a11_chr3_UNC5114998/merge_at_locus.png" class="img-fluid figure-img"></p>
+<figcaption>Merge profile for this locus and interval: CYP3A11 chr3.</figcaption>
+</figure>
+</div>
+</section>
+<section id="cyp2c39-chr19-unc30297139" class="level2">
+<h2 class="anchored" data-anchor-id="cyp2c39-chr19-unc30297139">CYP2C39 chr19: UNC30297139</h2>
+<p>Lead position: 38.97 Mb; 90% CI: 38.20–40.36 Mb; scan p = 2.08e-15; adjusted p = 2.22e-16.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/credible_interval_gene_track.png" class="img-fluid figure-img"></p>
+<figcaption>90% bootstrap credible interval and nearby genes for CYP2C39, chr19.</figcaption>
+</figure>
+</div>
+<ul>
+<li>Genome scan: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/genome_scan_v2.pdf">v2 scan and adjusted scan PDF</a></li>
+<li>Mediation overlays: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/mediation_posterior_nogenes.png">posterior, no gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/mediation_overlay_withgenes.png">posterior, with gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/mediation_bf_nogenes.png">Bayes factor, no gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/mediation_bf_withgenes.png">Bayes factor, with gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/mediation_posterior_bars.pdf">posterior bars</a></li>
+<li>TIMBR: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/timbr_ci_sweep.jpg">posterior-probability plot</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/timbr_ci_bf.jpg">Bayes-factor plot</a></li>
+<li>Top TIMBR haplotype plots: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/haplotype_top1_0,1,0,0,0,2,2,0_chr19.jpg">haplotype_top1_0,1,0,0,0,2,2,0_chr19.jpg</a></li>
+<li>Merge: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/merge_at_locus.png">locus-specific merge plot</a></li>
+<li>CI scan data: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/credible_interval_scan_data.txt">download</a></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/mediation_posterior_nogenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation posterior probabilities without gene track: CYP2C39 chr19.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/mediation_overlay_withgenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation posterior probabilities with gene track: CYP2C39 chr19.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/mediation_bf_nogenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation Bayes factors without gene track: CYP2C39 chr19.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/mediation_bf_withgenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation Bayes factors with gene track: CYP2C39 chr19.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/timbr_ci_sweep.jpg" class="img-fluid figure-img"></p>
+<figcaption>TIMBR posterior probabilities: CYP2C39 chr19.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/timbr_ci_bf.jpg" class="img-fluid figure-img"></p>
+<figcaption>TIMBR Bayes factors: CYP2C39 chr19.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c39_chr19_UNC30297139/merge_at_locus.png" class="img-fluid figure-img"></p>
+<figcaption>Merge profile for this locus and interval: CYP2C39 chr19.</figcaption>
+</figure>
+</div>
+</section>
+<section id="cyp2c50-chr3-unc5366241" class="level2">
+<h2 class="anchored" data-anchor-id="cyp2c50-chr3-unc5366241">CYP2C50 chr3: UNC5366241</h2>
+<p>Lead position: 60.51 Mb; 90% CI: 50.30–90.49 Mb; scan p = 9.24e-07; adjusted p = 3.64e-03.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/credible_interval_gene_track.png" class="img-fluid figure-img"></p>
+<figcaption>90% bootstrap credible interval and nearby genes for CYP2C50, chr3.</figcaption>
+</figure>
+</div>
+<ul>
+<li>Genome scan: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/genome_scan_v2.pdf">v2 scan and adjusted scan PDF</a></li>
+<li>Mediation overlays: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/mediation_posterior_nogenes.png">posterior, no gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/mediation_overlay_withgenes.png">posterior, with gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/mediation_bf_nogenes.png">Bayes factor, no gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/mediation_bf_withgenes.png">Bayes factor, with gene track</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/mediation_posterior_bars.pdf">posterior bars</a></li>
+<li>TIMBR: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/timbr_ci_sweep.jpg">posterior-probability plot</a>; <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/timbr_ci_bf.jpg">Bayes-factor plot</a></li>
+<li>Top TIMBR haplotype plots: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/haplotype_top1_0,0,0,0,0,0,0,0_chr3.jpg">haplotype_top1_0,0,0,0,0,0,0,0_chr3.jpg</a>, <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/haplotype_top2_0,1,1,1,1,1,0,1_chr3.jpg">haplotype_top2_0,1,1,1,1,1,0,1_chr3.jpg</a>, <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/haplotype_top3_0,1,1,1,1,1,1,1_chr3.jpg">haplotype_top3_0,1,1,1,1,1,1,1_chr3.jpg</a></li>
+<li>Merge: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/merge_at_locus.png">locus-specific merge plot</a></li>
+<li>CI scan data: <a href="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/credible_interval_scan_data.txt">download</a></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/mediation_posterior_nogenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation posterior probabilities without gene track: CYP2C50 chr3.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/mediation_overlay_withgenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation posterior probabilities with gene track: CYP2C50 chr3.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/mediation_bf_nogenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation Bayes factors without gene track: CYP2C50 chr3.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/mediation_bf_withgenes.png" class="img-fluid figure-img"></p>
+<figcaption>Mediation Bayes factors with gene track: CYP2C50 chr3.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/timbr_ci_sweep.jpg" class="img-fluid figure-img"></p>
+<figcaption>TIMBR posterior probabilities: CYP2C50 chr3.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/timbr_ci_bf.jpg" class="img-fluid figure-img"></p>
+<figcaption>TIMBR Bayes factors: CYP2C50 chr3.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/rerun_2026-09-24_v2/credible_interval_loci/Cyp2c50_chr3_UNC5366241/merge_at_locus.png" class="img-fluid figure-img"></p>
+<figcaption>Merge profile for this locus and interval: CYP2C50 chr3.</figcaption>
+</figure>
+</div>
+</section>
+<section id="coverage-notes" class="level2">
+<h2 class="anchored" data-anchor-id="coverage-notes">Coverage notes</h2>
+<p>The v2 significant-results file contains 8 significant non-CES2 loci. Each is shown above with its 90% interval. Merge figures are matched to the lead locus and interval; plots from other regions are not substituted.</p>
+<p>Mediation overlays are the saved v2 targeted results and should be interpreted as locus follow-up, not a genome-wide mediation scan. TIMBR plots summarize the credible-interval sweep and the linked haplotype plots show the top saved partitions.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./status.html" class="pagination-link" aria-label="Analysis progress">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Analysis progress</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./ATPase.html" class="pagination-link" aria-label="ATPase">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">ATPase</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

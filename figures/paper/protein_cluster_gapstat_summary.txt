@@ -1,0 +1,8 @@
+Selected k (first 1-SE rule): 2
+k with largest observed gap value: 3
+Gap-statistic bootstrap replicates: 500
+Number of strains: 45
+Number of protein features: 26
+Fraction of z-scored Box-Cox-profile variance separated by clusters: 0.224
+Clustering: Euclidean distance, Ward.D2 linkage
+Gap null: scaled PCA reference distribution

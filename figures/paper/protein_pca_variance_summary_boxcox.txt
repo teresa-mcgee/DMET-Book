@@ -1,0 +1,6 @@
+PC1 variance explained (%): 61.75
+PC2 variance explained (%): 37.82
+PC1 + PC2 variance explained (%): 99.57
+PCA input: Box-Cox transformed protein profiles
+Loading vectors are black and scaled only for plotting
+Strain cluster colors come from the z-scored gap-statistic analysis

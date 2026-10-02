@@ -1,0 +1,4 @@
+/* download lines under each embedded figure */
+.fig-downloads { text-align: center; font-size: 0.9em; margin: -0.4em 0 1.6em 0; color: #555; }
+.fig-downloads a { white-space: nowrap; }
+figure.figure img, .quarto-figure img { max-width: 100%; height: auto; }

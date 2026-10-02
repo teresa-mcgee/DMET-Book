@@ -1,0 +1,2 @@
+"Protein","CH","Locus","Mb","CI.Start","CI.End","Subset","Adjusted_P.val","pqtl_gene","gene_chr","gene_start_Mb","gene_end_Mb","gene_in_CI","gene_to_peak_Mb","pqtl_type"
+"Cyp2c39",19,"JAX00214946",39.930549,37.991484,41.30402342,"sub",5.78894559177812e-07,"Cyp2c39","19","39.51","39.57",TRUE,0.36,"cis"
