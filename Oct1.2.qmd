@@ -8,131 +8,30 @@ editor: visual
 
 The mouse protein Oct1.2 is encoded by the gene **Pou2f1**. It is a member of the POU (POU domain) family of transcription factors and is also known by its aliases **Oct-1**, **Oct-1A**, and **OCT1**. This protein plays a vital role in regulating gene expression and is involved in various biological processes, including development and cellular differentiation.
 
-# Data Overview
+# Data and normalization
 
-The protein data can be handled either with RINT normalization or a Box-Cox (BC) transformation. BC transformation often produces clearer genome scans, but is not available yet for every analysis stage below.
+Replicate measurements were Box-Cox transformed with a protein-specific λ = **0.92** (95% likelihood interval 0.64 to 1.23), estimated on the individual replicates (`boxcox(y ~ strain)`, no +1 shift); because 1 replicate(s) were zero, a small shift of 0.5 was added before transforming. The strain phenotype is the mean of the transformed replicates and the strain noise used for the wisam weights is their variance.
 
-## Protein Distributions
+![Oct1.2: raw replicates, Box-Cox likelihood profile and transformed replicates.](figures/repbc_2026-10-01/proteins/Oct1.2_normalization.png){fig-align="center" width="95%"}
 
-### Box-Cox transformation diagnostic
-
-![](figures/Oct1.2/jpgs/boxcox/boxcox_page_001.jpg){fig-align="center" width="80%"}
-
-### Raw data
-
-![](figures/Oct1.2/jpgs/rawHistograms/rawHistograms_page_001.jpg){fig-align="center" width="80%"}
-
-### Box-Cox transformed
-
-![](figures/Oct1.2/jpgs/BC_Histograms/BC_Histograms_page_001.jpg){fig-align="center" width="80%"}
-
-### RINT transformed
-
-![](figures/Oct1.2/jpgs/RINT_Histograms/RINT_Histograms_page_001.jpg){fig-align="center" width="80%"}
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/proteins/Oct1.2_normalization.png){download="Oct1.2_normalization.png"} · [PDF](figures/repbc_2026-10-01/proteins/Oct1.2_normalization.pdf){download="Oct1.2_normalization.pdf"}
+:::
 
 ## Heritability
 
-Estimated narrow-sense heritability, i.e. whether the trait is strongly correlated within Collaborative Cross strains.
+Broad-sense heritability of the protein is **0.42** (95% CI 0.29–0.56; BH-adjusted P 3.40e-09). Its paired transcript is **Slc22a1** (array probe `1418118_PM_at`, paired from the measured peptide `SPGVAELSQR`). Transcript H² is **0.60** (95% CI 0.45–0.71; BH-adjusted P 1.29e-13).
 
-![](figures/Oct1.2/h2.jpg){fig-align="center" width="80%"}
+# pQTL genome scan
 
-## pQTL Genome Scans
+Genome scan of the Box-Cox phenotype with wisam weights (miqtl `scan.h2lmm`, 11 imputations); significance thresholds come from 1000 permutations (GEV fit to the permutation maxima of −log10 P). Strongest locus: chr16:77.90 Mb, P = 1.70e-04, adjusted P = 4.01e-01; 95% threshold = 5.00 (−log10 P).
 
-### Genome-wide scan (scans_0.9, transform unspecified)
+![Oct1.2 genome-wide pQTL scan with the permutation threshold.](figures/repbc_2026-10-01/per_protein/Oct1.2/Oct1.2_genome_scan.png){fig-align="center" width="95%"}
 
-<div id="Oct1-2-carousel" class="carousel slide" data-bs-ride="carousel">
-<div class="carousel-inner">
-<div class="carousel-item active"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_001.jpg" class="d-block w-100" alt="Oct1-2 page 1"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_002.jpg" class="d-block w-100" alt="Oct1-2 page 2"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_003.jpg" class="d-block w-100" alt="Oct1-2 page 3"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_004.jpg" class="d-block w-100" alt="Oct1-2 page 4"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_005.jpg" class="d-block w-100" alt="Oct1-2 page 5"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_006.jpg" class="d-block w-100" alt="Oct1-2 page 6"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_007.jpg" class="d-block w-100" alt="Oct1-2 page 7"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_008.jpg" class="d-block w-100" alt="Oct1-2 page 8"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_009.jpg" class="d-block w-100" alt="Oct1-2 page 9"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_010.jpg" class="d-block w-100" alt="Oct1-2 page 10"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_011.jpg" class="d-block w-100" alt="Oct1-2 page 11"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_012.jpg" class="d-block w-100" alt="Oct1-2 page 12"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_013.jpg" class="d-block w-100" alt="Oct1-2 page 13"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_014.jpg" class="d-block w-100" alt="Oct1-2 page 14"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_015.jpg" class="d-block w-100" alt="Oct1-2 page 15"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_016.jpg" class="d-block w-100" alt="Oct1-2 page 16"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_017.jpg" class="d-block w-100" alt="Oct1-2 page 17"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_018.jpg" class="d-block w-100" alt="Oct1-2 page 18"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_019.jpg" class="d-block w-100" alt="Oct1-2 page 19"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_020.jpg" class="d-block w-100" alt="Oct1-2 page 20"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/scans_0.9/scans_0.9_page_021.jpg" class="d-block w-100" alt="Oct1-2 page 21"></div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#Oct1-2-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
-<button class="carousel-control-next" type="button" data-bs-target="#Oct1-2-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
-</div>
-<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
-<label for="Oct1-2-jump" class="mb-0">Jump to figure:</label>
-<select id="Oct1-2-jump" class="form-select form-select-sm d-inline-block w-auto" onchange='bootstrap.Carousel.getOrCreateInstance(document.getElementById("Oct1-2-carousel")).to(parseInt(this.value));'>
-<option value="0" selected>Figure 1</option>
-<option value="1">Figure 2</option>
-<option value="2">Figure 3</option>
-<option value="3">Figure 4</option>
-<option value="4">Figure 5</option>
-<option value="5">Figure 6</option>
-<option value="6">Figure 7</option>
-<option value="7">Figure 8</option>
-<option value="8">Figure 9</option>
-<option value="9">Figure 10</option>
-<option value="10">Figure 11</option>
-<option value="11">Figure 12</option>
-<option value="12">Figure 13</option>
-<option value="13">Figure 14</option>
-<option value="14">Figure 15</option>
-<option value="15">Figure 16</option>
-<option value="16">Figure 17</option>
-<option value="17">Figure 18</option>
-<option value="18">Figure 19</option>
-<option value="19">Figure 20</option>
-<option value="20">Figure 21</option>
-</select>
-</div>
-<script>document.getElementById("Oct1-2-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Oct1-2-jump").value=e.to;});</script>
+::: {.fig-downloads}
+Download: [PDF](figures/repbc_2026-10-01/per_protein/Oct1.2/Oct1.2_genome_scan.pdf){download="Oct1.2_genome_scan.pdf"} · [PDF](figures/repbc_2026-10-01/per_protein/Oct1.2/Oct1.2_scan_by_chromosome.pdf){download="Oct1.2_scan_by_chromosome.pdf"}
+:::
 
-## Peak Locus
+# Significant peak(s)
 
-### Confidence interval of the significant peak (if one exists)
-
-_Not yet analyzed here: no confidence-interval scan found for Oct1.2. See [Analysis Status](status.qmd)._
-
-## RNA Mediation
-
-Genome-wide test of whether transcript abundance mediates the protein QTL (bmediatR).
-
-_Not yet analyzed here: no RNA-mediation figure found for Oct1.2. See [Analysis Status](status.qmd)._
-
-### Protein-protein mediation at the peak locus
-
-_Not yet analyzed here: no protein-protein mediation figure found for Oct1.2. See [Analysis Status](status.qmd)._
-
-## TIMBR (Allelic Series)
-
-TIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.
-
-<div id="Oct1-2-timbr-carousel" class="carousel slide" data-bs-ride="carousel">
-<div class="carousel-inner">
-<div class="carousel-item active"><img src="figures/Oct1.2/jpgs/timbr_results/timbr_results_page_001.jpg" class="d-block w-100" alt="Oct1-2-timbr page 1"></div>
-<div class="carousel-item"><img src="figures/Oct1.2/jpgs/timbr_results/timbr_results_page_002.jpg" class="d-block w-100" alt="Oct1-2-timbr page 2"></div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#Oct1-2-timbr-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
-<button class="carousel-control-next" type="button" data-bs-target="#Oct1-2-timbr-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
-</div>
-<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
-<label for="Oct1-2-timbr-jump" class="mb-0">Jump to figure:</label>
-<select id="Oct1-2-timbr-jump" class="form-select form-select-sm d-inline-block w-auto" onchange='bootstrap.Carousel.getOrCreateInstance(document.getElementById("Oct1-2-timbr-carousel")).to(parseInt(this.value));'>
-<option value="0" selected>Figure 1</option>
-<option value="1">Figure 2</option>
-</select>
-</div>
-<script>document.getElementById("Oct1-2-timbr-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Oct1-2-timbr-jump").value=e.to;});</script>
-
-## Merge / Diplotype Fine-Mapping
-
-_Not yet analyzed here: merge/diplotype fine-mapping has not been run for Oct1.2. See [Analysis Status](status.qmd)._
-
+No genome-wide significant pQTL for this protein (adjusted P ≥ 0.05), so credible intervals, Merge, TIMBR and mediation were not run.

@@ -8,135 +8,30 @@ editor: visual
 
 Mrp3, also known as Multidrug Resistance-associated Protein 3, is a protein encoded by the **Abcc3** gene in mice. It is involved in the transport of various endogenous and exogenous compounds across cell membranes. Alias names for Mrp3 include **ABCC3**.
 
-# Data Overview
+# Data and normalization
 
-The protein data can be handled either with RINT normalization or a Box-Cox (BC) transformation. BC transformation often produces clearer genome scans, but is not available yet for every analysis stage below.
+Replicate measurements were Box-Cox transformed with a protein-specific λ = **0.58** (95% likelihood interval 0.45 to 0.73), estimated on the individual replicates (`boxcox(y ~ strain)`, no +1 shift); because 3 replicate(s) were zero, a small shift of 0.05 was added before transforming. The strain phenotype is the mean of the transformed replicates and the strain noise used for the wisam weights is their variance.
 
-## Protein Distributions
+![Mrp3: raw replicates, Box-Cox likelihood profile and transformed replicates.](figures/repbc_2026-10-01/proteins/Mrp3_normalization.png){fig-align="center" width="95%"}
 
-### Box-Cox transformation diagnostic
-
-![](figures/Mrp3/jpgs/boxcox/boxcox_page_001.jpg){fig-align="center" width="80%"}
-
-### Raw data
-
-![](figures/Mrp3/jpgs/rawHistograms/rawHistograms_page_001.jpg){fig-align="center" width="80%"}
-
-### Box-Cox transformed
-
-![](figures/Mrp3/jpgs/BC_Histograms/BC_Histograms_page_001.jpg){fig-align="center" width="80%"}
-
-### RINT transformed
-
-![](figures/Mrp3/jpgs/RINT_Histograms/RINT_Histograms_page_001.jpg){fig-align="center" width="80%"}
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/proteins/Mrp3_normalization.png){download="Mrp3_normalization.png"} · [PDF](figures/repbc_2026-10-01/proteins/Mrp3_normalization.pdf){download="Mrp3_normalization.pdf"}
+:::
 
 ## Heritability
 
-Estimated narrow-sense heritability, i.e. whether the trait is strongly correlated within Collaborative Cross strains.
+Broad-sense heritability of the protein is **0.51** (95% CI 0.38–0.64; BH-adjusted P 2.83e-13). Its paired transcript is **Abcc3** (array probe `1428988_PM_at`, paired from the measured peptide `GALVAVVGPVGCGK`). Transcript H² is **0.48** (95% CI 0.32–0.63; BH-adjusted P 3.87e-11).
 
-![](figures/Mrp3/h2.jpg){fig-align="center" width="80%"}
+# pQTL genome scan
 
-## pQTL Genome Scans
+Genome scan of the Box-Cox phenotype with wisam weights (miqtl `scan.h2lmm`, 11 imputations); significance thresholds come from 1000 permutations (GEV fit to the permutation maxima of −log10 P). Strongest locus: chr12:77.11 Mb, P = 5.37e-05, adjusted P = 1.92e-01; 95% threshold = 5.02 (−log10 P).
 
-### Combined with RNA (eQTL + pQTL)
+![Mrp3 genome-wide pQTL scan with the permutation threshold.](figures/repbc_2026-10-01/per_protein/Mrp3/Mrp3_genome_scan.png){fig-align="center" width="95%"}
 
-![](figures/Mrp3/jpgs/boxcox/genome_scan_combined_RNAProt.jpg){fig-align="center" width="80%"}
+::: {.fig-downloads}
+Download: [PDF](figures/repbc_2026-10-01/per_protein/Mrp3/Mrp3_genome_scan.pdf){download="Mrp3_genome_scan.pdf"} · [PDF](figures/repbc_2026-10-01/per_protein/Mrp3/Mrp3_scan_by_chromosome.pdf){download="Mrp3_scan_by_chromosome.pdf"}
+:::
 
-### Genome-wide scan (scans_0.95, box-cox)
+# Significant peak(s)
 
-<div id="Mrp3-carousel" class="carousel slide" data-bs-ride="carousel">
-<div class="carousel-inner">
-<div class="carousel-item active"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_001.jpg" class="d-block w-100" alt="Mrp3 page 1"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_002.jpg" class="d-block w-100" alt="Mrp3 page 2"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_003.jpg" class="d-block w-100" alt="Mrp3 page 3"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_004.jpg" class="d-block w-100" alt="Mrp3 page 4"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_005.jpg" class="d-block w-100" alt="Mrp3 page 5"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_006.jpg" class="d-block w-100" alt="Mrp3 page 6"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_007.jpg" class="d-block w-100" alt="Mrp3 page 7"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_008.jpg" class="d-block w-100" alt="Mrp3 page 8"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_009.jpg" class="d-block w-100" alt="Mrp3 page 9"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_010.jpg" class="d-block w-100" alt="Mrp3 page 10"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_011.jpg" class="d-block w-100" alt="Mrp3 page 11"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_012.jpg" class="d-block w-100" alt="Mrp3 page 12"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_013.jpg" class="d-block w-100" alt="Mrp3 page 13"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_014.jpg" class="d-block w-100" alt="Mrp3 page 14"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_015.jpg" class="d-block w-100" alt="Mrp3 page 15"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_016.jpg" class="d-block w-100" alt="Mrp3 page 16"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_017.jpg" class="d-block w-100" alt="Mrp3 page 17"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_018.jpg" class="d-block w-100" alt="Mrp3 page 18"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_019.jpg" class="d-block w-100" alt="Mrp3 page 19"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_020.jpg" class="d-block w-100" alt="Mrp3 page 20"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/boxcox/scans_0.95/scans_0.95_page_021.jpg" class="d-block w-100" alt="Mrp3 page 21"></div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#Mrp3-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
-<button class="carousel-control-next" type="button" data-bs-target="#Mrp3-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
-</div>
-<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
-<label for="Mrp3-jump" class="mb-0">Jump to figure:</label>
-<select id="Mrp3-jump" class="form-select form-select-sm d-inline-block w-auto" onchange='bootstrap.Carousel.getOrCreateInstance(document.getElementById("Mrp3-carousel")).to(parseInt(this.value));'>
-<option value="0" selected>Figure 1</option>
-<option value="1">Figure 2</option>
-<option value="2">Figure 3</option>
-<option value="3">Figure 4</option>
-<option value="4">Figure 5</option>
-<option value="5">Figure 6</option>
-<option value="6">Figure 7</option>
-<option value="7">Figure 8</option>
-<option value="8">Figure 9</option>
-<option value="9">Figure 10</option>
-<option value="10">Figure 11</option>
-<option value="11">Figure 12</option>
-<option value="12">Figure 13</option>
-<option value="13">Figure 14</option>
-<option value="14">Figure 15</option>
-<option value="15">Figure 16</option>
-<option value="16">Figure 17</option>
-<option value="17">Figure 18</option>
-<option value="18">Figure 19</option>
-<option value="19">Figure 20</option>
-<option value="20">Figure 21</option>
-</select>
-</div>
-<script>document.getElementById("Mrp3-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Mrp3-jump").value=e.to;});</script>
-
-## Peak Locus
-
-### Confidence interval of the significant peak (if one exists)
-
-_Not yet analyzed here: no confidence-interval scan found for Mrp3. See [Analysis Status](status.qmd)._
-
-## RNA Mediation
-
-Genome-wide test of whether transcript abundance mediates the protein QTL (bmediatR).
-
-_Analysis has been run for Mrp3 but no genome-wide mediation figure was produced yet -- see `output/Mrp3rna_mediators.RDS` (or `output/rna_mediators/`) in the main project repository._
-
-### Protein-protein mediation at the peak locus
-
-_Not yet analyzed here: no protein-protein mediation figure found for Mrp3. See [Analysis Status](status.qmd)._
-
-## TIMBR (Allelic Series)
-
-TIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.
-
-<div id="Mrp3-timbr-carousel" class="carousel slide" data-bs-ride="carousel">
-<div class="carousel-inner">
-<div class="carousel-item active"><img src="figures/Mrp3/jpgs/timbr_results/timbr_results_page_001.jpg" class="d-block w-100" alt="Mrp3-timbr page 1"></div>
-<div class="carousel-item"><img src="figures/Mrp3/jpgs/timbr_results/timbr_results_page_002.jpg" class="d-block w-100" alt="Mrp3-timbr page 2"></div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#Mrp3-timbr-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
-<button class="carousel-control-next" type="button" data-bs-target="#Mrp3-timbr-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
-</div>
-<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
-<label for="Mrp3-timbr-jump" class="mb-0">Jump to figure:</label>
-<select id="Mrp3-timbr-jump" class="form-select form-select-sm d-inline-block w-auto" onchange='bootstrap.Carousel.getOrCreateInstance(document.getElementById("Mrp3-timbr-carousel")).to(parseInt(this.value));'>
-<option value="0" selected>Figure 1</option>
-<option value="1">Figure 2</option>
-</select>
-</div>
-<script>document.getElementById("Mrp3-timbr-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Mrp3-timbr-jump").value=e.to;});</script>
-
-## Merge / Diplotype Fine-Mapping
-
-_Not yet analyzed here: merge/diplotype fine-mapping has not been run for Mrp3. See [Analysis Status](status.qmd)._
-
+No genome-wide significant pQTL for this protein (adjusted P ≥ 0.05), so credible intervals, Merge, TIMBR and mediation were not run.

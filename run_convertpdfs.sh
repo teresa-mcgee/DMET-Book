@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --array=1-27      # adjust to number of biomarkers
+#SBATCH --array=1-26      # adjust to number of biomarkers
 #SBATCH --time=01:00:00
 #SBATCH --mem=4G
 #SBATCH --cpus-per-task=1

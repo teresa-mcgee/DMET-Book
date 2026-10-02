@@ -72,6 +72,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -125,13 +126,19 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">V2 results overview</span></a>
+ <span class="menu-text">Results overview</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./status.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Analysis progress</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./credible_intervals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Credible intervals</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -314,10 +321,15 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#proteomics" id="toc-proteomics" class="nav-link active" data-scroll-target="#proteomics">Proteomics</a></li>
+  <li><a href="#normalization" id="toc-normalization" class="nav-link" data-scroll-target="#normalization">Normalization</a></li>
   <li><a href="#genome-scans" id="toc-genome-scans" class="nav-link" data-scroll-target="#genome-scans">Genome scans</a></li>
+  <li><a href="#cis-and-trans-pqtl" id="toc-cis-and-trans-pqtl" class="nav-link" data-scroll-target="#cis-and-trans-pqtl">cis and trans pQTL</a></li>
+  <li><a href="#proteintranscript-pairing" id="toc-proteintranscript-pairing" class="nav-link" data-scroll-target="#proteintranscript-pairing">Protein–transcript pairing</a></li>
+  <li><a href="#heritability-and-genetic-correlation" id="toc-heritability-and-genetic-correlation" class="nav-link" data-scroll-target="#heritability-and-genetic-correlation">Heritability and genetic correlation</a></li>
   <li><a href="#rna-mediation" id="toc-rna-mediation" class="nav-link" data-scroll-target="#rna-mediation">RNA mediation</a></li>
   <li><a href="#timbr" id="toc-timbr" class="nav-link" data-scroll-target="#timbr">TIMBR</a></li>
   <li><a href="#merge-diplotype-fine-mapping" id="toc-merge-diplotype-fine-mapping" class="nav-link" data-scroll-target="#merge-diplotype-fine-mapping">Merge / diplotype fine-mapping</a></li>
+  <li><a href="#clustering" id="toc-clustering" class="nav-link" data-scroll-target="#clustering">Clustering</a></li>
   </ul>
 </nav>
 </nav>
@@ -349,24 +361,43 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="proteomics" class="level2">
 <h2 class="anchored" data-anchor-id="proteomics">Proteomics</h2>
-<p>Raw protein-abundance data were generated using protein isolation, proteolytic digestion, and quantitative targeted absolute proteomics (QTAP) analysis, as previously described in Qasem et al.&nbsp;(2020). Peptides were selected to avoid confounding from genetic variation, by excluding peptides with non-synonymous mutations predicted from the Inbred Strain Variant Database (Oreper et al., 2017).</p>
-<p>For three proteins – <strong>Cyp2c50</strong>, <strong>Cyp3a11</strong>, and <strong>Oatp1a4</strong> – avoiding a variant peptide was not possible, and the peptide sequence used contains a missense variant across some Collaborative Cross founder/strain haplotypes. Separately, <strong>Cyp2c39</strong> likely carries a genetic variant in the C57BL/6J (B6) strain that caused QTAP to fail to detect the protein in B6-descended strains; this shows up as a zero-inflated phenotype for Cyp2c39 (see that chapter’s distribution plots).</p>
+<p>Raw protein-abundance data were generated using protein isolation, proteolytic digestion, and quantitative targeted absolute proteomics (QTAP) analysis, as previously described in Qasem et al.&nbsp;(2020). Peptides were selected to avoid confounding from genetic variation where possible. For <strong>Cyp2c50</strong>, <strong>Cyp3a11</strong> and <strong>Oatp1a4</strong> the peptide contains a missense variant in some Collaborative Cross founder/strain haplotypes. Three to four replicate measurements were made per protein per strain (45 CC strains).</p>
+</section>
+<section id="normalization" class="level2">
+<h2 class="anchored" data-anchor-id="normalization">Normalization</h2>
+<p>For each protein a Box-Cox exponent λ was estimated on the individual replicates (<code>boxcox(y ~ strain)</code>, grid −2 to 2) with <strong>no +1 shift</strong>; a small shift (half the smallest positive replicate) is added only for proteins that contain zeros (Cyp2c39, Cyp2c50, Mrp3, Oct1.2). Every replicate is transformed with λ; the strain phenotype is the mean of the transformed replicates and the strain noise is their variance. For zero-inflated proteins (Cyp2c39, Cyp2c50) a second <strong>subset</strong> scan keeps strains whose normalized within-strain variance exceeds 0.01 and re-estimates λ on that subset.</p>
 </section>
 <section id="genome-scans" class="level2">
 <h2 class="anchored" data-anchor-id="genome-scans">Genome scans</h2>
-<p>pQTL genome scans were run with <a href="https://cran.r-project.org/package=miqtl"><code>miqtl</code></a>. Genome-wide significance thresholds were derived from permutation testing (typically 1000 permutations) using a generalized extreme value (GEV) fit to the permuted maximum statistics, at the 0.90/0.95 percentile as noted per chapter.</p>
+<p>pQTL scans use <a href="https://cran.r-project.org/package=miqtl"><code>miqtl</code></a> (<code>scan.h2lmm</code>, haplotype-dosage model with 11 multiple imputations) on the strain phenotype, weighted by wisam precision weights computed from the transformed-scale noise. Genome-wide significance thresholds come from 1000 permutations (6 imputations each) with a generalized extreme value fit to the permutation maxima of −log10 P (95th percentile); adjusted P-values use the same fit. Credible intervals are 90% intervals from 100 Bayesian bootstrap replicates of the chromosome scan (80% intervals are drawn in the gene-track plots).</p>
+</section>
+<section id="cis-and-trans-pqtl" class="level2">
+<h2 class="anchored" data-anchor-id="cis-and-trans-pqtl">cis and trans pQTL</h2>
+<p>A significant peak is <strong>cis</strong> if the gene encoding the protein lies inside its credible interval (same chromosome, mm10 gene body overlapping the interval) and <strong>trans</strong> otherwise. The encoding gene comes from the peptide-based pairing below (e.g.&nbsp;Ent1 → Slc29a1); CYP2C9 has no mouse ortholog and receives no call.</p>
+</section>
+<section id="proteintranscript-pairing" class="level2">
+<h2 class="anchored" data-anchor-id="proteintranscript-pairing">Protein–transcript pairing</h2>
+<p>Each protein was paired to a transcript from the measured peptide (exact match against mouse UniProt sequences for the relevant gene families), not from the protein name. Where several array probes cover the gene, a single-gene probe is preferred, then the Affymetrix suffix (_at, _a_at, _s_at, _x_at), then highest expression. Proteins with no defensible pair (CES1: no Ces probes on the array; CYP2C9: no mouse ortholog) have no transcript; shared multi-gene probes (UGT1A1, UGT1A6, UGT2A2, CYP2C50) are marked † because their signal is not gene-specific.</p>
+</section>
+<section id="heritability-and-genetic-correlation" class="level2">
+<h2 class="anchored" data-anchor-id="heritability-and-genetic-correlation">Heritability and genetic correlation</h2>
+<p>Broad-sense heritability is Vg/(Vg + Ve) from a strain random-intercept REML model on the Box-Cox replicates with a 200-replicate parametric-bootstrap interval; transcript H² uses individual-sample RINT values with scan date as a fixed effect. <strong>Genetic covariance is computed on z-scored traits</strong>: each protein’s replicate-level values are z-scored before the REML fit and before the CC-line means used for off-diagonal covariances, so genetic variances share one scale; genetic correlations and H² are unaffected. Off-diagonal covariances use method of moments on CC-line means (protein replicates are not animal-matched across traits, so residual cross-trait covariance is assumed zero) and the correlation matrix is projected to the nearest positive-semidefinite matrix. Phenotypic correlations are Pearson correlations of the strain means.</p>
 </section>
 <section id="rna-mediation" class="level2">
 <h2 class="anchored" data-anchor-id="rna-mediation">RNA mediation</h2>
-<p>Mediation analysis uses <code>bmediatR</code> (Bayesian mediation analysis for QTL) to test whether transcript abundance mediates a protein QTL, and whether one protein mediates another’s QTL at a shared peak locus.</p>
+<p>Mediation analysis uses <code>bmediatR</code> (Bayesian mediation analysis for QTL) to test whether transcript abundance mediates a protein QTL, with the scan’s own model weights, using corrected RNA data (duplicate probes resolved, all 20,666 transcripts).</p>
 </section>
 <section id="timbr" class="level2">
 <h2 class="anchored" data-anchor-id="timbr">TIMBR</h2>
-<p>TIMBR (Tree-based Inference of Multiple-allele Regression) infers whether the founder haplotypes underlying a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings with a phylogenetic backbone, rather than assuming every founder haplotype is functionally distinct.</p>
+<p>TIMBR (Tree-based Inference of Multiple-allele Regression) infers whether the founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings with a phylogenetic backbone. It is run across the full credible interval with the scan’s model weights.</p>
 </section>
 <section id="merge-diplotype-fine-mapping" class="level2">
 <h2 class="anchored" data-anchor-id="merge-diplotype-fine-mapping">Merge / diplotype fine-mapping</h2>
-<p>At significant loci, diplotype-resolved (“merge”) analysis re-tests association at the level of imputed founder-haplotype dosage to narrow the candidate region and flag significant SNPs. As of this writing this has only been carried out for a subset of proteins – see <a href="./status.html">Analysis Status</a>.</p>
+<p>At each significant locus, diplotype-resolved (“merge”) analysis re-tests association at the level of imputed founder-haplotype dosage across the credible interval, with the scan’s model weights, to narrow the candidate region and flag significant SNPs.</p>
+</section>
+<section id="clustering" class="level2">
+<h2 class="anchored" data-anchor-id="clustering">Clustering</h2>
+<p>Strains are clustered (Ward.D2, Euclidean) on the z-scored Box-Cox protein profiles; the number of clusters is chosen with the gap statistic.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -377,7 +408,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Full bibliographic details for Qasem et al.&nbsp;(2020) and Oreper et al.&nbsp;(2017) are not yet recorded anywhere in this project. Please add the complete citations to <code>references.bib</code> – these are currently referenced by author/year only.</p>
+<p>Full bibliographic details for Qasem et al.&nbsp;(2020) and Oreper et al.&nbsp;(2017) are not yet recorded in this project; please add the complete citations to <code>references.bib</code>.</p>
 </div>
 </div>
 
@@ -792,8 +823,8 @@ Note
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./overview.html" class="pagination-link" aria-label="V2 results overview">
-        <span class="nav-page-text">V2 results overview</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./overview.html" class="pagination-link" aria-label="Results overview">
+        <span class="nav-page-text">Results overview</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

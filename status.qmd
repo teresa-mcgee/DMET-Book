@@ -1,20 +1,22 @@
 # Analysis progress {.unnumbered}
 
-This page tracks the reporting status of the **rerun_2026-09-24_v2** results bundle. The cross-panel plots and integrated summary are in [V2 results overview](overview.qmd). CES2 is excluded from reporting analyses because of its protein QC issue.
+This page tracks the **repbc_2026-10-01** analysis. CES2 is excluded because of a protein QC issue. Counts are computed from the files on disk when this page is built.
 
-| Analysis | Current status | Evidence and reporting note |
+| Analysis | Status | Note |
 |---|---|---|
-| Protein pQTL summary | Available for 25/26 QC-retained proteins | Lead locus, p-value, adjusted p-value, and thresholds are in the integrated summary; OCT1.2 has no v2 pQTL summary row. |
-| Individual pQTL scan PDFs | Available for 21/26 proteins | Linked from the integrated table where available; scan PDFs are missing for CYP2D9, CYP2D10, CYP2E1, MRP2, and OCT1.2. |
-| Protein broad-sense H² | Available for all 26 QC-retained proteins | Box–Cox protein estimates with 95% bootstrap intervals are shown in the figure 2 panel; p-values include Bonferroni correction in the summary. |
-| Protein strain profiles and clustering | Available | Box–Cox profiles, PCA, gap-statistic plot, and k=3 heatmap are linked from the overview. |
-| Transcript broad-sense H² | Available for matched probes | Forest plot and summary table cover 19 unique probes mapped to 20 of 26 QC-retained protein rows. Per-probe estimates include 95% bootstrap intervals and adjusted p-values. |
-| eQTL genome map | Peak results complete; location plot near-complete | The merged RNA-v2 table has 20,666/20,666 peak results and 104/104 task outputs; the location map plots 19,959 transcripts with complete positional annotation. |
-| Transcriptome structure | Available as overview plots | RINT hierarchical heatmap and binned transcript-correlation display are included. |
-| Genetic covariance / genetic correlations | Available as point estimates | Protein and coding-transcript CC-line covariance matrices and H²-diagonal correlation plots are included; uncertainty intervals have not been estimated. |
-| Mediation | Partial, targeted | 7/26 reportable proteins have plots in the RNA-v2 targeted mediation folder; the submitted array explicitly listed eight proteins, including excluded CES2. |
-| Merge/diplotype fine mapping | Partial | Available locus-specific results should be reported as selected-locus follow-up, not a complete panel-wide analysis. |
+| Replicate-level Box-Cox normalization | 26/26 proteins | λ per protein from `boxcox(y ~ strain)`; small shift only for proteins with zeros (Cyp2c39, Cyp2c50, Mrp3, Oct1.2). |
+| pQTL genome scans (11 imputations, 1000 permutations) | 26/26 proteins | wisam weights from the Box-Cox-scale replicate variance. |
+| Significant pQTL peaks with 90% credible intervals | 10 peaks in 8 proteins | plus 1 in the zero-inflated subset scan; all classified cis/trans. |
+| Zero-inflated subset scans (Cyp2c39, Cyp2c50) | 2/2 | the binary detected/not-detected scan has not been re-run with the new normalization. |
+| Merge (diplotype fine-mapping) | 7/10 full-set loci complete | 5/10 plots available; wide credible intervals take many hours. |
+| TIMBR credible-interval sweep | 10/10 loci | 0/10 loci have plots (plots need the Merge profile). |
+| RNA mediation (bmediatR) | 10/10 loci | scan weights and phenotype come from the same tag. |
+| Protein broad-sense H² | 26/26 | 95% parametric-bootstrap intervals. |
+| Transcript pairing and H² | 24/26 proteins paired | peptide-based pairing; CES1 and CYP2C9 have no defensible pair. |
+| Genetic covariance / correlation | Available | z-scored traits; point estimates (no uncertainty intervals). |
+| Protein clustering | Available | gap statistic, PCA, heatmap. |
+| eQTL map and transcriptome overview | Available | independent of the protein normalization. |
 
-## Reporting interpretation
-
-The completed plots support reporting protein-level heritability, strain variation, protein QTL signals, complete transcript peak results, near-complete positional eQTL mapping, and targeted mediation. The current pQTL table is incomplete for OCT1.2. Genetic covariance estimates are available but currently lack uncertainty intervals.
+## Pending
+- Merge, TIMBR plots and mediation overlays using the Merge-derived plotting window are completed once the running Merge jobs finish; rebuild the book afterwards (`python3 build_book_repbc.py && quarto render`).
+- The binary (detected vs not detected) scans for the zero-inflated proteins use the earlier definition.

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Teresa McGee">
-<meta name="dcterms.date" content="2026-09-29">
+<meta name="dcterms.date" content="2026-10-02">
 
 <title>DMET results</title>
 <style>
@@ -73,6 +73,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -126,13 +127,19 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">V2 results overview</span></a>
+ <span class="menu-text">Results overview</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./status.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Analysis progress</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./credible_intervals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Credible intervals</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -344,7 +351,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 29, 2026</p>
+      <p class="date">October 2, 2026</p>
     </div>
   </div>
   
@@ -358,18 +365,15 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="preface" class="level1 unnumbered">
 <h1 class="unnumbered">Preface</h1>
-<p>This book collects results from a pharmacogenomics screen of 27 drug-metabolizing enzyme and transporter (DMET) proteins measured across Collaborative Cross (CC) mouse strains. The current integrated v2 report excludes CES2 because of a protein QC issue; its legacy chapter is retained in the source tree but omitted from the rendered book.</p>
-<p>The <a href="./overview.html">V2 results overview</a> is the reporting-focused cross-panel summary, with the updated summary table, QTL maps, heritability results, protein clustering, and transcriptome figures. The <a href="./status.html">Analysis progress</a> page records current coverage and outstanding analyses. The remaining protein chapters provide detailed, protein-specific results where available. These include:</p>
+<p>This book collects results from a pharmacogenomics screen of 26 drug-metabolizing enzyme and transporter (DMET) proteins measured across Collaborative Cross (CC) mouse strains (a 27th, CES2, is excluded for a protein QC issue). It reports the <strong>repbc_2026-10-01</strong> analysis: protein abundances were Box-Cox normalized on the individual replicates, scanned for protein QTL (pQTL), and followed up at each significant locus.</p>
+<p>The <a href="./overview.html">results overview</a> has the cross-protein summary, heritability, correlations, genome-wide QTL maps and clustering. <a href="./status.html">Analysis progress</a> lists what has been completed, and the <a href="./credible_intervals.html">credible-interval appendix</a> has every significant locus with its cis/trans call. The protein chapters give per-protein detail:</p>
 <ul>
-<li><strong>Protein distributions</strong> – raw, RINT-normalized, and Box-Cox-transformed measurements, and which transformation was recommended.</li>
-<li><strong>Heritability</strong> – how strongly the trait clusters within CC strains.</li>
-<li><strong>pQTL genome scans</strong> – <code>miqtl</code>-based linkage scans, with permutation-derived significance thresholds.</li>
-<li><strong>RNA mediation</strong> – whether transcript abundance (via <code>bmediatR</code>) explains the protein QTL.</li>
-<li><strong>Merge / diplotype fine-mapping</strong> – founder-haplotype-resolved fine-mapping at significant loci.</li>
-<li><strong>TIMBR</strong> – whether the founder haplotypes at a QTL collapse into fewer functional alleles.</li>
+<li><strong>Normalization</strong> – raw, Box-Cox likelihood profile and transformed replicates.</li>
+<li><strong>Heritability</strong> – broad-sense H² of the protein and of its paired transcript.</li>
+<li><strong>pQTL genome scan</strong> – <code>miqtl</code> scan with permutation-derived thresholds.</li>
+<li><strong>Significant peaks</strong> – credible interval, cis/trans, Merge fine-mapping, TIMBR allelic series and RNA mediation.</li>
 </ul>
-<p>Not every protein has been carried through every stage yet. Rather than hide that, each chapter says explicitly which analyses exist for that protein and which don’t (“<em>Not yet analyzed here</em>”), and the <a href="./status.html">Analysis Status</a> chapter gives the full picture across all 27 proteins at once, plus a short list of known data-quality issues in the current figures. That chapter is regenerated automatically (via <code>build_chapters.py</code>) from what’s actually present on disk, so it should never drift out of date the way a hand-maintained checklist would.</p>
-<p>See <a href="./intro.html">Methods</a> for how the underlying proteomics and genetic data were generated.</p>
+<p>Every figure is displayed in the page and has a download link (PNG, PDF or CSV) beneath it. See <a href="./intro.html">Methods</a> for how the data were generated and analysed.</p>
 
 
 </section>

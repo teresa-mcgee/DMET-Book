@@ -3,7 +3,6 @@ Abcb4
 Bcrp
 Bsep
 Ces1
-Ces2
 Cyp1a2
 Cyp2c29
 Cyp2c39

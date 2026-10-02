@@ -1,16 +1,12 @@
 # Preface {.unnumbered}
 
-This book collects results from a pharmacogenomics screen of 27 drug-metabolizing enzyme and transporter (DMET) proteins measured across Collaborative Cross (CC) mouse strains. The current integrated v2 report excludes CES2 because of a protein QC issue; its legacy chapter is retained in the source tree but omitted from the rendered book.
+This book collects results from a pharmacogenomics screen of 26 drug-metabolizing enzyme and transporter (DMET) proteins measured across Collaborative Cross (CC) mouse strains (a 27th, CES2, is excluded for a protein QC issue). It reports the **repbc_2026-10-01** analysis: protein abundances were Box-Cox normalized on the individual replicates, scanned for protein QTL (pQTL), and followed up at each significant locus.
 
-The [V2 results overview](overview.qmd) is the reporting-focused cross-panel summary, with the updated summary table, QTL maps, heritability results, protein clustering, and transcriptome figures. The [Analysis progress](status.qmd) page records current coverage and outstanding analyses. The remaining protein chapters provide detailed, protein-specific results where available. These include:
+The [results overview](overview.qmd) has the cross-protein summary, heritability, correlations, genome-wide QTL maps and clustering. [Analysis progress](status.qmd) lists what has been completed, and the [credible-interval appendix](credible_intervals.qmd) has every significant locus with its cis/trans call. The protein chapters give per-protein detail:
 
-- **Protein distributions** -- raw, RINT-normalized, and Box-Cox-transformed measurements, and which transformation was recommended.
-- **Heritability** -- how strongly the trait clusters within CC strains.
-- **pQTL genome scans** -- `miqtl`-based linkage scans, with permutation-derived significance thresholds.
-- **RNA mediation** -- whether transcript abundance (via `bmediatR`) explains the protein QTL.
-- **Merge / diplotype fine-mapping** -- founder-haplotype-resolved fine-mapping at significant loci.
-- **TIMBR** -- whether the founder haplotypes at a QTL collapse into fewer functional alleles.
+- **Normalization** -- raw, Box-Cox likelihood profile and transformed replicates.
+- **Heritability** -- broad-sense H² of the protein and of its paired transcript.
+- **pQTL genome scan** -- `miqtl` scan with permutation-derived thresholds.
+- **Significant peaks** -- credible interval, cis/trans, Merge fine-mapping, TIMBR allelic series and RNA mediation.
 
-Not every protein has been carried through every stage yet. Rather than hide that, each chapter says explicitly which analyses exist for that protein and which don't ("_Not yet analyzed here_"), and the [Analysis Status](status.qmd) chapter gives the full picture across all 27 proteins at once, plus a short list of known data-quality issues in the current figures. That chapter is regenerated automatically (via `build_chapters.py`) from what's actually present on disk, so it should never drift out of date the way a hand-maintained checklist would.
-
-See [Methods](intro.qmd) for how the underlying proteomics and genetic data were generated.
+Every figure is displayed in the page and has a download link (PNG, PDF or CSV) beneath it. See [Methods](intro.qmd) for how the data were generated and analysed.

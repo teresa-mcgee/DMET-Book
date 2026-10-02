@@ -72,6 +72,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -125,13 +126,19 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">V2 results overview</span></a>
+ <span class="menu-text">Results overview</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./status.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Analysis progress</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./credible_intervals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Credible intervals</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -314,31 +321,28 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#protein-overview" id="toc-protein-overview" class="nav-link active" data-scroll-target="#protein-overview"><span class="header-section-number">9</span> Protein Overview</a></li>
-  <li><a href="#data-overview" id="toc-data-overview" class="nav-link" data-scroll-target="#data-overview"><span class="header-section-number">10</span> Data Overview</a>
+  <li><a href="#data-and-normalization" id="toc-data-and-normalization" class="nav-link" data-scroll-target="#data-and-normalization"><span class="header-section-number">10</span> Data and normalization</a>
   <ul class="collapse">
-  <li><a href="#protein-distributions" id="toc-protein-distributions" class="nav-link" data-scroll-target="#protein-distributions"><span class="header-section-number">10.1</span> Protein Distributions</a>
-  <ul class="collapse">
-  <li><a href="#box-cox-transformation-diagnostic" id="toc-box-cox-transformation-diagnostic" class="nav-link" data-scroll-target="#box-cox-transformation-diagnostic"><span class="header-section-number">10.1.1</span> Box-Cox transformation diagnostic</a></li>
-  <li><a href="#raw-data" id="toc-raw-data" class="nav-link" data-scroll-target="#raw-data"><span class="header-section-number">10.1.2</span> Raw data</a></li>
-  <li><a href="#box-cox-transformed" id="toc-box-cox-transformed" class="nav-link" data-scroll-target="#box-cox-transformed"><span class="header-section-number">10.1.3</span> Box-Cox transformed</a></li>
-  <li><a href="#rint-transformed" id="toc-rint-transformed" class="nav-link" data-scroll-target="#rint-transformed"><span class="header-section-number">10.1.4</span> RINT transformed</a></li>
+  <li><a href="#heritability" id="toc-heritability" class="nav-link" data-scroll-target="#heritability"><span class="header-section-number">10.1</span> Heritability</a></li>
   </ul></li>
-  <li><a href="#heritability" id="toc-heritability" class="nav-link" data-scroll-target="#heritability"><span class="header-section-number">10.2</span> Heritability</a></li>
-  <li><a href="#pqtl-genome-scans" id="toc-pqtl-genome-scans" class="nav-link" data-scroll-target="#pqtl-genome-scans"><span class="header-section-number">10.3</span> pQTL Genome Scans</a>
+  <li><a href="#pqtl-genome-scan" id="toc-pqtl-genome-scan" class="nav-link" data-scroll-target="#pqtl-genome-scan"><span class="header-section-number">11</span> pQTL genome scan</a></li>
+  <li><a href="#significant-peaks" id="toc-significant-peaks" class="nav-link" data-scroll-target="#significant-peaks"><span class="header-section-number">12</span> Significant peak(s)</a>
   <ul class="collapse">
-  <li><a href="#combined-with-rna-eqtl-pqtl" id="toc-combined-with-rna-eqtl-pqtl" class="nav-link" data-scroll-target="#combined-with-rna-eqtl-pqtl"><span class="header-section-number">10.3.1</span> Combined with RNA (eQTL + pQTL)</a></li>
-  <li><a href="#genome-wide-scan-scans_0.95-box-cox" id="toc-genome-wide-scan-scans_0.95-box-cox" class="nav-link" data-scroll-target="#genome-wide-scan-scans_0.95-box-cox"><span class="header-section-number">10.3.2</span> Genome-wide scan (scans_0.95, box-cox)</a></li>
-  </ul></li>
-  <li><a href="#peak-locus" id="toc-peak-locus" class="nav-link" data-scroll-target="#peak-locus"><span class="header-section-number">10.4</span> Peak Locus</a>
+  <li><a href="#chromosome-19-peak-jax00214946" id="toc-chromosome-19-peak-jax00214946" class="nav-link" data-scroll-target="#chromosome-19-peak-jax00214946"><span class="header-section-number">12.1</span> Chromosome 19 peak (JAX00214946)</a>
   <ul class="collapse">
-  <li><a href="#confidence-interval-of-the-significant-peak-if-one-exists" id="toc-confidence-interval-of-the-significant-peak-if-one-exists" class="nav-link" data-scroll-target="#confidence-interval-of-the-significant-peak-if-one-exists"><span class="header-section-number">10.4.1</span> Confidence interval of the significant peak (if one exists)</a></li>
+  <li><a href="#merge-diplotype-fine-mapping" id="toc-merge-diplotype-fine-mapping" class="nav-link" data-scroll-target="#merge-diplotype-fine-mapping"><span class="header-section-number">12.1.1</span> Merge / diplotype fine-mapping</a></li>
+  <li><a href="#timbr-allelic-series" id="toc-timbr-allelic-series" class="nav-link" data-scroll-target="#timbr-allelic-series"><span class="header-section-number">12.1.2</span> TIMBR allelic series</a></li>
+  <li><a href="#rna-mediation" id="toc-rna-mediation" class="nav-link" data-scroll-target="#rna-mediation"><span class="header-section-number">12.1.3</span> RNA mediation</a></li>
   </ul></li>
-  <li><a href="#rna-mediation" id="toc-rna-mediation" class="nav-link" data-scroll-target="#rna-mediation"><span class="header-section-number">10.5</span> RNA Mediation</a>
+  </ul></li>
+  <li><a href="#zero-inflated-subset-scan" id="toc-zero-inflated-subset-scan" class="nav-link" data-scroll-target="#zero-inflated-subset-scan"><span class="header-section-number">13</span> Zero-inflated subset scan</a>
   <ul class="collapse">
-  <li><a href="#protein-protein-mediation-at-the-peak-locus" id="toc-protein-protein-mediation-at-the-peak-locus" class="nav-link" data-scroll-target="#protein-protein-mediation-at-the-peak-locus"><span class="header-section-number">10.5.1</span> Protein-protein mediation at the peak locus</a></li>
+  <li><a href="#chromosome-19-peak-jax00214946-zero-inflated-subset-scan" id="toc-chromosome-19-peak-jax00214946-zero-inflated-subset-scan" class="nav-link" data-scroll-target="#chromosome-19-peak-jax00214946-zero-inflated-subset-scan"><span class="header-section-number">13.1</span> Chromosome 19 peak (JAX00214946) — zero-inflated subset scan</a>
+  <ul class="collapse">
+  <li><a href="#merge-diplotype-fine-mapping-1" id="toc-merge-diplotype-fine-mapping-1" class="nav-link" data-scroll-target="#merge-diplotype-fine-mapping-1"><span class="header-section-number">13.1.1</span> Merge / diplotype fine-mapping</a></li>
+  <li><a href="#timbr-allelic-series-1" id="toc-timbr-allelic-series-1" class="nav-link" data-scroll-target="#timbr-allelic-series-1"><span class="header-section-number">13.1.2</span> TIMBR allelic series</a></li>
+  <li><a href="#rna-mediation-1" id="toc-rna-mediation-1" class="nav-link" data-scroll-target="#rna-mediation-1"><span class="header-section-number">13.1.3</span> RNA mediation</a></li>
   </ul></li>
-  <li><a href="#timbr-allelic-series" id="toc-timbr-allelic-series" class="nav-link" data-scroll-target="#timbr-allelic-series"><span class="header-section-number">10.6</span> TIMBR (Allelic Series)</a></li>
-  <li><a href="#merge-diplotype-fine-mapping" id="toc-merge-diplotype-fine-mapping" class="nav-link" data-scroll-target="#merge-diplotype-fine-mapping"><span class="header-section-number">10.7</span> Merge / Diplotype Fine-Mapping</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -373,329 +377,219 @@ ul.task-list li input[type="checkbox"] {
 <h1 data-number="9"><span class="header-section-number">9</span> Protein Overview</h1>
 <p>The mouse protein Cyp2c39, also known by its gene name <strong>Cyp2c39</strong>, is a member of the cytochrome P450 superfamily. It is involved in the metabolism of various endogenous and exogenous compounds. The protein has aliases such as <strong>Cytochrome P450 2C39</strong>.</p>
 </section>
-<section id="data-overview" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Data Overview</h1>
-<p>The protein data can be handled either with RINT normalization or a Box-Cox (BC) transformation. BC transformation often produces clearer genome scans, but is not available yet for every analysis stage below.</p>
-<section id="protein-distributions" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="protein-distributions"><span class="header-section-number">10.1</span> Protein Distributions</h2>
-<section id="box-cox-transformation-diagnostic" class="level3" data-number="10.1.1">
-<h3 data-number="10.1.1" class="anchored" data-anchor-id="box-cox-transformation-diagnostic"><span class="header-section-number">10.1.1</span> Box-Cox transformation diagnostic</h3>
+<section id="data-and-normalization" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Data and normalization</h1>
+<p>Replicate measurements were Box-Cox transformed with a protein-specific λ = <strong>0.19</strong> (95% likelihood interval 0.14 to 0.24), estimated on the individual replicates (<code>boxcox(y ~ strain)</code>, no +1 shift); because 37 replicate(s) were zero, a small shift of 0.005 was added before transforming. The strain phenotype is the mean of the transformed replicates and the strain noise used for the wisam weights is their variance.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/Cyp2c39/jpgs/boxcox/boxcox_page_001.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<p><img src="figures/repbc_2026-10-01/proteins/Cyp2c39_normalization.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption>Cyp2c39: raw replicates, Box-Cox likelihood profile and transformed replicates.</figcaption>
 </figure>
 </div>
+<div class="fig-downloads">
+<p>Download: <a href="figures/repbc_2026-10-01/proteins/Cyp2c39_normalization.png" download="Cyp2c39_normalization.png">PNG</a> · <a href="figures/repbc_2026-10-01/proteins/Cyp2c39_normalization.pdf" download="Cyp2c39_normalization.pdf">PDF</a></p>
+</div>
+<section id="heritability" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="heritability"><span class="header-section-number">10.1</span> Heritability</h2>
+<p>Broad-sense heritability of the protein is <strong>0.90</strong> (95% CI 0.85–0.94; BH-adjusted P 8.48e-57). Its paired transcript is <strong>Cyp2c39</strong> (array probe <code>1421363_PM_at</code>, paired from the measured peptide <code>FINLVPNNIPR</code>). Transcript H² is <strong>0.69</strong> (95% CI 0.55–0.79; BH-adjusted P 1.38e-23).</p>
 </section>
-<section id="raw-data" class="level3" data-number="10.1.2">
-<h3 data-number="10.1.2" class="anchored" data-anchor-id="raw-data"><span class="header-section-number">10.1.2</span> Raw data</h3>
+</section>
+<section id="pqtl-genome-scan" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> pQTL genome scan</h1>
+<p>Genome scan of the Box-Cox phenotype with wisam weights (miqtl <code>scan.h2lmm</code>, 11 imputations); significance thresholds come from 1000 permutations (GEV fit to the permutation maxima of −log10 P). Strongest locus: chr19:39.93 Mb, P = 5.40e-19, adjusted P = 2.22e-16; 95% threshold = 5.00 (−log10 P).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/Cyp2c39/jpgs/rawHistograms/rawHistograms_page_001.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<p><img src="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_genome_scan.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption>Cyp2c39 genome-wide pQTL scan with the permutation threshold.</figcaption>
 </figure>
 </div>
+<div class="fig-downloads">
+<p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_genome_scan.pdf" download="Cyp2c39_genome_scan.pdf">PDF</a> · <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_scan_by_chromosome.pdf" download="Cyp2c39_scan_by_chromosome.pdf">PDF</a></p>
+</div>
 </section>
-<section id="box-cox-transformed" class="level3" data-number="10.1.3">
-<h3 data-number="10.1.3" class="anchored" data-anchor-id="box-cox-transformed"><span class="header-section-number">10.1.3</span> Box-Cox transformed</h3>
+<section id="significant-peaks" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> Significant peak(s)</h1>
+<section id="chromosome-19-peak-jax00214946" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="chromosome-19-peak-jax00214946"><span class="header-section-number">12.1</span> Chromosome 19 peak (JAX00214946)</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Peak position</th>
+<th style="text-align: right;">−log10(P)</th>
+<th style="text-align: right;">Adjusted P</th>
+<th>90% credible interval</th>
+<th>Encoding gene</th>
+<th>Gene location</th>
+<th>pQTL type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>chr19:39.93 Mb</td>
+<td style="text-align: right;">18.27</td>
+<td style="text-align: right;">2.22e-16</td>
+<td>38.20–40.36 Mb</td>
+<td>Cyp2c39</td>
+<td>chr19:39.51–39.57 Mb</td>
+<td><strong>cis</strong></td>
+</tr>
+</tbody>
+</table>
+<p>A pQTL is <strong>cis</strong> when the gene encoding the protein lies within the credible interval and <strong>trans</strong> otherwise.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/Cyp2c39/jpgs/BC_Histograms/BC_Histograms_page_001.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<p><img src="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_ci_scans_full_p1.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption>Bootstrap credible interval, chromosome 19.</figcaption>
 </figure>
 </div>
-</section>
-<section id="rint-transformed" class="level3" data-number="10.1.4">
-<h3 data-number="10.1.4" class="anchored" data-anchor-id="rint-transformed"><span class="header-section-number">10.1.4</span> RINT transformed</h3>
+<div class="fig-downloads">
+<p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_ci_scans_full.pdf" download="Cyp2c39_ci_scans_full.pdf">PDF</a></p>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/Cyp2c39/jpgs/RINT_Histograms/RINT_Histograms_page_001.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<p><img src="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_ci_genes_full_chr19.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption>Genes within the credible interval, chromosome 19 (80% interval boxed).</figcaption>
 </figure>
 </div>
-</section>
-</section>
-<section id="heritability" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="heritability"><span class="header-section-number">10.2</span> Heritability</h2>
-<p>Estimated narrow-sense heritability, i.e.&nbsp;whether the trait is strongly correlated within Collaborative Cross strains.</p>
+<div class="fig-downloads">
+<p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_ci_genes_full_chr19.png" download="Cyp2c39_ci_genes_full_chr19.png">PNG</a></p>
+</div>
+<section id="merge-diplotype-fine-mapping" class="level3" data-number="12.1.1">
+<h3 data-number="12.1.1" class="anchored" data-anchor-id="merge-diplotype-fine-mapping"><span class="header-section-number">12.1.1</span> Merge / diplotype fine-mapping</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/Cyp2c39/h2.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<p><img src="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mergeplot_full_JAX00214946.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption>Merge: SDP significance profile across the credible interval.</figcaption>
 </figure>
 </div>
+<div class="fig-downloads">
+<p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mergeplot_full_JAX00214946.png" download="Cyp2c39_mergeplot_full_JAX00214946.png">PNG</a></p>
+</div>
 </section>
-<section id="pqtl-genome-scans" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="pqtl-genome-scans"><span class="header-section-number">10.3</span> pQTL Genome Scans</h2>
-<section id="combined-with-rna-eqtl-pqtl" class="level3" data-number="10.3.1">
-<h3 data-number="10.3.1" class="anchored" data-anchor-id="combined-with-rna-eqtl-pqtl"><span class="header-section-number">10.3.1</span> Combined with RNA (eQTL + pQTL)</h3>
+<section id="timbr-allelic-series" class="level3" data-number="12.1.2">
+<h3 data-number="12.1.2" class="anchored" data-anchor-id="timbr-allelic-series"><span class="header-section-number">12.1.2</span> TIMBR allelic series</h3>
+<p><em>TIMBR sweep complete; plots will appear once Merge profiles are available.</em></p>
+</section>
+<section id="rna-mediation" class="level3" data-number="12.1.3">
+<h3 data-number="12.1.3" class="anchored" data-anchor-id="rna-mediation"><span class="header-section-number">12.1.3</span> RNA mediation</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/Cyp2c39/jpgs/boxcox/genome_scan_combined_RNAProt.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<p><img src="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mediation_overlay_bf_chr19_withgenes.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption>Bayes-factor mediation overlay: scan, mediators and genes in the credible interval.</figcaption>
 </figure>
 </div>
-</section>
-<section id="genome-wide-scan-scans_0.95-box-cox" class="level3" data-number="10.3.2">
-<h3 data-number="10.3.2" class="anchored" data-anchor-id="genome-wide-scan-scans_0.95-box-cox"><span class="header-section-number">10.3.2</span> Genome-wide scan (scans_0.95, box-cox)</h3>
-<p><em>Opens on Chr 19, where the significant peak is.</em></p>
-<div id="Cyp2c39-carousel" class="carousel slide" data-bs-ride="carousel">
-<div class="carousel-inner">
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_001.jpg" class="d-block w-100" alt="Cyp2c39 page 1">
+<div class="fig-downloads">
+<p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mediation_overlay_bf_chr19_withgenes.png" download="Cyp2c39_mediation_overlay_bf_chr19_withgenes.png">PNG</a> · <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mediation_overlay_bf_chr19_nogenes.png" download="Cyp2c39_mediation_overlay_bf_chr19_nogenes.png">PNG</a></p>
 </div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_002.jpg" class="d-block w-100" alt="Cyp2c39 page 2">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_003.jpg" class="d-block w-100" alt="Cyp2c39 page 3">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_004.jpg" class="d-block w-100" alt="Cyp2c39 page 4">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_005.jpg" class="d-block w-100" alt="Cyp2c39 page 5">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_006.jpg" class="d-block w-100" alt="Cyp2c39 page 6">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_007.jpg" class="d-block w-100" alt="Cyp2c39 page 7">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_008.jpg" class="d-block w-100" alt="Cyp2c39 page 8">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_009.jpg" class="d-block w-100" alt="Cyp2c39 page 9">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_010.jpg" class="d-block w-100" alt="Cyp2c39 page 10">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_011.jpg" class="d-block w-100" alt="Cyp2c39 page 11">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_012.jpg" class="d-block w-100" alt="Cyp2c39 page 12">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_013.jpg" class="d-block w-100" alt="Cyp2c39 page 13">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_014.jpg" class="d-block w-100" alt="Cyp2c39 page 14">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_015.jpg" class="d-block w-100" alt="Cyp2c39 page 15">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_016.jpg" class="d-block w-100" alt="Cyp2c39 page 16">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_017.jpg" class="d-block w-100" alt="Cyp2c39 page 17">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_018.jpg" class="d-block w-100" alt="Cyp2c39 page 18">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_019.jpg" class="d-block w-100" alt="Cyp2c39 page 19">
-</div>
-<div class="carousel-item active">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_020.jpg" class="d-block w-100" alt="Cyp2c39 page 20">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/scans_0.95/scans_0.95_page_021.jpg" class="d-block w-100" alt="Cyp2c39 page 21">
-</div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#Cyp2c39-carousel" data-bs-slide="prev">
-<span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
-</button>
-<button class="carousel-control-next" type="button" data-bs-target="#Cyp2c39-carousel" data-bs-slide="next">
-<span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
-</button>
-</div>
-<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
-<p><label for="Cyp2c39-jump" class="mb-0">Jump to figure:</label> <select id="Cyp2c39-jump" class="form-select form-select-sm d-inline-block w-auto" onchange="bootstrap.Carousel.getOrCreateInstance(document.getElementById(&quot;Cyp2c39-carousel&quot;)).to(parseInt(this.value));"> <option value="0">Figure 1</option> <option value="1">Figure 2</option> <option value="2">Figure 3</option> <option value="3">Figure 4</option> <option value="4">Figure 5</option> <option value="5">Figure 6</option> <option value="6">Figure 7</option> <option value="7">Figure 8</option> <option value="8">Figure 9</option> <option value="9">Figure 10</option> <option value="10">Figure 11</option> <option value="11">Figure 12</option> <option value="12">Figure 13</option> <option value="13">Figure 14</option> <option value="14">Figure 15</option> <option value="15">Figure 16</option> <option value="16">Figure 17</option> <option value="17">Figure 18</option> <option value="18">Figure 19</option> <option value="19" selected="">Figure 20</option> <option value="20">Figure 21</option> </select></p>
-</div>
-<script>document.getElementById("Cyp2c39-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Cyp2c39-jump").value=e.to;});</script>
-</section>
-</section>
-<section id="peak-locus" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="peak-locus"><span class="header-section-number">10.4</span> Peak Locus</h2>
-<section id="confidence-interval-of-the-significant-peak-if-one-exists" class="level3" data-number="10.4.1">
-<h3 data-number="10.4.1" class="anchored" data-anchor-id="confidence-interval-of-the-significant-peak-if-one-exists"><span class="header-section-number">10.4.1</span> Confidence interval of the significant peak (if one exists)</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/Cyp2c39/jpgs/boxcox/ci_scans/ci_scans_page_001.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%"></p>
+<p><img src="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mediation_posterior_bars_chr19.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption>Posterior probabilities of the mediation models for each candidate mediator.</figcaption>
 </figure>
+</div>
+<div class="fig-downloads">
+<p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_targeted_mediation_chr19_posterior_bars.pdf" download="Cyp2c39_targeted_mediation_chr19_posterior_bars.pdf">PDF</a></p>
 </div>
 </section>
 </section>
-<section id="rna-mediation" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="rna-mediation"><span class="header-section-number">10.5</span> RNA Mediation</h2>
-<p>Genome-wide test of whether transcript abundance mediates the protein QTL (bmediatR).</p>
-<p><em>Not yet analyzed here: no RNA-mediation figure found for Cyp2c39. See <a href="./status.html">Analysis Status</a>.</em></p>
-<section id="protein-protein-mediation-at-the-peak-locus" class="level3" data-number="10.5.1">
-<h3 data-number="10.5.1" class="anchored" data-anchor-id="protein-protein-mediation-at-the-peak-locus"><span class="header-section-number">10.5.1</span> Protein-protein mediation at the peak locus</h3>
+</section>
+<section id="zero-inflated-subset-scan" class="level1" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> Zero-inflated subset scan</h1>
+<p>Cyp2c39 has strains with no detectable protein (all replicates zero). A second scan was run on the strains with measurable variation (normalized within-strain variance &gt; 0.01), re-normalized with its own Box-Cox λ, with its own permutation threshold. The binary (detected vs.&nbsp;not detected) scan has not been re-run with the new normalization.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/Cyp2c39/jpgs/proteinMediators/proteinMediators_page_001.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+<p><img src="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_sub_scan.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption>Cyp2c39 zero-inflated subset genome scan.</figcaption>
 </figure>
 </div>
-</section>
-</section>
-<section id="timbr-allelic-series" class="level2" data-number="10.6">
-<h2 data-number="10.6" class="anchored" data-anchor-id="timbr-allelic-series"><span class="header-section-number">10.6</span> TIMBR (Allelic Series)</h2>
-<p>TIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.</p>
-<div id="Cyp2c39-timbr-carousel" class="carousel slide" data-bs-ride="carousel">
-<div class="carousel-inner">
-<div class="carousel-item active">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_001.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 1">
+<div class="fig-downloads">
+<p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_sub_scan.pdf" download="Cyp2c39_sub_scan.pdf">PDF</a></p>
 </div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_002.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 2">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_003.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 3">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_004.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 4">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_005.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 5">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_006.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 6">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_007.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 7">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_008.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 8">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_009.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 9">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_010.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 10">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_011.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 11">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_012.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 12">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_013.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 13">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_014.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 14">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_015.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 15">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_016.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 16">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_017.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 17">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_018.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 18">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_019.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 19">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_020.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 20">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_021.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 21">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_022.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 22">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_023.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 23">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_024.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 24">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_025.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 25">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_026.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 26">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_027.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 27">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_028.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 28">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_029.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 29">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_030.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 30">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_031.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 31">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_032.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 32">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_033.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 33">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_034.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 34">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_035.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 35">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_036.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 36">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_037.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 37">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_038.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 38">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_039.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 39">
-</div>
-<div class="carousel-item">
-<img src="figures/Cyp2c39/jpgs/boxcox/timbr_ci/timbr_ci_page_040.jpg" class="d-block w-100" alt="Cyp2c39-timbr page 40">
-</div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#Cyp2c39-timbr-carousel" data-bs-slide="prev">
-<span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
-</button>
-<button class="carousel-control-next" type="button" data-bs-target="#Cyp2c39-timbr-carousel" data-bs-slide="next">
-<span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
-</button>
-</div>
-<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
-<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-target="#Cyp2c39-timbr-carousel" data-bs-slide-to="0">
-5’ side
-</button>
-<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-target="#Cyp2c39-timbr-carousel" data-bs-slide-to="36">
-Lead SNP
-</button>
-<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-target="#Cyp2c39-timbr-carousel" data-bs-slide-to="39">
-3’ side
-</button>
-<p><label for="Cyp2c39-timbr-jump" class="mb-0">Jump to figure:</label> <select id="Cyp2c39-timbr-jump" class="form-select form-select-sm d-inline-block w-auto" onchange="bootstrap.Carousel.getOrCreateInstance(document.getElementById(&quot;Cyp2c39-timbr-carousel&quot;)).to(parseInt(this.value));"> <option value="0" selected="">Figure 1</option> <option value="1">Figure 2</option> <option value="2">Figure 3</option> <option value="3">Figure 4</option> <option value="4">Figure 5</option> <option value="5">Figure 6</option> <option value="6">Figure 7</option> <option value="7">Figure 8</option> <option value="8">Figure 9</option> <option value="9">Figure 10</option> <option value="10">Figure 11</option> <option value="11">Figure 12</option> <option value="12">Figure 13</option> <option value="13">Figure 14</option> <option value="14">Figure 15</option> <option value="15">Figure 16</option> <option value="16">Figure 17</option> <option value="17">Figure 18</option> <option value="18">Figure 19</option> <option value="19">Figure 20</option> <option value="20">Figure 21</option> <option value="21">Figure 22</option> <option value="22">Figure 23</option> <option value="23">Figure 24</option> <option value="24">Figure 25</option> <option value="25">Figure 26</option> <option value="26">Figure 27</option> <option value="27">Figure 28</option> <option value="28">Figure 29</option> <option value="29">Figure 30</option> <option value="30">Figure 31</option> <option value="31">Figure 32</option> <option value="32">Figure 33</option> <option value="33">Figure 34</option> <option value="34">Figure 35</option> <option value="35">Figure 36</option> <option value="36">Figure 37</option> <option value="37">Figure 38</option> <option value="38">Figure 39</option> <option value="39">Figure 40</option> </select></p>
-</div>
-<script>document.getElementById("Cyp2c39-timbr-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Cyp2c39-timbr-jump").value=e.to;});</script>
-<section id="ci-window-model-selection-dot-plot" class="level4" data-number="10.6.0.1">
-<h4 data-number="10.6.0.1" class="anchored" data-anchor-id="ci-window-model-selection-dot-plot"><span class="header-section-number">10.6.0.1</span> CI-window model-selection dot plot</h4>
+<section id="chromosome-19-peak-jax00214946-zero-inflated-subset-scan" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="chromosome-19-peak-jax00214946-zero-inflated-subset-scan"><span class="header-section-number">13.1</span> Chromosome 19 peak (JAX00214946) — zero-inflated subset scan</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 17%">
+<col style="width: 17%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Peak position</th>
+<th style="text-align: right;">−log10(P)</th>
+<th style="text-align: right;">Adjusted P</th>
+<th>90% credible interval</th>
+<th>Encoding gene</th>
+<th>Gene location</th>
+<th>pQTL type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>chr19:39.93 Mb</td>
+<td style="text-align: right;">9.33</td>
+<td style="text-align: right;">5.79e-07</td>
+<td>37.99–41.30 Mb</td>
+<td>Cyp2c39</td>
+<td>chr19:39.51–39.57 Mb</td>
+<td><strong>cis</strong></td>
+</tr>
+</tbody>
+</table>
+<p>A pQTL is <strong>cis</strong> when the gene encoding the protein lies within the credible interval and <strong>trans</strong> otherwise.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/Cyp2c39/jpgs/boxcox/CHR19/TIMBR/timbr_ci_dot.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+<p><img src="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_ci_scans_sub_p1.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption>Bootstrap credible interval, chromosome 19.</figcaption>
 </figure>
 </div>
+<div class="fig-downloads">
+<p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_ci_scans_sub.pdf" download="Cyp2c39_ci_scans_sub.pdf">PDF</a></p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_ci_genes_sub_chr19.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption>Genes within the credible interval, chromosome 19 (80% interval boxed).</figcaption>
+</figure>
+</div>
+<div class="fig-downloads">
+<p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_ci_genes_sub_chr19.png" download="Cyp2c39_ci_genes_sub_chr19.png">PNG</a></p>
+</div>
+<section id="merge-diplotype-fine-mapping-1" class="level3" data-number="13.1.1">
+<h3 data-number="13.1.1" class="anchored" data-anchor-id="merge-diplotype-fine-mapping-1"><span class="header-section-number">13.1.1</span> Merge / diplotype fine-mapping</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mergeplot_sub_JAX00214946.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption>Merge: SDP significance profile across the credible interval.</figcaption>
+</figure>
+</div>
+<div class="fig-downloads">
+<p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mergeplot_sub_JAX00214946.png" download="Cyp2c39_mergeplot_sub_JAX00214946.png">PNG</a></p>
+</div>
 </section>
+<section id="timbr-allelic-series-1" class="level3" data-number="13.1.2">
+<h3 data-number="13.1.2" class="anchored" data-anchor-id="timbr-allelic-series-1"><span class="header-section-number">13.1.2</span> TIMBR allelic series</h3>
+<p><em>TIMBR was not run for the zero-inflated subset peak.</em></p>
 </section>
-<section id="merge-diplotype-fine-mapping" class="level2" data-number="10.7">
-<h2 data-number="10.7" class="anchored" data-anchor-id="merge-diplotype-fine-mapping"><span class="header-section-number">10.7</span> Merge / Diplotype Fine-Mapping</h2>
-<p>Merge analysis has been run for Cyp2c39; see <code>merge/Cyp2c39/</code> in the main project repository for diplotype and SNP-filtering results.</p>
+<section id="rna-mediation-1" class="level3" data-number="13.1.3">
+<h3 data-number="13.1.3" class="anchored" data-anchor-id="rna-mediation-1"><span class="header-section-number">13.1.3</span> RNA mediation</h3>
+<p><em>RNA mediation was not run for the zero-inflated subset peak.</em></p>
 
 
+</section>
 </section>
 </section>
 

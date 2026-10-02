@@ -8,135 +8,30 @@ editor: visual
 
 The mouse protein ATPase, categorized under the symbol **Atp5a1**, is a component of the ATP synthase complex vital for ATP production in mitochondria. It is also known by various aliases, including **ATPase H+ transporting mitochondrial F1 complex alpha subunit 1** and **F1-ATPase alpha subunit**. The protein plays a crucial role in cellular energy metabolism.
 
-# Data Overview
+# Data and normalization
 
-The protein data can be handled either with RINT normalization or a Box-Cox (BC) transformation. BC transformation often produces clearer genome scans, but is not available yet for every analysis stage below.
+Replicate measurements were Box-Cox transformed with a protein-specific λ = **0.64** (95% likelihood interval 0.01 to 1.27), estimated on the individual replicates (`boxcox(y ~ strain)`, no +1 shift). The strain phenotype is the mean of the transformed replicates and the strain noise used for the wisam weights is their variance.
 
-## Protein Distributions
+![ATPase: raw replicates, Box-Cox likelihood profile and transformed replicates.](figures/repbc_2026-10-01/proteins/ATPase_normalization.png){fig-align="center" width="95%"}
 
-### Box-Cox transformation diagnostic
-
-![](figures/ATPase/jpgs/boxcox/boxcox_page_001.jpg){fig-align="center" width="80%"}
-
-### Raw data
-
-![](figures/ATPase/jpgs/rawHistograms/rawHistograms_page_001.jpg){fig-align="center" width="80%"}
-
-### Box-Cox transformed
-
-![](figures/ATPase/jpgs/BC_Histograms/BC_Histograms_page_001.jpg){fig-align="center" width="80%"}
-
-### RINT transformed
-
-![](figures/ATPase/jpgs/rint/RINT_Histograms/RINT_Histograms_page_001.jpg){fig-align="center" width="80%"}
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/proteins/ATPase_normalization.png){download="ATPase_normalization.png"} · [PDF](figures/repbc_2026-10-01/proteins/ATPase_normalization.pdf){download="ATPase_normalization.pdf"}
+:::
 
 ## Heritability
 
-Estimated narrow-sense heritability, i.e. whether the trait is strongly correlated within Collaborative Cross strains.
+Broad-sense heritability of the protein is **0.33** (95% CI 0.20–0.48; BH-adjusted P 2.69e-06). Its paired transcript is **Atp1a1** (array probe `1423653_PM_at`, paired from the measured peptide `VDNSSLTGESEPQTR`). Transcript H² is **0.51** (95% CI 0.36–0.64; BH-adjusted P 1.49e-12).
 
-![](figures/ATPase/h2.jpg){fig-align="center" width="80%"}
+# pQTL genome scan
 
-## pQTL Genome Scans
+Genome scan of the Box-Cox phenotype with wisam weights (miqtl `scan.h2lmm`, 11 imputations); significance thresholds come from 1000 permutations (GEV fit to the permutation maxima of −log10 P). Strongest locus: chr6:139.86 Mb, P = 2.57e-04, adjusted P = 4.99e-01; 95% threshold = 5.08 (−log10 P).
 
-### Combined with RNA (eQTL + pQTL)
+![ATPase genome-wide pQTL scan with the permutation threshold.](figures/repbc_2026-10-01/per_protein/ATPase/ATPase_genome_scan.png){fig-align="center" width="95%"}
 
-![](figures/ATPase/jpgs/boxcox/genome_scan_combined_RNAProt.jpg){fig-align="center" width="80%"}
+::: {.fig-downloads}
+Download: [PDF](figures/repbc_2026-10-01/per_protein/ATPase/ATPase_genome_scan.pdf){download="ATPase_genome_scan.pdf"} · [PDF](figures/repbc_2026-10-01/per_protein/ATPase/ATPase_scan_by_chromosome.pdf){download="ATPase_scan_by_chromosome.pdf"}
+:::
 
-### Genome-wide scan (scans_0.95, box-cox)
+# Significant peak(s)
 
-<div id="ATPase-carousel" class="carousel slide" data-bs-ride="carousel">
-<div class="carousel-inner">
-<div class="carousel-item active"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_001.jpg" class="d-block w-100" alt="ATPase page 1"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_002.jpg" class="d-block w-100" alt="ATPase page 2"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_003.jpg" class="d-block w-100" alt="ATPase page 3"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_004.jpg" class="d-block w-100" alt="ATPase page 4"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_005.jpg" class="d-block w-100" alt="ATPase page 5"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_006.jpg" class="d-block w-100" alt="ATPase page 6"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_007.jpg" class="d-block w-100" alt="ATPase page 7"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_008.jpg" class="d-block w-100" alt="ATPase page 8"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_009.jpg" class="d-block w-100" alt="ATPase page 9"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_010.jpg" class="d-block w-100" alt="ATPase page 10"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_011.jpg" class="d-block w-100" alt="ATPase page 11"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_012.jpg" class="d-block w-100" alt="ATPase page 12"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_013.jpg" class="d-block w-100" alt="ATPase page 13"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_014.jpg" class="d-block w-100" alt="ATPase page 14"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_015.jpg" class="d-block w-100" alt="ATPase page 15"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_016.jpg" class="d-block w-100" alt="ATPase page 16"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_017.jpg" class="d-block w-100" alt="ATPase page 17"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_018.jpg" class="d-block w-100" alt="ATPase page 18"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_019.jpg" class="d-block w-100" alt="ATPase page 19"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_020.jpg" class="d-block w-100" alt="ATPase page 20"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/boxcox/scans_0.95/scans_0.95_page_021.jpg" class="d-block w-100" alt="ATPase page 21"></div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#ATPase-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
-<button class="carousel-control-next" type="button" data-bs-target="#ATPase-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
-</div>
-<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
-<label for="ATPase-jump" class="mb-0">Jump to figure:</label>
-<select id="ATPase-jump" class="form-select form-select-sm d-inline-block w-auto" onchange='bootstrap.Carousel.getOrCreateInstance(document.getElementById("ATPase-carousel")).to(parseInt(this.value));'>
-<option value="0" selected>Figure 1</option>
-<option value="1">Figure 2</option>
-<option value="2">Figure 3</option>
-<option value="3">Figure 4</option>
-<option value="4">Figure 5</option>
-<option value="5">Figure 6</option>
-<option value="6">Figure 7</option>
-<option value="7">Figure 8</option>
-<option value="8">Figure 9</option>
-<option value="9">Figure 10</option>
-<option value="10">Figure 11</option>
-<option value="11">Figure 12</option>
-<option value="12">Figure 13</option>
-<option value="13">Figure 14</option>
-<option value="14">Figure 15</option>
-<option value="15">Figure 16</option>
-<option value="16">Figure 17</option>
-<option value="17">Figure 18</option>
-<option value="18">Figure 19</option>
-<option value="19">Figure 20</option>
-<option value="20">Figure 21</option>
-</select>
-</div>
-<script>document.getElementById("ATPase-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("ATPase-jump").value=e.to;});</script>
-
-## Peak Locus
-
-### Confidence interval of the significant peak (if one exists)
-
-_Not yet analyzed here: no confidence-interval scan found for ATPase. See [Analysis Status](status.qmd)._
-
-## RNA Mediation
-
-Genome-wide test of whether transcript abundance mediates the protein QTL (bmediatR).
-
-_Not yet analyzed here: no RNA-mediation figure found for ATPase. See [Analysis Status](status.qmd)._
-
-### Protein-protein mediation at the peak locus
-
-_Not yet analyzed here: no protein-protein mediation figure found for ATPase. See [Analysis Status](status.qmd)._
-
-## TIMBR (Allelic Series)
-
-TIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.
-
-<div id="ATPase-timbr-carousel" class="carousel slide" data-bs-ride="carousel">
-<div class="carousel-inner">
-<div class="carousel-item active"><img src="figures/ATPase/jpgs/rint/timbr_results/timbr_results_page_001.jpg" class="d-block w-100" alt="ATPase-timbr page 1"></div>
-<div class="carousel-item"><img src="figures/ATPase/jpgs/rint/timbr_results/timbr_results_page_002.jpg" class="d-block w-100" alt="ATPase-timbr page 2"></div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#ATPase-timbr-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
-<button class="carousel-control-next" type="button" data-bs-target="#ATPase-timbr-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
-</div>
-<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
-<label for="ATPase-timbr-jump" class="mb-0">Jump to figure:</label>
-<select id="ATPase-timbr-jump" class="form-select form-select-sm d-inline-block w-auto" onchange='bootstrap.Carousel.getOrCreateInstance(document.getElementById("ATPase-timbr-carousel")).to(parseInt(this.value));'>
-<option value="0" selected>Figure 1</option>
-<option value="1">Figure 2</option>
-</select>
-</div>
-<script>document.getElementById("ATPase-timbr-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("ATPase-timbr-jump").value=e.to;});</script>
-
-## Merge / Diplotype Fine-Mapping
-
-_Not yet analyzed here: merge/diplotype fine-mapping has not been run for ATPase. See [Analysis Status](status.qmd)._
-
+No genome-wide significant pQTL for this protein (adjusted P ≥ 0.05), so credible intervals, Merge, TIMBR and mediation were not run.

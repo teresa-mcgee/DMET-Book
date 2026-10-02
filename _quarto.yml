@@ -1,6 +1,9 @@
 project:
   type: book
   output-dir: docs    # GitHub Pages looks for a "docs" folder by default
+  resources:
+    - figures/repbc_2026-10-01/**   # PNG/PDF/CSV files offered as downloads
+    - "!figures/repbc_2026-10-01/**/*.rds"   # analysis caches are not published
 
 book:
   title: "DMET results"
@@ -11,6 +14,7 @@ book:
     - intro.qmd
     - overview.qmd
     - status.qmd
+    - credible_intervals.qmd
     - part: "Protein Analyses"
       chapters:
         - ATPase.qmd
@@ -44,6 +48,7 @@ book:
 format:
   html:
     theme: cosmo          # Bootswatch theme (cosmo, flatly, lumen, etc.)
+    css: styles.css       # download lines under figures
     toc: true             # enable table of contents in sidebar
     toc-location: left
     number-sections: true # auto-number sections

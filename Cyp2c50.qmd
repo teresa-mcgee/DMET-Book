@@ -8,254 +8,128 @@ editor: visual
 
 Cyp2c50, also known as Cytochrome P450 2C50, is a mouse protein encoded by the gene **Cyp2c50**. This protein belongs to the cytochrome P450 family and plays a role in the metabolism of various compounds. The gene has several aliases, including **CYP2C50**, reflecting its involvement in metabolic processes in the liver and other tissues.
 
-# Data Overview
+# Data and normalization
 
-The protein data can be handled either with RINT normalization or a Box-Cox (BC) transformation. BC transformation often produces clearer genome scans, but is not available yet for every analysis stage below.
+Replicate measurements were Box-Cox transformed with a protein-specific λ = **0.21** (95% likelihood interval 0.08 to 0.34), estimated on the individual replicates (`boxcox(y ~ strain)`, no +1 shift); because 17 replicate(s) were zero, a small shift of 796 was added before transforming. The strain phenotype is the mean of the transformed replicates and the strain noise used for the wisam weights is their variance.
 
-## Protein Distributions
+![Cyp2c50: raw replicates, Box-Cox likelihood profile and transformed replicates.](figures/repbc_2026-10-01/proteins/Cyp2c50_normalization.png){fig-align="center" width="95%"}
 
-### Box-Cox transformation diagnostic
-
-![](figures/Cyp2c50/jpgs/boxcox/boxcox_page_001.jpg){fig-align="center" width="80%"}
-
-### Raw data
-
-![](figures/Cyp2c50/jpgs/rawHistograms/rawHistograms_page_001.jpg){fig-align="center" width="80%"}
-
-### Box-Cox transformed
-
-![](figures/Cyp2c50/jpgs/BC_Histograms/BC_Histograms_page_001.jpg){fig-align="center" width="80%"}
-
-### RINT transformed
-
-![](figures/Cyp2c50/jpgs/RINT_Histograms/RINT_Histograms_page_001.jpg){fig-align="center" width="80%"}
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/proteins/Cyp2c50_normalization.png){download="Cyp2c50_normalization.png"} · [PDF](figures/repbc_2026-10-01/proteins/Cyp2c50_normalization.pdf){download="Cyp2c50_normalization.pdf"}
+:::
 
 ## Heritability
 
-Estimated narrow-sense heritability, i.e. whether the trait is strongly correlated within Collaborative Cross strains.
+Broad-sense heritability of the protein is **0.85** (95% CI 0.78–0.90; BH-adjusted P 4.53e-44). Its paired transcript is **Cyp2c50 +1** (array probe `1418653_PM_at`, paired from the measured peptide `GTNVITSLSSVLR`). Transcript H² is **0.42** (95% CI 0.24–0.56; BH-adjusted P 1.70e-08). This is a shared multi-gene probe, so the transcript signal is not gene-specific.
 
-![](figures/Cyp2c50/h2.jpg){fig-align="center" width="80%"}
+# pQTL genome scan
 
-## pQTL Genome Scans
+Genome scan of the Box-Cox phenotype with wisam weights (miqtl `scan.h2lmm`, 11 imputations); significance thresholds come from 1000 permutations (GEV fit to the permutation maxima of −log10 P). Strongest locus: chr19:37.99 Mb, P = 3.89e-13, adjusted P = 2.22e-16; 95% threshold = 4.95 (−log10 P).
 
-### Combined with RNA (eQTL + pQTL)
+![Cyp2c50 genome-wide pQTL scan with the permutation threshold.](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_genome_scan.png){fig-align="center" width="95%"}
 
-![](figures/Cyp2c50/jpgs/boxcox/genome_scan_combined_RNAProt.jpg){fig-align="center" width="80%"}
+::: {.fig-downloads}
+Download: [PDF](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_genome_scan.pdf){download="Cyp2c50_genome_scan.pdf"} · [PDF](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_scan_by_chromosome.pdf){download="Cyp2c50_scan_by_chromosome.pdf"}
+:::
 
-### Genome-wide scan (scans_0.95, box-cox)
+# Significant peak(s)
 
-_Opens on Chr 19, where the significant peak is._
+## Chromosome 19 peak (UNC30282360)
 
-<div id="Cyp2c50-carousel" class="carousel slide" data-bs-ride="carousel">
-<div class="carousel-inner">
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_001.jpg" class="d-block w-100" alt="Cyp2c50 page 1"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_002.jpg" class="d-block w-100" alt="Cyp2c50 page 2"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_003.jpg" class="d-block w-100" alt="Cyp2c50 page 3"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_004.jpg" class="d-block w-100" alt="Cyp2c50 page 4"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_005.jpg" class="d-block w-100" alt="Cyp2c50 page 5"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_006.jpg" class="d-block w-100" alt="Cyp2c50 page 6"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_007.jpg" class="d-block w-100" alt="Cyp2c50 page 7"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_008.jpg" class="d-block w-100" alt="Cyp2c50 page 8"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_009.jpg" class="d-block w-100" alt="Cyp2c50 page 9"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_010.jpg" class="d-block w-100" alt="Cyp2c50 page 10"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_011.jpg" class="d-block w-100" alt="Cyp2c50 page 11"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_012.jpg" class="d-block w-100" alt="Cyp2c50 page 12"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_013.jpg" class="d-block w-100" alt="Cyp2c50 page 13"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_014.jpg" class="d-block w-100" alt="Cyp2c50 page 14"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_015.jpg" class="d-block w-100" alt="Cyp2c50 page 15"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_016.jpg" class="d-block w-100" alt="Cyp2c50 page 16"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_017.jpg" class="d-block w-100" alt="Cyp2c50 page 17"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_018.jpg" class="d-block w-100" alt="Cyp2c50 page 18"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_019.jpg" class="d-block w-100" alt="Cyp2c50 page 19"></div>
-<div class="carousel-item active"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_020.jpg" class="d-block w-100" alt="Cyp2c50 page 20"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/scans_0.95/scans_0.95_page_021.jpg" class="d-block w-100" alt="Cyp2c50 page 21"></div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#Cyp2c50-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
-<button class="carousel-control-next" type="button" data-bs-target="#Cyp2c50-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
-</div>
-<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
-<label for="Cyp2c50-jump" class="mb-0">Jump to figure:</label>
-<select id="Cyp2c50-jump" class="form-select form-select-sm d-inline-block w-auto" onchange='bootstrap.Carousel.getOrCreateInstance(document.getElementById("Cyp2c50-carousel")).to(parseInt(this.value));'>
-<option value="0">Figure 1</option>
-<option value="1">Figure 2</option>
-<option value="2">Figure 3</option>
-<option value="3">Figure 4</option>
-<option value="4">Figure 5</option>
-<option value="5">Figure 6</option>
-<option value="6">Figure 7</option>
-<option value="7">Figure 8</option>
-<option value="8">Figure 9</option>
-<option value="9">Figure 10</option>
-<option value="10">Figure 11</option>
-<option value="11">Figure 12</option>
-<option value="12">Figure 13</option>
-<option value="13">Figure 14</option>
-<option value="14">Figure 15</option>
-<option value="15">Figure 16</option>
-<option value="16">Figure 17</option>
-<option value="17">Figure 18</option>
-<option value="18">Figure 19</option>
-<option value="19" selected>Figure 20</option>
-<option value="20">Figure 21</option>
-</select>
-</div>
-<script>document.getElementById("Cyp2c50-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Cyp2c50-jump").value=e.to;});</script>
+| Peak position | −log10(P) | Adjusted P | 90% credible interval | Encoding gene | Gene location | pQTL type |
+|---|---:|---:|---|---|---|---|
+| chr19:37.99 Mb | 12.41 | 2.22e-16 | 37.45–48.47 Mb | Cyp2c50 | chr19:40.09–40.11 Mb | **cis** |
 
-## Peak Locus
+A pQTL is **cis** when the gene encoding the protein lies within the credible interval and **trans** otherwise.
 
-### Confidence interval of the significant peak (if one exists)
+![Bootstrap credible interval, chromosome 19.](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_ci_scans_full_p1.png){fig-align="center" width="95%"}
 
-![](figures/Cyp2c50/jpgs/boxcox/ci_scans/ci_scans_page_001.jpg){fig-align="center" width="80%"}
+::: {.fig-downloads}
+Download: [PDF](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_ci_scans_full.pdf){download="Cyp2c50_ci_scans_full.pdf"}
+:::
 
-## RNA Mediation
+![Genes within the credible interval, chromosome 19 (80% interval boxed).](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_ci_genes_full_chr19.png){fig-align="center" width="95%"}
 
-Genome-wide test of whether transcript abundance mediates the protein QTL (bmediatR).
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_ci_genes_full_chr19.png){download="Cyp2c50_ci_genes_full_chr19.png"}
+:::
 
-_Not yet analyzed here: no RNA-mediation figure found for Cyp2c50. See [Analysis Status](status.qmd)._
+### Merge / diplotype fine-mapping
 
-### Protein-protein mediation at the peak locus
+![Merge: SDP significance profile across the credible interval.](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mergeplot_full_UNC30282360.png){fig-align="center" width="95%"}
 
-![](figures/Cyp2c50/jpgs/proteinMediators/proteinMediators_page_001.jpg){fig-align="center" width="100%"}
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mergeplot_full_UNC30282360.png){download="Cyp2c50_mergeplot_full_UNC30282360.png"}
+:::
 
-## TIMBR (Allelic Series)
+### TIMBR allelic series
 
-TIMBR infers whether founder haplotypes at a QTL collapse into fewer functional alleles, using a Chinese Restaurant Process prior over haplotype groupings.
+_TIMBR sweep complete; plots will appear once Merge profiles are available._
 
-<div id="Cyp2c50-timbr-carousel" class="carousel slide" data-bs-ride="carousel">
-<div class="carousel-inner">
-<div class="carousel-item active"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_001.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 1"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_002.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 2"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_003.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 3"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_004.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 4"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_005.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 5"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_006.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 6"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_007.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 7"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_008.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 8"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_009.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 9"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_010.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 10"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_011.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 11"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_012.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 12"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_013.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 13"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_014.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 14"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_015.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 15"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_016.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 16"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_017.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 17"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_018.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 18"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_019.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 19"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_020.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 20"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_021.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 21"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_022.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 22"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_023.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 23"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_024.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 24"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_025.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 25"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_026.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 26"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_027.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 27"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_028.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 28"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_029.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 29"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_030.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 30"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_031.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 31"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_032.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 32"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_033.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 33"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_034.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 34"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_035.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 35"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_036.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 36"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_037.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 37"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_038.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 38"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_039.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 39"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_040.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 40"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_041.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 41"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_042.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 42"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_043.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 43"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_044.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 44"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_045.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 45"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_046.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 46"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_047.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 47"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_048.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 48"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_049.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 49"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_050.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 50"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_051.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 51"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_052.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 52"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_053.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 53"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_054.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 54"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_055.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 55"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_056.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 56"></div>
-<div class="carousel-item"><img src="figures/Cyp2c50/jpgs/boxcox/timbr_ci/timbr_ci_page_057.jpg" class="d-block w-100" alt="Cyp2c50-timbr page 57"></div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#Cyp2c50-timbr-carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
-<button class="carousel-control-next" type="button" data-bs-target="#Cyp2c50-timbr-carousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
-</div>
-<div class="carousel-jump-controls d-flex flex-wrap align-items-center gap-2 mt-2">
-<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-target="#Cyp2c50-timbr-carousel" data-bs-slide-to="0">5' side</button>
-<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-target="#Cyp2c50-timbr-carousel" data-bs-slide-to="4">Lead SNP</button>
-<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-target="#Cyp2c50-timbr-carousel" data-bs-slide-to="56">3' side</button>
-<label for="Cyp2c50-timbr-jump" class="mb-0">Jump to figure:</label>
-<select id="Cyp2c50-timbr-jump" class="form-select form-select-sm d-inline-block w-auto" onchange='bootstrap.Carousel.getOrCreateInstance(document.getElementById("Cyp2c50-timbr-carousel")).to(parseInt(this.value));'>
-<option value="0" selected>Figure 1</option>
-<option value="1">Figure 2</option>
-<option value="2">Figure 3</option>
-<option value="3">Figure 4</option>
-<option value="4">Figure 5</option>
-<option value="5">Figure 6</option>
-<option value="6">Figure 7</option>
-<option value="7">Figure 8</option>
-<option value="8">Figure 9</option>
-<option value="9">Figure 10</option>
-<option value="10">Figure 11</option>
-<option value="11">Figure 12</option>
-<option value="12">Figure 13</option>
-<option value="13">Figure 14</option>
-<option value="14">Figure 15</option>
-<option value="15">Figure 16</option>
-<option value="16">Figure 17</option>
-<option value="17">Figure 18</option>
-<option value="18">Figure 19</option>
-<option value="19">Figure 20</option>
-<option value="20">Figure 21</option>
-<option value="21">Figure 22</option>
-<option value="22">Figure 23</option>
-<option value="23">Figure 24</option>
-<option value="24">Figure 25</option>
-<option value="25">Figure 26</option>
-<option value="26">Figure 27</option>
-<option value="27">Figure 28</option>
-<option value="28">Figure 29</option>
-<option value="29">Figure 30</option>
-<option value="30">Figure 31</option>
-<option value="31">Figure 32</option>
-<option value="32">Figure 33</option>
-<option value="33">Figure 34</option>
-<option value="34">Figure 35</option>
-<option value="35">Figure 36</option>
-<option value="36">Figure 37</option>
-<option value="37">Figure 38</option>
-<option value="38">Figure 39</option>
-<option value="39">Figure 40</option>
-<option value="40">Figure 41</option>
-<option value="41">Figure 42</option>
-<option value="42">Figure 43</option>
-<option value="43">Figure 44</option>
-<option value="44">Figure 45</option>
-<option value="45">Figure 46</option>
-<option value="46">Figure 47</option>
-<option value="47">Figure 48</option>
-<option value="48">Figure 49</option>
-<option value="49">Figure 50</option>
-<option value="50">Figure 51</option>
-<option value="51">Figure 52</option>
-<option value="52">Figure 53</option>
-<option value="53">Figure 54</option>
-<option value="54">Figure 55</option>
-<option value="55">Figure 56</option>
-<option value="56">Figure 57</option>
-</select>
-</div>
-<script>document.getElementById("Cyp2c50-timbr-carousel").addEventListener("slide.bs.carousel",function(e){document.getElementById("Cyp2c50-timbr-jump").value=e.to;});</script>
+### RNA mediation
 
-#### CI-window model-selection dot plot
+![Bayes-factor mediation overlay: scan, mediators and genes in the credible interval.](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_overlay_bf_chr19_withgenes.png){fig-align="center" width="95%"}
 
-![](figures/Cyp2c50/jpgs/boxcox/CHR19/TIMBR/timbr_ci_dot.jpg){fig-align="center" width="90%"}
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_overlay_bf_chr19_withgenes.png){download="Cyp2c50_mediation_overlay_bf_chr19_withgenes.png"} · [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_overlay_bf_chr19_nogenes.png){download="Cyp2c50_mediation_overlay_bf_chr19_nogenes.png"}
+:::
 
-## Merge / Diplotype Fine-Mapping
+![Posterior probabilities of the mediation models for each candidate mediator.](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_posterior_bars_chr19.png){fig-align="center" width="95%"}
 
-A partial merge run exists for Cyp2c50 (diplotype filtering only, no significant SNPs surfaced yet); see `out/Merge/Cyp2c50/`.
+::: {.fig-downloads}
+Download: [PDF](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_targeted_mediation_chr19_posterior_bars.pdf){download="Cyp2c50_targeted_mediation_chr19_posterior_bars.pdf"}
+:::
 
+## Chromosome 3 peak (UNC5366241)
+
+| Peak position | −log10(P) | Adjusted P | 90% credible interval | Encoding gene | Gene location | pQTL type |
+|---|---:|---:|---|---|---|---|
+| chr3:60.51 Mb | 5.89 | 5.32e-03 | 47.17–87.62 Mb | Cyp2c50 | chr19:40.09–40.11 Mb | **trans** |
+
+A pQTL is **cis** when the gene encoding the protein lies within the credible interval and **trans** otherwise.
+
+![Bootstrap credible interval, chromosome 3.](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_ci_scans_full_p2.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PDF](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_ci_scans_full.pdf){download="Cyp2c50_ci_scans_full.pdf"}
+:::
+
+![Genes within the credible interval, chromosome 3 (80% interval boxed).](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_ci_genes_full_chr3.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_ci_genes_full_chr3.png){download="Cyp2c50_ci_genes_full_chr3.png"}
+:::
+
+### Merge / diplotype fine-mapping
+
+_Merge status: complete; the plot is not available yet._
+
+### TIMBR allelic series
+
+_TIMBR sweep complete; plots will appear once Merge profiles are available._
+
+### RNA mediation
+
+![Bayes-factor mediation overlay: scan, mediators and genes in the credible interval.](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_overlay_bf_chr3_withgenes.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_overlay_bf_chr3_withgenes.png){download="Cyp2c50_mediation_overlay_bf_chr3_withgenes.png"} · [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_overlay_bf_chr3_nogenes.png){download="Cyp2c50_mediation_overlay_bf_chr3_nogenes.png"}
+:::
+
+![Posterior probabilities of the mediation models for each candidate mediator.](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_posterior_bars_chr3.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PDF](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_targeted_mediation_chr3_posterior_bars.pdf){download="Cyp2c50_targeted_mediation_chr3_posterior_bars.pdf"}
+:::
+
+# Zero-inflated subset scan
+
+Cyp2c50 has strains with no detectable protein (all replicates zero). A second scan was run on the strains with measurable variation (normalized within-strain variance > 0.01), re-normalized with its own Box-Cox λ, with its own permutation threshold. The binary (detected vs. not detected) scan has not been re-run with the new normalization.
+
+![Cyp2c50 zero-inflated subset genome scan.](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_sub_scan.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PDF](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_sub_scan.pdf){download="Cyp2c50_sub_scan.pdf"}
+:::
+
+The subset scan has no genome-wide significant peak.

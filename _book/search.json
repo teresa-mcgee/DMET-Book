@@ -64,7 +64,7 @@
     "href": "overview.html",
     "title": "V2 results overview",
     "section": "",
-    "text": "Cross-protein summary\nThis is the reporting overview for the rerun_2026-09-24_v2 rerun. It presents the current cross-protein results and links the figure set. The reporting table and figures exclude CES2 because of the previously identified protein QC issue. CES2’s legacy source chapter is omitted from the rendered book; this page is the cross-panel summary.\nThe table combines pQTL lead-locus statistics and protein broad-sense H² with coding-transcript broad-sense H² where an original-array probe could be matched. Protein H² uses the Box–Cox transformed protein measurements supplied to the QTL analyses. Transcript H² uses RINT-transformed individual RNA array measurements, with CC line as a random effect and scan date adjusted as a fixed effect. Transcript rows without a gene-specific match are shown as unavailable.\nDownload the QC-filtered CSV summary or the transcript H² estimates and intervals. OCT1.2 is retained with its protein H² estimate from the figure 2 results, but the v2 integrated table contains no OCT1.2 pQTL row.",
+    "text": "Cross-protein summary\nThis is the reporting overview for the rerun_2026-09-24_v2 rerun. It presents the current cross-protein results and links the figure set. Protein symbols are shown in uppercase. The reporting table and figures exclude CES2 because of the previously identified protein QC issue. CES2’s legacy source chapter is omitted from the rendered book; this page is the cross-panel summary.\nThe table combines pQTL lead-locus statistics and protein broad-sense H² with coding-transcript broad-sense H² where an original-array probe could be matched. Protein H² uses the Box–Cox transformed protein measurements supplied to the QTL analyses. Transcript H² uses RINT-transformed individual RNA array measurements, with CC line as a random effect and scan date adjusted as a fixed effect. Transcript rows without a gene-specific match are shown as unavailable.\nDownload the QC-filtered CSV summary or the transcript H² estimates and intervals. OCT1.2 is retained with its protein H² estimate from the figure 2 results, but the v2 integrated table contains no OCT1.2 pQTL row.",
     "crumbs": [
       "V2 results overview"
     ]
@@ -94,7 +94,7 @@
     "href": "overview.html#genome-wide-qtl-overview",
     "title": "V2 results overview",
     "section": "Genome-wide QTL overview",
-    "text": "Genome-wide QTL overview\n\npQTL\n\n\n\nGenome-wide pQTL scan signal across proteins.\n\n\n\n\n\nProtein-specific pQTL signal overlaid on chromosome 3.\n\n\n\n\n\nProtein-specific pQTL signal overlaid on chromosome 9.\n\n\nThe v2 figure bundle also includes zoomed pQTL views for chromosomes 3, 16, 17, and 19: chr3, chr16, chr17, and chr19. The summary table links individual protein scan PDFs where available (21 of 26 reportable proteins); current scan PDFs are missing for CYP2D9, CYP2D10, CYP2E1, MRP2, and OCT1.2.\n\n\neQTL\n\n\n\neQTL genomic locations, with eQTL peak position on the x-axis and coding-gene position on the y-axis.\n\n\nThe merged corrected RNA-v2 eQTL table contains peak results for all 20,666 of 20,666 transcripts, with all 104 of 104 task outputs present. The location map plots the 19,959 transcripts with usable chromosome and genomic-position annotation on both axes; 707 eQTL results do not have complete positional annotation for this display. The point color shows uncapped −log₁₀(p). The refreshed plot and its underlying coordinates are in the RNA-v2 figure bundle.",
+    "text": "Genome-wide QTL overview\n\npQTL\n\n\n\nGenome-wide pQTL scan signal across proteins.\n\n\n\n\n\nProtein-specific pQTL signal overlaid on chromosome 3.\n\n\n\n\n\nProtein-specific pQTL signal overlaid on chromosome 9.\n\n\nThe v2 figure bundle also includes zoomed pQTL views for chromosomes 3, 16, 17, and 19: chr3, chr16, chr17, and chr19. The summary table links individual protein scan PDFs where available (21 of 26 reportable proteins); current scan PDFs are missing for CYP2D9, CYP2D10, CYP2E1, MRP2, and OCT1.2.\n\n\nSignificant-locus credible intervals\nThe credible-interval appendix reports every significant non-CES2 v2 pQTL locus with its 90% bootstrap interval, genome scan, nearby-gene CI plot, and corresponding mediation, TIMBR, and Merge follow-up where available.\n\n\neQTL\n\n\n\neQTL genomic locations, with eQTL peak position on the x-axis and coding-gene position on the y-axis.\n\n\nThe merged corrected RNA-v2 eQTL table contains peak results for all 20,666 of 20,666 transcripts, with all 104 of 104 task outputs present. The location map plots the 19,959 transcripts with usable chromosome and genomic-position annotation on both axes; 707 eQTL results do not have complete positional annotation for this display. The point color shows uncapped −log₁₀(p). The refreshed plot and its underlying coordinates are in the RNA-v2 figure bundle.",
     "crumbs": [
       "V2 results overview"
     ]
@@ -114,7 +114,7 @@
     "href": "overview.html#rna-mediation-coverage",
     "title": "V2 results overview",
     "section": "RNA mediation coverage",
-    "text": "RNA mediation coverage\nThe 2026-09-27 targeted mediation array was submitted for eight proteins. Seven are reportable after excluding CES2: Bsep, Cyp2c39, Cyp2c50, Cyp2d26, Cyp3a11, Ent1, Oatp2a1. Available chromosome overlays and posterior-bar plots are copied below; this is targeted locus follow-up, not panel-wide mediation.\n\n\n\nProtein\nAvailable mediation figures\n\n\n\n\nBsep\noverlay 16 withgenes, posterior bars chr16\n\n\nCyp2c39\noverlay 19 withgenes, posterior bars chr19\n\n\nCyp2c50\noverlay 19 withgenes, overlay 3 withgenes, posterior bars chr19, posterior bars chr3\n\n\nCyp2d26\noverlay 3 withgenes, posterior bars chr3\n\n\nCyp3a11\noverlay 3 withgenes, posterior bars chr3\n\n\nEnt1\noverlay 17 withgenes, posterior bars chr17\n\n\nOatp2a1\noverlay 16 withgenes, posterior bars chr16\n\n\n\nThe report previously showed no mediation figures because its builder only copied cross-panel plots and pQTL scans from the 2026-09-24 folder; it did not collect the separate 2026-09-27 RNA mediation folder. The other 19 QC-retained proteins have no plots in this RNA-v2 folder because they were not included in the explicit SLURM mediation protein list. CES2 outputs are omitted from the report because of its protein QC issue.",
+    "text": "RNA mediation coverage\nThe 2026-09-27 targeted mediation array was submitted for eight proteins. Seven are reportable after excluding CES2: BSEP, CYP2C39, CYP2C50, CYP2D26, CYP3A11, ENT1, OATP2A1. The current posterior-probability and Bayes-factor overlays and TIMBR credible-region plots are copied into the book figure bundle below; this is targeted locus follow-up, not panel-wide mediation. Each overlay uses the Merge-style haplotype-association scan line and the original analysis points.\n\n\n\nProtein\nMediation and TIMBR figures\n\n\n\n\nBSEP\nmediation bf chr16 no genes, mediation bf chr16 with genes, mediation chr16 no genes, mediation chr16 with genes, posterior bars chr16, TIMBR Bayes factor chr16, TIMBR posterior probability chr16\n\n\nCYP2C39\nmediation bf chr19 no genes, mediation bf chr19 with genes, mediation chr19 no genes, mediation chr19 with genes, posterior bars chr19, TIMBR Bayes factor chr19, TIMBR posterior probability chr19\n\n\nCYP2C50\nmediation bf chr19 no genes, mediation bf chr19 with genes, mediation bf chr3 no genes, mediation bf chr3 with genes, mediation chr19 no genes, mediation chr19 with genes, mediation chr3 no genes, mediation chr3 with genes, posterior bars chr19, posterior bars chr3, TIMBR Bayes factor chr19, TIMBR Bayes factor chr3, TIMBR posterior probability chr19, TIMBR posterior probability chr3\n\n\nCYP2D26\nmediation bf chr3 no genes, mediation bf chr3 with genes, mediation chr3 no genes, mediation chr3 with genes, posterior bars chr3, TIMBR Bayes factor chr3, TIMBR posterior probability chr3\n\n\nCYP3A11\nmediation bf chr3 no genes, mediation bf chr3 with genes, mediation chr3 no genes, mediation chr3 with genes, posterior bars chr3, TIMBR Bayes factor chr3, TIMBR posterior probability chr3\n\n\nENT1\nmediation bf chr17 no genes, mediation bf chr17 with genes, mediation chr17 no genes, mediation chr17 with genes, posterior bars chr17, TIMBR Bayes factor chr17, TIMBR posterior probability chr17\n\n\nOATP2A1\nmediation bf chr16 no genes, mediation bf chr16 with genes, mediation chr16 no genes, mediation chr16 with genes, posterior bars chr16, TIMBR Bayes factor chr16, TIMBR posterior probability chr16\n\n\n\nThe report previously showed no mediation figures because its builder only copied cross-panel plots and pQTL scans from the 2026-09-24 folder; it did not collect the separate 2026-09-27 RNA mediation folder. The other 19 QC-retained proteins have no plots in this RNA-v2 folder because they were not included in the explicit SLURM mediation protein list. CES2 outputs are omitted from the report because of its protein QC issue.",
     "crumbs": [
       "V2 results overview"
     ]
@@ -124,7 +124,7 @@
     "href": "overview.html#remaining-reporting-gaps",
     "title": "V2 results overview",
     "section": "Remaining reporting gaps",
-    "text": "Remaining reporting gaps\n\nGenetic covariance uncertainty: current covariance and correlation matrices are point estimates; confidence intervals or bootstrap uncertainty are not yet estimated.\neQTL positional annotation: 20,666/20,666 transcripts have peak results, while 19,959 are plotted because 707 lack complete position annotation.\nCoding transcript matching: six of the 26 QC-retained protein rows lack a gene-specific original-array transcript match, so their transcript H² is not estimated.\nOCT1.2 pQTL: its protein H² is available, but the v2 integrated summary and per-protein scan figure are absent.\nMediation and fine mapping: mediation covers seven reportable proteins from the targeted array. Merge/diplotype results remain locus-specific follow-up, not a uniform panel-wide report.",
+    "text": "Remaining reporting gaps\n\nGenetic covariance uncertainty: current covariance and correlation matrices are point estimates; confidence intervals or bootstrap uncertainty are not yet estimated.\neQTL positional annotation: 20,666/20,666 transcripts have peak results, while 19,959 are plotted because 707 lack complete position annotation.\nCoding transcript matching: six of the 26 QC-retained protein rows lack a gene-specific original-array transcript match, so their transcript H² is not estimated.\nOCT1.2 pQTL: its protein H² is available, but the v2 integrated summary and per-protein scan figure are absent.\nMediation and fine mapping: mediation and TIMBR outputs are linked at all eight significant non-CES2 pQTL CIs. Merge plots are linked where available. These are locus-specific follow-up, not a uniform panel-wide report.",
     "crumbs": [
       "V2 results overview"
     ]
@@ -134,9 +134,109 @@
     "href": "status.html",
     "title": "Analysis progress",
     "section": "",
-    "text": "Reporting interpretation\nThis page tracks the reporting status of the rerun_2026-09-24_v2 results bundle. The cross-panel plots and integrated summary are in V2 results overview. CES2 is excluded from reporting analyses because of its protein QC issue.\nThe completed plots support reporting protein-level heritability, strain variation, protein QTL signals, complete transcript peak results, near-complete positional eQTL mapping, and targeted mediation. The current pQTL table is incomplete for OCT1.2. Genetic covariance estimates are available but currently lack uncertainty intervals.",
+    "text": "Reporting interpretation\nThis page tracks the reporting status of the rerun_2026-09-24_v2 results bundle. The cross-panel plots and integrated summary are in V2 results overview. CES2 is excluded from reporting analyses because of its protein QC issue.\nThe completed plots support reporting protein-level heritability, strain variation, protein QTL signals, complete transcript peak results, near-complete positional eQTL mapping, and locus-specific CI follow-up. The current pQTL table is incomplete for OCT1.2. Genetic covariance estimates are available but currently lack uncertainty intervals; the BSEP significant-locus CI lacks a matching Merge analysis plot.",
     "crumbs": [
       "Analysis progress"
+    ]
+  },
+  {
+    "objectID": "credible_intervals.html",
+    "href": "credible_intervals.html",
+    "title": "Significant pQTL credible-interval follow-up",
+    "section": "",
+    "text": "OATP2A1 chr16: UNC26384752\nThis page follows the significant loci in rerun_2026-09-24_v2/SignificantResults.txt. It uses the saved 90% bootstrap credible intervals and matching v2 figures. CES2 is omitted because of the protein QC issue. Each locus is linked to its genome scan, CI/gene plot, mediation, TIMBR CI sweep, and Merge result where saved.\nAll coordinates are Mb. The listed interval is the 90% bootstrap CI. Mediation, TIMBR, and Merge links refer to the same protein and lead locus.\nLead position: 15.22 Mb; 90% CI: 13.99–22.32 Mb; scan p = 1.37e-06; adjusted p = 7.33e-03.",
+    "crumbs": [
+      "Significant pQTL credible-interval follow-up"
+    ]
+  },
+  {
+    "objectID": "credible_intervals.html#oatp2a1-chr16-unc26384752",
+    "href": "credible_intervals.html#oatp2a1-chr16-unc26384752",
+    "title": "Significant pQTL credible-interval follow-up",
+    "section": "",
+    "text": "90% bootstrap credible interval and nearby genes for OATP2A1, chr16.\n\n\n\nGenome scan: v2 scan and adjusted scan PDF\nMediation overlays: posterior, no gene track; posterior, with gene track; Bayes factor, no gene track; Bayes factor, with gene track; posterior bars\nTIMBR: posterior-probability plot; Bayes-factor plot\nTop TIMBR haplotype plots: haplotype_top1_0,0,1,1,0,0,0,1_chr16.jpg, haplotype_top2_0,0,0,1,0,0,0,1_chr16.jpg\nMerge: locus-specific merge plot\nCI scan data: download\n\n\n\n\nMediation posterior probabilities without gene track: OATP2A1 chr16.\n\n\n\n\n\nMediation posterior probabilities with gene track: OATP2A1 chr16.\n\n\n\n\n\nMediation Bayes factors without gene track: OATP2A1 chr16.\n\n\n\n\n\nMediation Bayes factors with gene track: OATP2A1 chr16.\n\n\n\n\n\nTIMBR posterior probabilities: OATP2A1 chr16.\n\n\n\n\n\nTIMBR Bayes factors: OATP2A1 chr16.\n\n\n\n\n\nMerge profile for this locus and interval: OATP2A1 chr16.",
+    "crumbs": [
+      "Significant pQTL credible-interval follow-up"
+    ]
+  },
+  {
+    "objectID": "credible_intervals.html#cyp2c50-chr19-unc30282360",
+    "href": "credible_intervals.html#cyp2c50-chr19-unc30282360",
+    "title": "Significant pQTL credible-interval follow-up",
+    "section": "CYP2C50 chr19: UNC30282360",
+    "text": "CYP2C50 chr19: UNC30282360\nLead position: 37.99 Mb; 90% CI: 37.42–49.01 Mb; scan p = 4.88e-11; adjusted p = 2.22e-16.\n\n\n\n90% bootstrap credible interval and nearby genes for CYP2C50, chr19.\n\n\n\nGenome scan: v2 scan and adjusted scan PDF\nMediation overlays: posterior, no gene track; posterior, with gene track; Bayes factor, no gene track; Bayes factor, with gene track; posterior bars\nTIMBR: posterior-probability plot; Bayes-factor plot\nTop TIMBR haplotype plots: haplotype_top1_0,0,0,0,0,0,1,0_chr19.jpg, haplotype_top2_0,1,0,0,1,1,2,0_chr19.jpg, haplotype_top3_0,1,0,0,0,1,2,0_chr19.jpg\nMerge: locus-specific merge plot\nCI scan data: download\n\n\n\n\nMediation posterior probabilities without gene track: CYP2C50 chr19.\n\n\n\n\n\nMediation posterior probabilities with gene track: CYP2C50 chr19.\n\n\n\n\n\nMediation Bayes factors without gene track: CYP2C50 chr19.\n\n\n\n\n\nMediation Bayes factors with gene track: CYP2C50 chr19.\n\n\n\n\n\nTIMBR posterior probabilities: CYP2C50 chr19.\n\n\n\n\n\nTIMBR Bayes factors: CYP2C50 chr19.\n\n\n\n\n\nMerge profile for this locus and interval: CYP2C50 chr19.",
+    "crumbs": [
+      "Significant pQTL credible-interval follow-up"
+    ]
+  },
+  {
+    "objectID": "credible_intervals.html#ent1-chr17-unc27944457",
+    "href": "credible_intervals.html#ent1-chr17-unc27944457",
+    "title": "Significant pQTL credible-interval follow-up",
+    "section": "ENT1 chr17: UNC27944457",
+    "text": "ENT1 chr17: UNC27944457\nLead position: 47.35 Mb; 90% CI: 28.12–55.33 Mb; scan p = 1.72e-06; adjusted p = 1.00e-02.\n\n\n\n90% bootstrap credible interval and nearby genes for ENT1, chr17.\n\n\n\nGenome scan: v2 scan and adjusted scan PDF\nMediation overlays: posterior, no gene track; posterior, with gene track; Bayes factor, no gene track; Bayes factor, with gene track; posterior bars\nTIMBR: posterior-probability plot; Bayes-factor plot\nTop TIMBR haplotype plots: haplotype_top1_0,0,0,0,0,0,0,1_chr17.jpg, haplotype_top2_0,0,0,0,1,0,0,1_chr17.jpg, haplotype_top3_0,0,0,0,0,0,1,2_chr17.jpg\nMerge: locus-specific merge plot\nCI scan data: download\n\n\n\n\nMediation posterior probabilities without gene track: ENT1 chr17.\n\n\n\n\n\nMediation posterior probabilities with gene track: ENT1 chr17.\n\n\n\n\n\nMediation Bayes factors without gene track: ENT1 chr17.\n\n\n\n\n\nMediation Bayes factors with gene track: ENT1 chr17.\n\n\n\n\n\nTIMBR posterior probabilities: ENT1 chr17.\n\n\n\n\n\nTIMBR Bayes factors: ENT1 chr17.\n\n\n\n\n\nMerge profile for this locus and interval: ENT1 chr17.",
+    "crumbs": [
+      "Significant pQTL credible-interval follow-up"
+    ]
+  },
+  {
+    "objectID": "credible_intervals.html#cyp2d26-chr3-unc5373318",
+    "href": "credible_intervals.html#cyp2d26-chr3-unc5373318",
+    "title": "Significant pQTL credible-interval follow-up",
+    "section": "CYP2D26 chr3: UNC5373318",
+    "text": "CYP2D26 chr3: UNC5373318\nLead position: 61.22 Mb; 90% CI: 59.97–96.77 Mb; scan p = 5.62e-06; adjusted p = 3.37e-02.\n\n\n\n90% bootstrap credible interval and nearby genes for CYP2D26, chr3.\n\n\n\nGenome scan: v2 scan and adjusted scan PDF\nMediation overlays: posterior, no gene track; posterior, with gene track; Bayes factor, no gene track; Bayes factor, with gene track; posterior bars\nTIMBR: posterior-probability plot; Bayes-factor plot\nTop TIMBR haplotype plots: haplotype_top1_0,0,0,0,0,0,0,0_chr3.jpg, haplotype_top2_0,1,1,1,1,0,1,1_chr3.jpg\nMerge: locus-specific merge plot\nCI scan data: download\n\n\n\n\nMediation posterior probabilities without gene track: CYP2D26 chr3.\n\n\n\n\n\nMediation posterior probabilities with gene track: CYP2D26 chr3.\n\n\n\n\n\nMediation Bayes factors without gene track: CYP2D26 chr3.\n\n\n\n\n\nMediation Bayes factors with gene track: CYP2D26 chr3.\n\n\n\n\n\nTIMBR posterior probabilities: CYP2D26 chr3.\n\n\n\n\n\nTIMBR Bayes factors: CYP2D26 chr3.\n\n\n\n\n\nMerge profile for this locus and interval: CYP2D26 chr3.",
+    "crumbs": [
+      "Significant pQTL credible-interval follow-up"
+    ]
+  },
+  {
+    "objectID": "credible_intervals.html#bsep-chr16-unc26665635",
+    "href": "credible_intervals.html#bsep-chr16-unc26665635",
+    "title": "Significant pQTL credible-interval follow-up",
+    "section": "BSEP chr16: UNC26665635",
+    "text": "BSEP chr16: UNC26665635\nLead position: 38.15 Mb; 90% CI: 35.14–48.23 Mb; scan p = 4.18e-07; adjusted p = 1.90e-03.\n\n\n\n90% bootstrap credible interval and nearby genes for BSEP, chr16.\n\n\n\nGenome scan: v2 scan and adjusted scan PDF\nMediation overlays: posterior, no gene track; posterior, with gene track; Bayes factor, no gene track; Bayes factor, with gene track; posterior bars\nTIMBR: posterior-probability plot; Bayes-factor plot\nTop TIMBR haplotype plots: haplotype_top1_0,1,0,1,1,0,0,1_chr16.jpg, haplotype_top2_0,1,0,1,1,0,0,0_chr16.jpg, haplotype_top3_0,0,0,0,0,0,0,0_chr16.jpg\nMerge: Unavailable in this run\nCI scan data: download\n\n\n\n\nMediation posterior probabilities without gene track: BSEP chr16.\n\n\n\n\n\nMediation posterior probabilities with gene track: BSEP chr16.\n\n\n\n\n\nMediation Bayes factors without gene track: BSEP chr16.\n\n\n\n\n\nMediation Bayes factors with gene track: BSEP chr16.\n\n\n\n\n\nTIMBR posterior probabilities: BSEP chr16.\n\n\n\n\n\nTIMBR Bayes factors: BSEP chr16.",
+    "crumbs": [
+      "Significant pQTL credible-interval follow-up"
+    ]
+  },
+  {
+    "objectID": "credible_intervals.html#cyp3a11-chr3-unc5114998",
+    "href": "credible_intervals.html#cyp3a11-chr3-unc5114998",
+    "title": "Significant pQTL credible-interval follow-up",
+    "section": "CYP3A11 chr3: UNC5114998",
+    "text": "CYP3A11 chr3: UNC5114998\nLead position: 41.34 Mb; 90% CI: 38.04–109.82 Mb; scan p = 5.74e-06; adjusted p = 2.86e-02.\n\n\n\n90% bootstrap credible interval and nearby genes for CYP3A11, chr3.\n\n\n\nGenome scan: v2 scan and adjusted scan PDF\nMediation overlays: posterior, no gene track; posterior, with gene track; Bayes factor, no gene track; Bayes factor, with gene track; posterior bars\nTIMBR: posterior-probability plot; Bayes-factor plot\nTop TIMBR haplotype plots: haplotype_top1_0,0,0,0,0,0,0,0_chr3.jpg, haplotype_top2_0,0,0,1,1,0,0,0_chr3.jpg, haplotype_top3_0,1,1,0,0,0,0,1_chr3.jpg\nMerge: locus-specific merge plot\nCI scan data: download\n\n\n\n\nMediation posterior probabilities without gene track: CYP3A11 chr3.\n\n\n\n\n\nMediation posterior probabilities with gene track: CYP3A11 chr3.\n\n\n\n\n\nMediation Bayes factors without gene track: CYP3A11 chr3.\n\n\n\n\n\nMediation Bayes factors with gene track: CYP3A11 chr3.\n\n\n\n\n\nTIMBR posterior probabilities: CYP3A11 chr3.\n\n\n\n\n\nTIMBR Bayes factors: CYP3A11 chr3.\n\n\n\n\n\nMerge profile for this locus and interval: CYP3A11 chr3.",
+    "crumbs": [
+      "Significant pQTL credible-interval follow-up"
+    ]
+  },
+  {
+    "objectID": "credible_intervals.html#cyp2c39-chr19-unc30297139",
+    "href": "credible_intervals.html#cyp2c39-chr19-unc30297139",
+    "title": "Significant pQTL credible-interval follow-up",
+    "section": "CYP2C39 chr19: UNC30297139",
+    "text": "CYP2C39 chr19: UNC30297139\nLead position: 38.97 Mb; 90% CI: 38.20–40.36 Mb; scan p = 2.08e-15; adjusted p = 2.22e-16.\n\n\n\n90% bootstrap credible interval and nearby genes for CYP2C39, chr19.\n\n\n\nGenome scan: v2 scan and adjusted scan PDF\nMediation overlays: posterior, no gene track; posterior, with gene track; Bayes factor, no gene track; Bayes factor, with gene track; posterior bars\nTIMBR: posterior-probability plot; Bayes-factor plot\nTop TIMBR haplotype plots: haplotype_top1_0,1,0,0,0,2,2,0_chr19.jpg\nMerge: locus-specific merge plot\nCI scan data: download\n\n\n\n\nMediation posterior probabilities without gene track: CYP2C39 chr19.\n\n\n\n\n\nMediation posterior probabilities with gene track: CYP2C39 chr19.\n\n\n\n\n\nMediation Bayes factors without gene track: CYP2C39 chr19.\n\n\n\n\n\nMediation Bayes factors with gene track: CYP2C39 chr19.\n\n\n\n\n\nTIMBR posterior probabilities: CYP2C39 chr19.\n\n\n\n\n\nTIMBR Bayes factors: CYP2C39 chr19.\n\n\n\n\n\nMerge profile for this locus and interval: CYP2C39 chr19.",
+    "crumbs": [
+      "Significant pQTL credible-interval follow-up"
+    ]
+  },
+  {
+    "objectID": "credible_intervals.html#cyp2c50-chr3-unc5366241",
+    "href": "credible_intervals.html#cyp2c50-chr3-unc5366241",
+    "title": "Significant pQTL credible-interval follow-up",
+    "section": "CYP2C50 chr3: UNC5366241",
+    "text": "CYP2C50 chr3: UNC5366241\nLead position: 60.51 Mb; 90% CI: 50.30–90.49 Mb; scan p = 9.24e-07; adjusted p = 3.64e-03.\n\n\n\n90% bootstrap credible interval and nearby genes for CYP2C50, chr3.\n\n\n\nGenome scan: v2 scan and adjusted scan PDF\nMediation overlays: posterior, no gene track; posterior, with gene track; Bayes factor, no gene track; Bayes factor, with gene track; posterior bars\nTIMBR: posterior-probability plot; Bayes-factor plot\nTop TIMBR haplotype plots: haplotype_top1_0,0,0,0,0,0,0,0_chr3.jpg, haplotype_top2_0,1,1,1,1,1,0,1_chr3.jpg, haplotype_top3_0,1,1,1,1,1,1,1_chr3.jpg\nMerge: locus-specific merge plot\nCI scan data: download\n\n\n\n\nMediation posterior probabilities without gene track: CYP2C50 chr3.\n\n\n\n\n\nMediation posterior probabilities with gene track: CYP2C50 chr3.\n\n\n\n\n\nMediation Bayes factors without gene track: CYP2C50 chr3.\n\n\n\n\n\nMediation Bayes factors with gene track: CYP2C50 chr3.\n\n\n\n\n\nTIMBR posterior probabilities: CYP2C50 chr3.\n\n\n\n\n\nTIMBR Bayes factors: CYP2C50 chr3.\n\n\n\n\n\nMerge profile for this locus and interval: CYP2C50 chr3.",
+    "crumbs": [
+      "Significant pQTL credible-interval follow-up"
+    ]
+  },
+  {
+    "objectID": "credible_intervals.html#coverage-notes",
+    "href": "credible_intervals.html#coverage-notes",
+    "title": "Significant pQTL credible-interval follow-up",
+    "section": "Coverage notes",
+    "text": "Coverage notes\nThe v2 significant-results file contains 8 significant non-CES2 loci. Each is shown above with its 90% interval. Merge figures are matched to the lead locus and interval; plots from other regions are not substituted.\nMediation overlays are the saved v2 targeted results and should be interpreted as locus follow-up, not a genome-wide mediation scan. TIMBR plots summarize the credible-interval sweep and the linked haplotype plots show the top saved partitions.",
+    "crumbs": [
+      "Significant pQTL credible-interval follow-up"
     ]
   },
   {
@@ -173,11 +273,11 @@
     ]
   },
   {
-    "objectID": "ATPase.html#pqtl-genome-scans",
-    "href": "ATPase.html#pqtl-genome-scans",
+    "objectID": "ATPase.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "ATPase.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "1  ATPase",
-    "section": "3.3 pQTL Genome Scans",
-    "text": "3.3 pQTL Genome Scans\n\n3.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n3.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "3.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "3.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>ATPase</span>"
@@ -261,11 +361,11 @@
     ]
   },
   {
-    "objectID": "Abcb4.html#pqtl-genome-scans",
-    "href": "Abcb4.html#pqtl-genome-scans",
+    "objectID": "Abcb4.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Abcb4.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "2  Abcb4",
-    "section": "4.3 pQTL Genome Scans",
-    "text": "4.3 pQTL Genome Scans\n\n4.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n4.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "4.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "4.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Abcb4</span>"
@@ -349,11 +449,11 @@
     ]
   },
   {
-    "objectID": "Bcrp.html#pqtl-genome-scans",
-    "href": "Bcrp.html#pqtl-genome-scans",
+    "objectID": "Bcrp.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Bcrp.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "3  Bcrp",
-    "section": "5.3 pQTL Genome Scans",
-    "text": "5.3 pQTL Genome Scans\n\n5.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n5.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "5.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "5.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Bcrp</span>"
@@ -437,11 +537,11 @@
     ]
   },
   {
-    "objectID": "Bsep.html#pqtl-genome-scans",
-    "href": "Bsep.html#pqtl-genome-scans",
+    "objectID": "Bsep.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Bsep.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "4  Bsep",
-    "section": "6.3 pQTL Genome Scans",
-    "text": "6.3 pQTL Genome Scans\n\n6.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n6.3.2 Genome-wide scan (scans_0.95, box-cox)\nOpens on Chr 16, where the significant peak is.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "6.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "6.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bsep</span>"
@@ -525,11 +625,11 @@
     ]
   },
   {
-    "objectID": "Ces1.html#pqtl-genome-scans",
-    "href": "Ces1.html#pqtl-genome-scans",
+    "objectID": "Ces1.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Ces1.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "5  Ces1",
-    "section": "7.3 pQTL Genome Scans",
-    "text": "7.3 pQTL Genome Scans\n\n7.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n7.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "7.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "7.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Ces1</span>"
@@ -613,11 +713,11 @@
     ]
   },
   {
-    "objectID": "Cyp1a2.html#pqtl-genome-scans",
-    "href": "Cyp1a2.html#pqtl-genome-scans",
+    "objectID": "Cyp1a2.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Cyp1a2.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "6  Cyp1a2",
-    "section": "8.3 pQTL Genome Scans",
-    "text": "8.3 pQTL Genome Scans\n\n8.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n8.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "8.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "8.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Cyp1a2</span>"
@@ -701,11 +801,11 @@
     ]
   },
   {
-    "objectID": "Cyp2c29.html#pqtl-genome-scans",
-    "href": "Cyp2c29.html#pqtl-genome-scans",
+    "objectID": "Cyp2c29.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Cyp2c29.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "7  Cyp2c29",
-    "section": "9.3 pQTL Genome Scans",
-    "text": "9.3 pQTL Genome Scans\n\n9.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n9.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "9.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "9.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Cyp2c29</span>"
@@ -789,11 +889,11 @@
     ]
   },
   {
-    "objectID": "Cyp2c39.html#pqtl-genome-scans",
-    "href": "Cyp2c39.html#pqtl-genome-scans",
+    "objectID": "Cyp2c39.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Cyp2c39.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "8  Cyp2c39",
-    "section": "10.3 pQTL Genome Scans",
-    "text": "10.3 pQTL Genome Scans\n\n10.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n10.3.2 Genome-wide scan (scans_0.95, box-cox)\nOpens on Chr 19, where the significant peak is.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "10.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "10.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Cyp2c39</span>"
@@ -877,11 +977,11 @@
     ]
   },
   {
-    "objectID": "Cyp2c50.html#pqtl-genome-scans",
-    "href": "Cyp2c50.html#pqtl-genome-scans",
+    "objectID": "Cyp2c50.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Cyp2c50.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "9  Cyp2c50",
-    "section": "11.3 pQTL Genome Scans",
-    "text": "11.3 pQTL Genome Scans\n\n11.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n11.3.2 Genome-wide scan (scans_0.95, box-cox)\nOpens on Chr 19, where the significant peak is.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "11.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "11.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Cyp2c50</span>"
@@ -965,11 +1065,11 @@
     ]
   },
   {
-    "objectID": "Cyp2c9.html#pqtl-genome-scans",
-    "href": "Cyp2c9.html#pqtl-genome-scans",
+    "objectID": "Cyp2c9.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Cyp2c9.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "10  Cyp2c9",
-    "section": "12.3 pQTL Genome Scans",
-    "text": "12.3 pQTL Genome Scans\n\n12.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n12.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "12.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "12.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Cyp2c9</span>"
@@ -1053,11 +1153,11 @@
     ]
   },
   {
-    "objectID": "Cyp2d10.html#pqtl-genome-scans",
-    "href": "Cyp2d10.html#pqtl-genome-scans",
+    "objectID": "Cyp2d10.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Cyp2d10.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "11  Cyp2d10",
-    "section": "13.3 pQTL Genome Scans",
-    "text": "13.3 pQTL Genome Scans\n\n13.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n13.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "13.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "13.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nNo per-protein genome scan PDF was present in the saved 2026-09-24 v2 outputs. This chapter does not display a scan from an older run in its place.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Cyp2d10</span>"
@@ -1141,11 +1241,11 @@
     ]
   },
   {
-    "objectID": "Cyp2d26.html#pqtl-genome-scans",
-    "href": "Cyp2d26.html#pqtl-genome-scans",
+    "objectID": "Cyp2d26.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Cyp2d26.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "12  Cyp2d26",
-    "section": "14.3 pQTL Genome Scans",
-    "text": "14.3 pQTL Genome Scans\n\n14.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n14.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "14.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "14.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Cyp2d26</span>"
@@ -1229,11 +1329,11 @@
     ]
   },
   {
-    "objectID": "Cyp2d9.html#pqtl-genome-scans",
-    "href": "Cyp2d9.html#pqtl-genome-scans",
+    "objectID": "Cyp2d9.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Cyp2d9.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "13  Cyp2d9",
-    "section": "15.3 pQTL Genome Scans",
-    "text": "15.3 pQTL Genome Scans\n\n15.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n15.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "15.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "15.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nNo per-protein genome scan PDF was present in the saved 2026-09-24 v2 outputs. This chapter does not display a scan from an older run in its place.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Cyp2d9</span>"
@@ -1317,11 +1417,11 @@
     ]
   },
   {
-    "objectID": "Cyp2e1.html#pqtl-genome-scans",
-    "href": "Cyp2e1.html#pqtl-genome-scans",
+    "objectID": "Cyp2e1.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Cyp2e1.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "14  Cyp2e1",
-    "section": "16.3 pQTL Genome Scans",
-    "text": "16.3 pQTL Genome Scans\n\n16.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n16.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "16.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "16.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nNo per-protein genome scan PDF was present in the saved 2026-09-24 v2 outputs. This chapter does not display a scan from an older run in its place.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Cyp2e1</span>"
@@ -1405,11 +1505,11 @@
     ]
   },
   {
-    "objectID": "Cyp2f2.html#pqtl-genome-scans",
-    "href": "Cyp2f2.html#pqtl-genome-scans",
+    "objectID": "Cyp2f2.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Cyp2f2.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "15  Cyp2f2",
-    "section": "17.3 pQTL Genome Scans",
-    "text": "17.3 pQTL Genome Scans\n\n17.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n17.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "17.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "17.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Cyp2f2</span>"
@@ -1493,11 +1593,11 @@
     ]
   },
   {
-    "objectID": "Cyp3a11.html#pqtl-genome-scans",
-    "href": "Cyp3a11.html#pqtl-genome-scans",
+    "objectID": "Cyp3a11.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Cyp3a11.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "16  Cyp3a11",
-    "section": "18.3 pQTL Genome Scans",
-    "text": "18.3 pQTL Genome Scans\n\n18.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n18.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "18.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "18.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Cyp3a11</span>"
@@ -1581,11 +1681,11 @@
     ]
   },
   {
-    "objectID": "Ent1.html#pqtl-genome-scans",
-    "href": "Ent1.html#pqtl-genome-scans",
+    "objectID": "Ent1.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Ent1.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "17  Ent1",
-    "section": "19.3 pQTL Genome Scans",
-    "text": "19.3 pQTL Genome Scans\n\n19.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n19.3.2 Genome-wide scan (scans_0.95, box-cox)\nOpens on Chr 17, where the significant peak is.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "19.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "19.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Ent1</span>"
@@ -1669,11 +1769,11 @@
     ]
   },
   {
-    "objectID": "Mrp2.html#pqtl-genome-scans",
-    "href": "Mrp2.html#pqtl-genome-scans",
+    "objectID": "Mrp2.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Mrp2.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "18  Mrp2",
-    "section": "20.3 pQTL Genome Scans",
-    "text": "20.3 pQTL Genome Scans\n\n20.3.1 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "20.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "20.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nNo per-protein genome scan PDF was present in the saved 2026-09-24 v2 outputs. This chapter does not display a scan from an older run in its place.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Mrp2</span>"
@@ -1757,11 +1857,11 @@
     ]
   },
   {
-    "objectID": "Mrp3.html#pqtl-genome-scans",
-    "href": "Mrp3.html#pqtl-genome-scans",
+    "objectID": "Mrp3.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Mrp3.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "19  Mrp3",
-    "section": "21.3 pQTL Genome Scans",
-    "text": "21.3 pQTL Genome Scans\n\n21.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n21.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "21.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "21.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Mrp3</span>"
@@ -1845,11 +1945,11 @@
     ]
   },
   {
-    "objectID": "Ntcp.html#pqtl-genome-scans",
-    "href": "Ntcp.html#pqtl-genome-scans",
+    "objectID": "Ntcp.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Ntcp.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "20  Ntcp",
-    "section": "22.3 pQTL Genome Scans",
-    "text": "22.3 pQTL Genome Scans\n\n22.3.1 Genome-wide scan (scans_0.9, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "22.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "22.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Ntcp</span>"
@@ -1933,11 +2033,11 @@
     ]
   },
   {
-    "objectID": "Oatp1a4.html#pqtl-genome-scans",
-    "href": "Oatp1a4.html#pqtl-genome-scans",
+    "objectID": "Oatp1a4.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Oatp1a4.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "21  Oatp1a4",
-    "section": "23.3 pQTL Genome Scans",
-    "text": "23.3 pQTL Genome Scans\n\n23.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n23.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "23.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "23.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>Oatp1a4</span>"
@@ -2021,11 +2121,11 @@
     ]
   },
   {
-    "objectID": "Oatp2a1.html#pqtl-genome-scans",
-    "href": "Oatp2a1.html#pqtl-genome-scans",
+    "objectID": "Oatp2a1.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Oatp2a1.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "22  Oatp2a1",
-    "section": "24.3 pQTL Genome Scans",
-    "text": "24.3 pQTL Genome Scans\n\n24.3.1 Combined with RNA (eQTL + pQTL)\n\n\n\n\n\n\n\n24.3.2 Genome-wide scan (scans_0.95, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "24.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "24.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>Oatp2a1</span>"
@@ -2109,11 +2209,11 @@
     ]
   },
   {
-    "objectID": "Oct1.2.html#pqtl-genome-scans",
-    "href": "Oct1.2.html#pqtl-genome-scans",
+    "objectID": "Oct1.2.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Oct1.2.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "23  Oct1.2",
-    "section": "25.3 pQTL Genome Scans",
-    "text": "25.3 pQTL Genome Scans\n\n25.3.1 Genome-wide scan (scans_0.9, transform unspecified)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "25.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "25.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nNo per-protein genome scan PDF was present in the saved 2026-09-24 v2 outputs. This chapter does not display a scan from an older run in its place.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>23</span>  <span class='chapter-title'>Oct1.2</span>"
@@ -2197,11 +2297,11 @@
     ]
   },
   {
-    "objectID": "Ugt1a1.html#pqtl-genome-scans",
-    "href": "Ugt1a1.html#pqtl-genome-scans",
+    "objectID": "Ugt1a1.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Ugt1a1.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "24  Ugt1a1",
-    "section": "26.3 pQTL Genome Scans",
-    "text": "26.3 pQTL Genome Scans\n\n26.3.1 Genome-wide scan (scans_0.95, transform unspecified)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "26.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "26.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>Ugt1a1</span>"
@@ -2285,11 +2385,11 @@
     ]
   },
   {
-    "objectID": "Ugt1a6.html#pqtl-genome-scans",
-    "href": "Ugt1a6.html#pqtl-genome-scans",
+    "objectID": "Ugt1a6.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Ugt1a6.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "25  Ugt1a6",
-    "section": "27.3 pQTL Genome Scans",
-    "text": "27.3 pQTL Genome Scans\n\n27.3.1 Genome-wide scan (scans_0.95, transform unspecified)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "27.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "27.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>25</span>  <span class='chapter-title'>Ugt1a6</span>"
@@ -2373,11 +2473,11 @@
     ]
   },
   {
-    "objectID": "Ugt2a2.html#pqtl-genome-scans",
-    "href": "Ugt2a2.html#pqtl-genome-scans",
+    "objectID": "Ugt2a2.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
+    "href": "Ugt2a2.html#pqtl-genome-scans-2026-09-24-v2-boxcox",
     "title": "26  Ugt2a2",
-    "section": "28.3 pQTL Genome Scans",
-    "text": "28.3 pQTL Genome Scans\n\n28.3.1 Genome-wide scan (scans_0.9, box-cox)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrevious\n\n\nNext\n\n\n\nJump to figure:  Figure 1 Figure 2 Figure 3 Figure 4 Figure 5 Figure 6 Figure 7 Figure 8 Figure 9 Figure 10 Figure 11 Figure 12 Figure 13 Figure 14 Figure 15 Figure 16 Figure 17 Figure 18 Figure 19 Figure 20 Figure 21",
+    "section": "28.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)",
+    "text": "28.3 pQTL Genome Scans (2026-09-24 v2; Box–Cox)\nDownload the v2 genome scan PDF.",
     "crumbs": [
       "Protein Analyses",
       "<span class='chapter-number'>26</span>  <span class='chapter-title'>Ugt2a2</span>"
