@@ -8,8 +8,8 @@ This page tracks the **repbc_2026-10-01** analysis. CES2 is excluded because of 
 | pQTL genome scans (11 imputations, 1000 permutations) | 26/26 proteins | wisam weights from the Box-Cox-scale replicate variance. |
 | Significant pQTL peaks with 90% credible intervals | 10 peaks in 8 proteins | plus 1 in the zero-inflated subset scan; all classified cis/trans. |
 | Zero-inflated subset scans (Cyp2c39, Cyp2c50) | 2/2 | the binary detected/not-detected scan has not been re-run with the new normalization. |
-| Merge (diplotype fine-mapping) | 7/10 full-set loci complete | 5/10 plots available; wide credible intervals take many hours. |
-| TIMBR credible-interval sweep | 10/10 loci | 0/10 loci have plots (plots need the Merge profile). |
+| Merge (diplotype fine-mapping) | 10/10 full-set loci complete | 10/10 plots available; wide credible intervals take many hours. |
+| TIMBR credible-interval sweep | 10/10 loci | 10/10 loci have plots (plots need the Merge profile). |
 | RNA mediation (bmediatR) | 10/10 loci | scan weights and phenotype come from the same tag. |
 | Protein broad-sense H² | 26/26 | 95% parametric-bootstrap intervals. |
 | Transcript pairing and H² | 24/26 proteins paired | peptide-based pairing; CES1 and CYP2C9 have no defensible pair. |

@@ -62,19 +62,69 @@ Download: [PNG](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_ci_genes_full_chr
 Download: [PNG](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_mergeplot_full_UNC2678323.png){download="Ntcp_mergeplot_full_UNC2678323.png"}
 :::
 
+_The top allelic series (SDP) from Merge is added to the book once the follow-up summary has been generated._
+
 ### TIMBR allelic series
 
-_TIMBR sweep complete; plots will appear once Merge profiles are available._
+![TIMBR allelic-series sweep across the credible interval (Bayes-factor dot plot), chromosome 2; Merge SDP profile overlaid where available.](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_timbr_ci_bf_dot_chr2.jpg){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [JPG](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_timbr_ci_bf_dot_chr2.jpg){download="Ntcp_timbr_ci_bf_dot_chr2.jpg"}
+:::
+
+![TIMBR allelic-series sweep across the credible interval (posterior-probability dot plot), chromosome 2; Merge SDP profile overlaid where available.](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_timbr_ci_dot_chr2.jpg){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [JPG](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_timbr_ci_dot_chr2.jpg){download="Ntcp_timbr_ci_dot_chr2.jpg"}
+:::
+
+The highest-posterior TIMBR allelic series at the peak splits the founders into **allele 0**: A/J, C57BL/6J, NOD/ShiLtJ, NZO/HlLtJ, CAST/EiJ, PWK/PhJ, WSB/EiJ; **allele 1**: 129S1/SvImJ. That is 2 functional alleles: founders in the same group are inferred to carry the same functional allele at this locus.
+
+**Number of functional alleles.** At the lead locus (UNC2678323, 19.65 Mb) the posterior probability of a bi-allelic series (two functional alleles) is 0.28, tri-allelic 0.40, and four or more alleles 0.33; a single allele (no QTL effect) has probability 0.00. For comparison, the Chinese-restaurant-process prior gives 0.50 / 0.29 / 0.14 for one / two / three alleles, so the data move weight away from a single allele. The locus in the credible interval whose single best allelic series has the highest posterior probability is JAX00091946 (20.70 Mb; series 0,0,1,0,0,0,0,0, P = 0.30); there bi-allelic = 0.49, tri-allelic = 0.32, four or more = 0.18.
+
+![Prior (uniform over partitions and Chinese restaurant process) versus posterior probability of the number of functional alleles at the lead and best-model loci.](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_allele_number_prior_posterior_chr2.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_allele_number_prior_posterior_chr2.png){download="Ntcp_allele_number_prior_posterior_chr2.png"} · [PDF](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_allele_number_prior_posterior_chr2.pdf){download="Ntcp_allele_number_prior_posterior_chr2.pdf"}
+:::
+
+![Posterior probability of 1, 2, 3 or 4+ functional alleles at each locus across the credible interval (dashed line: lead locus; dotted line: best-model locus).](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_allele_number_across_ci_chr2.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_allele_number_across_ci_chr2.png){download="Ntcp_allele_number_across_ci_chr2.png"} · [PDF](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_allele_number_across_ci_chr2.pdf){download="Ntcp_allele_number_across_ci_chr2.pdf"}
+:::
+
+![TIMBR founder-haplotype effects at the lead locus UNC2678323.](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_haplotype_lead_UNC2678323_chr2.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_haplotype_lead_UNC2678323_chr2.png){download="Ntcp_haplotype_lead_UNC2678323_chr2.png"} · [PDF](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_haplotype_lead_UNC2678323_chr2.pdf){download="Ntcp_haplotype_lead_UNC2678323_chr2.pdf"}
+:::
+
+![TIMBR founder-haplotype effects at the locus with the highest-probability allelic series, JAX00091946.](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_haplotype_best_JAX00091946_chr2.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_haplotype_best_JAX00091946_chr2.png){download="Ntcp_haplotype_best_JAX00091946_chr2.png"} · [PDF](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_haplotype_best_JAX00091946_chr2.pdf){download="Ntcp_haplotype_best_JAX00091946_chr2.pdf"}
+:::
 
 ### RNA mediation
 
-![Bayes-factor mediation overlay: scan, mediators and genes in the credible interval.](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_mediation_overlay_bf_chr2_withgenes.png){fig-align="center" width="95%"}
+![RNA mediation: pQTL scan (left axis) and each candidate transcript's best-supported model, log10 Bayes factor (right axis); transcripts with a mediation or co-local best model and log10 BF of at least 0.5 are labelled.](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_mediation_overlay_bf_chr2_nogenes.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
-Download: [PNG](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_mediation_overlay_bf_chr2_withgenes.png){download="Ntcp_mediation_overlay_bf_chr2_withgenes.png"} · [PNG](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_mediation_overlay_bf_chr2_nogenes.png){download="Ntcp_mediation_overlay_bf_chr2_nogenes.png"}
+Download: [PNG](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_mediation_overlay_bf_chr2_nogenes.png){download="Ntcp_mediation_overlay_bf_chr2_nogenes.png"} · [PNG](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_mediation_overlay_bf_chr2_withgenes.png){download="Ntcp_mediation_overlay_bf_chr2_withgenes.png"} · [CSV](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_mediation_bf_points_chr2.csv){download="Ntcp_mediation_bf_points_chr2.csv"}
 :::
 
-![Posterior probabilities of the mediation models for each candidate mediator.](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_mediation_posterior_bars_chr2.png){fig-align="center" width="95%"}
+5 candidate transcripts lie in the credible interval. **1** have a best-model log10 Bayes factor ≥ 0.5 with mediation or co-local as the best-supported model and are labelled in the figure (4 more reach 0.5 only for the non-mediator model and are not labelled): **co-local** (1): Msrb2 (1.53). *Mediation* means the transcript is best explained as lying on the path from the QTL to the protein; *co-local* means it shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.
+
+::: {.callout-note collapse="true" title="Function of the 1 labelled transcripts (UniProt)"}
+Function text is the UniProt (mouse) annotation retrieved on 2026-10-03; reviewed Swiss-Prot entries where available. A dash means UniProt holds no functional annotation for that symbol.
+
+| Transcript | Best model | log10 BF | UniProt protein | Function (UniProt) |
+|---|---|---:|---|---|
+| *Msrb2* | co-local | 1.53 | [Methionine-R-sulfoxide reductase B2, mitochondrial](https://www.uniprot.org/uniprotkb/Q78J03) | Methionine-sulfoxide reductase that specifically reduces methionine (R)-sulfoxide back to methionine. While in many cases, methionine oxidation is the result of random oxidation following oxidative stress, methionine oxidation is also a post-translational modification that takes place on specific residue. |
+:::
+
+![Posterior probabilities of the mediation models for the strongest candidate mediator.](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_mediation_posterior_bars_chr2.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
 Download: [PDF](figures/repbc_2026-10-01/per_protein/Ntcp/Ntcp_targeted_mediation_chr2_posterior_bars.pdf){download="Ntcp_targeted_mediation_chr2_posterior_bars.pdf"}

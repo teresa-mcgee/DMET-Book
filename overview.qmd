@@ -183,13 +183,13 @@ Download: [PNG](figures/repbc_2026-10-01/protein_cluster_heatmap.png){download="
 ![RINT-normalized transcriptome, hierarchically clustered.](figures/repbc_2026-10-01/transcriptome_rint_hierarchical_heatmap.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
-Download: [PNG](figures/repbc_2026-10-01/transcriptome_rint_hierarchical_heatmap.png){download="transcriptome_rint_hierarchical_heatmap.png"} · [PDF](figures/repbc_2026-10-01/transcriptome_rint_hierarchical_heatmap.pdf){download="transcriptome_rint_hierarchical_heatmap.pdf"}
+Download: [PNG](figures/repbc_2026-10-01/transcriptome_rint_hierarchical_heatmap.png){download="transcriptome_rint_hierarchical_heatmap.png"} · [PDF](figures/repbc_2026-10-01/transcriptome_rint_hierarchical_heatmap.pdf){download="transcriptome_rint_hierarchical_heatmap.pdf"} · [CSV](figures/repbc_2026-10-01/transcriptome_rint_variance.csv){download="transcriptome_rint_variance.csv"}
 :::
 
 ![Binned correlation structure across the RINT-normalized transcriptome.](figures/repbc_2026-10-01/transcriptome_rint_all_transcript_binned_correlation.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
-Download: [PNG](figures/repbc_2026-10-01/transcriptome_rint_all_transcript_binned_correlation.png){download="transcriptome_rint_all_transcript_binned_correlation.png"} · [PDF](figures/repbc_2026-10-01/transcriptome_rint_all_transcript_binned_correlation.pdf){download="transcriptome_rint_all_transcript_binned_correlation.pdf"}
+Download: [PNG](figures/repbc_2026-10-01/transcriptome_rint_all_transcript_binned_correlation.png){download="transcriptome_rint_all_transcript_binned_correlation.png"} · [PDF](figures/repbc_2026-10-01/transcriptome_rint_all_transcript_binned_correlation.pdf){download="transcriptome_rint_all_transcript_binned_correlation.pdf"} · [CSV](figures/repbc_2026-10-01/transcriptome_rint_binned_correlation.csv){download="transcriptome_rint_binned_correlation.csv"}
 :::
 
 The correlation overview bins transcripts by expression variance for display; it is not the full 20,666 × 20,666 matrix.
@@ -198,4 +198,19 @@ The correlation overview bins transcripts by expression variance for display; it
 
 Mediation, TIMBR and Merge were run at every significant locus; what is currently available is itemised in [Analysis progress](status.qmd).
 
-_The locus follow-up summary (top Merge SDP, TIMBR allelic series, mediators) is added once Merge has finished._
+### Locus follow-up summary
+
+Per significant locus: the top Merge SDP (founder-haplotype split), the highest-posterior TIMBR allelic series at the peak, and the transcripts for which mediation is the top-supported model. [Download (CSV)](figures/repbc_2026-10-01/pqtl_followup_summary.csv){download="pqtl_followup_summary.csv"}.
+
+| Protein | Peak (chr:Mb) | pQTL type | Top SDP | Top TIMBR allelic series | Mediators |
+|---|---|---|---|---|---|
+| ENT1 | 17:47.35 | cis | 0,0,0,0,1,0,0,1 | 0,0,0,0,0,0,0,1 | Glo1, Pex6, Ppp1r10, Slc29a1 |
+| NTCP | 2:19.65 | trans | NA | 0,0,1,0,0,0,0,0 | — |
+| CYP2C50 | 19:37.99 | cis | 0,1,0,0,0,1,2,0 | 0,1,0,0,0,1,2,0 | Cyp2c37, Cyp2c38, Cyp2c39, Mms19 |
+| CYP2C50 | 3:60.51 | trans | 0,1,1,1,1,1,0,1 | 0,1,1,1,1,1,0,1 | E130311K13Rik, Mfsd1, Sfxn2, Sh3pxd2a, Tmem144 |
+| CYP2E1 | 3:59.86 | trans | NA | 0,1,1,1,1,0,1,1 | — |
+| CYP2C29 | 6:38.19 | trans | NA | 0,1,0,1,1,1,1,1 | Fam13a, Snx10, Tpk1 |
+| BSEP | 16:38.15 | trans | 0,0,0,0,0,0,0,1 | 0,1,0,1,1,0,0,1 | — |
+| CYP2C39 | 19:39.93 | cis | NA | 0,1,0,0,0,2,2,0 | Cyp2c38, Cyp2c39 |
+| CYP3A11 | 3:41.34 | trans | 0,1,0,0,0,1,0,1 | 0,0,0,1,1,1,1,0 | Eif2a, Ggct |
+| CYP3A11 | 6:52.95 | trans | NA | 0,1,1,1,1,1,1,1 | Agbl3, Ggct, Tcaf1 |

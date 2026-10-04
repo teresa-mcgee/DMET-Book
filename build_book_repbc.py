@@ -12,8 +12,14 @@ Inputs: ../out/<TAG>/, ../out/<TAG>_zeroinflated/, ../merge/<TAG>/, figures/<TAG
 After running, render with:  quarto render
 """
 import csv
+import datetime
+import json
 import math
 import re
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
 import shutil
 import subprocess
 from pathlib import Path
@@ -165,6 +171,149 @@ def fig_dir(subset):
     return (ZOUT if subset == "sub" else OUT) / "figs"
 
 
+# --------------------------------------------------------------------------- allelic-series text, UniProt
+FOUNDERS = ["A/J", "C57BL/6J", "129S1/SvImJ", "NOD/ShiLtJ", "NZO/HlLtJ", "CAST/EiJ", "PWK/PhJ", "WSB/EiJ"]
+SUMMARY_FILE = OUT / "pqtl_summary_table.csv"          # written by R/rerun2026/summarize_pqtl_analysis.R (after Merge)
+SUMMARY = {}
+if SUMMARY_FILE.exists():
+    for _r in load_csv(SUMMARY_FILE):
+        SUMMARY[(_r["Protein"].upper(), _r["Locus"])] = _r
+UNIPROT_CACHE = FIGS / "uniprot_mediator_function_cache.json"
+MEDIATION_LABEL_BF = 0.5          # same rule as the plot: label transcripts with best-model log10 BF >= 0.5
+
+
+def allele_groups(code):
+    """'0,0,0,1,0,0,0,1' -> {'0': [founders...], '1': [...]} (None if the code is not 8 values)."""
+    if not code or code in ("NA", "—"):
+        return None
+    t = [x.strip() for x in str(code).replace(";", ",").split(",") if x.strip() != ""]
+    if len(t) != 8:
+        return None
+    g = {}
+    for founder, a in zip(FOUNDERS, t):
+        g.setdefault(a, []).append(founder)
+    return g
+
+
+def allele_text(code, what):
+    g = allele_groups(code)
+    if g is None:
+        return None
+    parts = [f"**allele {a}**: {', '.join(v)}" for a, v in sorted(g.items(), key=lambda kv: (-len(kv[1]), kv[0]))]
+    return f"{what} " + "; ".join(parts) + f". That is {len(g)} functional allele{'s' if len(g) > 1 else ''}: founders in the same group are inferred to carry the same functional allele at this locus."
+
+
+def merge_text(protein, locus):
+    r = SUMMARY.get((protein.upper(), locus))
+    if r is not None and r.get("merge_source") != "tag":      # SDP not read from THIS tag's Merge output -> never show it
+        r = None
+    if r is None:
+        return "_The top allelic series (SDP) from Merge is added to the book once the follow-up summary has been generated._\n"
+    t = allele_text(r.get("top_sdp"), "In plain terms, the strongest Merge strain distribution pattern (SDP) splits the eight founders into")
+    return (t + "\n") if t else "_Merge did not return a top SDP for this locus (not run or no significant SDP)._\n"
+
+
+def timbr_text(protein, locus):
+    r = SUMMARY.get((protein.upper(), locus))
+    if r is None:
+        return None
+    t = allele_text(r.get("top_timbr_allelic_series"), "The highest-posterior TIMBR allelic series at the peak splits the founders into")
+    return (t + "\n") if t else None
+
+
+def _clean_function(txt, limit=380):
+    txt = re.sub(r"\s*\((?:PubMed|By similarity)[^)]*\)", "", txt or "")
+    txt = re.sub(r"\s+", " ", txt).strip()
+    if len(txt) <= limit:
+        return txt
+    cut = txt[:limit]
+    k = max(cut.rfind(". "), cut.rfind("; "))
+    return (cut[:k + 1] if k > 150 else cut.rsplit(" ", 1)[0] + " …").strip()
+
+
+def uniprot_lookup(symbols):
+    """Function annotation for mouse gene symbols from the UniProt REST API (cached on disk; reviewed entries first)."""
+    cache = json.loads(UNIPROT_CACHE.read_text()) if UNIPROT_CACHE.exists() else {}
+    todo = sorted({x for x in symbols if x and x not in cache})
+    def fetch(batch, reviewed):
+        q = "(" + " OR ".join(f"gene_exact:{x}" for x in batch) + f") AND organism_id:10090 AND reviewed:{'true' if reviewed else 'false'}"
+        url = "https://rest.uniprot.org/uniprotkb/search?" + urllib.parse.urlencode(
+            {"query": q, "fields": "accession,gene_names,protein_name,cc_function", "format": "json", "size": 500})
+        with urllib.request.urlopen(url, timeout=60) as resp:
+            return json.load(resp).get("results", [])
+    def parse(e):
+        names = [g.get("geneName", {}).get("value") for g in e.get("genes", [])] + [s.get("value") for g in e.get("genes", []) for s in g.get("synonyms", [])]
+        pd = e.get("proteinDescription", {})
+        pname = (pd.get("recommendedName") or (pd.get("submissionNames") or [{}])[0]).get("fullName", {}).get("value", "")
+        fn = [c["texts"][0]["value"] for c in e.get("comments", []) if c.get("commentType") == "FUNCTION" and c.get("texts")]
+        return [x for x in names if x], dict(accession=e.get("primaryAccession"), protein=pname, function=_clean_function(fn[0]) if fn else "", reviewed=None)
+    try:
+        for reviewed in (True, False):
+            pending = [x for x in todo if x not in cache or cache[x].get("status") != "found"]
+            for i in range(0, len(pending), 40):
+                batch = pending[i:i + 40]
+                for e in fetch(batch, reviewed):
+                    names, rec = parse(e)
+                    rec["reviewed"] = reviewed
+                    for nm in names:
+                        if nm in batch and (nm not in cache or cache[nm].get("status") != "found" or (reviewed and not cache[nm].get("reviewed"))):
+                            cache[nm] = dict(rec, status="found")
+                time.sleep(0.3)
+        for x in todo:
+            cache.setdefault(x, dict(status="none"))
+        UNIPROT_CACHE.write_text(json.dumps(cache, indent=1, sort_keys=True))
+    except (urllib.error.URLError, TimeoutError, OSError) as err:     # offline build: use whatever is cached
+        print(f"[uniprot] lookup skipped ({err}); using cached entries only")
+    return cache
+
+
+def mediation_points(protein, chr_, fdir):
+    f = fdir / f"mediation_bf_points_chr{chr_}.csv"
+    if not f.exists():
+        return None, f
+    rows = load_csv(f)
+    return rows, f
+
+
+def mediation_text_and_table(protein, chr_, fdir):
+    rows, f = mediation_points(protein, chr_, fdir)
+    if rows is None:
+        return "", ""
+    best = {}
+    for r in rows:                                                    # one row per gene symbol: strongest RNA column
+        b = float(r["best_log10BF"])
+        if r["symbol"] not in best or b > float(best[r["symbol"]]["best_log10BF"]):
+            best[r["symbol"]] = r
+    lab = sorted([r for r in best.values() if r.get("labelled") in ("TRUE", "True", "true")],
+                 key=lambda r: (r["best_model"] != "mediation", -float(r["best_log10BF"])))
+    n_other = sum(1 for r in best.values() if r["best_model"] == "other" and float(r["best_log10BF"]) >= MEDIATION_LABEL_BF)
+    names = {"mediation": "mediation", "colocal": "co-local", "other": "other (non-mediator)"}
+    by = {m: [r for r in lab if r["best_model"] == m] for m in names}
+    sent = (f"{len(best)} candidate transcripts lie in the credible interval. **{len(lab)}** have a best-model log10 Bayes factor ≥ {MEDIATION_LABEL_BF} with mediation or co-local as the best-supported model and are labelled in the figure"
+            + (f" ({n_other} more reach {MEDIATION_LABEL_BF} only for the non-mediator model and are not labelled)" if n_other else "") + ": ")
+    bits = []
+    for m in ("mediation", "colocal"):
+        if by[m]:
+            bits.append(f"**{names[m]}** ({len(by[m])}): " + ", ".join(f"{r['symbol']} ({float(r['best_log10BF']):.2f})" for r in by[m][:12]) + (" …" if len(by[m]) > 12 else ""))
+    sent += "; ".join(bits) if bits else "none."
+    sent += ". *Mediation* means the transcript is best explained as lying on the path from the QTL to the protein; *co-local* means it shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.\n"
+    table = ""
+    if lab:
+        info = uniprot_lookup([r["symbol"] for r in lab])
+        t = [f"::: {{.callout-note collapse=\"true\" title=\"Function of the {len(lab)} labelled transcripts (UniProt)\"}}",
+             f"Function text is the UniProt (mouse) annotation retrieved on {datetime.date.today().isoformat()}; reviewed Swiss-Prot entries where available. "
+             "A dash means UniProt holds no functional annotation for that symbol.\n",
+             "| Transcript | Best model | log10 BF | UniProt protein | Function (UniProt) |", "|---|---|---:|---|---|"]
+        for r in lab:
+            u = info.get(r["symbol"], {})
+            acc = u.get("accession")
+            prot = f"[{md(u.get('protein'))}](https://www.uniprot.org/uniprotkb/{acc})" if acc and u.get("protein") else "—"
+            t.append(f"| *{r['symbol']}* | {names[r['best_model']]} | {float(r['best_log10BF']):.2f} | {prot} | {md(u.get('function') or '')} |")
+        t.append(":::\n")
+        table = "\n".join(t)
+    return sent, table
+
+
 # --------------------------------------------------------------------------- per-locus figure blocks
 def locus_blocks(protein, peak, level="##"):
     """Everything produced for one significant peak, shown inline."""
@@ -201,32 +350,88 @@ def locus_blocks(protein, peak, level="##"):
                           [stage(mp, protein, f"mergeplot_{subset}_{locus}.png")]))
     else:
         out.append(f"_Merge status: {merge_state(protein, locus, subset)}; the plot is not available yet._\n")
+    if subset == "full":
+        out.append(merge_text(protein, locus))
     # TIMBR
     out.append(f"{level}# TIMBR allelic series\n")
     tdir = fig_dir(subset) / protein / "TIMBR_ci"
-    timbr_imgs = sorted([p for p in tdir.glob("*") if p.suffix.lower() in {".png", ".jpg"} and f"chr{chr_}" in p.name]) if tdir.exists() else []
+    timbr_imgs = sorted([p for p in tdir.glob("*") if p.suffix.lower() in {".png", ".jpg"} and f"chr{chr_}" in p.name and not p.name.startswith(("allele_number", "haplotype_"))]) if tdir.exists() else []
     if timbr_imgs:
         for p in timbr_imgs:
-            out.append(figure(stage(p, protein), f"TIMBR: {p.stem.replace('_', ' ')}.", [stage(p, protein)]))
+            kind = ("Bayes-factor" if "_bf_" in p.name else "posterior-probability")
+            out.append(figure(stage(p, protein), f"TIMBR allelic-series sweep across the credible interval ({kind} dot plot), chromosome {chr_}; Merge SDP profile overlaid where available.", [stage(p, protein)]))
     else:
         done = (OUT / protein / "TIMBR_ci" / f"ch{chr_}_res_list.RData").exists() or (OUT / protein / "TIMBR_ci" / f"ch{chr_}_singlelocus_res.RData").exists()
         out.append("_TIMBR sweep complete; plots will appear once Merge profiles are available._\n" if (done and subset == "full")
                    else "_TIMBR was not run for the zero-inflated subset peak._\n" if subset == "sub" else "_TIMBR not run yet._\n")
+    tt = timbr_text(protein, locus) if subset == "full" else None
+    if tt:
+        out.append(tt)
+    if subset == "full":
+        out.append(allele_number_blocks(protein, chr_, tdir))
     # mediation
     out.append(f"{level}# RNA mediation\n")
     if subset == "sub":
         out.append("_RNA mediation was not run for the zero-inflated subset peak._\n")
     else:
-        bf = fdir / f"mediation_overlay_bf_chr{chr_}_withgenes.png"
+        bf_no = fdir / f"mediation_overlay_bf_chr{chr_}_nogenes.png"      # the book shows the plot WITHOUT the gene track
+        bf_with = fdir / f"mediation_overlay_bf_chr{chr_}_withgenes.png"  # offered as a download
         pb = fdir / f"targeted_mediation_chr{chr_}_posterior_bars.pdf"
-        if bf.exists():
-            out.append(figure(stage(bf, protein), "Bayes-factor mediation overlay: scan, mediators and genes in the credible interval.",
-                              [stage(bf, protein), stage(fdir / f"mediation_overlay_bf_chr{chr_}_nogenes.png", protein) if (fdir / f"mediation_overlay_bf_chr{chr_}_nogenes.png").exists() else bf]))
+        pts_rows, pts_csv = mediation_points(protein, chr_, fdir)
+        downloads = [stage(x, protein) for x in (bf_no, bf_with, pts_csv) if x.exists()]
+        if bf_no.exists():
+            out.append(figure(stage(bf_no, protein), "RNA mediation: pQTL scan (left axis) and each candidate transcript's best-supported model, log10 Bayes factor (right axis); transcripts with a mediation or co-local best model and log10 BF of at least 0.5 are labelled.", downloads))
+            sent, table = mediation_text_and_table(protein, chr_, fdir)
+            if sent:
+                out.append(sent)
+            if table:
+                out.append(table)
         if pb.exists():
             png = pdf_to_png(pb, PP / protein / f"{protein}_mediation_posterior_bars_chr{chr_}.png", page=1)
-            out.append(figure(png, "Posterior probabilities of the mediation models for each candidate mediator.", [stage(pb, protein)]))
-        if not bf.exists() and not pb.exists():
+            out.append(figure(png, "Posterior probabilities of the mediation models for the strongest candidate mediator.", [stage(pb, protein)]))
+        if not bf_no.exists() and not pb.exists():
             out.append("_No mediation output yet for this peak._\n")
+    return "\n".join(out)
+
+
+ALLELE_SUMMARY = {}
+_af = OUT / "timbr_allele_number_summary.csv"
+if _af.exists():
+    for _r in load_csv(_af):
+        ALLELE_SUMMARY[(_r["Protein"].upper(), _r["CH"])] = _r
+
+
+def allele_number_blocks(protein, chr_, tdir):
+    """Number-of-functional-alleles (prior vs posterior) and lead / best-model haplotype plots for one peak."""
+    r = ALLELE_SUMMARY.get((protein.upper(), str(chr_)))
+    if not r:
+        return ""
+    def pk(pref, k):
+        return float(r[f"{pref}_P_K{k}"])
+    def ge4(pref):
+        return sum(pk(pref, k) for k in range(4, 9))
+    out = []
+    out.append("**Number of functional alleles.** "
+               f"At the lead locus ({r['lead_locus']}, {float(r['lead_Mb']):.2f} Mb) the posterior probability of a bi-allelic series (two functional alleles) is {pk('lead',2):.2f}, "
+               f"tri-allelic {pk('lead',3):.2f}, and four or more alleles {ge4('lead'):.2f}; a single allele (no QTL effect) has probability {pk('lead',1):.2f}. "
+               f"For comparison, the Chinese-restaurant-process prior gives {float(r['prior_crp_K1']):.2f} / {float(r['prior_crp_K2']):.2f} / {float(r['prior_crp_K3']):.2f} for one / two / three alleles, "
+               f"so the data move weight away from a single allele. ")
+    if r["lead_equals_best"] not in ("TRUE", "True", "1"):
+        out[-1] += (f"The locus in the credible interval whose single best allelic series has the highest posterior probability is {r['best_locus']} ({float(r['best_Mb']):.2f} Mb; "
+                    f"series {r['best_top_partition']}, P = {float(r['best_top_partition_P']):.2f}); there bi-allelic = {pk('best',2):.2f}, tri-allelic = {pk('best',3):.2f}, four or more = {ge4('best'):.2f}.")
+    else:
+        out[-1] += "The lead locus is also the locus with the highest-probability allelic series."
+    out[-1] += "\n"
+    items = [
+        (f"allele_number_prior_posterior_chr{chr_}", "Prior (uniform over partitions and Chinese restaurant process) versus posterior probability of the number of functional alleles at the lead and best-model loci."),
+        (f"allele_number_across_ci_chr{chr_}", "Posterior probability of 1, 2, 3 or 4+ functional alleles at each locus across the credible interval (dashed line: lead locus; dotted line: best-model locus)."),
+        (f"haplotype_lead_{r['lead_locus']}_chr{chr_}", f"TIMBR founder-haplotype effects at the lead locus {r['lead_locus']}."),
+        (f"haplotype_best_{r['best_locus']}_chr{chr_}", f"TIMBR founder-haplotype effects at the locus with the highest-probability allelic series, {r['best_locus']}."),
+    ]
+    for stem, cap in items:
+        png = tdir / f"{stem}.png"
+        if png.exists():
+            out.append(figure(stage(png, protein), cap, [stage(png, protein), tdir / f"{stem}.pdf" if not (PP / protein / f"{protein}_{stem}.pdf").exists() else None] and [stage(png, protein), stage(tdir / f"{stem}.pdf", protein)] if (tdir / f"{stem}.pdf").exists() else [stage(png, protein)]))
     return "\n".join(out)
 
 
@@ -427,8 +632,8 @@ The eQTL map is built from the corrected RNA data ({eqtl}); it does not depend o
 
 ### Transcriptome
 
-{tfig('transcriptome_rint_hierarchical_heatmap', 'RINT-normalized transcriptome, hierarchically clustered.')}
-{tfig('transcriptome_rint_all_transcript_binned_correlation', 'Binned correlation structure across the RINT-normalized transcriptome.')}
+{tfig('transcriptome_rint_hierarchical_heatmap', 'RINT-normalized transcriptome, hierarchically clustered.', extra=('transcriptome_rint_variance.csv',))}
+{tfig('transcriptome_rint_all_transcript_binned_correlation', 'Binned correlation structure across the RINT-normalized transcriptome.', extra=('transcriptome_rint_binned_correlation.csv',))}
 The correlation overview bins transcripts by expression variance for display; it is not the full 20,666 × 20,666 matrix.
 
 ## Follow-up coverage

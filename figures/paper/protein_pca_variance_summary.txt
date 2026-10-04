@@ -1,5 +1,0 @@
-PC1 variance explained (%): 61.75
-PC2 variance explained (%): 37.82
-PC1 + PC2 variance explained (%): 99.57
-PCA input: strains x proteins; QTL Box-Cox transformed BC_DATA values
-Loadings: correlation loadings, scaled only for plotting

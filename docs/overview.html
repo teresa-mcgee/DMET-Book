@@ -337,7 +337,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#protein-clustering" id="toc-protein-clustering" class="nav-link" data-scroll-target="#protein-clustering">Protein clustering</a></li>
   <li><a href="#transcriptome" id="toc-transcriptome" class="nav-link" data-scroll-target="#transcriptome">Transcriptome</a></li>
   </ul></li>
-  <li><a href="#follow-up-coverage" id="toc-follow-up-coverage" class="nav-link" data-scroll-target="#follow-up-coverage">Follow-up coverage</a></li>
+  <li><a href="#follow-up-coverage" id="toc-follow-up-coverage" class="nav-link" data-scroll-target="#follow-up-coverage">Follow-up coverage</a>
+  <ul class="collapse">
+  <li><a href="#locus-follow-up-summary" id="toc-locus-follow-up-summary" class="nav-link" data-scroll-target="#locus-follow-up-summary">Locus follow-up summary</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -1009,7 +1012,7 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <div class="fig-downloads">
-<p>Download: <a href="figures/repbc_2026-10-01/transcriptome_rint_hierarchical_heatmap.png" download="transcriptome_rint_hierarchical_heatmap.png">PNG</a> · <a href="figures/repbc_2026-10-01/transcriptome_rint_hierarchical_heatmap.pdf" download="transcriptome_rint_hierarchical_heatmap.pdf">PDF</a></p>
+<p>Download: <a href="figures/repbc_2026-10-01/transcriptome_rint_hierarchical_heatmap.png" download="transcriptome_rint_hierarchical_heatmap.png">PNG</a> · <a href="figures/repbc_2026-10-01/transcriptome_rint_hierarchical_heatmap.pdf" download="transcriptome_rint_hierarchical_heatmap.pdf">PDF</a> · <a href="figures/repbc_2026-10-01/transcriptome_rint_variance.csv" download="transcriptome_rint_variance.csv">CSV</a></p>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1018,7 +1021,7 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <div class="fig-downloads">
-<p>Download: <a href="figures/repbc_2026-10-01/transcriptome_rint_all_transcript_binned_correlation.png" download="transcriptome_rint_all_transcript_binned_correlation.png">PNG</a> · <a href="figures/repbc_2026-10-01/transcriptome_rint_all_transcript_binned_correlation.pdf" download="transcriptome_rint_all_transcript_binned_correlation.pdf">PDF</a></p>
+<p>Download: <a href="figures/repbc_2026-10-01/transcriptome_rint_all_transcript_binned_correlation.png" download="transcriptome_rint_all_transcript_binned_correlation.png">PNG</a> · <a href="figures/repbc_2026-10-01/transcriptome_rint_all_transcript_binned_correlation.pdf" download="transcriptome_rint_all_transcript_binned_correlation.pdf">PDF</a> · <a href="figures/repbc_2026-10-01/transcriptome_rint_binned_correlation.csv" download="transcriptome_rint_binned_correlation.csv">CSV</a></p>
 </div>
 <p>The correlation overview bins transcripts by expression variance for display; it is not the full 20,666 × 20,666 matrix.</p>
 </section>
@@ -1026,9 +1029,114 @@ ul.task-list li input[type="checkbox"] {
 <section id="follow-up-coverage" class="level2">
 <h2 class="anchored" data-anchor-id="follow-up-coverage">Follow-up coverage</h2>
 <p>Mediation, TIMBR and Merge were run at every significant locus; what is currently available is itemised in <a href="./status.html">Analysis progress</a>.</p>
-<p><em>The locus follow-up summary (top Merge SDP, TIMBR allelic series, mediators) is added once Merge has finished.</em></p>
+<section id="locus-follow-up-summary" class="level3">
+<h3 class="anchored" data-anchor-id="locus-follow-up-summary">Locus follow-up summary</h3>
+<p>Per significant locus: the top Merge SDP (founder-haplotype split), the highest-posterior TIMBR allelic series at the peak, and the transcripts for which mediation is the top-supported model. <a href="figures/repbc_2026-10-01/pqtl_followup_summary.csv" download="pqtl_followup_summary.csv">Download (CSV)</a>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Protein</th>
+<th>Peak (chr:Mb)</th>
+<th>pQTL type</th>
+<th>Top SDP</th>
+<th>Top TIMBR allelic series</th>
+<th>Mediators</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ENT1</td>
+<td>17:47.35</td>
+<td>cis</td>
+<td>0,0,0,0,1,0,0,1</td>
+<td>0,0,0,0,0,0,0,1</td>
+<td>Glo1, Pex6, Ppp1r10, Slc29a1</td>
+</tr>
+<tr class="even">
+<td>NTCP</td>
+<td>2:19.65</td>
+<td>trans</td>
+<td>NA</td>
+<td>0,0,1,0,0,0,0,0</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>CYP2C50</td>
+<td>19:37.99</td>
+<td>cis</td>
+<td>0,1,0,0,0,1,2,0</td>
+<td>0,1,0,0,0,1,2,0</td>
+<td>Cyp2c37, Cyp2c38, Cyp2c39, Mms19</td>
+</tr>
+<tr class="even">
+<td>CYP2C50</td>
+<td>3:60.51</td>
+<td>trans</td>
+<td>0,1,1,1,1,1,0,1</td>
+<td>0,1,1,1,1,1,0,1</td>
+<td>E130311K13Rik, Mfsd1, Sfxn2, Sh3pxd2a, Tmem144</td>
+</tr>
+<tr class="odd">
+<td>CYP2E1</td>
+<td>3:59.86</td>
+<td>trans</td>
+<td>NA</td>
+<td>0,1,1,1,1,0,1,1</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>CYP2C29</td>
+<td>6:38.19</td>
+<td>trans</td>
+<td>NA</td>
+<td>0,1,0,1,1,1,1,1</td>
+<td>Fam13a, Snx10, Tpk1</td>
+</tr>
+<tr class="odd">
+<td>BSEP</td>
+<td>16:38.15</td>
+<td>trans</td>
+<td>0,0,0,0,0,0,0,1</td>
+<td>0,1,0,1,1,0,0,1</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>CYP2C39</td>
+<td>19:39.93</td>
+<td>cis</td>
+<td>NA</td>
+<td>0,1,0,0,0,2,2,0</td>
+<td>Cyp2c38, Cyp2c39</td>
+</tr>
+<tr class="odd">
+<td>CYP3A11</td>
+<td>3:41.34</td>
+<td>trans</td>
+<td>0,1,0,0,0,1,0,1</td>
+<td>0,0,0,1,1,1,1,0</td>
+<td>Eif2a, Ggct</td>
+</tr>
+<tr class="even">
+<td>CYP3A11</td>
+<td>6:52.95</td>
+<td>trans</td>
+<td>NA</td>
+<td>0,1,1,1,1,1,1,1</td>
+<td>Agbl3, Ggct, Tcaf1</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
