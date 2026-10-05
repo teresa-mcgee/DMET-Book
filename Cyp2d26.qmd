@@ -34,4 +34,54 @@ Download: [PDF](figures/repbc_2026-10-01/per_protein/Cyp2d26/Cyp2d26_genome_scan
 
 # Significant peak(s)
 
-No genome-wide significant pQTL for this protein (adjusted P ≥ 0.05), so credible intervals, Merge, TIMBR and mediation were not run.
+## Chromosome 3 peak (UNC5373318)
+
+| Peak position | −log10(P) | Adjusted P | 90% credible interval | Encoding gene | Gene location | pQTL type |
+|---|---:|---:|---|---|---|---|
+| chr3:61.22 Mb | 4.89 | — | 60.51–96.17 Mb | — | — | **—** |
+
+### Merge / diplotype fine-mapping
+
+![Merge: SDP significance profile across the credible interval.](figures/repbc_2026-10-01/per_protein/Cyp2d26/Cyp2d26_mergeplot__UNC5373318.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/per_protein/Cyp2d26/Cyp2d26_mergeplot__UNC5373318.png){download="Cyp2d26_mergeplot__UNC5373318.png"}
+:::
+
+### TIMBR allelic series
+
+![TIMBR allelic-series sweep across the credible interval (Bayes-factor dot plot), chromosome 3; Merge SDP profile overlaid where available.](figures/repbc_2026-10-01/per_protein/Cyp2d26/Cyp2d26_timbr_ci_bf_dot_chr3.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/per_protein/Cyp2d26/Cyp2d26_timbr_ci_bf_dot_chr3.png){download="Cyp2d26_timbr_ci_bf_dot_chr3.png"}
+:::
+
+![TIMBR allelic-series sweep across the credible interval (posterior-probability dot plot), chromosome 3; Merge SDP profile overlaid where available.](figures/repbc_2026-10-01/per_protein/Cyp2d26/Cyp2d26_timbr_ci_dot_chr3.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/per_protein/Cyp2d26/Cyp2d26_timbr_ci_dot_chr3.png){download="Cyp2d26_timbr_ci_dot_chr3.png"}
+:::
+
+### RNA mediation
+
+![RNA mediation: pQTL scan (left axis) and each candidate transcript's best-supported model-specific log10 Bayes factor (right axis); partial and complete mediation labels require log10 BF > 0.5.](figures/repbc_2026-10-01/per_protein/Cyp2d26/Cyp2d26_mediation_overlay_bf_chr3_nogenes.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/per_protein/Cyp2d26/Cyp2d26_mediation_overlay_bf_chr3_nogenes.png){download="Cyp2d26_mediation_overlay_bf_chr3_nogenes.png"} · [PNG](figures/repbc_2026-10-01/per_protein/Cyp2d26/Cyp2d26_mediation_overlay_bf_chr3_withgenes.png){download="Cyp2d26_mediation_overlay_bf_chr3_withgenes.png"} · [CSV](figures/repbc_2026-10-01/per_protein/Cyp2d26/Cyp2d26_mediation_bf_points_chr3.csv){download="Cyp2d26_mediation_bf_points_chr3.csv"}
+:::
+
+218 candidate transcripts lie in the credible interval. **1** have a partial- or complete-mediation log10 Bayes factor > 0.5; these are labelled in the figure: **partial mediation** (1): Tiparp (1.19). *Partial* and *complete mediation* are shown separately; *co-local* means the transcript shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.
+
+::: {.callout-note collapse="true" title="Function of the 1 labelled transcripts (UniProt)"}
+Function text is the UniProt (mouse) annotation retrieved on 2026-10-05; reviewed Swiss-Prot entries where available. A dash means UniProt holds no functional annotation for that symbol.
+
+| Transcript | Best model | log10 BF | UniProt protein | Function (UniProt) |
+|---|---|---:|---|---|
+| *Tiparp* | partial mediation | 1.19 | [Protein mono-ADP-ribosyltransferase TIPARP](https://www.uniprot.org/uniprotkb/Q8C1B2) | ADP-ribosyltransferase that mediates mono-ADP-ribosylation of glutamate, aspartate and cysteine residues on target proteins. Acts as a negative regulator of AHR by mediating mono-ADP-ribosylation of AHR, leading to inhibit transcription activator activity of AHR (Probable) |
+:::
+
+![Posterior probabilities of the mediation models for the strongest candidate mediator.](figures/repbc_2026-10-01/per_protein/Cyp2d26/Cyp2d26_mediation_posterior_bars_chr3.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PDF](figures/repbc_2026-10-01/per_protein/Cyp2d26/Cyp2d26_targeted_mediation_chr3_posterior_bars.pdf){download="Cyp2d26_targeted_mediation_chr3_posterior_bars.pdf"}
+:::

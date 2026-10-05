@@ -558,26 +558,26 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mediation_overlay_bf_chr19_nogenes.png" class="img-fluid figure-img" style="width:95.0%"></p>
-<figcaption>RNA mediation: pQTL scan (left axis) and each candidate transcript’s best-supported model, log10 Bayes factor (right axis); text labels are shown only when mediation has the highest posterior probability and log10 BF is at least 0.5.</figcaption>
+<figcaption>RNA mediation: pQTL scan (left axis) and each candidate transcript’s best-supported model-specific log10 Bayes factor (right axis); partial and complete mediation labels require log10 BF &gt; 0.5.</figcaption>
 </figure>
 </div>
 <div class="fig-downloads">
 <p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mediation_overlay_bf_chr19_nogenes.png" download="Cyp2c39_mediation_overlay_bf_chr19_nogenes.png">PNG</a> · <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mediation_overlay_bf_chr19_withgenes.png" download="Cyp2c39_mediation_overlay_bf_chr19_withgenes.png">PNG</a> · <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mediation_bf_points_chr19.csv" download="Cyp2c39_mediation_bf_points_chr19.csv">CSV</a></p>
 </div>
-<p>13 candidate transcripts lie in the credible interval. <strong>2</strong> have a best-model log10 Bayes factor ≥ 0.5 and mediation has the highest posterior probability among the model classes; these are labelled in the figure (7 more reach 0.5 only for the non-mediator model and are not labelled): <strong>mediation</strong> (2): Cyp2c38 (2.25), Cyp2c39 (0.93). <em>Mediation</em> means the transcript is best explained as lying on the path from the QTL to the protein; <em>co-local</em> means it shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Function of the 2 labelled transcripts (UniProt)">
+<p>13 candidate transcripts lie in the credible interval. <strong>3</strong> have a partial- or complete-mediation log10 Bayes factor &gt; 0.5; these are labelled in the figure: <strong>partial mediation</strong> (2): Cyp2c38 (2.62), Cyp2c39 (1.30). <em>Partial</em> and <em>complete mediation</em> are shown separately; <em>co-local</em> means the transcript shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Function of the 3 labelled transcripts (UniProt)">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Function of the 2 labelled transcripts (UniProt)
+<span class="screen-reader-only">Note</span>Function of the 3 labelled transcripts (UniProt)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Function text is the UniProt (mouse) annotation retrieved on 2026-10-04; reviewed Swiss-Prot entries where available. A dash means UniProt holds no functional annotation for that symbol.</p>
+<p>Function text is the UniProt (mouse) annotation retrieved on 2026-10-05; reviewed Swiss-Prot entries where available. A dash means UniProt holds no functional annotation for that symbol.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -591,17 +591,24 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td><em>Cyp2c38</em></td>
-<td>mediation</td>
-<td style="text-align: right;">2.25</td>
+<td>partial mediation</td>
+<td style="text-align: right;">2.62</td>
 <td><a href="https://www.uniprot.org/uniprotkb/P56655">Cytochrome P450 2C38</a></td>
 <td>A cytochrome P450 monooxygenase that primarily catalyzes the epoxidation of 11,12 double bond of (5Z,8Z,11Z,14Z)-eicosatetraenoic acid (arachidonate) forming 11,12-epoxyeicosatrienoic acid (11,12-EET) regioisomer.</td>
 </tr>
 <tr class="even">
 <td><em>Cyp2c39</em></td>
-<td>mediation</td>
-<td style="text-align: right;">0.93</td>
+<td>partial mediation</td>
+<td style="text-align: right;">1.30</td>
 <td><a href="https://www.uniprot.org/uniprotkb/P56656">Cytochrome P450 2C39</a></td>
 <td>A cytochrome P450 monooxygenase that primarily catalyzes the epoxidation of 11,12 and 14,15 double bonds of (5Z,8Z,11Z,14Z)-eicosatetraenoic acid (arachidonate) forming 11,12- and 14,15-epoxyeicosatrienoic acids (11,12- and 14,15-EET) regioisomers.</td>
+</tr>
+<tr class="odd">
+<td><em>Cyp2c37</em></td>
+<td>co-local</td>
+<td style="text-align: right;">0.74</td>
+<td><a href="https://www.uniprot.org/uniprotkb/P56654">Cytochrome P450 2C37</a></td>
+<td>A cytochrome P450 monooxygenase that metabolizes (5Z,8Z,11Z,14Z)-eicosatetraenoic acid (arachidonate) to primarily produce 12-hydroxyeicosatetraenoic acid (12-HETE). Mechanistically, uses molecular oxygen inserting one oxygen atom into a substrate, and reducing the second into a water molecule, with two electrons provided by NADPH via cytochrome P450 reductase (CPR;</td>
 </tr>
 </tbody>
 </table>

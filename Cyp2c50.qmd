@@ -120,22 +120,23 @@ Download: [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_haplotype_b
 
 ### RNA mediation
 
-![RNA mediation: pQTL scan (left axis) and each candidate transcript's best-supported model, log10 Bayes factor (right axis); text labels are shown only when mediation has the highest posterior probability and log10 BF is at least 0.5.](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_overlay_bf_chr19_nogenes.png){fig-align="center" width="95%"}
+![RNA mediation: pQTL scan (left axis) and each candidate transcript's best-supported model-specific log10 Bayes factor (right axis); partial and complete mediation labels require log10 BF > 0.5.](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_overlay_bf_chr19_nogenes.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
 Download: [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_overlay_bf_chr19_nogenes.png){download="Cyp2c50_mediation_overlay_bf_chr19_nogenes.png"} · [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_overlay_bf_chr19_withgenes.png){download="Cyp2c50_mediation_overlay_bf_chr19_withgenes.png"} · [CSV](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_bf_points_chr19.csv){download="Cyp2c50_mediation_bf_points_chr19.csv"}
 :::
 
-195 candidate transcripts lie in the credible interval. **3** have a best-model log10 Bayes factor ≥ 0.5 and mediation has the highest posterior probability among the model classes; these are labelled in the figure (152 more reach 0.5 only for the non-mediator model and are not labelled): **mediation** (3): Cyp2c39 (1.49), Cyp2c38 (1.07), Cyp2c37 (0.69). *Mediation* means the transcript is best explained as lying on the path from the QTL to the protein; *co-local* means it shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.
+195 candidate transcripts lie in the credible interval. **4** have a partial- or complete-mediation log10 Bayes factor > 0.5; these are labelled in the figure: **partial mediation** (4): Cyp2c39 (1.86), Cyp2c38 (1.43), Cyp2c37 (1.06), Mms19 (0.68). *Partial* and *complete mediation* are shown separately; *co-local* means the transcript shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.
 
-::: {.callout-note collapse="true" title="Function of the 3 labelled transcripts (UniProt)"}
-Function text is the UniProt (mouse) annotation retrieved on 2026-10-04; reviewed Swiss-Prot entries where available. A dash means UniProt holds no functional annotation for that symbol.
+::: {.callout-note collapse="true" title="Function of the 4 labelled transcripts (UniProt)"}
+Function text is the UniProt (mouse) annotation retrieved on 2026-10-05; reviewed Swiss-Prot entries where available. A dash means UniProt holds no functional annotation for that symbol.
 
 | Transcript | Best model | log10 BF | UniProt protein | Function (UniProt) |
 |---|---|---:|---|---|
-| *Cyp2c39* | mediation | 1.49 | [Cytochrome P450 2C39](https://www.uniprot.org/uniprotkb/P56656) | A cytochrome P450 monooxygenase that primarily catalyzes the epoxidation of 11,12 and 14,15 double bonds of (5Z,8Z,11Z,14Z)-eicosatetraenoic acid (arachidonate) forming 11,12- and 14,15-epoxyeicosatrienoic acids (11,12- and 14,15-EET) regioisomers. |
-| *Cyp2c38* | mediation | 1.07 | [Cytochrome P450 2C38](https://www.uniprot.org/uniprotkb/P56655) | A cytochrome P450 monooxygenase that primarily catalyzes the epoxidation of 11,12 double bond of (5Z,8Z,11Z,14Z)-eicosatetraenoic acid (arachidonate) forming 11,12-epoxyeicosatrienoic acid (11,12-EET) regioisomer. |
-| *Cyp2c37* | mediation | 0.69 | [Cytochrome P450 2C37](https://www.uniprot.org/uniprotkb/P56654) | A cytochrome P450 monooxygenase that metabolizes (5Z,8Z,11Z,14Z)-eicosatetraenoic acid (arachidonate) to primarily produce 12-hydroxyeicosatetraenoic acid (12-HETE). Mechanistically, uses molecular oxygen inserting one oxygen atom into a substrate, and reducing the second into a water molecule, with two electrons provided by NADPH via cytochrome P450 reductase (CPR; |
+| *Cyp2c39* | partial mediation | 1.86 | [Cytochrome P450 2C39](https://www.uniprot.org/uniprotkb/P56656) | A cytochrome P450 monooxygenase that primarily catalyzes the epoxidation of 11,12 and 14,15 double bonds of (5Z,8Z,11Z,14Z)-eicosatetraenoic acid (arachidonate) forming 11,12- and 14,15-epoxyeicosatrienoic acids (11,12- and 14,15-EET) regioisomers. |
+| *Cyp2c38* | partial mediation | 1.43 | [Cytochrome P450 2C38](https://www.uniprot.org/uniprotkb/P56655) | A cytochrome P450 monooxygenase that primarily catalyzes the epoxidation of 11,12 double bond of (5Z,8Z,11Z,14Z)-eicosatetraenoic acid (arachidonate) forming 11,12-epoxyeicosatrienoic acid (11,12-EET) regioisomer. |
+| *Cyp2c37* | partial mediation | 1.06 | [Cytochrome P450 2C37](https://www.uniprot.org/uniprotkb/P56654) | A cytochrome P450 monooxygenase that metabolizes (5Z,8Z,11Z,14Z)-eicosatetraenoic acid (arachidonate) to primarily produce 12-hydroxyeicosatetraenoic acid (12-HETE). Mechanistically, uses molecular oxygen inserting one oxygen atom into a substrate, and reducing the second into a water molecule, with two electrons provided by NADPH via cytochrome P450 reductase (CPR; |
+| *Mms19* | partial mediation | 0.68 | [MMS19 nucleotide excision repair protein homolog](https://www.uniprot.org/uniprotkb/Q9D071) | Key component of the cytosolic iron-sulfur protein assembly (CIA) complex, a multiprotein complex that mediates the incorporation of iron-sulfur cluster into apoproteins specifically involved in DNA metabolism and genomic integrity. |
 :::
 
 ![Posterior probabilities of the mediation models for the strongest candidate mediator.](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_posterior_bars_chr19.png){fig-align="center" width="95%"}
@@ -230,21 +231,22 @@ Download: [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_haplotype_b
 
 ### RNA mediation
 
-![RNA mediation: pQTL scan (left axis) and each candidate transcript's best-supported model, log10 Bayes factor (right axis); text labels are shown only when mediation has the highest posterior probability and log10 BF is at least 0.5.](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_overlay_bf_chr3_nogenes.png){fig-align="center" width="95%"}
+![RNA mediation: pQTL scan (left axis) and each candidate transcript's best-supported model-specific log10 Bayes factor (right axis); partial and complete mediation labels require log10 BF > 0.5.](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_overlay_bf_chr3_nogenes.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
 Download: [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_overlay_bf_chr3_nogenes.png){download="Cyp2c50_mediation_overlay_bf_chr3_nogenes.png"} · [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_overlay_bf_chr3_withgenes.png){download="Cyp2c50_mediation_overlay_bf_chr3_withgenes.png"} · [CSV](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_bf_points_chr3.csv){download="Cyp2c50_mediation_bf_points_chr3.csv"}
 :::
 
-195 candidate transcripts lie in the credible interval. **2** have a best-model log10 Bayes factor ≥ 0.5 and mediation has the highest posterior probability among the model classes; these are labelled in the figure (130 more reach 0.5 only for the non-mediator model and are not labelled): **mediation** (1): Sfxn2 (0.53). *Mediation* means the transcript is best explained as lying on the path from the QTL to the protein; *co-local* means it shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.
+195 candidate transcripts lie in the credible interval. **3** have a partial- or complete-mediation log10 Bayes factor > 0.5; these are labelled in the figure: **partial mediation** (3): Sfxn2 (0.89), Sucnr1 (0.72), E130311K13Rik (0.61). *Partial* and *complete mediation* are shown separately; *co-local* means the transcript shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.
 
-::: {.callout-note collapse="true" title="Function of the 2 labelled transcripts (UniProt)"}
-Function text is the UniProt (mouse) annotation retrieved on 2026-10-04; reviewed Swiss-Prot entries where available. A dash means UniProt holds no functional annotation for that symbol.
+::: {.callout-note collapse="true" title="Function of the 3 labelled transcripts (UniProt)"}
+Function text is the UniProt (mouse) annotation retrieved on 2026-10-05; reviewed Swiss-Prot entries where available. A dash means UniProt holds no functional annotation for that symbol.
 
 | Transcript | Best model | log10 BF | UniProt protein | Function (UniProt) |
 |---|---|---:|---|---|
-| *Sfxn2* | mediation | 0.53 | [Sideroflexin-2](https://www.uniprot.org/uniprotkb/Q925N2) | Mitochondrial amino-acid transporter that mediates transport of serine into mitochondria. Involved in mitochondrial iron homeostasis by regulating heme biosynthesis |
-| *Sucnr1* | co-local | 0.72 | [Succinate receptor 1](https://www.uniprot.org/uniprotkb/Q99MT6) | G protein-coupled receptor for succinate able to mediate signaling through Gq/GNAQ or Gi/GNAI second messengers depending on the cell type and the processes regulated. Succinate-SUCNR1 signaling serves as a link between metabolic stress, inflammation and energy homeostasis. In macrophages, plays a range of immune-regulatory roles. |
+| *Sfxn2* | partial mediation | 0.89 | [Sideroflexin-2](https://www.uniprot.org/uniprotkb/Q925N2) | Mitochondrial amino-acid transporter that mediates transport of serine into mitochondria. Involved in mitochondrial iron homeostasis by regulating heme biosynthesis |
+| *Sucnr1* | partial mediation | 0.72 | [Succinate receptor 1](https://www.uniprot.org/uniprotkb/Q99MT6) | G protein-coupled receptor for succinate able to mediate signaling through Gq/GNAQ or Gi/GNAI second messengers depending on the cell type and the processes regulated. Succinate-SUCNR1 signaling serves as a link between metabolic stress, inflammation and energy homeostasis. In macrophages, plays a range of immune-regulatory roles. |
+| *E130311K13Rik* | partial mediation | 0.61 | — | — |
 :::
 
 ![Posterior probabilities of the mediation models for the strongest candidate mediator.](figures/repbc_2026-10-01/per_protein/Cyp2c50/Cyp2c50_mediation_posterior_bars_chr3.png){fig-align="center" width="95%"}

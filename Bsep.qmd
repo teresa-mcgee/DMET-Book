@@ -120,16 +120,64 @@ Download: [PNG](figures/repbc_2026-10-01/per_protein/Bsep/Bsep_haplotype_best_JA
 
 ### RNA mediation
 
-![RNA mediation: pQTL scan (left axis) and each candidate transcript's best-supported model, log10 Bayes factor (right axis); text labels are shown only when mediation has the highest posterior probability and log10 BF is at least 0.5.](figures/repbc_2026-10-01/per_protein/Bsep/Bsep_mediation_overlay_bf_chr16_nogenes.png){fig-align="center" width="95%"}
+![RNA mediation: pQTL scan (left axis) and each candidate transcript's best-supported model-specific log10 Bayes factor (right axis); partial and complete mediation labels require log10 BF > 0.5.](figures/repbc_2026-10-01/per_protein/Bsep/Bsep_mediation_overlay_bf_chr16_nogenes.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
 Download: [PNG](figures/repbc_2026-10-01/per_protein/Bsep/Bsep_mediation_overlay_bf_chr16_nogenes.png){download="Bsep_mediation_overlay_bf_chr16_nogenes.png"} · [PNG](figures/repbc_2026-10-01/per_protein/Bsep/Bsep_mediation_overlay_bf_chr16_withgenes.png){download="Bsep_mediation_overlay_bf_chr16_withgenes.png"} · [CSV](figures/repbc_2026-10-01/per_protein/Bsep/Bsep_mediation_bf_points_chr16.csv){download="Bsep_mediation_bf_points_chr16.csv"}
 :::
 
-0 candidate transcripts lie in the credible interval. **0** have a best-model log10 Bayes factor ≥ 0.5 and mediation has the highest posterior probability among the model classes; these are labelled in the figure: none.. *Mediation* means the transcript is best explained as lying on the path from the QTL to the protein; *co-local* means it shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.
+0 candidate transcripts lie in the credible interval. **0** have a partial- or complete-mediation log10 Bayes factor > 0.5; these are labelled in the figure: none.. *Partial* and *complete mediation* are shown separately; *co-local* means the transcript shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.
 
 ![Posterior probabilities of the mediation models for the strongest candidate mediator.](figures/repbc_2026-10-01/per_protein/Bsep/Bsep_mediation_posterior_bars_chr16.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
 Download: [PDF](figures/repbc_2026-10-01/per_protein/Bsep/Bsep_protein_mediation_chr16_posterior_bars.pdf){download="Bsep_protein_mediation_chr16_posterior_bars.pdf"}
+:::
+
+## Chromosome 17 peak (UNC28060204)
+
+| Peak position | −log10(P) | Adjusted P | 90% credible interval | Encoding gene | Gene location | pQTL type |
+|---|---:|---:|---|---|---|---|
+| chr17:55.41 Mb | 4.88 | — | 43.63–56.89 Mb | — | — | **—** |
+
+![Bootstrap credible interval, chromosome 17.](figures/repbc_2026-10-01/per_protein/Bsep/Bsep_ci_scans__p2.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PDF](figures/repbc_2026-10-01/per_protein/Bsep/Bsep_ci_scans_.pdf){download="Bsep_ci_scans_.pdf"}
+:::
+
+### Merge / diplotype fine-mapping
+
+![Merge: SDP significance profile across the credible interval.](figures/repbc_2026-10-01/per_protein/Bsep/Bsep_mergeplot__UNC28060204.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/per_protein/Bsep/Bsep_mergeplot__UNC28060204.png){download="Bsep_mergeplot__UNC28060204.png"}
+:::
+
+### TIMBR allelic series
+
+_TIMBR not run yet._
+
+### RNA mediation
+
+![RNA mediation: pQTL scan (left axis) and each candidate transcript's best-supported model-specific log10 Bayes factor (right axis); partial and complete mediation labels require log10 BF > 0.5.](figures/repbc_2026-10-01/per_protein/Bsep/Bsep_mediation_overlay_bf_chr17_nogenes.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/per_protein/Bsep/Bsep_mediation_overlay_bf_chr17_nogenes.png){download="Bsep_mediation_overlay_bf_chr17_nogenes.png"} · [PNG](figures/repbc_2026-10-01/per_protein/Bsep/Bsep_mediation_overlay_bf_chr17_withgenes.png){download="Bsep_mediation_overlay_bf_chr17_withgenes.png"} · [CSV](figures/repbc_2026-10-01/per_protein/Bsep/Bsep_mediation_bf_points_chr17.csv){download="Bsep_mediation_bf_points_chr17.csv"}
+:::
+
+114 candidate transcripts lie in the credible interval. **1** have a partial- or complete-mediation log10 Bayes factor > 0.5; these are labelled in the figure: **partial mediation** (1): 2310039H08Rik (0.67). *Partial* and *complete mediation* are shown separately; *co-local* means the transcript shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.
+
+::: {.callout-note collapse="true" title="Function of the 1 labelled transcripts (UniProt)"}
+Function text is the UniProt (mouse) annotation retrieved on 2026-10-05; reviewed Swiss-Prot entries where available. A dash means UniProt holds no functional annotation for that symbol.
+
+| Transcript | Best model | log10 BF | UniProt protein | Function (UniProt) |
+|---|---|---:|---|---|
+| *2310039H08Rik* | partial mediation | 0.67 | — | — |
+:::
+
+![Posterior probabilities of the mediation models for the strongest candidate mediator.](figures/repbc_2026-10-01/per_protein/Bsep/Bsep_mediation_posterior_bars_chr17.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PDF](figures/repbc_2026-10-01/per_protein/Bsep/Bsep_targeted_mediation_chr17_posterior_bars.pdf){download="Bsep_targeted_mediation_chr17_posterior_bars.pdf"}
 :::

@@ -34,4 +34,44 @@ Download: [PDF](figures/repbc_2026-10-01/per_protein/Cyp2c9/Cyp2c9_genome_scan.p
 
 # Significant peak(s)
 
-No genome-wide significant pQTL for this protein (adjusted P ≥ 0.05), so credible intervals, Merge, TIMBR and mediation were not run.
+## Chromosome 12 peak (UNC21925293)
+
+| Peak position | −log10(P) | Adjusted P | 90% credible interval | Encoding gene | Gene location | pQTL type |
+|---|---:|---:|---|---|---|---|
+| chr12:113.58 Mb | 4.76 | — | 86.52–118.08 Mb | — | — | **—** |
+
+### Merge / diplotype fine-mapping
+
+![Merge: SDP significance profile across the credible interval.](figures/repbc_2026-10-01/per_protein/Cyp2c9/Cyp2c9_mergeplot__UNC21925293.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c9/Cyp2c9_mergeplot__UNC21925293.png){download="Cyp2c9_mergeplot__UNC21925293.png"}
+:::
+
+### TIMBR allelic series
+
+_TIMBR not run yet._
+
+### RNA mediation
+
+![RNA mediation: pQTL scan (left axis) and each candidate transcript's best-supported model-specific log10 Bayes factor (right axis); partial and complete mediation labels require log10 BF > 0.5.](figures/repbc_2026-10-01/per_protein/Cyp2c9/Cyp2c9_mediation_overlay_bf_chr12_nogenes.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c9/Cyp2c9_mediation_overlay_bf_chr12_nogenes.png){download="Cyp2c9_mediation_overlay_bf_chr12_nogenes.png"} · [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c9/Cyp2c9_mediation_overlay_bf_chr12_withgenes.png){download="Cyp2c9_mediation_overlay_bf_chr12_withgenes.png"} · [CSV](figures/repbc_2026-10-01/per_protein/Cyp2c9/Cyp2c9_mediation_bf_points_chr12.csv){download="Cyp2c9_mediation_bf_points_chr12.csv"}
+:::
+
+125 candidate transcripts lie in the credible interval. **1** have a partial- or complete-mediation log10 Bayes factor > 0.5; these are labelled in the figure: **partial mediation** (1): Cdca7l (1.15). *Partial* and *complete mediation* are shown separately; *co-local* means the transcript shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.
+
+::: {.callout-note collapse="true" title="Function of the 1 labelled transcripts (UniProt)"}
+Function text is the UniProt (mouse) annotation retrieved on 2026-10-05; reviewed Swiss-Prot entries where available. A dash means UniProt holds no functional annotation for that symbol.
+
+| Transcript | Best model | log10 BF | UniProt protein | Function (UniProt) |
+|---|---|---:|---|---|
+| *Cdca7l* | partial mediation | 1.15 | — | — |
+:::
+
+![Posterior probabilities of the mediation models for the strongest candidate mediator.](figures/repbc_2026-10-01/per_protein/Cyp2c9/Cyp2c9_mediation_posterior_bars_chr12.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PDF](figures/repbc_2026-10-01/per_protein/Cyp2c9/Cyp2c9_targeted_mediation_chr12_posterior_bars.pdf){download="Cyp2c9_targeted_mediation_chr12_posterior_bars.pdf"}
+:::

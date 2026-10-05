@@ -150,6 +150,24 @@ sig = load_sig(OUT / "SignificantResults.txt")
 zsig = load_sig(ZOUT / "SignificantResults.txt") if (ZOUT / "SignificantResults.txt").exists() else []
 for r in zsig:
     r["Subset"] = "sub"
+# The current integrated pQTL summary also carries the newer 90% threshold
+# loci.  Include those full-set loci in the protein chapters so their Merge,
+# TIMBR, and mediation outputs are propagated into the book alongside the
+# conventional 95% loci.
+summary90 = OUT / "current_protein_pqtl_summary.csv"
+if summary90.exists():
+    existing_keys = {(r["Protein"].upper(), r["CH"], r["Locus"]) for r in sig}
+    for r in load_csv(summary90):
+        if r.get("credible_interval_level") != "90%":
+            continue
+        key = (r["Protein"].upper(), r["chromosome"], r["peak_locus"])
+        if r["Protein"].upper() == "CES2" or key in existing_keys:
+            continue
+        sig.append(dict(Protein=r["Protein"], CH=r["chromosome"], Locus=r["peak_locus"],
+                        Mb=float(r["peak_Mb"]), P=float(r["p_value"]),
+                        CI_start=float(r["CI_start_Mb"]), CI_end=float(r["CI_end_Mb"]),
+                        Subset="", Adj_P=num(r["adjusted_p_value"])))
+        existing_keys.add(key)
 norm = {r["Protein"].upper(): r for r in load_csv(FIGS / "protein_normalization_summary.csv")}
 her = {r["Protein"].upper(): r for r in load_csv(FIGS / "figure2_heritability_protein_and_transcript.csv")}
 pairs = {r["Protein"].upper(): r for r in load_csv(OUT / "protein_transcript_pairs.csv")}
@@ -160,6 +178,10 @@ for src in (OUT, ZOUT):
         for r in load_csv(f):
             cis[(r["Protein"].upper(), r["Locus"])] = r
 lead = {r["Protein"].upper(): r for r in load_csv(OUT / "prot_summary_table_with_heritability.csv")}
+eqtl_summary = {}
+eqtl_summary_path = OUT / "protein_heritability_qtl_summary.csv"
+if eqtl_summary_path.exists():
+    eqtl_summary = {r["Protein"].upper(): r for r in load_csv(eqtl_summary_path)}
 
 
 def sig_for(protein, rows=None):
@@ -291,18 +313,17 @@ def mediation_text_and_table(protein, chr_, fdir):
         if r["symbol"] not in best or b > float(best[r["symbol"]]["best_log10BF"]):
             best[r["symbol"]] = r
     lab = sorted([r for r in best.values() if r.get("labelled") in ("TRUE", "True", "true")],
-                 key=lambda r: (r["best_model"] != "mediation", -float(r["best_log10BF"])))
-    n_other = sum(1 for r in best.values() if r["best_model"] == "other" and float(r["best_log10BF"]) >= MEDIATION_LABEL_BF)
-    names = {"mediation": "mediation", "colocal": "co-local", "other": "other (non-mediator)"}
+                 key=lambda r: (-float(r["best_log10BF"]), r["symbol"]))
+    names = {"partial": "partial mediation", "complete": "complete mediation",
+             "colocal": "co-local", "other": "other (non-mediator)"}
     by = {m: [r for r in lab if r["best_model"] == m] for m in names}
-    sent = (f"{len(best)} candidate transcripts lie in the credible interval. **{len(lab)}** have a best-model log10 Bayes factor ≥ {MEDIATION_LABEL_BF} and mediation has the highest posterior probability among the model classes; these are labelled in the figure"
-            + (f" ({n_other} more reach {MEDIATION_LABEL_BF} only for the non-mediator model and are not labelled)" if n_other else "") + ": ")
+    sent = (f"{len(best)} candidate transcripts lie in the credible interval. **{len(lab)}** have a partial- or complete-mediation log10 Bayes factor > {MEDIATION_LABEL_BF}; these are labelled in the figure: ")
     bits = []
-    for m in ("mediation",):
+    for m in ("partial", "complete"):
         if by[m]:
             bits.append(f"**{names[m]}** ({len(by[m])}): " + ", ".join(f"{r['symbol']} ({float(r['best_log10BF']):.2f})" for r in by[m][:12]) + (" …" if len(by[m]) > 12 else ""))
     sent += "; ".join(bits) if bits else "none."
-    sent += ". *Mediation* means the transcript is best explained as lying on the path from the QTL to the protein; *co-local* means it shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.\n"
+    sent += ". *Partial* and *complete mediation* are shown separately; *co-local* means the transcript shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.\n"
     table = ""
     if lab:
         info = uniprot_lookup([r["symbol"] for r in lab])
@@ -392,7 +413,7 @@ def locus_blocks(protein, peak, level="##"):
         pts_rows, pts_csv = mediation_points(protein, chr_, fdir)
         downloads = [stage(x, protein) for x in (bf_no, bf_with, pts_csv) if x.exists()]
         if bf_no.exists():
-            out.append(figure(stage(bf_no, protein), "RNA mediation: pQTL scan (left axis) and each candidate transcript's best-supported model, log10 Bayes factor (right axis); text labels are shown only when mediation has the highest posterior probability and log10 BF is at least 0.5.", downloads))
+            out.append(figure(stage(bf_no, protein), "RNA mediation: pQTL scan (left axis) and each candidate transcript's best-supported model-specific log10 Bayes factor (right axis); partial and complete mediation labels require log10 BF > 0.5.", downloads))
             sent, table = mediation_text_and_table(protein, chr_, fdir)
             if sent:
                 out.append(sent)
@@ -525,6 +546,7 @@ def integrated_rows():
     for p in PROTEINS:
         k = p.upper()
         h, n, l, pr = her[k], norm[k], lead.get(k, {}), pairs[k]
+        eq = eqtl_summary.get(k, {})
         peaks = sig_for(p)
         types = sorted({cis.get((k, pk["Locus"]), {}).get("pqtl_type", "") for pk in peaks} - {""})
         rows.append(dict(
@@ -532,20 +554,22 @@ def integrated_rows():
             n_significant_peaks=len(peaks), pqtl_type="/".join(types) if types else "",
             protein_H2=h["H2"], protein_H2_CI_low=h["CI_low"], protein_H2_CI_high=h["CI_high"], protein_H2_BH_P=h["p_value_BH"],
             transcript=(pr["probe_symbol"] if pr["status"] != "no_pair" else ""), transcript_pair_status=pr["status"],
-            transcript_H2=h["tx_H2"], transcript_H2_CI_low=h["tx_low"], transcript_H2_CI_high=h["tx_high"], transcript_H2_BH_P=h["tx_p_BH"]))
+            transcript_H2=h["tx_H2"], transcript_H2_CI_low=h["tx_low"], transcript_H2_CI_high=h["tx_high"], transcript_H2_BH_P=h["tx_p_BH"],
+            eQTL_top_locus=eq.get("eQTL_top_locus", ""), eQTL_top_pvalue=eq.get("eQTL_top_pvalue", ""),
+            combined_Fisher_pvalue=eq.get("combined_Fisher_pvalue", ""), combined_Fisher_qvalue=eq.get("combined_q_value", "")))
     return rows
 
 
 def overview_table(rows):
-    t = ["| Protein | λ | Strongest pQTL (chr:Mb) | P | Adjusted P | Significant peaks (type) | Protein H² (95% CI) | Paired transcript | Transcript H² (95% CI) | Transcript BH P |",
-         "|---|---:|---|---:|---:|---|---:|---|---:|---:|"]
+    t = ["| Protein | λ | Strongest pQTL (chr:Mb) | P | Adjusted P | Significant peaks (type) | Protein H² (95% CI) | Paired transcript | Transcript H² (95% CI) | Transcript BH P | eQTL top locus | eQTL top P | Fisher combined q |",
+         "|---|---:|---|---:|---:|---|---:|---|---:|---:|---|---:|---:|"]
     for r in rows:
         h2 = f"{f2(r['protein_H2'])} ({f2(r['protein_H2_CI_low'])}, {f2(r['protein_H2_CI_high'])})"
         th2 = (f"{f2(r['transcript_H2'])} ({f2(r['transcript_H2_CI_low'])}, {f2(r['transcript_H2_CI_high'])})" if num(r["transcript_H2"]) is not None else "—")
         shared = " †" if r["transcript_pair_status"] == "paired_shared_probe" else ""
         sigtxt = f"{r['n_significant_peaks']} ({r['pqtl_type']})" if r["n_significant_peaks"] else "0"
         t.append(f"| {r['Protein']} | {f2(r['lambda_'])} | {r['lead_chr']}:{f2(r['lead_Mb'])} | {fp(r['lead_P'])} | {fp(r['lead_adj_P'])} | {sigtxt} | {h2} | "
-                 f"{md(short_symbol(r['transcript']) if r['transcript'] else '')}{shared} | {th2} | {fp(r['transcript_H2_BH_P'])} |")
+                 f"{md(short_symbol(r['transcript']) if r['transcript'] else '')}{shared} | {th2} | {fp(r['transcript_H2_BH_P'])} | {md(r.get('eQTL_top_locus'))} | {fp(r.get('eQTL_top_pvalue'))} | {fp(r.get('combined_Fisher_qvalue'))} |")
     return "\n".join(t)
 
 

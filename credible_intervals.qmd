@@ -14,6 +14,9 @@ Every genome-wide significant pQTL locus with its 90% bootstrap credible interva
 | CYP2C39 | 19 | 39.93 | 2.22e-16 | 38.20–40.36 | 2.2 | Cyp2c39 | **cis** |
 | CYP3A11 | 3 | 41.34 | 2.48e-02 | 38.04–104.21 | 66.2 | Cyp3a11 | **trans** |
 | CYP3A11 | 6 | 52.95 | 2.67e-02 | 18.04–64.62 | 46.6 | Cyp3a11 | **trans** |
+| CYP2D26 | 3 | 61.22 | — | 60.51–96.17 | 35.7 | — | **—** |
+| CYP2C9 | 12 | 113.58 | — | 86.52–118.08 | 31.6 | — | **—** |
+| BSEP | 17 | 55.41 | — | 43.63–56.89 | 13.3 | — | **—** |
 | CYP2C39 (subset) | 19 | 39.93 | 5.79e-07 | 37.99–41.30 | 3.3 | Cyp2c39 | **cis** |
 
 ## ENT1, chromosome 17
@@ -115,6 +118,18 @@ Download: [PNG](figures/repbc_2026-10-01/per_protein/Cyp3a11/Cyp3a11_ci_genes_fu
 :::
 
 Interval 18.04–64.62 Mb around the peak at 52.95 Mb. Follow-up: see the [CYP3A11 chapter](Cyp3a11.qmd).
+
+## CYP2D26, chromosome 3
+
+Interval 60.51–96.17 Mb around the peak at 61.22 Mb. Follow-up: see the [CYP2D26 chapter](Cyp2d26.qmd).
+
+## CYP2C9, chromosome 12
+
+Interval 86.52–118.08 Mb around the peak at 113.58 Mb. Follow-up: see the [CYP2C9 chapter](Cyp2c9.qmd).
+
+## BSEP, chromosome 17
+
+Interval 43.63–56.89 Mb around the peak at 55.41 Mb. Follow-up: see the [BSEP chapter](Bsep.qmd).
 
 ## CYP2C39, chromosome 19 (zero-inflated subset scan)
 

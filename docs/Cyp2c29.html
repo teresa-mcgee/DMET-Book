@@ -549,13 +549,49 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/repbc_2026-10-01/per_protein/Cyp2c29/Cyp2c29_mediation_overlay_bf_chr6_nogenes.png" class="img-fluid figure-img" style="width:95.0%"></p>
-<figcaption>RNA mediation: pQTL scan (left axis) and each candidate transcript’s best-supported model, log10 Bayes factor (right axis); text labels are shown only when mediation has the highest posterior probability and log10 BF is at least 0.5.</figcaption>
+<figcaption>RNA mediation: pQTL scan (left axis) and each candidate transcript’s best-supported model-specific log10 Bayes factor (right axis); partial and complete mediation labels require log10 BF &gt; 0.5.</figcaption>
 </figure>
 </div>
 <div class="fig-downloads">
 <p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c29/Cyp2c29_mediation_overlay_bf_chr6_nogenes.png" download="Cyp2c29_mediation_overlay_bf_chr6_nogenes.png">PNG</a> · <a href="figures/repbc_2026-10-01/per_protein/Cyp2c29/Cyp2c29_mediation_overlay_bf_chr6_withgenes.png" download="Cyp2c29_mediation_overlay_bf_chr6_withgenes.png">PNG</a> · <a href="figures/repbc_2026-10-01/per_protein/Cyp2c29/Cyp2c29_mediation_bf_points_chr6.csv" download="Cyp2c29_mediation_bf_points_chr6.csv">CSV</a></p>
 </div>
-<p>491 candidate transcripts lie in the credible interval. <strong>0</strong> have a best-model log10 Bayes factor ≥ 0.5 and mediation has the highest posterior probability among the model classes; these are labelled in the figure (423 more reach 0.5 only for the non-mediator model and are not labelled): none.. <em>Mediation</em> means the transcript is best explained as lying on the path from the QTL to the protein; <em>co-local</em> means it shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.</p>
+<p>491 candidate transcripts lie in the credible interval. <strong>1</strong> have a partial- or complete-mediation log10 Bayes factor &gt; 0.5; these are labelled in the figure: <strong>partial mediation</strong> (1): Fam13a (0.93). <em>Partial</em> and <em>complete mediation</em> are shown separately; <em>co-local</em> means the transcript shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Function of the 1 labelled transcripts (UniProt)">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Function of the 1 labelled transcripts (UniProt)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Function text is the UniProt (mouse) annotation retrieved on 2026-10-05; reviewed Swiss-Prot entries where available. A dash means UniProt holds no functional annotation for that symbol.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Transcript</th>
+<th>Best model</th>
+<th style="text-align: right;">log10 BF</th>
+<th>UniProt protein</th>
+<th>Function (UniProt)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Fam13a</em></td>
+<td>partial mediation</td>
+<td style="text-align: right;">0.93</td>
+<td><a href="https://www.uniprot.org/uniprotkb/Q8BGI4">Protein FAM13A</a></td>
+<td>(Microbial infection) Plays a role in the clearance of Pseudomonas aeruginosa by macrophages. In complex with ANXA2, promotes activation of Rho GTPases following P.aeruginosa infection</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/repbc_2026-10-01/per_protein/Cyp2c29/Cyp2c29_mediation_posterior_bars_chr6.png" class="img-fluid figure-img" style="width:95.0%"></p>

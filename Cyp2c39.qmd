@@ -120,21 +120,22 @@ Download: [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_haplotype_b
 
 ### RNA mediation
 
-![RNA mediation: pQTL scan (left axis) and each candidate transcript's best-supported model, log10 Bayes factor (right axis); text labels are shown only when mediation has the highest posterior probability and log10 BF is at least 0.5.](figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mediation_overlay_bf_chr19_nogenes.png){fig-align="center" width="95%"}
+![RNA mediation: pQTL scan (left axis) and each candidate transcript's best-supported model-specific log10 Bayes factor (right axis); partial and complete mediation labels require log10 BF > 0.5.](figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mediation_overlay_bf_chr19_nogenes.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
 Download: [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mediation_overlay_bf_chr19_nogenes.png){download="Cyp2c39_mediation_overlay_bf_chr19_nogenes.png"} · [PNG](figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mediation_overlay_bf_chr19_withgenes.png){download="Cyp2c39_mediation_overlay_bf_chr19_withgenes.png"} · [CSV](figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mediation_bf_points_chr19.csv){download="Cyp2c39_mediation_bf_points_chr19.csv"}
 :::
 
-13 candidate transcripts lie in the credible interval. **2** have a best-model log10 Bayes factor ≥ 0.5 and mediation has the highest posterior probability among the model classes; these are labelled in the figure (7 more reach 0.5 only for the non-mediator model and are not labelled): **mediation** (2): Cyp2c38 (2.25), Cyp2c39 (0.93). *Mediation* means the transcript is best explained as lying on the path from the QTL to the protein; *co-local* means it shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.
+13 candidate transcripts lie in the credible interval. **3** have a partial- or complete-mediation log10 Bayes factor > 0.5; these are labelled in the figure: **partial mediation** (2): Cyp2c38 (2.62), Cyp2c39 (1.30). *Partial* and *complete mediation* are shown separately; *co-local* means the transcript shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.
 
-::: {.callout-note collapse="true" title="Function of the 2 labelled transcripts (UniProt)"}
-Function text is the UniProt (mouse) annotation retrieved on 2026-10-04; reviewed Swiss-Prot entries where available. A dash means UniProt holds no functional annotation for that symbol.
+::: {.callout-note collapse="true" title="Function of the 3 labelled transcripts (UniProt)"}
+Function text is the UniProt (mouse) annotation retrieved on 2026-10-05; reviewed Swiss-Prot entries where available. A dash means UniProt holds no functional annotation for that symbol.
 
 | Transcript | Best model | log10 BF | UniProt protein | Function (UniProt) |
 |---|---|---:|---|---|
-| *Cyp2c38* | mediation | 2.25 | [Cytochrome P450 2C38](https://www.uniprot.org/uniprotkb/P56655) | A cytochrome P450 monooxygenase that primarily catalyzes the epoxidation of 11,12 double bond of (5Z,8Z,11Z,14Z)-eicosatetraenoic acid (arachidonate) forming 11,12-epoxyeicosatrienoic acid (11,12-EET) regioisomer. |
-| *Cyp2c39* | mediation | 0.93 | [Cytochrome P450 2C39](https://www.uniprot.org/uniprotkb/P56656) | A cytochrome P450 monooxygenase that primarily catalyzes the epoxidation of 11,12 and 14,15 double bonds of (5Z,8Z,11Z,14Z)-eicosatetraenoic acid (arachidonate) forming 11,12- and 14,15-epoxyeicosatrienoic acids (11,12- and 14,15-EET) regioisomers. |
+| *Cyp2c38* | partial mediation | 2.62 | [Cytochrome P450 2C38](https://www.uniprot.org/uniprotkb/P56655) | A cytochrome P450 monooxygenase that primarily catalyzes the epoxidation of 11,12 double bond of (5Z,8Z,11Z,14Z)-eicosatetraenoic acid (arachidonate) forming 11,12-epoxyeicosatrienoic acid (11,12-EET) regioisomer. |
+| *Cyp2c39* | partial mediation | 1.30 | [Cytochrome P450 2C39](https://www.uniprot.org/uniprotkb/P56656) | A cytochrome P450 monooxygenase that primarily catalyzes the epoxidation of 11,12 and 14,15 double bonds of (5Z,8Z,11Z,14Z)-eicosatetraenoic acid (arachidonate) forming 11,12- and 14,15-epoxyeicosatrienoic acids (11,12- and 14,15-EET) regioisomers. |
+| *Cyp2c37* | co-local | 0.74 | [Cytochrome P450 2C37](https://www.uniprot.org/uniprotkb/P56654) | A cytochrome P450 monooxygenase that metabolizes (5Z,8Z,11Z,14Z)-eicosatetraenoic acid (arachidonate) to primarily produce 12-hydroxyeicosatetraenoic acid (12-HETE). Mechanistically, uses molecular oxygen inserting one oxygen atom into a substrate, and reducing the second into a water molecule, with two electrons provided by NADPH via cytochrome P450 reductase (CPR; |
 :::
 
 ![Posterior probabilities of the mediation models for the strongest candidate mediator.](figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mediation_posterior_bars_chr19.png){fig-align="center" width="95%"}
