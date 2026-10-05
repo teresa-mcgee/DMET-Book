@@ -474,7 +474,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="fig-downloads">
 <p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mergeplot_full_JAX00214946.png" download="Cyp2c39_mergeplot_full_JAX00214946.png">PNG</a></p>
 </div>
-<p><em>The top allelic series (SDP) from Merge is added to the book once the follow-up summary has been generated.</em></p>
+<p>In plain terms, the strongest Merge strain distribution pattern (SDP) splits the eight founders into <strong>allele 0</strong>: A/J, 129S1/SvImJ, NOD/ShiLtJ, NZO/HlLtJ, WSB/EiJ; <strong>allele 2</strong>: CAST/EiJ, PWK/PhJ; <strong>allele 1</strong>: C57BL/6J. That is 3 functional alleles: founders in the same group are inferred to carry the same functional allele at this locus.</p>
 </section>
 <section id="timbr-allelic-series" class="level3" data-number="12.1.2">
 <h3 data-number="12.1.2" class="anchored" data-anchor-id="timbr-allelic-series"><span class="header-section-number">12.1.2</span> TIMBR allelic series</h3>
@@ -489,6 +489,15 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
+<p><img src="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_timbr_ci_bf_dot_chr19.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption>TIMBR allelic-series sweep across the credible interval (Bayes-factor dot plot), chromosome 19; Merge SDP profile overlaid where available.</figcaption>
+</figure>
+</div>
+<div class="fig-downloads">
+<p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_timbr_ci_bf_dot_chr19.png" download="Cyp2c39_timbr_ci_bf_dot_chr19.png">PNG</a></p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
 <p><img src="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_timbr_ci_dot_chr19.jpg" class="img-fluid figure-img" style="width:95.0%"></p>
 <figcaption>TIMBR allelic-series sweep across the credible interval (posterior-probability dot plot), chromosome 19; Merge SDP profile overlaid where available.</figcaption>
 </figure>
@@ -496,12 +505,21 @@ ul.task-list li input[type="checkbox"] {
 <div class="fig-downloads">
 <p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_timbr_ci_dot_chr19.jpg" download="Cyp2c39_timbr_ci_dot_chr19.jpg">JPG</a></p>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_timbr_ci_dot_chr19.png" class="img-fluid figure-img" style="width:95.0%"></p>
+<figcaption>TIMBR allelic-series sweep across the credible interval (posterior-probability dot plot), chromosome 19; Merge SDP profile overlaid where available.</figcaption>
+</figure>
+</div>
+<div class="fig-downloads">
+<p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_timbr_ci_dot_chr19.png" download="Cyp2c39_timbr_ci_dot_chr19.png">PNG</a></p>
+</div>
 <p>The highest-posterior TIMBR allelic series at the peak splits the founders into <strong>allele 0</strong>: A/J, 129S1/SvImJ, NOD/ShiLtJ, NZO/HlLtJ, WSB/EiJ; <strong>allele 2</strong>: CAST/EiJ, PWK/PhJ; <strong>allele 1</strong>: C57BL/6J. That is 3 functional alleles: founders in the same group are inferred to carry the same functional allele at this locus.</p>
 <p><strong>Number of functional alleles.</strong> At the lead locus (JAX00214946, 39.93 Mb) the posterior probability of a bi-allelic series (two functional alleles) is 0.06, tri-allelic 0.59, and four or more alleles 0.35; a single allele (no QTL effect) has probability 0.00. For comparison, the Chinese-restaurant-process prior gives 0.50 / 0.29 / 0.14 for one / two / three alleles, so the data move weight away from a single allele. The locus in the credible interval whose single best allelic series has the highest posterior probability is UNC30297139 (38.97 Mb; series 0,1,0,0,0,2,2,0, P = 0.32); there bi-allelic = 0.06, tri-allelic = 0.59, four or more = 0.35.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_allele_number_prior_posterior_chr19.png" class="img-fluid figure-img" style="width:95.0%"></p>
-<figcaption>Prior (uniform over partitions and Chinese restaurant process) versus posterior probability of the number of functional alleles at the lead and best-model loci.</figcaption>
+<figcaption>Chinese-restaurant-process prior versus posterior probability of the number of functional alleles at the lead and best-model loci.</figcaption>
 </figure>
 </div>
 <div class="fig-downloads">
@@ -540,26 +558,26 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mediation_overlay_bf_chr19_nogenes.png" class="img-fluid figure-img" style="width:95.0%"></p>
-<figcaption>RNA mediation: pQTL scan (left axis) and each candidate transcript’s best-supported model, log10 Bayes factor (right axis); transcripts with a mediation or co-local best model and log10 BF of at least 0.5 are labelled.</figcaption>
+<figcaption>RNA mediation: pQTL scan (left axis) and each candidate transcript’s best-supported model, log10 Bayes factor (right axis); text labels are shown only when mediation has the highest posterior probability and log10 BF is at least 0.5.</figcaption>
 </figure>
 </div>
 <div class="fig-downloads">
 <p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mediation_overlay_bf_chr19_nogenes.png" download="Cyp2c39_mediation_overlay_bf_chr19_nogenes.png">PNG</a> · <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mediation_overlay_bf_chr19_withgenes.png" download="Cyp2c39_mediation_overlay_bf_chr19_withgenes.png">PNG</a> · <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_mediation_bf_points_chr19.csv" download="Cyp2c39_mediation_bf_points_chr19.csv">CSV</a></p>
 </div>
-<p>13 candidate transcripts lie in the credible interval. <strong>4</strong> have a best-model log10 Bayes factor ≥ 0.5 with mediation or co-local as the best-supported model and are labelled in the figure (7 more reach 0.5 only for the non-mediator model and are not labelled): <strong>mediation</strong> (2): Cyp2c38 (2.25), Cyp2c39 (0.93); <strong>co-local</strong> (2): Cyp2c55 (1.83), Cyp2c37 (0.74). <em>Mediation</em> means the transcript is best explained as lying on the path from the QTL to the protein; <em>co-local</em> means it shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Function of the 4 labelled transcripts (UniProt)">
+<p>13 candidate transcripts lie in the credible interval. <strong>2</strong> have a best-model log10 Bayes factor ≥ 0.5 and mediation has the highest posterior probability among the model classes; these are labelled in the figure (7 more reach 0.5 only for the non-mediator model and are not labelled): <strong>mediation</strong> (2): Cyp2c38 (2.25), Cyp2c39 (0.93). <em>Mediation</em> means the transcript is best explained as lying on the path from the QTL to the protein; <em>co-local</em> means it shares the QTL without mediating; log10 BF is the evidence for the best-supported model against the null.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Function of the 2 labelled transcripts (UniProt)">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Function of the 4 labelled transcripts (UniProt)
+<span class="screen-reader-only">Note</span>Function of the 2 labelled transcripts (UniProt)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Function text is the UniProt (mouse) annotation retrieved on 2026-10-03; reviewed Swiss-Prot entries where available. A dash means UniProt holds no functional annotation for that symbol.</p>
+<p>Function text is the UniProt (mouse) annotation retrieved on 2026-10-04; reviewed Swiss-Prot entries where available. A dash means UniProt holds no functional annotation for that symbol.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -585,20 +603,6 @@ ul.task-list li input[type="checkbox"] {
 <td><a href="https://www.uniprot.org/uniprotkb/P56656">Cytochrome P450 2C39</a></td>
 <td>A cytochrome P450 monooxygenase that primarily catalyzes the epoxidation of 11,12 and 14,15 double bonds of (5Z,8Z,11Z,14Z)-eicosatetraenoic acid (arachidonate) forming 11,12- and 14,15-epoxyeicosatrienoic acids (11,12- and 14,15-EET) regioisomers.</td>
 </tr>
-<tr class="odd">
-<td><em>Cyp2c55</em></td>
-<td>co-local</td>
-<td style="text-align: right;">1.83</td>
-<td><a href="https://www.uniprot.org/uniprotkb/Q9D816">Cytochrome P450 2C55</a></td>
-<td>Metabolizes arachidonic acid mainly to 19-hydroxyeicosatetraenoic acid (HETE)</td>
-</tr>
-<tr class="even">
-<td><em>Cyp2c37</em></td>
-<td>co-local</td>
-<td style="text-align: right;">0.74</td>
-<td><a href="https://www.uniprot.org/uniprotkb/P56654">Cytochrome P450 2C37</a></td>
-<td>A cytochrome P450 monooxygenase that metabolizes (5Z,8Z,11Z,14Z)-eicosatetraenoic acid (arachidonate) to primarily produce 12-hydroxyeicosatetraenoic acid (12-HETE). Mechanistically, uses molecular oxygen inserting one oxygen atom into a substrate, and reducing the second into a water molecule, with two electrons provided by NADPH via cytochrome P450 reductase (CPR;</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -611,7 +615,7 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <div class="fig-downloads">
-<p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_targeted_mediation_chr19_posterior_bars.pdf" download="Cyp2c39_targeted_mediation_chr19_posterior_bars.pdf">PDF</a></p>
+<p>Download: <a href="figures/repbc_2026-10-01/per_protein/Cyp2c39/Cyp2c39_protein_mediation_chr19_posterior_bars.pdf" download="Cyp2c39_protein_mediation_chr19_posterior_bars.pdf">PDF</a></p>
 </div>
 </section>
 </section>

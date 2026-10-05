@@ -101,6 +101,12 @@ def pdf_to_png(pdf, png, page=1, dpi=130):
     return png
 
 
+def newest_existing(*paths):
+    """Return the newest existing path, or None when none of the candidates exist."""
+    existing = [Path(p) for p in paths if Path(p).exists()]
+    return max(existing, key=lambda p: p.stat().st_mtime) if existing else None
+
+
 def figure(png, caption, downloads=(), width="95%"):
     """Inline figure + a download line (each entry of `downloads` is a path to an existing file)."""
     png = Path(png)
@@ -289,10 +295,10 @@ def mediation_text_and_table(protein, chr_, fdir):
     n_other = sum(1 for r in best.values() if r["best_model"] == "other" and float(r["best_log10BF"]) >= MEDIATION_LABEL_BF)
     names = {"mediation": "mediation", "colocal": "co-local", "other": "other (non-mediator)"}
     by = {m: [r for r in lab if r["best_model"] == m] for m in names}
-    sent = (f"{len(best)} candidate transcripts lie in the credible interval. **{len(lab)}** have a best-model log10 Bayes factor ≥ {MEDIATION_LABEL_BF} with mediation or co-local as the best-supported model and are labelled in the figure"
+    sent = (f"{len(best)} candidate transcripts lie in the credible interval. **{len(lab)}** have a best-model log10 Bayes factor ≥ {MEDIATION_LABEL_BF} and mediation has the highest posterior probability among the model classes; these are labelled in the figure"
             + (f" ({n_other} more reach {MEDIATION_LABEL_BF} only for the non-mediator model and are not labelled)" if n_other else "") + ": ")
     bits = []
-    for m in ("mediation", "colocal"):
+    for m in ("mediation",):
         if by[m]:
             bits.append(f"**{names[m]}** ({len(by[m])}): " + ", ".join(f"{r['symbol']} ({float(r['best_log10BF']):.2f})" for r in by[m][:12]) + (" …" if len(by[m]) > 12 else ""))
     sent += "; ".join(bits) if bits else "none."
@@ -376,11 +382,17 @@ def locus_blocks(protein, peak, level="##"):
     else:
         bf_no = fdir / f"mediation_overlay_bf_chr{chr_}_nogenes.png"      # the book shows the plot WITHOUT the gene track
         bf_with = fdir / f"mediation_overlay_bf_chr{chr_}_withgenes.png"  # offered as a download
-        pb = fdir / f"targeted_mediation_chr{chr_}_posterior_bars.pdf"
+        # The newer protein-level mediation output supersedes the older targeted
+        # output when both are present.  Keep this timestamp-aware so the book
+        # follows whichever result was generated most recently.
+        pb = newest_existing(
+            fdir / f"protein_mediation_chr{chr_}_posterior_bars.pdf",
+            fdir / f"targeted_mediation_chr{chr_}_posterior_bars.pdf",
+        )
         pts_rows, pts_csv = mediation_points(protein, chr_, fdir)
         downloads = [stage(x, protein) for x in (bf_no, bf_with, pts_csv) if x.exists()]
         if bf_no.exists():
-            out.append(figure(stage(bf_no, protein), "RNA mediation: pQTL scan (left axis) and each candidate transcript's best-supported model, log10 Bayes factor (right axis); transcripts with a mediation or co-local best model and log10 BF of at least 0.5 are labelled.", downloads))
+            out.append(figure(stage(bf_no, protein), "RNA mediation: pQTL scan (left axis) and each candidate transcript's best-supported model, log10 Bayes factor (right axis); text labels are shown only when mediation has the highest posterior probability and log10 BF is at least 0.5.", downloads))
             sent, table = mediation_text_and_table(protein, chr_, fdir)
             if sent:
                 out.append(sent)
@@ -423,7 +435,7 @@ def allele_number_blocks(protein, chr_, tdir):
         out[-1] += "The lead locus is also the locus with the highest-probability allelic series."
     out[-1] += "\n"
     items = [
-        (f"allele_number_prior_posterior_chr{chr_}", "Prior (uniform over partitions and Chinese restaurant process) versus posterior probability of the number of functional alleles at the lead and best-model loci."),
+        (f"allele_number_prior_posterior_chr{chr_}", "Chinese-restaurant-process prior versus posterior probability of the number of functional alleles at the lead and best-model loci."),
         (f"allele_number_across_ci_chr{chr_}", "Posterior probability of 1, 2, 3 or 4+ functional alleles at each locus across the credible interval (dashed line: lead locus; dotted line: best-model locus)."),
         (f"haplotype_lead_{r['lead_locus']}_chr{chr_}", f"TIMBR founder-haplotype effects at the lead locus {r['lead_locus']}."),
         (f"haplotype_best_{r['best_locus']}_chr{chr_}", f"TIMBR founder-haplotype effects at the locus with the highest-probability allelic series, {r['best_locus']}."),

@@ -68,7 +68,7 @@ Protein H² is the strain share of replicate variance (random-intercept REML on 
 ![Correlation across CC strains between each protein and its paired transcript (outlined diagonal) and the other paired transcripts.](figures/repbc_2026-10-01/protein_transcript_correlation_heatmap.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
-Download: [PNG](figures/repbc_2026-10-01/protein_transcript_correlation_heatmap.png){download="protein_transcript_correlation_heatmap.png"} · [PDF](figures/repbc_2026-10-01/protein_transcript_correlation_heatmap.pdf){download="protein_transcript_correlation_heatmap.pdf"} · [CSV](figures/repbc_2026-10-01/protein_transcript_correlation_matrix.csv){download="protein_transcript_correlation_matrix.csv"}
+Download: [PNG](figures/repbc_2026-10-01/protein_transcript_correlation_heatmap.png){download="protein_transcript_correlation_heatmap.png"} · [PDF](figures/repbc_2026-10-01/protein_transcript_correlation_heatmap.pdf){download="protein_transcript_correlation_heatmap.pdf"}
 :::
 
 Proteins were paired to transcripts from the measured peptide, not the protein name ([pairing table (CSV)](figures/repbc_2026-10-01/protein_transcript_pairs.csv){download="protein_transcript_pairs.csv"}). Proteins with no pair (CES1, CYP2C9) are omitted.
@@ -78,13 +78,13 @@ Proteins were paired to transcripts from the measured peptide, not the protein n
 ![Trait correlations: H² on the diagonal, genetic correlation (squares) below, phenotypic correlation (circles) above.](figures/repbc_2026-10-01/protein_genetic_phenotypic_correlation_heatmap.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
-Download: [PNG](figures/repbc_2026-10-01/protein_genetic_phenotypic_correlation_heatmap.png){download="protein_genetic_phenotypic_correlation_heatmap.png"} · [PDF](figures/repbc_2026-10-01/protein_genetic_phenotypic_correlation_heatmap.pdf){download="protein_genetic_phenotypic_correlation_heatmap.pdf"} · [CSV](figures/repbc_2026-10-01/protein_genetic_correlation_lower_matrix.csv){download="protein_genetic_correlation_lower_matrix.csv"}
+Download: [PNG](figures/repbc_2026-10-01/protein_genetic_phenotypic_correlation_heatmap.png){download="protein_genetic_phenotypic_correlation_heatmap.png"} · [PDF](figures/repbc_2026-10-01/protein_genetic_phenotypic_correlation_heatmap.pdf){download="protein_genetic_phenotypic_correlation_heatmap.pdf"}
 :::
 
 ![Phenotypic correlation (off-diagonal) with the genetic variance of each z-scored trait on the diagonal.](figures/repbc_2026-10-01/protein_phenotype_correlation_heatmap.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
-Download: [PNG](figures/repbc_2026-10-01/protein_phenotype_correlation_heatmap.png){download="protein_phenotype_correlation_heatmap.png"} · [PDF](figures/repbc_2026-10-01/protein_phenotype_correlation_heatmap.pdf){download="protein_phenotype_correlation_heatmap.pdf"} · [CSV](figures/repbc_2026-10-01/protein_phenotype_correlation_matrix.csv){download="protein_phenotype_correlation_matrix.csv"}
+Download: [PNG](figures/repbc_2026-10-01/protein_phenotype_correlation_heatmap.png){download="protein_phenotype_correlation_heatmap.png"} · [PDF](figures/repbc_2026-10-01/protein_phenotype_correlation_heatmap.pdf){download="protein_phenotype_correlation_heatmap.pdf"}
 :::
 
 Genetic covariance was estimated on z-scored traits (method of moments on CC-line means, REML genetic variances), so genetic variances are on a common scale; correlations and H² are unaffected by the scaling. Matrices: [genetic covariance (CSV)](figures/repbc_2026-10-01/protein_genetic_correlation_H2_diagonal_genetic_covariance.csv){download="protein_genetic_correlation_H2_diagonal_genetic_covariance.csv"} · [genetic correlation (CSV)](figures/repbc_2026-10-01/protein_genetic_correlation_H2_diagonal_genetic_correlation.csv){download="protein_genetic_correlation_H2_diagonal_genetic_correlation.csv"}.
@@ -108,10 +108,40 @@ Download: [PNG](figures/repbc_2026-10-01/figure3_pqtl_genome_heatmap.png){downlo
 
 Chromosomes with significant peaks for two or more proteins are shown as overlays (line opacity scales with the chromosome-wide signal) and as zoomed heatmaps.
 
+![pQTL overlay, chromosome 12.](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr12.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr12.png){download="figure3_pqtl_overlay_chr12.png"} · [PDF](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr12.pdf){download="figure3_pqtl_overlay_chr12.pdf"}
+:::
+
+![pQTL overlay, chromosome 12_with90.](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr12_with90.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr12_with90.png){download="figure3_pqtl_overlay_chr12_with90.png"} · [PDF](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr12_with90.pdf){download="figure3_pqtl_overlay_chr12_with90.pdf"}
+:::
+
+![pQTL overlay, chromosome 17.](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr17.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr17.png){download="figure3_pqtl_overlay_chr17.png"} · [PDF](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr17.pdf){download="figure3_pqtl_overlay_chr17.pdf"}
+:::
+
+![pQTL overlay, chromosome 17_with90.](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr17_with90.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr17_with90.png){download="figure3_pqtl_overlay_chr17_with90.png"} · [PDF](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr17_with90.pdf){download="figure3_pqtl_overlay_chr17_with90.pdf"}
+:::
+
 ![pQTL overlay, chromosome 19.](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr19.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
 Download: [PNG](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr19.png){download="figure3_pqtl_overlay_chr19.png"} · [PDF](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr19.pdf){download="figure3_pqtl_overlay_chr19.pdf"}
+:::
+
+![pQTL overlay, chromosome 19_with90.](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr19_with90.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr19_with90.png){download="figure3_pqtl_overlay_chr19_with90.png"} · [PDF](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr19_with90.pdf){download="figure3_pqtl_overlay_chr19_with90.pdf"}
 :::
 
 ![pQTL overlay, chromosome 3.](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr3.png){fig-align="center" width="95%"}
@@ -120,11 +150,31 @@ Download: [PNG](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr19.png){downloa
 Download: [PNG](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr3.png){download="figure3_pqtl_overlay_chr3.png"} · [PDF](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr3.pdf){download="figure3_pqtl_overlay_chr3.pdf"}
 :::
 
+![pQTL overlay, chromosome 3_with90.](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr3_with90.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr3_with90.png){download="figure3_pqtl_overlay_chr3_with90.png"} · [PDF](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr3_with90.pdf){download="figure3_pqtl_overlay_chr3_with90.pdf"}
+:::
+
 ![pQTL overlay, chromosome 6.](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr6.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
 Download: [PNG](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr6.png){download="figure3_pqtl_overlay_chr6.png"} · [PDF](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr6.pdf){download="figure3_pqtl_overlay_chr6.pdf"}
 :::
+
+![pQTL overlay, chromosome 6_with90.](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr6_with90.png){fig-align="center" width="95%"}
+
+::: {.fig-downloads}
+Download: [PNG](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr6_with90.png){download="figure3_pqtl_overlay_chr6_with90.png"} · [PDF](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr6_with90.pdf){download="figure3_pqtl_overlay_chr6_with90.pdf"}
+:::
+
+_Figure not available yet: `figure3_pqtl_zoom_chr12`._
+
+_Figure not available yet: `figure3_pqtl_zoom_chr12_with90`._
+
+_Figure not available yet: `figure3_pqtl_zoom_chr17`._
+
+_Figure not available yet: `figure3_pqtl_zoom_chr17_with90`._
 
 ![pQTL signal across proteins, chromosome 19.](figures/repbc_2026-10-01/figure3_pqtl_zoom_chr19.png){fig-align="center" width="95%"}
 
@@ -132,17 +182,23 @@ Download: [PNG](figures/repbc_2026-10-01/figure3_pqtl_overlay_chr6.png){download
 Download: [PNG](figures/repbc_2026-10-01/figure3_pqtl_zoom_chr19.png){download="figure3_pqtl_zoom_chr19.png"} · [PDF](figures/repbc_2026-10-01/figure3_pqtl_zoom_chr19.pdf){download="figure3_pqtl_zoom_chr19.pdf"}
 :::
 
+_Figure not available yet: `figure3_pqtl_zoom_chr19_with90`._
+
 ![pQTL signal across proteins, chromosome 3.](figures/repbc_2026-10-01/figure3_pqtl_zoom_chr3.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
 Download: [PNG](figures/repbc_2026-10-01/figure3_pqtl_zoom_chr3.png){download="figure3_pqtl_zoom_chr3.png"} · [PDF](figures/repbc_2026-10-01/figure3_pqtl_zoom_chr3.pdf){download="figure3_pqtl_zoom_chr3.pdf"}
 :::
 
+_Figure not available yet: `figure3_pqtl_zoom_chr3_with90`._
+
 ![pQTL signal across proteins, chromosome 6.](figures/repbc_2026-10-01/figure3_pqtl_zoom_chr6.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
 Download: [PNG](figures/repbc_2026-10-01/figure3_pqtl_zoom_chr6.png){download="figure3_pqtl_zoom_chr6.png"} · [PDF](figures/repbc_2026-10-01/figure3_pqtl_zoom_chr6.pdf){download="figure3_pqtl_zoom_chr6.pdf"}
 :::
+
+_Figure not available yet: `figure3_pqtl_zoom_chr6_with90`._
 
 
 ### eQTL
@@ -162,19 +218,19 @@ The eQTL map is built from the corrected RNA data (rerun_2026-09-27_rna_v2); it 
 ![PCA biplot of the protein profiles across strains, coloured by gap-statistic cluster.](figures/repbc_2026-10-01/protein_pca_biplot.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
-Download: [PNG](figures/repbc_2026-10-01/protein_pca_biplot.png){download="protein_pca_biplot.png"} · [PDF](figures/repbc_2026-10-01/protein_pca_biplot.pdf){download="protein_pca_biplot.pdf"} · [CSV](figures/repbc_2026-10-01/protein_pca_loadings.csv){download="protein_pca_loadings.csv"}
+Download: [PNG](figures/repbc_2026-10-01/protein_pca_biplot.png){download="protein_pca_biplot.png"} · [PDF](figures/repbc_2026-10-01/protein_pca_biplot.pdf){download="protein_pca_biplot.pdf"}
 :::
 
 ![Gap statistic for the number of strain clusters.](figures/repbc_2026-10-01/protein_cluster_gapstat.png){fig-align="center" width="60%"}
 
 ::: {.fig-downloads}
-Download: [PNG](figures/repbc_2026-10-01/protein_cluster_gapstat.png){download="protein_cluster_gapstat.png"} · [PDF](figures/repbc_2026-10-01/protein_cluster_gapstat.pdf){download="protein_cluster_gapstat.pdf"} · [CSV](figures/repbc_2026-10-01/protein_cluster_gapstat_values.csv){download="protein_cluster_gapstat_values.csv"}
+Download: [PNG](figures/repbc_2026-10-01/protein_cluster_gapstat.png){download="protein_cluster_gapstat.png"} · [PDF](figures/repbc_2026-10-01/protein_cluster_gapstat.pdf){download="protein_cluster_gapstat.pdf"}
 :::
 
 ![Strains clustered on their z-scored protein profiles.](figures/repbc_2026-10-01/protein_cluster_heatmap.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
-Download: [PNG](figures/repbc_2026-10-01/protein_cluster_heatmap.png){download="protein_cluster_heatmap.png"} · [PDF](figures/repbc_2026-10-01/protein_cluster_heatmap.pdf){download="protein_cluster_heatmap.pdf"} · [CSV](figures/repbc_2026-10-01/protein_cluster_assignments.csv){download="protein_cluster_assignments.csv"} · [CSV](figures/repbc_2026-10-01/protein_cluster_kw_drivers.csv){download="protein_cluster_kw_drivers.csv"}
+Download: [PNG](figures/repbc_2026-10-01/protein_cluster_heatmap.png){download="protein_cluster_heatmap.png"} · [PDF](figures/repbc_2026-10-01/protein_cluster_heatmap.pdf){download="protein_cluster_heatmap.pdf"}
 :::
 
 
@@ -183,13 +239,13 @@ Download: [PNG](figures/repbc_2026-10-01/protein_cluster_heatmap.png){download="
 ![RINT-normalized transcriptome, hierarchically clustered.](figures/repbc_2026-10-01/transcriptome_rint_hierarchical_heatmap.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
-Download: [PNG](figures/repbc_2026-10-01/transcriptome_rint_hierarchical_heatmap.png){download="transcriptome_rint_hierarchical_heatmap.png"} · [PDF](figures/repbc_2026-10-01/transcriptome_rint_hierarchical_heatmap.pdf){download="transcriptome_rint_hierarchical_heatmap.pdf"} · [CSV](figures/repbc_2026-10-01/transcriptome_rint_variance.csv){download="transcriptome_rint_variance.csv"}
+Download: [PNG](figures/repbc_2026-10-01/transcriptome_rint_hierarchical_heatmap.png){download="transcriptome_rint_hierarchical_heatmap.png"} · [PDF](figures/repbc_2026-10-01/transcriptome_rint_hierarchical_heatmap.pdf){download="transcriptome_rint_hierarchical_heatmap.pdf"}
 :::
 
 ![Binned correlation structure across the RINT-normalized transcriptome.](figures/repbc_2026-10-01/transcriptome_rint_all_transcript_binned_correlation.png){fig-align="center" width="95%"}
 
 ::: {.fig-downloads}
-Download: [PNG](figures/repbc_2026-10-01/transcriptome_rint_all_transcript_binned_correlation.png){download="transcriptome_rint_all_transcript_binned_correlation.png"} · [PDF](figures/repbc_2026-10-01/transcriptome_rint_all_transcript_binned_correlation.pdf){download="transcriptome_rint_all_transcript_binned_correlation.pdf"} · [CSV](figures/repbc_2026-10-01/transcriptome_rint_binned_correlation.csv){download="transcriptome_rint_binned_correlation.csv"}
+Download: [PNG](figures/repbc_2026-10-01/transcriptome_rint_all_transcript_binned_correlation.png){download="transcriptome_rint_all_transcript_binned_correlation.png"} · [PDF](figures/repbc_2026-10-01/transcriptome_rint_all_transcript_binned_correlation.pdf){download="transcriptome_rint_all_transcript_binned_correlation.pdf"}
 :::
 
 The correlation overview bins transcripts by expression variance for display; it is not the full 20,666 × 20,666 matrix.
@@ -205,12 +261,12 @@ Per significant locus: the top Merge SDP (founder-haplotype split), the highest-
 | Protein | Peak (chr:Mb) | pQTL type | Top SDP | Top TIMBR allelic series | Mediators |
 |---|---|---|---|---|---|
 | ENT1 | 17:47.35 | cis | 0,0,0,0,1,0,0,1 | 0,0,0,0,0,0,0,1 | Glo1, Pex6, Ppp1r10, Slc29a1 |
-| NTCP | 2:19.65 | trans | NA | 0,0,1,0,0,0,0,0 | — |
-| CYP2C50 | 19:37.99 | cis | 0,1,0,0,0,1,2,0 | 0,1,0,0,0,1,2,0 | Cyp2c37, Cyp2c38, Cyp2c39, Mms19 |
+| NTCP | 2:19.65 | trans | 0,1,2,0,1,1,1,0 | 0,0,1,0,0,0,0,0 | — |
+| CYP2C50 | 19:37.99 | cis | 0,1,0,0,1,1,2,0 | 0,1,0,0,0,1,2,0 | Cyp2c37, Cyp2c38, Cyp2c39, Mms19 |
 | CYP2C50 | 3:60.51 | trans | 0,1,1,1,1,1,0,1 | 0,1,1,1,1,1,0,1 | E130311K13Rik, Mfsd1, Sfxn2, Sh3pxd2a, Tmem144 |
-| CYP2E1 | 3:59.86 | trans | NA | 0,1,1,1,1,0,1,1 | — |
-| CYP2C29 | 6:38.19 | trans | NA | 0,1,0,1,1,1,1,1 | Fam13a, Snx10, Tpk1 |
-| BSEP | 16:38.15 | trans | 0,0,0,0,0,0,0,1 | 0,1,0,1,1,0,0,1 | — |
-| CYP2C39 | 19:39.93 | cis | NA | 0,1,0,0,0,2,2,0 | Cyp2c38, Cyp2c39 |
-| CYP3A11 | 3:41.34 | trans | 0,1,0,0,0,1,0,1 | 0,0,0,1,1,1,1,0 | Eif2a, Ggct |
-| CYP3A11 | 6:52.95 | trans | NA | 0,1,1,1,1,1,1,1 | Agbl3, Ggct, Tcaf1 |
+| CYP2E1 | 3:59.86 | trans | 0,1,1,2,2,0,1,2 | 0,1,1,1,1,0,1,1 | — |
+| CYP2C29 | 6:38.19 | trans | 0,1,2,2,1,1,1,2 | 0,1,0,1,1,1,1,1 | Fam13a, Snx10, Tpk1 |
+| BSEP | 16:38.15 | trans | 0,1,2,3,3,0,4,5 | 0,1,0,1,1,0,0,1 | — |
+| CYP2C39 | 19:39.93 | cis | 0,1,0,0,0,2,2,0 | 0,1,0,0,0,2,2,0 | Cyp2c38, Cyp2c39 |
+| CYP3A11 | 3:41.34 | trans | 0,1,0,0,0,0,0,1 | 0,0,0,1,1,1,1,0 | Eif2a, Ggct |
+| CYP3A11 | 6:52.95 | trans | 0,1,1,1,1,2,2,2 | 0,1,1,1,1,1,1,1 | Agbl3, Ggct, Tcaf1 |
